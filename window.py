@@ -2,12 +2,13 @@ from gui import gui
 
 
 class Window:
-    def __init__(self, ctk, FrameObj):
+    def __init__(self, ctk, FrameObj, os):
         self.width = 1200
         self.height = 800
         self.root = ctk.CTk()
         self.ctk = ctk
         self.Frame = FrameObj
+        self.os = os
 
     def create_window(self):
         self.ctk.set_appearance_mode("dark")
@@ -19,7 +20,7 @@ class Window:
         # min window Size
         self.root.minsize(width=self.width, height=self.height)
 
-        self.root.iconbitmap("logo.ico")
+        self.root.iconbitmap(self.os.path.join("assets", "icon.ico"))
 
         # Disable Resize
         self.root.resizable(width=False, height=False)

@@ -63,36 +63,36 @@ class Ui_MainWindow(object):
         return img_frame
 
     def __name_stat_frame(self):
-        frame = self.Frame(master=self.root, corner_radius=0, height=self.img_height, width=self.img_width * 1.3)
+        frame = self.Frame(master=self.root, corner_radius=0, height=self.img_height)
         frame.grid(row=1, column=1, sticky="n", pady=self.pad_y)
 
         frame.columnconfigure(0, weight=1)
         frame.rowconfigure(0, weight=1)
 
         self.__name_plate(frame)
-        self.__stat_plate(frame)
+        self.__stat_frame(frame)
+
 
     def __name_plate(self, parentFrame):
-        name_plate = self.ctk.CTkButton(master=parentFrame, text="Name Plate", fg_color=self.color,
+        name_plate = self.ctk.CTkButton(master=parentFrame, text="Name Plate", height=30, fg_color=self.color,
                                         corner_radius=0, font=('Arial Bold', 18))
-        name_plate.grid(row=0, column=0, sticky="n", pady=5)
+        name_plate.grid(row=0, column=0, pady=5)
 
-    def __stat_plate(self, parentFrame):
-        base = self.ctk.CTkLabel(master=parentFrame, height=20, text='Base', font=('Arial Bold', 15))
-        hp = self.ctk.CTkLabel(master=parentFrame, height=20, text='HP', font=('Arial Bold', 15))
-        atk = self.ctk.CTkLabel(master=parentFrame, height=20, text='Attack', font=('Arial Bold', 15))
-        defense = self.ctk.CTkLabel(master=parentFrame, height=20, text='Defense', font=('Arial Bold', 15))
-        sp_atk = self.ctk.CTkLabel(master=parentFrame, height=20, text='Special Attack', font=('Arial Bold', 15))
-        sp_def = self.ctk.CTkLabel(master=parentFrame, height=20, text='Special Defense', font=('Arial Bold', 15))
-        speed = self.ctk.CTkLabel(master=parentFrame, height=20, text='Speed', font=('Arial Bold', 15))
 
-        base.grid(row=1, column=0, sticky="w", pady=5)
-        hp.grid(row=2, column=0, sticky="w", pady=5)
-        atk.grid(row=3, column=0, sticky="w", pady=5)
-        defense.grid(row=4, column=0, sticky="w", pady=5)
-        sp_atk.grid(row=5, column=0, sticky="w", pady=5)
-        sp_def.grid(row=6, column=0, sticky="w", pady=5)
-        speed.grid(row=7, column=0, sticky="w", pady=5)
+    def __stat_frame(self, parentFrame):
+        stat = ['Base', 'HP', 'Attack', 'Defense', 'Special Attack', 'Special Defense', 'Speed']
+        for i in range(1, 8):
+            stat_frame = self.Frame(master=parentFrame, corner_radius=0, height=30)
+            stat_frame.grid(row=i, column=0, sticky="se", pady=0)
+
+            frame_1 = self.Frame(master=stat_frame, corner_radius=0, height=30)
+            frame_1.grid(row=i, column=1, sticky="")
+
+            stat_name = self.ctk.CTkLabel(master=frame_1, text=stat[int(i - 1)] + ": ")
+            stat_name.grid()
+
+            frame_2 = self.Frame(master=stat_frame, corner_radius=0, height=30, width=300, border_width=1)
+            frame_2.grid(row=i, column=2, sticky="")
 
     def __type_frame(self):
         frame = self.Frame(master=self.root, corner_radius=0, height=self.img_height, width=self.img_width * 1.5)
