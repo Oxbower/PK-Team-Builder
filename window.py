@@ -1,29 +1,37 @@
-from tkinter import Frame, Label, Button
-from PIL import ImageTk
+from gui import gui
+
 
 class Window:
-    def __init__(self, tk):
-        self.root = tk.Tk()
-        self.frame = tk.Frame(self.root)
+    def __init__(self, ctk, FrameObj):
+        self.width = 1200
+        self.height = 800
+        self.root = ctk.CTk()
+        self.ctk = ctk
+        self.Frame = FrameObj
 
     def create_window(self):
-        self.root.title("pktb")
-        self.root.minsize(width=800, height=600)
+        self.ctk.set_appearance_mode("dark")
+        self.ctk.set_default_color_theme("dark-blue")
+
+        # window title
+        self.root.title("PKMN Team Builder")
+
+        # min window Size
+        self.root.minsize(width=self.width, height=self.height)
+
+        self.root.iconbitmap("logo.ico")
+
+        # Disable Resize
+        self.root.resizable(width=False, height=False)
+
+        # Build main frame for window
         self.build_gen_frame()
 
+    # Calls all functions to build the window
     def build_gen_frame(self):
-        container_frame = Frame(self.root, bg="red", height=1080, width=1920)
-        container_frame.pack()
+        self.root.columnconfigure(1, weight=1)
+        self.root.columnconfigure(0, weight=0)
+        self.root.rowconfigure(1, weight=0)
 
-        but = Button(container_frame, text="Test")
-        but.pack()
-
-    # Build frame for window
-    def build_img_frame(self):
-        img_frame = Frame(self.root)
-        img_frame.pack()
-
-
-    # Bind to frame
-    def display_img(self, image):
-        ImageTk.PhotoImage(image)
+        build_gui = gui.Ui_MainWindow(self, self.Frame)
+        build_gui.setupUi()
