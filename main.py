@@ -3,8 +3,8 @@ import sys
 
 from customtkinter import CTkFrame as Frame
 
-
 import window as wd
+from interaction import update as run_app
 
 
 def main():
@@ -14,9 +14,13 @@ def main():
     else:
         sys.exit("Unsupported operating system")
 
-    new_window = wd.Window(ctk, Frame, os)
+    app = run_app.Run()
+
+    new_window = wd.Window(ctk, Frame, os, app)
     new_window.create_window()
     window = new_window.root
+
+    app.load_app()
 
     window.mainloop()
 

@@ -1,7 +1,10 @@
 # front facing func
 
+"""
+    Builds the public facing interface
+"""
 class Ui_MainWindow(object):
-    def __init__(self, mainWindow, FrameObj):
+    def __init__(self, mainWindow, FrameObj, app):
         # Root Object
         self.root = mainWindow.root
         # Window Object
@@ -10,6 +13,8 @@ class Ui_MainWindow(object):
         self.ctk = self.mainWindow.ctk
         # frame object
         self.Frame = FrameObj
+
+        self.app = app
 
         # ui padding
         self.pad_y = 30
@@ -21,10 +26,19 @@ class Ui_MainWindow(object):
         self.img_width = 256
         self.img_height = 256
 
+        # variable string
+        self.string_var = self.ctk.StringVar()
+
+    '''
+        public setup call
+    '''
     def setupUi(self):
         self.__build_gui()
 
     # function to call all gui building function
+    '''
+        private call for inner funcs
+    '''
     def __build_gui(self):
         # Build
         self.__build_file_bar()
@@ -34,7 +48,10 @@ class Ui_MainWindow(object):
         self.__name_stat_frame()
         self.__type_frame()
 
-    # 'file' bar on top of app
+
+    '''
+        builds the 'file' bar
+    '''
     def __build_file_bar(self):
         file_bar = self.Frame(master=self.root, width=self.mainWindow.width, corner_radius=0)
         file_bar.grid(row=0, sticky="nwes", columnspan=3)
@@ -52,7 +69,9 @@ class Ui_MainWindow(object):
 
         # Add floating frame for options
 
-    # Build frame for window
+    '''
+        Build the img_frame for image container
+    '''
     def __build_img_frame(self):
         img_frame = self.Frame(master=self.root, height=self.img_height, width=self.img_width)
         img_frame.grid(row=1, column=0, pady=self.pad_y, padx=self.pad_x)
@@ -62,6 +81,9 @@ class Ui_MainWindow(object):
 
         return img_frame
 
+    '''
+        init call for name and stat block
+    '''
     def __name_stat_frame(self):
         frame = self.Frame(master=self.root, corner_radius=0, height=self.img_height)
         frame.grid(row=1, column=1, sticky="n", pady=self.pad_y)
@@ -72,13 +94,25 @@ class Ui_MainWindow(object):
         self.__name_plate(frame)
         self.__stat_frame(frame)
 
-
+    '''
+        builds the interactable name plate
+    '''
     def __name_plate(self, parentFrame):
-        name_plate = self.ctk.CTkButton(master=parentFrame, text="Name Plate", height=30, fg_color=self.color,
-                                        corner_radius=0, font=('Arial Bold', 18))
-        name_plate.grid(row=0, column=0, pady=5)
+        self.string_var.trace('w', self.__call_back)
 
+        # name_label = self.ctk.CTkLabel(master=parentFrame, text="Name:")
+        # name_label.grid(row=0, column=0, sticky="e")
 
+        name_plate = self.ctk.CTkEntry(master=parentFrame, textvariable=self.string_var, corner_radius=0,
+                                       width=self.img_width, fg_color="#3b3b3b", border_width=0, justify='center')
+        name_plate.grid(row=0, column=0, pady=5, sticky="wesn", padx=5)
+
+    def __call_back(self, *args):
+        self.app.search_string(self.string_var.get())
+
+    '''
+        builds the stat frame
+    '''
     def __stat_frame(self, parentFrame):
         stat = ['Base', 'HP', 'Attack', 'Defense', 'Special Attack', 'Special Defense', 'Speed']
         for i in range(1, 8):
@@ -91,9 +125,12 @@ class Ui_MainWindow(object):
             stat_name = self.ctk.CTkLabel(master=frame_1, text=stat[int(i - 1)] + ": ")
             stat_name.grid()
 
-            frame_2 = self.Frame(master=stat_frame, corner_radius=0, height=30, width=300, border_width=1)
+            frame_2 = self.Frame(master=stat_frame, corner_radius=0, height=30, width=300)
             frame_2.grid(row=i, column=2, sticky="")
 
+    '''
+        builds the type frame
+    '''
     def __type_frame(self):
         frame = self.Frame(master=self.root, corner_radius=0, height=self.img_height, width=self.img_width * 1.5)
         frame.grid(row=1, column=2, sticky="e", pady=self.pad_y, padx=self.pad_x)

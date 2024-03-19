@@ -2,13 +2,14 @@ from gui import gui
 
 
 class Window:
-    def __init__(self, ctk, FrameObj, os):
+    def __init__(self, ctk, FrameObj, os, app):
         self.width = 1200
         self.height = 800
         self.root = ctk.CTk()
         self.ctk = ctk
         self.Frame = FrameObj
         self.os = os
+        self.app = app
 
     def create_window(self):
         self.ctk.set_appearance_mode("dark")
@@ -34,5 +35,5 @@ class Window:
         self.root.columnconfigure(0, weight=0)
         self.root.rowconfigure(1, weight=0)
 
-        build_gui = gui.Ui_MainWindow(self, self.Frame)
+        build_gui = gui.Ui_MainWindow(self, self.Frame, self.app)
         build_gui.setupUi()
