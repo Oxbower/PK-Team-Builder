@@ -27,6 +27,7 @@ class Run:
         ImageTk.PhotoImage(image)
 
 
-    # k-tree search
     def search_string(self, string):
         print(self.pkmn[string])
+
+        # return all matching substring

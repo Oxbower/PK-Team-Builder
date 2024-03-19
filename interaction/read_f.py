@@ -32,10 +32,8 @@ def build_path(file_name):
 def unwrap_json(json_data):
     text = {}
     for i in json_data:
-        key = 0
-        for j in i.keys():
-            key = j
-        text[key] = dict(ele for sub in i.values() for ele in sub.items())
+        key = [j for j in i.keys()]
+        text[key[0]] = dict(ele for sub in i.values() for ele in sub.items())
 
     return text
 
@@ -52,6 +50,5 @@ def load_csv():
             d_ref[i] = val
 
     unwrapped_data = unwrap_json(d_ref[1])
-    print(unwrapped_data)
 
     return d_ref[0], unwrapped_data, d_ref[2], d_ref[3]
