@@ -3,6 +3,7 @@ import sys
 from PIL import ImageTk
 
 import interaction.read_f as rf
+import interaction.json_handler as ff
 
 
 class Run:
@@ -14,12 +15,10 @@ class Run:
 
     def load_app(self):
         # load all dependencies to RAM
-        try:
-            # move to a new class
-            self.types, self.pkmn, self.abilities, self.moves = rf.load_csv()
-            print("Loaded CSV")
-        except FileNotFoundError:
-            sys.exit("No CSV file found")
+        json_handler = ff.json_handler(rf, sys)
+
+        self.info = json_handler.json_load()
+
 
 
     # Bind image to frame
@@ -28,6 +27,13 @@ class Run:
 
 
     def search_string(self, string):
-        print(self.pkmn[string])
+        names = []
+        if self.info.pokemon.keys().__contains__(string):
+            print(self.info.pokemon[string])
+            return
+        for i in self.info.pokemon:
+            if str(i).find(string) != -1:
+                names.append(i)
 
+        print(f"\r {names}")
         # return all matching substring
