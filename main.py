@@ -8,7 +8,9 @@ from interaction import update as run_app
 
 
 def main():
-    # Switch to customTKinter
+    """
+    Main function to run app
+    """
     if os.name == "nt" or os.name == "posix":
         import customtkinter as ctk
     else:

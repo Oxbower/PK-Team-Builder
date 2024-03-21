@@ -1,6 +1,6 @@
 
 
-class json_handler():
+class JSONHandler:
     def __init__(self, rf, sys):
         self.rf = rf
         self.sys = sys
