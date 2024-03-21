@@ -1,47 +1,48 @@
 import json
 import os
 
-from PIL import Image
+from PIL import Image, ImageTk
 
-'''
-    Build os dependent path for image loader
-'''
+
 def build_img_ref(index):
-    build_href = os.path.join('pkdex-imgs', 'images') + index.lstrip('0') + '.jpg'
+    """
+        Build os dependent path for image loader
+    """
+    build_href = os.path.join('pkdex-imgs', 'images' + index.lstrip('0') + '.jpg')
     image = Image.open(build_href)
     return image
 
 
-'''
-    Build os dependent path for json
-'''
 def build_path(file_name):
-    str = os.path.join('data', file_name) + '.json'
+    """
+        Build os dependent path for json
+    """
+    ref_path = os.path.join('data', file_name) + '.json'
     try:
-        open(str, 'r').close()
-        print(str, 'successfully loaded')
+        open(ref_path, 'r').close()
+        print(ref_path, 'successfully loaded')
     except FileNotFoundError:
-        print('can\'t find', str)
+        print('can\'t find', ref_path)
 
-    return str
+    return ref_path
 
 
-'''
-    Fix json gen
-'''
 def unwrap_json(json_data):
+    """
+        Fix json gen
+    """
     text = {}
     for i in json_data:
-        key = [j for j in i.keys()]
+        key = [str.lower(j) for j in i.keys()]
         text[key[0]] = dict(ele for sub in i.values() for ele in sub.items())
 
     return text
 
 
-'''
-    Load JSON files into ram
-'''
 def load_csv():
+    """
+        Load JSON files into ram
+    """
     d_ref = ['types', 'pokemon', 'abilities', 'moves']
 
     for i in range(len(d_ref)):

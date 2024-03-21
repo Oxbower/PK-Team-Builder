@@ -35,5 +35,5 @@ class Window:
         self.root.columnconfigure(0, weight=0)
         self.root.rowconfigure(1, weight=0)
 
-        build_gui = gui.Ui_MainWindow(self, self.Frame, self.app)
-        build_gui.setupUi()
+        build_gui = gui.UI(self, self.Frame, self.app)
+        build_gui.setup_ui()

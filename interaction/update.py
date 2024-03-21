@@ -2,38 +2,41 @@ import sys
 
 from PIL import ImageTk
 
-import interaction.read_f as rf
-import interaction.json_handler as ff
+import interaction.read_f as read_file
+import interaction.jsonhandler as json_
 
 
 class Run:
     def __init__(self):
-        self.types = {}
-        self.pkmn = {}
-        self.abilities = {}
-        self.moves = {}
+        self.info = None
 
     def load_app(self):
         # load all dependencies to RAM
-        json_handler = ff.json_handler(rf, sys)
+        json_handler = json_.JSONHandler(read_file, sys)
 
         self.info = json_handler.json_load()
 
-
-
-    # Bind image to frame
-    def display_img(self, image):
-        ImageTk.PhotoImage(image)
-
+    def get_id(self, string):
+        return self.info.pokemon[string]["pkdex_id"]
 
     def search_string(self, string):
+        """
+        Adds searching functionality to name_plate
+        :param string: searching substring
+        :return names: array containing all names with substring
+        """
         names = []
-        if self.info.pokemon.keys().__contains__(string):
-            print(self.info.pokemon[string])
-            return
+        if string == "":
+            return names
+
+        new_case = str.lower(string)
+
         for i in self.info.pokemon:
-            if str(i).find(string) != -1:
+            if str(i).find(new_case) != -1:
                 names.append(i)
 
-        print(f"\r {names}")
-        # return all matching substring
+        if self.info.pokemon.keys().__contains__(new_case):
+            print(new_case, self.info.pokemon[new_case])
+            names = [new_case]
+
+        return names
