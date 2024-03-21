@@ -92,9 +92,7 @@ class UI:
             self.image_disp.pack()
             return
 
-
-
-    def __build_img_frame(self, img=None):
+    def __build_img_frame(self):
         """
         Build the img_frame for image container
         """
