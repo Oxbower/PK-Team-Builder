@@ -40,3 +40,6 @@ class Run:
             names = [new_case]
 
         return names
+
+    def update_stats(self, string):
+        return self.info.pokemon[string]

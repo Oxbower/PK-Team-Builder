@@ -1,5 +1,4 @@
-# In Progress
+# PK - Team Builder (In Progress)
+ Statistical analysis app for the Pokémon games
 
-Statistical analysis app for the Pokémon games
-
-not affiliated with The Pokémon Company
+Not affiliated with The Pokémon Company
