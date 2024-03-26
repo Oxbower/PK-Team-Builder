@@ -31,6 +31,9 @@ class UI:
         self.img_width = 256
         self.img_height = 256
 
+        self.name_stat_frame_height = 500
+        self.stat_subcategory_height = 40
+
         # variable string
         self.string_var = self.ctk.StringVar()
 
@@ -56,7 +59,8 @@ class UI:
         # Build image frame
         self.img_frame = self.__build_img_frame()
         self.__name_stat_frame()
-        self.__type_frame()
+        self.__subframe()
+        #self.__type_frame()
 
     def __build_file_bar(self):
         """
@@ -125,19 +129,31 @@ class UI:
         Build the img_frame for image container
         """
         img_frame = self.Frame(master=self.root, height=self.img_height, width=self.img_width)
-        img_frame.grid(row=1, column=0, pady=self.pad_y, padx=self.pad_x)
+        img_frame.grid(row=1, column=0, pady=(self.pad_y,0), padx=(self.pad_x, 0))
 
         # label = self.ctk.CTkLabel(master=img_frame, text='Image File', height=self.img_height, width=self.img_width)
         # label.pack()
 
+        #red frame
+        extend_frame = self.Frame(master=self.root, height=self.img_height - 50, width=50, fg_color="red")
+        extend_frame.grid(row=1, column=1, pady=(self.pad_y, 0), padx=(0, self.pad_x), sticky="w")
+
+        #blue frame
+        type_frame = self.Frame(master=self.root, height=50, width=self.img_width, fg_color="blue")
+        type_frame.grid(row=2, column=0, padx=(self.pad_x, 0), sticky="n")
+
         return img_frame
+
+    def __subframe(self):
+        frame = self.Frame(master=self.root, height=100, width=self.img_width, fg_color="pink")
+        frame.grid(row=3, column=0, pady=self.pad_y, padx=(self.pad_x, 0), sticky="n")
 
     def __name_stat_frame(self):
         """
         init call for name and stat block
         """
-        frame = self.Frame(master=self.root, corner_radius=0, height=self.img_height)
-        frame.grid(row=1, column=1, sticky="ns", pady=self.pad_y)
+        frame = self.Frame(master=self.root, corner_radius=15, height=self.name_stat_frame_height)
+        frame.grid(row=1, column=2, rowspan=3, sticky="n", pady=(self.pad_y, 0))
 
         frame.columnconfigure(0, weight=1)
         frame.rowconfigure(0, weight=1)
@@ -155,10 +171,10 @@ class UI:
         # name_label.grid(row=0, column=0, sticky="e")
 
         name_plate = self.ctk.CTkEntry(master=parentFrame, textvariable=self.string_var,
-                                       corner_radius=10, width=self.img_width,
-                                       fg_color="#3b3b3b", border_width=0,
-                                       justify='center')
-        name_plate.grid(row=0, column=0, pady=5, sticky=self.expand_all)
+                                       corner_radius=0, width=self.img_width,
+                                       height=40, fg_color="#3b3b3b",
+                                       border_width=0, justify='center')
+        name_plate.grid(row=0, column=0, sticky=self.expand_all)
 
     def __call_back(self, *args):
         # Remove focus add to selector
@@ -196,18 +212,18 @@ class UI:
         for i in range(1, 9):
             key = int(i - 1)
             # Builds outer frame
-            stat_frame = self.Frame(master=parentFrame, corner_radius=self.flat_corner, height=30)
+            stat_frame = self.Frame(master=parentFrame, corner_radius=self.flat_corner, height=self.stat_subcategory_height)
             stat_frame.grid(row=i, column=0, sticky="se", padx=10)
 
             # build inner frame_1 col 0
-            frame_1 = self.Frame(master=stat_frame, corner_radius=0, height=30)
+            frame_1 = self.Frame(master=stat_frame, corner_radius=0, height=self.stat_subcategory_height)
             frame_1.grid(row=i, column=1, sticky=self.expand_all)
 
             stat_name = self.ctk.CTkLabel(master=frame_1, text=key_list[key] + " ", font=self.font)
             stat_name.grid(sticky=self.expand_all)
 
             # Base Num
-            base_frame = self.Frame(master=stat_frame, corner_radius=self.flat_corner, height=30)
+            base_frame = self.Frame(master=stat_frame, corner_radius=self.flat_corner, height=self.stat_subcategory_height)
             base_frame.grid(row=i, column=2, sticky=self.expand_all)
 
             base_num = self.ctk.CTkLabel(master=base_frame, text="", width=50, font=self.font)
@@ -216,13 +232,13 @@ class UI:
             self.frame_dict[key_list[key]][0] = base_num
 
             # Build inner frame_2 col 1
-            bar_frame = self.Frame(master=stat_frame, corner_radius=self.flat_corner, height=30, width=300)
+            bar_frame = self.Frame(master=stat_frame, corner_radius=self.flat_corner, height=self.stat_subcategory_height, width=300)
             bar_frame.grid(row=i, column=3, sticky="")
 
             self.frame_dict[key_list[key]][1] = bar_frame
 
             # Min Num
-            min_frame = self.Frame(master=stat_frame, corner_radius=self.flat_corner, height=30)
+            min_frame = self.Frame(master=stat_frame, corner_radius=self.flat_corner, height=self.stat_subcategory_height)
             min_frame.grid(row=i, column=4, sticky=self.expand_all)
 
             min_num = self.ctk.CTkLabel(master=min_frame, text="", width=50, font=self.font)
@@ -231,7 +247,7 @@ class UI:
             self.frame_dict[key_list[key]][2] = min_num
 
             # Max Num
-            max_frame = self.Frame(master=stat_frame, corner_radius=self.flat_corner, height=30)
+            max_frame = self.Frame(master=stat_frame, corner_radius=self.flat_corner, height=self.stat_subcategory_height)
             max_frame.grid(row=i, column=5, sticky=self.expand_all)
 
             max_num = self.ctk.CTkLabel(master=max_frame, text="", width=50, font=self.font)
