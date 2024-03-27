@@ -1,4 +1,5 @@
 import interaction.read_f as read_file
+import gui.search_result as search_result
 
 """
     Builds the public facing interface
@@ -135,7 +136,7 @@ class UI:
         # label.pack()
 
         #red frame
-        extend_frame = self.Frame(master=self.root, height=self.img_height - 50, width=50, fg_color="red")
+        extend_frame = self.Frame(master=self.root, height=self.img_height, width=50, fg_color="red")
         extend_frame.grid(row=1, column=1, pady=(self.pad_y, 0), padx=(0, self.pad_x), sticky="w")
 
         #blue frame
@@ -161,7 +162,7 @@ class UI:
         self.__name_plate(frame)
         self.__stat_frame(frame)
 
-    def __name_plate(self, parentFrame):
+    def __name_plate(self, parent_frame):
         """
         builds the interactive name plate
         """
@@ -170,18 +171,33 @@ class UI:
         # name_label = self.ctk.CTkLabel(master=parentFrame, text="Name:")
         # name_label.grid(row=0, column=0, sticky="e")
 
-        name_plate = self.ctk.CTkEntry(master=parentFrame, textvariable=self.string_var,
+        name_plate = self.ctk.CTkEntry(master=parent_frame, textvariable=self.string_var,
                                        corner_radius=0, width=self.img_width,
                                        height=40, fg_color="#3b3b3b",
                                        border_width=0, justify='center')
         name_plate.grid(row=0, column=0, sticky=self.expand_all)
+
+        #self.searchHandler = search_result.SearchResult(self.Frame, self.ctk, parent_frame)
+
+    def __search_frame(self, parent_frame):
+        """
+        builds result of search box
+        :param parent_frame: __name_stat_frame parentFrame
+        :return: null
+        """
+        result = self.Frame(master=parent_frame, fg_color="#ffff00", height=50, width=500)
+        result.place(y=30)
+
+        self.searchHandler = search_result.SearchResult(self.Frame, self.ctk, result)
+
+
 
     def __call_back(self, *args):
         # Remove focus add to selector
         # self.root.focus_set()
         self.query_result = self.app.search_string(self.string_var.get())
 
-        print(self.query_result)
+        self.searchHandler.search(query_result=self.query_result)
 
         var = self.__display_img()
         if var:
@@ -259,6 +275,8 @@ class UI:
         for i in range(len(label)):
             if i != 1:
                 self.frame_dict[""][i].configure(text=label[i])
+
+        self.__search_frame(parent_frame=parentFrame)
 
     def __type_frame(self):
         """
