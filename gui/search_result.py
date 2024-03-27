@@ -17,19 +17,28 @@ class SearchResult:
         self.query_result = query_result
         self.__build_result_frame()
 
+    def __destroy_frame(self, widget):
+        widget.destroy()
+
     def __build_result_frame(self):
         """
         Build query output
-        :return:
+        :return: null
         """
 
         """
-        TODO: Flush the result area
+        TODO: Optimize search, (still) too slow
         """
 
+        # Flush the Frame
+        for i in self.result_frame.winfo_children():
+            self.__destroy_frame(i)
+
+        # Insert query result into frame
+        # Slow as fuck
         for i in range(len(self.query_result)):
-            frame_search = self.Frame(master=self.result_frame)
-            frame_search.grid(row=i, column=0, sticky="n")
+            frame_search = self.Frame(master=self.result_frame, width=self.result_frame.winfo_width())
+            frame_search.grid(row=i, column=0, sticky="ew", pady=3)
 
-            label = self.ctk.CTkLabel(frame_search, text=self.query_result[i])
-            label.grid(row=i, column=0)
+            label = self.ctk.CTkLabel(frame_search, text=self.query_result[i], width=self.result_frame.winfo_width())
+            label.grid(row=i, column=0, sticky="ew")

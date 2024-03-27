@@ -1,3 +1,4 @@
+import re
 import sys
 
 from PIL import ImageTk
@@ -8,6 +9,7 @@ import interaction.jsonhandler as json_
 
 class Run:
     def __init__(self):
+        self.root = None
         self.info = None
 
     def load_app(self):
@@ -29,15 +31,19 @@ class Run:
         if string == "":
             return names
 
+        # Search string
         new_case = str.lower(string)
 
         for i in self.info.pokemon:
-            if str(i).find(new_case) != -1:
+            str_builder = "^" + new_case
+            if re.search(str_builder, i):
                 names.append(i)
+            # if str(i).find(new_case) != -1:
+            #     names.append(i)
 
-        if self.info.pokemon.keys().__contains__(new_case):
-            print(new_case, self.info.pokemon[new_case])
-            names = [new_case]
+        # if self.info.pokemon.keys().__contains__(new_case):
+        #     print(new_case, self.info.pokemon[new_case])
+        #     names = [new_case]
 
         return names
 
