@@ -1,13 +1,11 @@
 import interaction.read_f as read_file
 import gui.search_result as search_result
-import interaction.keyHandler
-
-"""
-    Builds the public facing interface
-"""
 
 
 class UI:
+    """
+        Builds the public facing interface
+    """
     def __init__(self, mainWindow, FrameObj, app):
         # Root Object
         self.contains_img = False
@@ -206,9 +204,9 @@ class UI:
             self.result = self.ctk.CTkScrollableFrame(master=parent_frame,
                                                       fg_color="#3b3b3b",
                                                       width=parent_frame.winfo_width() - 25,
-                                                      height=150)
+                                                      height=150, corner_radius=0)
             self.result._scrollbar.configure(height=0)
-            self.result.place(y=50)
+            self.result.place(y=50,x=5)
             self.searchHandler = search_result.SearchResult(self.Frame, self.ctk, self.result)
         else:
             self.result.place_forget()
