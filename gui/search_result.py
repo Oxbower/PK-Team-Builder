@@ -37,8 +37,11 @@ class SearchResult:
         # Insert query result into frame
         # Slow as fuck
         for i in range(len(self.query_result)):
-            frame_search = self.Frame(master=self.result_frame, width=self.result_frame.winfo_width())
-            frame_search.grid(row=i, column=0, sticky="ew", pady=3)
+            frame_search = self.Frame(master=self.result_frame, width=self.result_frame.winfo_width(), corner_radius=0)
+            frame_search.grid(row=i, column=0, padx=(10, 0), sticky="ew", pady=3)
 
-            label = self.ctk.CTkLabel(frame_search, text=self.query_result[i], width=self.result_frame.winfo_width())
+            label = self.ctk.CTkLabel(master=frame_search,
+                                      text=self.query_result[i],
+                                      width=self.result_frame.winfo_width(),
+                                      corner_radius=0)
             label.grid(row=i, column=0, sticky="ew")

@@ -16,8 +16,10 @@ def main():
     else:
         sys.exit("Unsupported operating system")
 
+    # initialize
     app = run_app.Run()
 
+    # create window object
     new_window = wd.Window(ctk, Frame, os, app)
     new_window.create_window()
     window = new_window.root
