@@ -1,4 +1,6 @@
 import interaction.read_f as read_file
+import gui.search_result as search_result
+import interaction.keyHandler
 
 """
     Builds the public facing interface
@@ -48,6 +50,7 @@ class UI:
         public setup call
         """
         self.__build_gui()
+        self.root.bind_all("<Button-1>", lambda event: event.widget.focus_set())
 
     def __build_gui(self):
         """
@@ -107,6 +110,10 @@ class UI:
         self.frame_dict["Total"][0].configure(text=dict["base_total"])
 
     def __display_img(self):
+        """
+        display collected img
+        :return: null
+        """
         if len(self.query_result) == 1:
             print("Found Image")
             pkdex_id = self.app.get_id(str(self.query_result[0]))
@@ -135,7 +142,7 @@ class UI:
         # label.pack()
 
         #red frame
-        extend_frame = self.Frame(master=self.root, height=self.img_height - 50, width=50, fg_color="red")
+        extend_frame = self.Frame(master=self.root, height=self.img_height, width=50, fg_color="red")
         extend_frame.grid(row=1, column=1, pady=(self.pad_y, 0), padx=(0, self.pad_x), sticky="w")
 
         #blue frame
@@ -158,34 +165,71 @@ class UI:
         frame.columnconfigure(0, weight=1)
         frame.rowconfigure(0, weight=1)
 
-        self.__name_plate(frame)
+        self.__search_bar(frame)
         self.__stat_frame(frame)
 
-    def __name_plate(self, parentFrame):
+    def __search_bar(self, parent_frame):
         """
-        builds the interactive name plate
+        builds search bar
         """
-        self.string_var.trace('w', self.__call_back)
 
         # name_label = self.ctk.CTkLabel(master=parentFrame, text="Name:")
         # name_label.grid(row=0, column=0, sticky="e")
 
-        name_plate = self.ctk.CTkEntry(master=parentFrame, textvariable=self.string_var,
+        name_plate = self.ctk.CTkEntry(master=parent_frame, textvariable=self.string_var,
                                        corner_radius=0, width=self.img_width,
                                        height=40, fg_color="#3b3b3b",
                                        border_width=0, justify='center')
         name_plate.grid(row=0, column=0, sticky=self.expand_all)
 
-    def __call_back(self, *args):
+        self.string_var.trace('w', self.__call_back)
+
+        # bind focus to name_plate
+        name_plate.bind("<FocusIn>", lambda event: self.__focus(name_plate, parent_frame, True))
+        name_plate.bind("<FocusOut>", lambda event: self.__focus(name_plate, parent_frame, False))
+
+    def __focus(self, _widget, parentFrame, isFocused):
+        if isFocused:
+            self.__search_frame(parent_frame=parentFrame, inst="build")
+        else:
+            self.__search_frame(parent_frame=parentFrame, inst="destroy")
+
+    def __search_frame(self, parent_frame, inst):
+        """
+        builds result of search box
+        :param parent_frame: __name_stat_frame parentFrame
+        :return: null
+        """
+        if inst == "build":
+            # build result frame
+            # pass result frame to searchHandler
+            self.result = self.ctk.CTkScrollableFrame(master=parent_frame,
+                                                      fg_color="#3b3b3b",
+                                                      width=parent_frame.winfo_width() - 25,
+                                                      height=150)
+            self.result._scrollbar.configure(height=0)
+            self.result.place(y=50)
+            self.searchHandler = search_result.SearchResult(self.Frame, self.ctk, self.result)
+        else:
+            self.result.place_forget()
+
+    def __call_back(self, var, index, mode):
         # Remove focus add to selector
         # self.root.focus_set()
+
+        # build result bar
+        #self.__focus(name_plate, parent_frame, True)
+
+        # grep all strings w/ same substring
         self.query_result = self.app.search_string(self.string_var.get())
 
-        print(self.query_result)
+        # handle search
+        self.searchHandler.search(query_result=self.query_result)
 
-        var = self.__display_img()
-        if var:
-            self.__update_stats(self.query_result[0])
+        # for testing
+        # var = self.__display_img()
+        # if var:
+        #     self.__update_stats(self.query_result[0])
 
     def __stat_frame(self, parentFrame):
         """
