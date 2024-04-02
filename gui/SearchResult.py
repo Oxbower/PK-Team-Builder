@@ -1,4 +1,4 @@
-import gui.gui
+import gui.Gui
 
 
 class SearchResult:
@@ -24,10 +24,6 @@ class SearchResult:
         """
         Build query output
         :return: null
-        """
-
-        """
-        TODO: Optimize search, (still) too slow
         """
 
         # Flush the Frame

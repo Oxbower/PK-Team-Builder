@@ -3,8 +3,8 @@ import sys
 
 from PIL import ImageTk
 
-import interaction.read_f as read_file
-import interaction.jsonhandler as json_
+import interaction.ReadFiles as read_file
+import interaction.JsonHandler as json_
 
 
 class Run:
@@ -38,12 +38,6 @@ class Run:
             str_builder = "^" + new_case
             if re.search(str_builder, i):
                 names.append(i)
-            # if str(i).find(new_case) != -1:
-            #     names.append(i)
-
-        # if self.info.pokemon.keys().__contains__(new_case):
-        #     print(new_case, self.info.pokemon[new_case])
-        #     names = [new_case]
 
         return names
 
