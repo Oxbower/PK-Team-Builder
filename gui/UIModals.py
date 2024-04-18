@@ -14,7 +14,9 @@ class UIModals:
         self.gui = gui
 
         self.string_var = self.ctk.StringVar()
-        self.modal_interact = ModalInteraction.ModalInteraction(self.string_var)
+
+        # instantiate modal_interact class can only be accessed by UIModals
+        self.modal_interact = ModalInteraction.ModalInteraction(self.string_var, gui, ctk, mainWindow, Frame)
 
         '''
         Holds modal references for update
@@ -41,14 +43,14 @@ class UIModals:
         modals = ['File', 'Options']
 
         # build buttons for file bar
-        for i in range(len(modals)):
+        for index, _ in enumerate(modals):
             file = self.ctk.CTkButton(master=parentFrame,
-                                      text=modals[i],
+                                      text=modals[index],
                                       width=50,
                                       corner_radius=0,
                                       fg_color=self.gui.dark_grey,
                                       font=self.gui.font)
-            file.grid(row=0, column=i)
+            file.grid(row=0, column=index)
 
     def build_search_bar_modal(self, parentFrame):
         """
@@ -67,6 +69,8 @@ class UIModals:
                                        font=("Helvetica", 20, "bold"))
 
         name_plate.grid(row=0, column=0, sticky=self.gui.expand_all)
+
+        self.modal_interact.set_search_modal_frame(parentFrame)
 
         self.string_var.trace('w', self.modal_interact.search_bar_callback)
 

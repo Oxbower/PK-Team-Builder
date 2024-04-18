@@ -1,4 +1,3 @@
-import gui.SearchResult as SearchR
 import gui.UIModals as modals
 
 

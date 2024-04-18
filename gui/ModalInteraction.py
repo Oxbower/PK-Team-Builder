@@ -1,7 +1,19 @@
+import interaction.SearchResult as SearchResult
+import gui.ModalUpdate as ModalUpdate
+
+
 class ModalInteraction:
-    def __init__(self, stringVar):
+    def __init__(self, stringVar, gui, ctk, mainWindow, Frame):
+        # Updated String need to keep track of
         self.string_var = stringVar
-        pass
+
+        self.searchFrame = None
+
+        self.searchAlgorithm = SearchResult.SearchResult()
+        self.modalUpdate = ModalUpdate.ModalUpdate(gui, ctk, mainWindow, Frame)
+
+    def set_search_modal_frame(self, Frame):
+        self.searchFrame = Frame
 
     def search_bar_callback(self, *args):
         """
@@ -9,22 +21,25 @@ class ModalInteraction:
         :param args: None
         :return: None
         """
+        search_string = self.string_var.get()
 
-        print(self.string_var.get())
-        pass
+        # build the list containing all matches of string
+        search_string = self.searchAlgorithm.build_search_list(search_string)
 
-    def __call_back(self, *args):
+        # pass in the list to build result frame from
+        self.modalUpdate.build_search_result(search_string, self.searchFrame)
+
+    #def __call_back(self, *args):
         # Remove focus add to selector
         # self.root.focus_set()
 
         # build result bar
-        # self.__focus(name_plate, parent_frame, True)
-
+        # self.__focus(name_plate, parent_fr
         # grep all strings w/ same substring
-        self.query_result = self.app.search_string(self.string_var.get())
+        #self.query_result = self.app.search_string(self.string_var.get())
 
         # handle search
-        self.searchHandler.search(query_result=self.query_result)
+        #self.searchHandler.search(query_result=self.query_result)
 
         # for testing
         # var = self.__display_img()

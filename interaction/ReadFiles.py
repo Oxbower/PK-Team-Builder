@@ -6,7 +6,7 @@ from PIL import Image
 
 def build_img_ref(index):
     """
-        Build os dependent path for image loader
+    Build os dependent path for image loader
     """
     build_href = os.path.join('pkdex-imgs', 'images' + index.lstrip('0') + '.jpg')
     image = Image.open(build_href)
@@ -15,7 +15,7 @@ def build_img_ref(index):
 
 def build_path(file_name):
     """
-        Build os dependent path for json
+    Build os dependent path for json
     """
     ref_path = os.path.join('data', file_name) + '.json'
     try:
@@ -29,7 +29,7 @@ def build_path(file_name):
 
 def unwrap_json(json_data):
     """
-        Fix json gen
+    Fix json gen
     """
     text = {}
     for i in json_data:
@@ -41,7 +41,7 @@ def unwrap_json(json_data):
 
 def load_csv():
     """
-        Load JSON files into ram
+    Load JSON files into ram
     """
     d_ref = ['types', 'pokemon', 'abilities', 'moves']
 
