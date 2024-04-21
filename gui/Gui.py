@@ -60,7 +60,7 @@ class UI:
         self.__build_gui()
 
         # allow user to focus on all widgets
-        self.root.bind_all("<Button-1>", lambda event: event.widget.focus_set())  # redo later
+        #self.root.bind_all("<Button-1>", lambda event: event.widget.focus_set())  # redo later
 
     def __build_gui(self):
         """
