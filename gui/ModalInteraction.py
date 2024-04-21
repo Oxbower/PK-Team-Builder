@@ -15,6 +15,11 @@ class ModalInteraction:
         self.modalUpdate = ModalUpdate.ModalUpdate(gui, ctk, mainWindow, Frame, self)
 
     def set_search_modal_frame(self, Frame):
+        """
+        Set search frame after it was built
+        :param Frame: search frame widget
+        :return: None
+        """
         self.searchFrame = Frame
 
     def search_bar_callback(self, *args):

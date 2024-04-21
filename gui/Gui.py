@@ -54,6 +54,7 @@ class UI:
     def setup_ui(self):
         """
         Public facing setup call for gui
+        :return: None
         """
 
         # call gui builder
@@ -65,6 +66,7 @@ class UI:
     def __build_gui(self):
         """
         Builds the frame to put stuff in
+        :return: None
         """
 
         # Build top bar
@@ -80,7 +82,7 @@ class UI:
         item_ability_frame = self.__item_ability_frame()
 
         '''
-        Builds the modals using the parentFrames
+        Builds the modals using the parentFrames created by the build_.*_frame methods
         '''
         self.modals.build_file_modals(file_bar_frame)
 
@@ -91,6 +93,7 @@ class UI:
     def __build_file_bar(self):
         """
         Builds the 'file' bar i.e. the strip on top with file, options, etc
+        :return: None
         """
 
         # Builds frame for 'file' area
@@ -108,6 +111,7 @@ class UI:
     def __build_img_frame(self):
         """
         Build the img_frame for image container
+        :return: None
         """
 
         img_frame = self.Frame(master=self.root,
@@ -183,6 +187,7 @@ class UI:
     def __type_frame(self):
         """
         builds the type frame
+        :return: created frame
         """
         frame = self.Frame(master=self.root, corner_radius=0, height=self.img_height, width=self.img_width * 1.5)
         frame.grid(row=1, column=2, sticky="e", pady=self.pad_y, padx=self.pad_x)
