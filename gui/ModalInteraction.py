@@ -25,11 +25,15 @@ class ModalInteraction:
         """
         search_string = self.string_var.get()
 
-        # build the list containing all matches of string
-        search_string = self.searchAlgorithm.build_search_list(search_string)
+        if search_string is "":
+            print("Empty String")
+            self.modalUpdate.destroy_result_frame()
+        else:
+            # build the list containing all matches of string
+            search_string = self.searchAlgorithm.build_search_list(search_string)
 
-        # pass in the list to build result frame from
-        self.modalUpdate.build_search_result(search_string, self.searchFrame)
+            # pass in the list to build result frame from
+            self.modalUpdate.build_search_result(search_string, self.searchFrame)
 
     def clicked_button(self, string):
         """
@@ -39,24 +43,8 @@ class ModalInteraction:
         """
         print(string)
 
+        self.string_var.set(string)
+
         self.mainWindow.root.focus_set()
         # destroy result frame
         self.modalUpdate.destroy_result_frame()
-
-
-    #def __call_back(self, *args):
-        # Remove focus add to selector
-        # self.root.focus_set()
-
-        # build result bar
-        # self.__focus(name_plate, parent_fr
-        # grep all strings w/ same substring
-        #self.query_result = self.app.search_string(self.string_var.get())
-
-        # handle search
-        #self.searchHandler.search(query_result=self.query_result)
-
-        # for testing
-        # var = self.__display_img()
-        # if var:
-        #     self.__update_stats(self.query_result[0])

@@ -17,17 +17,19 @@ class ModalUpdate:
     def build_search_result(self, result_list, parentFrame):
         """
         Builds search result
+        :param result_list: list to build search result for
+        :param parentFrame: parentFrame for this class so stat_frame
+        :return: None
         """
 
+        # destroy container frame to stop filling up heap
         if self.container_frame is not None:
             self.container_frame.destroy()
 
         frame_width = parentFrame.winfo_width()
 
         # Work around to destroy scrollable frame, it's a known issue on Github #2266
-        self.container_frame = self.Frame(master=parentFrame,
-                                          width=0)
-
+        self.container_frame = self.Frame(master=parentFrame, width=0)
         # place the container in the stat frame at fixed location
         self.container_frame.place(y=55, x=5)
 
@@ -37,7 +39,7 @@ class ModalUpdate:
     def destroy_result_frame(self):
         """
         Destroy frame after user has chosen a result
-        :return:
+        :return: None
         """
         try:
             self.container_frame.destroy()

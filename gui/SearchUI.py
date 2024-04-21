@@ -53,6 +53,9 @@ class SearchUI:
         Build query output
         :return: null
         """
+        for index, value in enumerate(query_result):
+            capitalized = value.title()
+            query_result[index] = capitalized
 
         # Flush the Frame
         if self.result_frame is not None:
