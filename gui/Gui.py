@@ -23,7 +23,7 @@ class UI:
         # frame object
         self.Frame = FrameObj
 
-        # app class
+        # modal class
         self.modals = modals.UIModals(self, self.ctk, self.mainWindow, self.Frame)
 
         # ui settings
@@ -81,6 +81,15 @@ class UI:
         # build items and ability frame
         item_ability_frame = self.__item_ability_frame()
 
+        # build variations frame
+        variation_frame = self.__build_variation_frame()
+
+        # build type frame
+        type_frame = self.__build_type_frame()
+
+        # build moves frame
+        move_frame = self.__build_moves_frame()
+
         '''
         Builds the modals using the parentFrames created by the build_.*_frame methods
         '''
@@ -89,6 +98,8 @@ class UI:
         self.modals.build_search_bar_modal(search_stat_frame)
 
         self.modals.build_stat_modal(search_stat_frame)
+
+        self.modals.build_move_modal(move_frame)
 
     def __build_file_bar(self):
         """
@@ -122,6 +133,9 @@ class UI:
                        pady=(self.pad_y, 0),
                        padx=(self.pad_x, 0))
 
+        return img_frame
+
+    def __build_variation_frame(self):
         # variations frame
         extend_frame = self.Frame(master=self.root,
                                   height=self.img_height,
@@ -133,7 +147,10 @@ class UI:
                           padx=(0, self.pad_x),
                           sticky="w")
 
-        # ability & items frame
+        return extend_frame
+
+    def __build_type_frame(self):
+        # type frame
         type_frame = self.Frame(master=self.root,
                                 height=50,
                                 width=self.img_width,
@@ -143,7 +160,19 @@ class UI:
                         padx=(self.pad_x, 0),
                         sticky="n")
 
-        return img_frame
+        return type_frame
+
+    def __build_moves_frame(self):
+        """
+        Build container for move modals
+        :return: created frame
+        """
+        frame = self.Frame(master=self.root,
+                           width=400)
+        frame.grid(row=4,
+                   column=2)
+
+        return frame
 
     def __build_info_frame(self):
         """
@@ -181,17 +210,5 @@ class UI:
                    pady=self.pad_y,
                    padx=(self.pad_x, 0),
                    sticky="n")
-
-        return frame
-
-    def __type_frame(self):
-        """
-        builds the type frame
-        :return: created frame
-        """
-        frame = self.Frame(master=self.root, corner_radius=0, height=self.img_height, width=self.img_width * 1.5)
-        frame.grid(row=1, column=2, sticky="e", pady=self.pad_y, padx=self.pad_x)
-
-        frame.columnconfigure(0, weight=1)
 
         return frame

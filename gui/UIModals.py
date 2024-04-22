@@ -37,6 +37,7 @@ class UIModals:
     def build_file_modals(self, parentFrame):
         """
         Build file modals
+        :param parentFrame: which frame to draw modals on
         :return: None
         """
 
@@ -55,7 +56,7 @@ class UIModals:
     def build_search_bar_modal(self, parentFrame):
         """
         Build the search bar modal
-        :param parentFrame:
+        :param parentFrame: which frame to draw modals on
         :return: None
         """
         name_plate = self.ctk.CTkEntry(master=parentFrame,
@@ -63,7 +64,7 @@ class UIModals:
                                        corner_radius=0,
                                        width=self.gui.img_width,
                                        height=50,
-                                       fg_color=self.gui.light_grey,
+                                       fg_color="#2e2e2e",
                                        border_width=0,
                                        justify='center',
                                        font=("Helvetica", 20, "bold"))
@@ -74,9 +75,38 @@ class UIModals:
 
         self.string_var.trace('w', self.modal_interact.search_bar_callback)
 
-        # bind focus to name_plate
-        #name_plate.bind("<FocusIn>", lambda event: self.__focus(name_plate, parentFrame, True))
-        #name_plate.bind("<FocusOut>", lambda event: self.__focus(name_plate, parentFrame, False))
+    def build_variation_modal(self, parentFrame):
+        """
+        Needs information about diff variation
+        :param parentFrame:
+        :return:
+        """
+        pass
+
+    def build_type_modal(self, parentFrame):
+        """
+        builds modal holding diff types
+        :param parentFrame: parent frame to hold modal
+        :return:
+        """
+        pass
+
+    def build_move_modal(self, parentFrame):
+        """
+        build move modals
+        :param parentFrame: parent frame to hold modals
+        :return: None
+        """
+        for row in range(2):
+            for col in range(2):
+                modal = self.Frame(master=parentFrame,
+                                   height=70,
+                                   fg_color="#2e2e2e")
+
+                modal.grid(row=row,
+                           column=col,
+                           padx=10,
+                           pady=10)
 
     def build_stat_modal(self, parentFrame):
         """
