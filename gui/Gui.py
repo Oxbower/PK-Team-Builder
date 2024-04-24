@@ -174,6 +174,13 @@ class UI:
 
         return frame
 
+    def __build_type_adv_frame(self):
+        frame = self.Frame(master=self.root)
+        frame.grid(row=4,
+                   column=1,
+                   columnspan=2)
+        return frame
+
     def __build_info_frame(self):
         """
         Builds the frame that will hold the stats and search bar
