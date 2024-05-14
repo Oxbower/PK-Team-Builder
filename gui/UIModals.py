@@ -18,6 +18,8 @@ class UIModals:
         # instantiate modal_interact class can only be accessed by UIModals
         self.modal_interact = ModalInteraction.ModalInteraction(self.string_var, gui, ctk, mainWindow, Frame)
 
+        self.types = [0, 0]
+
         '''
         Holds modal references for update
         
@@ -61,7 +63,7 @@ class UIModals:
         """
         name_plate = self.ctk.CTkEntry(master=parentFrame,
                                        textvariable=self.string_var,
-                                       corner_radius=0,
+                                       corner_radius=50,
                                        width=self.gui.img_width,
                                        height=50,
                                        fg_color="#2e2e2e",
@@ -69,7 +71,12 @@ class UIModals:
                                        justify='center',
                                        font=("Helvetica", 20, "bold"))
 
-        name_plate.grid(row=0, column=0, sticky=self.gui.expand_all)
+        name_plate.grid(row=0,
+                        column=0,
+                        padx=10,
+                        pady=10,
+                        sticky=self.gui.expand_all,
+                        )
 
         self.modal_interact.set_search_modal_frame(parentFrame)
 
@@ -77,36 +84,103 @@ class UIModals:
 
     def build_variation_modal(self, parentFrame):
         """
-        Needs information about diff variation
-        :param parentFrame:
-        :return:
+        Needs information about diff variation handled by modal update
+        :param parentFrame: parentFrame to hold modal
+        :return: None
         """
+
         pass
+
+    def build_item_ability_modal(self, parentFrame):
+        """
+        build selection modal for possible abilities and all items
+        :param parentFrame: parentFrame to hold modal
+        :return: None
+        """
+        max_width = parentFrame.cget("width")
+
+        # build ability modal (open separate window for selection)
+        ability = self.ctk.CTkButton(master=parentFrame,
+                                     text="Abilities",
+                                     fg_color="#2a2a2a",
+                                     hover_color=self.gui.hover_color,
+                                     cursor="hand2",
+                                     height=45,
+                                     width=max_width-10)
+
+        ability.grid(row=0,
+                     pady=5,
+                     padx=5)
+
+        # build item modal (open separate window for selection)
+        items = self.ctk.CTkButton(master=parentFrame,
+                                   text="Items",
+                                   fg_color="#2a2a2a",
+                                   hover_color=self.gui.hover_color,
+                                   cursor="hand2",
+                                   height=45,
+                                   width=max_width-10)
+        items.grid(row=1,
+                   pady=(0, 5),
+                   padx=5)
 
     def build_type_modal(self, parentFrame):
         """
-        builds modal holding diff types
+        builds modal holding this pokemons diff types
         :param parentFrame: parent frame to hold modal
-        :return:
+        :return: None
         """
-        pass
+        max_height = parentFrame.cget("height")
+
+        # build type frame, store frame inside types to allow modalUpdate to access on change
+
+        for index, value in enumerate(self.types):
+            frame = self.Frame(master=parentFrame,
+                               height=max_height - 10,
+                               width=(self.gui.img_width / 2) - 10
+                               )
+
+            frame.grid(row=0,
+                       column=index,
+                       padx=5,
+                       pady=5)
+
+            self.types[index] = frame
 
     def build_move_modal(self, parentFrame):
         """
-        build move modals
+        build move modals limited to things that only this pokemon can learn in gen-9
         :param parentFrame: parent frame to hold modals
         :return: None
         """
+        label = self.ctk.CTkLabel(master=parentFrame,
+                                  text="Moves",
+                                  font=("Helvetica", 20, "bold")
+                                  )
+        label.grid(row=0,
+                   column=0,
+                   sticky="w",
+                   padx=10,
+                   pady=7)
+
         for row in range(2):
             for col in range(2):
-                modal = self.Frame(master=parentFrame,
-                                   height=70,
-                                   fg_color="#2e2e2e")
+                modal = self.ctk.CTkButton(master=parentFrame,
+                                           text="Move " + str((row + (col + row)) + 1),
+                                           cursor="hand2",
+                                           corner_radius=50,
+                                           hover_color=self.gui.hover_color,
+                                           width=200,
+                                           height=90,
+                                           # border_width=2,
+                                           # border_color="#5a5a5a",
+                                           fg_color="#2e2e2e")
 
-                modal.grid(row=row,
+                modal.grid(row=int(row + 1),
                            column=col,
-                           padx=10,
-                           pady=10)
+                           padx=5,
+                           pady=(0, 10),
+                           sticky="nsew")
 
     def build_stat_modal(self, parentFrame):
         """
@@ -155,10 +229,10 @@ class UIModals:
                 if col == 0:
                     label.configure(text=row_label[row - 1])
                 elif col == 2:
-                    # store frame for updates into stats_modal
+                    # store frame to allow updates into stats_modal array
                     self.stats_widget[row_label[row_key]][col - 1] = frame
                 else:
-                    # store label for updates into stats_modal
+                    # store label to allow updates into stats_modal array
                     self.stats_widget[row_label[row_key]][col - 1] = label
 
         # Build column Labels

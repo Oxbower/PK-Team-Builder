@@ -4,7 +4,7 @@ import gui.ModalUpdate as ModalUpdate
 
 class ModalInteraction:
     def __init__(self, stringVar, gui, ctk, mainWindow, Frame):
-        # Updated String need to keep track of
+        # Updated String (need to keep track of)
         self.string_var = stringVar
 
         self.searchFrame = None

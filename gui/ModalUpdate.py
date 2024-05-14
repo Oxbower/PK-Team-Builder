@@ -31,7 +31,7 @@ class ModalUpdate:
         # Work around to destroy scrollable frame, it's a known issue on Github #2266
         self.container_frame = self.Frame(master=parentFrame, width=0)
         # place the container in the stat frame at fixed location
-        self.container_frame.place(y=55, x=5)
+        self.container_frame.place(y=70, x=25)
 
         # build result frame
         self.SearchUI.build_frame(result_list, self.container_frame, frame_width)
