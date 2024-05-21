@@ -23,7 +23,7 @@ class SearchUI:
         # Build the scrollable frame
         self.result_frame = self.ctk.CTkScrollableFrame(master=parentFrame,
                                                         fg_color="#3b3b3b",
-                                                        width=frame_width - 25,
+                                                        width=frame_width - 70,
                                                         height=150,
                                                         corner_radius=self.gui.flat_corner)
 
@@ -68,7 +68,7 @@ class SearchUI:
                                        text=value,
                                        fg_color="#2b2b2b",
                                        hover_color="#353535",
-                                       width=frame_width-35,
+                                       width=frame_width-80,
                                        height=50,
                                        command=lambda string=value: self.modalInteract.clicked_button(string),
                                        corner_radius=self.gui.rounded_corner)

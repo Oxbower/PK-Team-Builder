@@ -8,7 +8,7 @@ class Window:
     """
     def __init__(self, ctk, os, app):
         # window dimensions
-        self.width = 1200
+        self.width = 1000
         self.height = 800
 
         # ctk object
