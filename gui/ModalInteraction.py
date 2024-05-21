@@ -30,7 +30,7 @@ class ModalInteraction:
         """
         search_string = self.string_var.get()
 
-        if search_string is "":
+        if search_string == "":
             print("Empty String")
             self.modalUpdate.destroy_result_frame()
         else:

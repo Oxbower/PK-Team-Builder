@@ -119,6 +119,8 @@ class UI:
 
         self.modals.build_item_ability_modal(item_ability_frame)
 
+        self.modals.build_type_adv_modal(type_adv_frame)
+
     def __build_file_bar(self):
         """
         Builds the 'file' bar i.e. the strip on top with file, options, etc
@@ -169,14 +171,13 @@ class UI:
 
     def __build_type_frame(self):
         """
-        the chosen pokemons type
+        the chosen pokemon's type
         :return: created frame
         """
         # type frame
         type_frame = self.Frame(master=self.root,
                                 height=50,
-                                width=self.img_width,
-                                fg_color="blue")
+                                width=self.img_width)
 
         type_frame.grid(row=2,
                         column=0,
@@ -195,7 +196,6 @@ class UI:
         frame.grid(row=4,
                    column=2,
                    padx=(0, self.pad_x),
-                   rowspan=3,
                    sticky="ne")
 
         return frame
@@ -207,8 +207,7 @@ class UI:
         """
         frame = self.Frame(master=self.root,
                            width=460,
-                           height=280,
-                           fg_color='yellow')
+                           height=300)
         frame.grid(row=4,
                    column=0,
                    padx=(self.pad_x, 0),
@@ -246,12 +245,11 @@ class UI:
         """
         frame = self.Frame(master=self.root,
                            height=100,
-                           width=self.img_width + 50,
-                           fg_color="pink")
+                           width=self.img_width + 50)
         frame.grid(row=3,
                    column=0,
                    columnspan=2,
-                   pady=20,
+                   pady=10,
                    padx=(self.pad_x, 0),
                    sticky="nw")
 

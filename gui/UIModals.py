@@ -20,6 +20,8 @@ class UIModals:
 
         self.types = [0, 0]
 
+        self.types_adv = [0, 0]
+
         '''
         Holds modal references for update
         
@@ -146,6 +148,42 @@ class UIModals:
                        pady=5)
 
             self.types[index] = frame
+
+    def build_type_adv_modal(self, parentFrame):
+        """
+        builds modal which shows current pokemon's defensive strength and weaknesses
+        :param parentFrame: parent frame to hold modals
+        :return: None
+        """
+
+        # get the dimensions of this parent frame
+        max_height = parentFrame.cget("height")
+        max_width = parentFrame.cget("width")
+
+        for index, value in enumerate(self.types_adv):
+            frame = self.Frame(master=parentFrame,
+                               height=max_height - 10,
+                               width=(max_width / 2) - 10,
+                               fg_color="#2a2a2a"
+                               )
+
+            frame.grid(row=0,
+                       column=index,
+                       padx=5,
+                       pady=5)
+
+            self.types_adv[index] = frame
+
+        # for index in range(10):
+        #     frame = self.Frame(master=self.types_adv[0],
+        #                        height=(max_height / 10) - 5,
+        #                        fg_color="white"
+        #                        )
+        #
+        #     frame.grid(row=index,
+        #                column=0,
+        #                pady=2,
+        #                padx=2)
 
     def build_move_modal(self, parentFrame):
         """
