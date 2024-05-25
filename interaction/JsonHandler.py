@@ -1,5 +1,6 @@
 import interaction.ReadFiles as read_file
 import sys
+from os import listdir
 
 
 class JSONHandler:
@@ -10,6 +11,7 @@ class JSONHandler:
         self.types = 0
         self.moves = 0
         self.abilities = 0
+        self.pokemon_names = listdir("pokemon-artwork")
 
     def json_load(self):
         """
@@ -23,3 +25,10 @@ class JSONHandler:
             self.sys.exit("No JSON file found")
 
         return self
+
+    def load_image_directory(self):
+        """
+        Loads image directory from 'pokemon-artwork' folder
+        :return: self
+        """
+        return self.pokemon_names

@@ -10,7 +10,8 @@ class SearchResult:
     """
     def __init__(self):
         self.json = json_.JSONHandler()
-        self.info = self.json.json_load().pokemon
+        self.names = self.json.load_image_directory()
+
         pass
 
     def build_search_list(self, search_string):
@@ -37,7 +38,7 @@ class SearchResult:
         # Search string
         new_case = str.lower(string)
 
-        for i in self.info:
+        for i in self.names:
             # regex looking for strings that match the start
             str_builder = "^" + new_case
 
