@@ -1,5 +1,9 @@
+from tkinter import StringVar
+
 import interaction.SearchResult as SearchResult
 import gui.ModalUpdate as ModalUpdate
+
+import time
 
 
 class ModalInteraction:
@@ -22,6 +26,28 @@ class ModalInteraction:
         """
         self.searchFrame = Frame
 
+    def set_img_frame(self, Frame):
+        """
+        Set Image frame
+        :param Frame: parentFrame for image container
+        :param imgFrame: Frame to manipulate when displaying new image
+        :return: None
+        """
+        self.modalUpdate.set_img_frame(Frame)
+
+    def set_variation_frame(self, Frame):
+        """
+        Sets the variation frame to be dynamic depending on how many variations a pokemon has
+        :param Frame: the frame container
+        :return: None
+        """
+        self.modalUpdate.set_variation_frame(Frame, self.set_string_var)
+
+    def set_string_var(self, string):
+        self.string_var.set(string)
+        # destroy result frame
+        self.modalUpdate.destroy_result_frame()
+
     def search_bar_callback(self, *args):
         """
         Handles search bar inputs to do string searches
@@ -40,16 +66,20 @@ class ModalInteraction:
             # pass in the list to build result frame from
             self.modalUpdate.build_search_result(search_string, self.searchFrame)
 
-    def clicked_button(self, string):
+    def clicked_search_query(self, string):
         """
         Detect when any of the search results are clicked
         :param string: name of the clicked result
         :return: null
         """
-        print(string)
-
         self.string_var.set(string)
+        self.modalUpdate.build_path_ref(string)
 
         self.mainWindow.root.focus_set()
         # destroy result frame
         self.modalUpdate.destroy_result_frame()
+
+    def clicked_variation_button(self, parentFrame, parentButton, image_ref):
+        self.mainWindow.root.focus_set()
+
+        self.modalUpdate.build_dynamic_variation_button(parentFrame, parentButton, image_ref)

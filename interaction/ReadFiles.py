@@ -4,13 +4,16 @@ import os
 from PIL import Image
 
 
-def build_img_ref(index):
+def build_img_ref(inner_path):
     """
     Build os dependent path for image loader
     """
-    build_href = os.path.join('pkdex-imgs', 'images' + index.lstrip('0') + '.jpg')
-    image = Image.open(build_href)
-    return image
+    path = []
+    build_href = os.path.join('pokemon-artwork', inner_path)
+    for i in os.listdir(build_href):
+        path.append(os.path.join(build_href, i))
+
+    return path
 
 
 def build_path(file_name):

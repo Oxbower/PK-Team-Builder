@@ -103,6 +103,9 @@ class UI:
         # build modals for the file bar
         self.modals.build_file_modals(file_bar_frame)
 
+        # build modal for the image
+        self.modals.build_img_modal(image_frame)
+
         # build search bar inside the info_stat frame block
         self.modals.build_search_bar_modal(search_stat_frame)
 
@@ -147,7 +150,8 @@ class UI:
 
         img_frame = self.Frame(master=self.root,
                                height=self.img_height,
-                               width=self.img_width)
+                               width=self.img_width,
+                               corner_radius=self.rounded_corner)
         img_frame.grid(row=1,
                        column=0,
                        pady=(self.pad_y, 0),
@@ -158,14 +162,19 @@ class UI:
     def __build_variation_frame(self):
         # variations frame
         extend_frame = self.Frame(master=self.root,
-                                  height=self.img_height,
-                                  width=50,
-                                  fg_color="red")
-        extend_frame.grid(row=1,
-                          column=1,
-                          pady=(self.pad_y, 0),
-                          padx=(0, self.pad_x),
-                          sticky="w")
+                                  height=self.img_height - 20,
+                                  width=0,
+                                  fg_color='#232323',
+                                  corner_radius=0)
+        # extend_frame.grid(row=1,
+        #                   column=1,
+        #                   columnspan=2,
+        #                   pady=(self.pad_y, 0),
+        #                   padx=(0, self.pad_x),
+        #                   sticky="w")
+
+        extend_frame.place(x=self.img_width + self.pad_x,
+                           y=self.pad_y * 2 + 10)
 
         return extend_frame
 

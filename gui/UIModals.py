@@ -1,4 +1,5 @@
 import gui.ModalInteraction as ModalInteraction
+from PIL import Image
 
 
 class UIModals:
@@ -57,6 +58,9 @@ class UIModals:
                                       font=self.gui.font)
             file.grid(row=0, column=index)
 
+    def build_img_modal(self, parentFrame):
+        self.modal_interact.set_img_frame(parentFrame)
+
     def build_search_bar_modal(self, parentFrame):
         """
         Build the search bar modal
@@ -86,12 +90,42 @@ class UIModals:
 
     def build_variation_modal(self, parentFrame):
         """
-        Needs information about diff variation handled by modal update
+        Needs information about diff variation handled by modal update (dynamic)
         :param parentFrame: parentFrame to hold modal
         :return: None
         """
+        image_ref = []
+        path = ["./assets/rightarrowhead.png", "./assets/leftarrowhead.png"]
 
-        pass
+        for i in path:
+            image = Image.open(i)
+            image.thumbnail(size=(10, 10))
+            image_ref.append(image)
+
+        image = self.ctk.CTkImage(light_image=image_ref[0],
+                                  size=(image_ref[1].width, image_ref[1].height))
+        self.modal_interact.set_variation_frame(parentFrame)
+
+        button = self.ctk.CTkButton(master=self.gui.root,
+                                    image=image,
+                                    text=None,
+                                    width=20,
+                                    height=80,
+                                    fg_color='#3a3a3a',
+                                    corner_radius=0,
+                                    hover_color=self.gui.hover_color,
+                                    cursor="hand2",
+                                    command=lambda: self.modal_interact.clicked_variation_button(parentFrame,
+                                                                                                 button,
+                                                                                                 image_ref)
+                                    )
+
+        button.place(in_=parentFrame,
+                     bordermode="outside",
+                     anchor="nw",
+                     x=-5,
+                     relx=1.0,
+                     rely=0.2)
 
     def build_item_ability_modal(self, parentFrame):
         """
@@ -145,7 +179,8 @@ class UIModals:
             frame.grid(row=0,
                        column=index,
                        padx=5,
-                       pady=5)
+                       pady=5,
+                       sticky="nsew")
 
             self.types[index] = frame
 
