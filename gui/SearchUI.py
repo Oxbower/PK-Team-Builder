@@ -53,6 +53,8 @@ class SearchUI:
         Build query output
         :return: null
         """
+
+        #---Make the string display look nicer
         for index, value in enumerate(query_result):
             capitalized = value.title()
             query_result[index] = capitalized
@@ -106,34 +108,3 @@ class SearchUI:
     #     self.frame_dict["Sp. Def"][0].configure(text=dict["sp_def"])
     #     self.frame_dict["Speed"][0].configure(text=dict["speed"])
     #     self.frame_dict["Total"][0].configure(text=dict["base_total"])
-
-    # def __display_img(self):
-    #     """
-    #     display collected img
-    #     :return: null
-    #     """
-    #     if len(self.query_result) == 1:
-    #         print("Found Image")
-    #         pkdex_id = self.app.get_id(str(self.query_result[0]))
-    #
-    #         img = read_file.build_img_ref(pkdex_id)
-    #         image_container = self.ctk.CTkImage(light_image=img, size=(256, 256))
-    #
-    #         if self.contains_img != True:
-    #             self.image_disp = self.__img_label_build(image_container)
-    #             self.contains_img = True
-    #         else:
-    #             self.image_disp.configure(image=image_container)
-    #
-    #         self.image_disp.pack()
-    #         return True
-    #     return False
-    #
-    # def __img_label_build(self, img_container):
-    #     return self.ctk.CTkLabel(self.img_frame, image=img_container, text=None)
-    #
-    # def __focus(self, _widget, parentFrame, isFocused):
-    #     if isFocused:
-    #         self.gui.search_result_frame(parent_frame=parentFrame, inst="build")
-    #     else:
-    #         self.gui.search_result_frame(parent_frame=parentFrame, inst="destroy")

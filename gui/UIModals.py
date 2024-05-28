@@ -57,6 +57,9 @@ class UIModals:
                                       font=self.gui.font)
             file.grid(row=0, column=index)
 
+    def build_img_modal(self, parentFrame):
+        self.modal_interact.set_img_frame(parentFrame)
+
     def build_search_bar_modal(self, parentFrame):
         """
         Build the search bar modal
@@ -145,7 +148,8 @@ class UIModals:
             frame.grid(row=0,
                        column=index,
                        padx=5,
-                       pady=5)
+                       pady=5,
+                       sticky="nsew")
 
             self.types[index] = frame
 

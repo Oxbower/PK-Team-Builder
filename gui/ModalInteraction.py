@@ -22,6 +22,15 @@ class ModalInteraction:
         """
         self.searchFrame = Frame
 
+    def set_img_frame(self, Frame):
+        """
+        Set Image frame
+        :param Frame: parentFrame for image container
+        :param imgFrame: Frame to manipulate when displaying new image
+        :return: None
+        """
+        self.modalUpdate.set_img_frame(Frame)
+
     def search_bar_callback(self, *args):
         """
         Handles search bar inputs to do string searches
@@ -46,9 +55,8 @@ class ModalInteraction:
         :param string: name of the clicked result
         :return: null
         """
-        print(string)
-
         self.string_var.set(string)
+        self.modalUpdate.build_path_ref(string)
 
         self.mainWindow.root.focus_set()
         # destroy result frame
