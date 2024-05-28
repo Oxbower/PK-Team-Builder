@@ -60,38 +60,6 @@ class ModalUpdate:
         except Exception as E:
             print(E)
 
-    # def __display_img(self):
-    #     """
-    #     Display Image
-    #     :return: null
-    #     """
-    #     if len(self.query_result) == 1:
-    #         print("Found Image")
-    #         pkdex_id = self.app.get_id(str(self.query_result[0]))
-    #
-    #         img = read_file.build_img_ref(pkdex_id)
-    #         image_container = self.ctk.CTkImage(light_image=img, size=(256, 256))
-    #
-    #         if self.contains_img != True:
-    #             self.image_disp = self.__img_label_build(image_container)
-    #             self.contains_img = True
-    #         else:
-    #             self.image_disp.configure(image=image_container)
-    #
-    #         self.image_disp.pack()
-    #         return True
-    #     return False
-
-    #
-    # def __img_label_build(self, img_container):
-    #     return self.ctk.CTkLabel(self.img_frame, image=img_container, text=None)
-    #
-    # def __focus(self, _widget, parentFrame, isFocused):
-    #     if isFocused:
-    #         self.gui.search_result_frame(parent_frame=parentFrame, inst="build")
-    #     else:
-    #         self.gui.search_result_frame(parent_frame=parentFrame, inst="destroy")
-
     def build_path_ref(self, string):
         """
         Builds the image frame
