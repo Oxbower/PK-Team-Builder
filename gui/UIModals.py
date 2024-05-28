@@ -89,12 +89,11 @@ class UIModals:
 
     def build_variation_modal(self, parentFrame):
         """
-        Needs information about diff variation handled by modal update
+        Needs information about diff variation handled by modal update (dynamic)
         :param parentFrame: parentFrame to hold modal
         :return: None
         """
-
-        pass
+        self.modal_interact.set_variation_frame(parentFrame)
 
     def build_item_ability_modal(self, parentFrame):
         """

@@ -1,3 +1,5 @@
+from tkinter import StringVar
+
 import interaction.SearchResult as SearchResult
 import gui.ModalUpdate as ModalUpdate
 
@@ -30,6 +32,19 @@ class ModalInteraction:
         :return: None
         """
         self.modalUpdate.set_img_frame(Frame)
+
+    def set_variation_frame(self, Frame):
+        """
+        Sets the variation frame to be dynamic depending on how many variations a pokemon has
+        :param Frame: the frame container
+        :return: None
+        """
+        self.modalUpdate.set_variation_frame(Frame, self.set_string_var)
+
+    def set_string_var(self, string):
+        self.string_var.set(string)
+        # destroy result frame
+        self.modalUpdate.destroy_result_frame()
 
     def search_bar_callback(self, *args):
         """

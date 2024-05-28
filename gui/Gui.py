@@ -163,10 +163,10 @@ class UI:
         # variations frame
         extend_frame = self.Frame(master=self.root,
                                   height=self.img_height,
-                                  width=50,
-                                  fg_color="red")
+                                  width=50)
         extend_frame.grid(row=1,
                           column=1,
+                          columnspan=2,
                           pady=(self.pad_y, 0),
                           padx=(0, self.pad_x),
                           sticky="w")

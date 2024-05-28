@@ -1,7 +1,7 @@
 import gui.SearchUI as SearchUI
+import os
 from interaction.ReadFiles import build_img_ref
 from PIL import Image
-
 
 class ModalUpdate:
     """
@@ -17,6 +17,8 @@ class ModalUpdate:
 
         self.container_frame = None
         self.img_holder = None
+        self.var_frame = None
+        self.stringvar = None
 
     def set_img_frame(self, Frame):
         self.img_holder = self.ctk.CTkLabel(master=Frame,
@@ -26,6 +28,10 @@ class ModalUpdate:
                                             height=self.gui.img_height,
                                             width=self.gui.img_width,
                                             corner_radius=self.gui.rounded_corner)
+
+    def set_variation_frame(self, Frame, stringvar):
+        self.var_frame = Frame
+        self.stringvar = stringvar
 
     def build_search_result(self, result_list, parentFrame):
         """
@@ -60,6 +66,58 @@ class ModalUpdate:
         except Exception as E:
             print(E)
 
+    def build_dynamic_variation_modal(self, ref_path):
+        """
+        Builds a dynamic modal for the number of variations this pokemon has
+        :return: None
+        """
+        for widget in self.var_frame.winfo_children():
+            widget.destroy()
+
+        for index, value in enumerate(ref_path):
+            if len(ref_path) == 1:
+                break
+            name = os.path.split(value)[-1]
+            if name.endswith(".png"):
+                name = name.split(".png")[0]
+            else:
+                name = name.split(".jpg")[0]
+
+            # Change this in the future
+            image = Image.open(value)
+            image.thumbnail(size=(30, 30))
+
+            image_container = self.ctk.CTkImage(light_image=image,
+                                                size=(image.width, image.height))
+
+            variation_button = self.ctk.CTkButton(master=self.var_frame,
+                                                  height=(self.var_frame.cget('height') / len(ref_path)) - 10,
+                                                  fg_color='#ffffff',
+                                                  hover_color='#ffffff',
+                                                  width=self.var_frame.cget('width') - 6,
+                                                  text=None,
+                                                  image=image_container,
+                                                  command=lambda string=value: self.build_image(string))
+
+            variation_button.grid(sticky="news",
+                                  pady=5,
+                                  padx=3,
+                                  column=0)
+
+        variant = ["Mega", "Alolan", "Galarian", "Hisuian", "Paldean"]
+
+        for value in ref_path:
+            name = os.path.split(value)[-1]
+            if name.endswith(".png"):
+                name = name.split(".png")[0]
+            else:
+                name = name.split(".jpg")[0]
+
+            if not any(s in name for s in variant):
+                self.build_image(value)
+                self.stringvar(name)
+                break
+
     def build_path_ref(self, string):
         """
         Builds the image frame
@@ -71,16 +129,31 @@ class ModalUpdate:
 
         print("Clicked Result: " + name)
         ref_path = build_img_ref(name)
+        self.build_dynamic_variation_modal(ref_path)
 
-        print(ref_path)
+    def build_image(self, image_path):
+        """
+        Opens and updates the frame to hold the image
+        :param image_path: image_path given by variation_model
+        :return: None
+        """
+        self.gui.root.focus_set()
 
-        image = Image.open(ref_path[0])
-        image.thumbnail(size=(self.gui.img_height-self.gui.rounded_corner,
-                              self.gui.img_width-self.gui.rounded_corner))
+        name = os.path.split(image_path)[-1]
+        if name.endswith(".png"):
+            name = name.split(".png")[0]
+        else:
+            name = name.split(".jpg")[0]
+
+        self.stringvar(name)
+
+        image = Image.open(image_path)
+        image.thumbnail(size=(self.gui.img_height - self.gui.rounded_corner,
+                              self.gui.img_width - self.gui.rounded_corner))
 
         image_container = self.ctk.CTkImage(light_image=image,
-                                            size=(image.width-self.gui.rounded_corner,
-                                                  image.height-self.gui.rounded_corner))
+                                            size=(image.width - self.gui.rounded_corner,
+                                                  image.height - self.gui.rounded_corner))
 
         self.img_holder.configure(image=image_container)
 
