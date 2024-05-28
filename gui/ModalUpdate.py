@@ -3,11 +3,13 @@ import os
 from interaction.ReadFiles import build_img_ref
 from PIL import Image
 
+
 class ModalUpdate:
     """
     Updates the modals when interaction occurs
     """
     def __init__(self, gui, ctk, mainWindow, Frame, modalInteract):
+        self.variation_frame = False
         self.gui = gui
         self.ctk = ctk
         self.mainWindow = mainWindow
@@ -19,6 +21,9 @@ class ModalUpdate:
         self.img_holder = None
         self.var_frame = None
         self.stringvar = None
+
+        self.delta_width = 4
+        self.frames = 50
 
     def set_img_frame(self, Frame):
         self.img_holder = self.ctk.CTkLabel(master=Frame,
@@ -66,9 +71,40 @@ class ModalUpdate:
         except Exception as E:
             print(E)
 
+    def build_dynamic_variation_button(self, parentFrame, parentButton, image_ref):
+
+        if self.variation_frame:
+            for i in self.var_frame.winfo_children():
+                i.grid_remove()
+
+            for i in range(self.frames):
+                parentFrame.configure(width=parentFrame.cget('width') - self.delta_width)
+                parentFrame.update()
+            self.variation_frame = False
+
+            image = self.ctk.CTkImage(light_image=image_ref[0],
+                                      size=(image_ref[1].width, image_ref[1].height))
+            parentButton.configure(image=image)
+
+        elif not self.variation_frame:
+            for i in range(self.frames):
+                parentFrame.configure(width=parentFrame.cget('width') + self.delta_width)
+                parentFrame.update()
+            self.variation_frame = True
+
+            for i in self.var_frame.winfo_children():
+                i.grid(sticky="news",
+                       pady=5,
+                       padx=5,
+                       column=0)
+
+            image = self.ctk.CTkImage(light_image=image_ref[1],
+                                      size=(image_ref[1].width, image_ref[1].height))
+            parentButton.configure(image=image)
+
     def build_dynamic_variation_modal(self, ref_path):
         """
-        Builds a dynamic modal for the number of variations this pokemon has
+        Builds a dynamic modal for the number of variations this pokemon has, this only runs once on query
         :return: None
         """
         for widget in self.var_frame.winfo_children():
@@ -94,15 +130,14 @@ class ModalUpdate:
                                                   height=(self.var_frame.cget('height') / len(ref_path)) - 10,
                                                   fg_color='#ffffff',
                                                   hover_color='#ffffff',
-                                                  width=self.var_frame.cget('width') - 6,
-                                                  text=None,
+                                                  text_color='#000000',
+                                                  width=self.frames * self.delta_width,
                                                   image=image_container,
+                                                  text=name,
                                                   command=lambda string=value: self.build_image(string))
 
-            variation_button.grid(sticky="news",
-                                  pady=5,
-                                  padx=3,
-                                  column=0)
+            if self.variation_frame:
+                variation_button.grid(sticky="news", pady=5, padx=5, column=0)
 
         variant = ["Mega", "Alolan", "Galarian", "Hisuian", "Paldean"]
 
@@ -131,7 +166,7 @@ class ModalUpdate:
         ref_path = build_img_ref(name)
         self.build_dynamic_variation_modal(ref_path)
 
-    def build_image(self, image_path):
+    def build_image(self, image_path):  # Modular do not mess with this anymore
         """
         Opens and updates the frame to hold the image
         :param image_path: image_path given by variation_model

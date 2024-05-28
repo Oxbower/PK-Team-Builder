@@ -72,7 +72,7 @@ class SearchUI:
                                        hover_color="#353535",
                                        width=frame_width-80,
                                        height=50,
-                                       command=lambda string=value: self.modalInteract.clicked_button(string),
+                                       command=lambda string=value: self.modalInteract.clicked_search_query(string),
                                        corner_radius=self.gui.rounded_corner)
             label.grid(row=index,
                        column=0,

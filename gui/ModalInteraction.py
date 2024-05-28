@@ -3,6 +3,8 @@ from tkinter import StringVar
 import interaction.SearchResult as SearchResult
 import gui.ModalUpdate as ModalUpdate
 
+import time
+
 
 class ModalInteraction:
     def __init__(self, stringVar, gui, ctk, mainWindow, Frame):
@@ -64,7 +66,7 @@ class ModalInteraction:
             # pass in the list to build result frame from
             self.modalUpdate.build_search_result(search_string, self.searchFrame)
 
-    def clicked_button(self, string):
+    def clicked_search_query(self, string):
         """
         Detect when any of the search results are clicked
         :param string: name of the clicked result
@@ -76,3 +78,8 @@ class ModalInteraction:
         self.mainWindow.root.focus_set()
         # destroy result frame
         self.modalUpdate.destroy_result_frame()
+
+    def clicked_variation_button(self, parentFrame, parentButton, image_ref):
+        self.mainWindow.root.focus_set()
+
+        self.modalUpdate.build_dynamic_variation_button(parentFrame, parentButton, image_ref)
