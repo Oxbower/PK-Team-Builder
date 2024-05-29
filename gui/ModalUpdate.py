@@ -22,8 +22,8 @@ class ModalUpdate:
         self.var_frame = None
         self.stringvar = None
 
-        self.delta_width = 4
-        self.frames = 50
+        self.delta_width = 10
+        self.frames = 25
 
     def set_img_frame(self, Frame):
         self.img_holder = self.ctk.CTkLabel(master=Frame,
