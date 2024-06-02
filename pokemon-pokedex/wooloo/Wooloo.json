@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 831,
+    "type": {
+        "type-0": "Normal"
+    },
+    "abilities": {
+        "ability-0": "Fluffy",
+        "ability-1": "Run Away",
+        "ability-2": "Bulletproof"
+    },
+    "stats": {
+        "HP": {
+            "base": 42,
+            "min": 194,
+            "max": 288
+        },
+        "Attack": {
+            "base": 40,
+            "min": 76,
+            "max": 196
+        },
+        "Defense": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        },
+        "Sp. Atk": {
+            "base": 40,
+            "min": 76,
+            "max": 196
+        },
+        "Sp. Def": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        },
+        "Speed": {
+            "base": 48,
+            "min": 90,
+            "max": 214
+        }
+    }
+}

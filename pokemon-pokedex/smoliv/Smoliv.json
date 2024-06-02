@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 928,
+    "type": {
+        "type-0": "Grass",
+        "type-1": "Normal"
+    },
+    "abilities": {
+        "ability-0": "Early Bird",
+        "ability-1": "Harvest"
+    },
+    "stats": {
+        "HP": {
+            "base": 41,
+            "min": 192,
+            "max": 286
+        },
+        "Attack": {
+            "base": 35,
+            "min": 67,
+            "max": 185
+        },
+        "Defense": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        },
+        "Sp. Atk": {
+            "base": 58,
+            "min": 108,
+            "max": 236
+        },
+        "Sp. Def": {
+            "base": 51,
+            "min": 96,
+            "max": 221
+        },
+        "Speed": {
+            "base": 30,
+            "min": 58,
+            "max": 174
+        }
+    }
+}

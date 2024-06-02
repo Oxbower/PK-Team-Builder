@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 767,
+    "type": {
+        "type-0": "Bug",
+        "type-1": "Water"
+    },
+    "abilities": {
+        "ability-0": "Wimp Out"
+    },
+    "stats": {
+        "HP": {
+            "base": 25,
+            "min": 160,
+            "max": 254
+        },
+        "Attack": {
+            "base": 35,
+            "min": 67,
+            "max": 185
+        },
+        "Defense": {
+            "base": 40,
+            "min": 76,
+            "max": 196
+        },
+        "Sp. Atk": {
+            "base": 20,
+            "min": 40,
+            "max": 152
+        },
+        "Sp. Def": {
+            "base": 30,
+            "min": 58,
+            "max": 174
+        },
+        "Speed": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        }
+    }
+}

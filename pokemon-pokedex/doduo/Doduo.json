@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 84,
+    "type": {
+        "type-0": "Normal",
+        "type-1": "Flying"
+    },
+    "abilities": {
+        "ability-0": "Run Away",
+        "ability-1": "Early Bird",
+        "ability-2": "Tangled Feet"
+    },
+    "stats": {
+        "HP": {
+            "base": 35,
+            "min": 180,
+            "max": 274
+        },
+        "Attack": {
+            "base": 85,
+            "min": 157,
+            "max": 295
+        },
+        "Defense": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        },
+        "Sp. Atk": {
+            "base": 35,
+            "min": 67,
+            "max": 185
+        },
+        "Sp. Def": {
+            "base": 35,
+            "min": 67,
+            "max": 185
+        },
+        "Speed": {
+            "base": 75,
+            "min": 139,
+            "max": 273
+        }
+    }
+}

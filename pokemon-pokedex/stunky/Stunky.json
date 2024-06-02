@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 434,
+    "type": {
+        "type-0": "Poison",
+        "type-1": "Dark"
+    },
+    "abilities": {
+        "ability-0": "Stench",
+        "ability-1": "Aftermath",
+        "ability-2": "Keen Eye"
+    },
+    "stats": {
+        "HP": {
+            "base": 63,
+            "min": 236,
+            "max": 330
+        },
+        "Attack": {
+            "base": 63,
+            "min": 117,
+            "max": 247
+        },
+        "Defense": {
+            "base": 47,
+            "min": 89,
+            "max": 212
+        },
+        "Sp. Atk": {
+            "base": 41,
+            "min": 78,
+            "max": 199
+        },
+        "Sp. Def": {
+            "base": 41,
+            "min": 78,
+            "max": 199
+        },
+        "Speed": {
+            "base": 74,
+            "min": 137,
+            "max": 271
+        }
+    }
+}

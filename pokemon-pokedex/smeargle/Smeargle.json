@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 235,
+    "type": {
+        "type-0": "Normal"
+    },
+    "abilities": {
+        "ability-0": "Own Tempo",
+        "ability-1": "Technician",
+        "ability-2": "Moody"
+    },
+    "stats": {
+        "HP": {
+            "base": 55,
+            "min": 220,
+            "max": 314
+        },
+        "Attack": {
+            "base": 20,
+            "min": 40,
+            "max": 152
+        },
+        "Defense": {
+            "base": 35,
+            "min": 67,
+            "max": 185
+        },
+        "Sp. Atk": {
+            "base": 20,
+            "min": 40,
+            "max": 152
+        },
+        "Sp. Def": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        },
+        "Speed": {
+            "base": 75,
+            "min": 139,
+            "max": 273
+        }
+    }
+}

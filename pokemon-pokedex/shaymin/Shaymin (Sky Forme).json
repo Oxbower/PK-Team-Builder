@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 492,
+    "type": {
+        "type-0": "Grass",
+        "type-1": "Flying"
+    },
+    "abilities": {
+        "ability-0": "Serene Grace"
+    },
+    "stats": {
+        "HP": {
+            "base": 100,
+            "min": 310,
+            "max": 404
+        },
+        "Attack": {
+            "base": 103,
+            "min": 189,
+            "max": 335
+        },
+        "Defense": {
+            "base": 75,
+            "min": 139,
+            "max": 273
+        },
+        "Sp. Atk": {
+            "base": 120,
+            "min": 220,
+            "max": 372
+        },
+        "Sp. Def": {
+            "base": 75,
+            "min": 139,
+            "max": 273
+        },
+        "Speed": {
+            "base": 127,
+            "min": 233,
+            "max": 388
+        }
+    }
+}

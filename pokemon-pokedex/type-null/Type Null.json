@@ -1,0 +1,41 @@
+{
+    "pokedex-no": 772,
+    "type": {
+        "type-0": "Normal"
+    },
+    "abilities": {
+        "ability-0": "Battle Armor"
+    },
+    "stats": {
+        "HP": {
+            "base": 95,
+            "min": 300,
+            "max": 394
+        },
+        "Attack": {
+            "base": 95,
+            "min": 175,
+            "max": 317
+        },
+        "Defense": {
+            "base": 95,
+            "min": 175,
+            "max": 317
+        },
+        "Sp. Atk": {
+            "base": 95,
+            "min": 175,
+            "max": 317
+        },
+        "Sp. Def": {
+            "base": 95,
+            "min": 175,
+            "max": 317
+        },
+        "Speed": {
+            "base": 59,
+            "min": 110,
+            "max": 238
+        }
+    }
+}

@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 475,
+    "type": {
+        "type-0": "Psychic",
+        "type-1": "Fighting"
+    },
+    "abilities": {
+        "ability-0": "Steadfast",
+        "ability-1": "Sharpness",
+        "ability-2": "Justified"
+    },
+    "stats": {
+        "HP": {
+            "base": 68,
+            "min": 246,
+            "max": 340
+        },
+        "Attack": {
+            "base": 125,
+            "min": 229,
+            "max": 383
+        },
+        "Defense": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Sp. Atk": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Sp. Def": {
+            "base": 115,
+            "min": 211,
+            "max": 361
+        },
+        "Speed": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        }
+    }
+}

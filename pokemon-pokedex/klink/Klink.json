@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 599,
+    "type": {
+        "type-0": "Steel"
+    },
+    "abilities": {
+        "ability-0": "Plus",
+        "ability-1": "Minus",
+        "ability-2": "Clear Body"
+    },
+    "stats": {
+        "HP": {
+            "base": 40,
+            "min": 190,
+            "max": 284
+        },
+        "Attack": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        },
+        "Defense": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        },
+        "Sp. Atk": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        },
+        "Sp. Def": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Speed": {
+            "base": 30,
+            "min": 58,
+            "max": 174
+        }
+    }
+}

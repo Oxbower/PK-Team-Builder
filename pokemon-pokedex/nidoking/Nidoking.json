@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 34,
+    "type": {
+        "type-0": "Poison",
+        "type-1": "Ground"
+    },
+    "abilities": {
+        "ability-0": "Poison Point",
+        "ability-1": "Rivalry",
+        "ability-2": "Sheer Force"
+    },
+    "stats": {
+        "HP": {
+            "base": 81,
+            "min": 272,
+            "max": 366
+        },
+        "Attack": {
+            "base": 102,
+            "min": 188,
+            "max": 333
+        },
+        "Defense": {
+            "base": 77,
+            "min": 143,
+            "max": 278
+        },
+        "Sp. Atk": {
+            "base": 85,
+            "min": 157,
+            "max": 295
+        },
+        "Sp. Def": {
+            "base": 75,
+            "min": 139,
+            "max": 273
+        },
+        "Speed": {
+            "base": 85,
+            "min": 157,
+            "max": 295
+        }
+    }
+}

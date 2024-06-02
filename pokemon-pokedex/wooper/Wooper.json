@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 194,
+    "type": {
+        "type-0": "Water",
+        "type-1": "Ground"
+    },
+    "abilities": {
+        "ability-0": "Damp",
+        "ability-1": "Water Absorb",
+        "ability-2": "Unaware"
+    },
+    "stats": {
+        "HP": {
+            "base": 55,
+            "min": 220,
+            "max": 314
+        },
+        "Attack": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        },
+        "Defense": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        },
+        "Sp. Atk": {
+            "base": 25,
+            "min": 49,
+            "max": 163
+        },
+        "Sp. Def": {
+            "base": 25,
+            "min": 49,
+            "max": 163
+        },
+        "Speed": {
+            "base": 15,
+            "min": 31,
+            "max": 141
+        }
+    }
+}

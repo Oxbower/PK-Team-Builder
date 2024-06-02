@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 715,
+    "type": {
+        "type-0": "Flying",
+        "type-1": "Dragon"
+    },
+    "abilities": {
+        "ability-0": "Frisk",
+        "ability-1": "Infiltrator",
+        "ability-2": "Telepathy"
+    },
+    "stats": {
+        "HP": {
+            "base": 85,
+            "min": 280,
+            "max": 374
+        },
+        "Attack": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        },
+        "Defense": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        },
+        "Sp. Atk": {
+            "base": 97,
+            "min": 179,
+            "max": 322
+        },
+        "Sp. Def": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        },
+        "Speed": {
+            "base": 123,
+            "min": 225,
+            "max": 379
+        }
+    }
+}

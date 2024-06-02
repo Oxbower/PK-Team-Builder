@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 10,
+    "type": {
+        "type-0": "Bug"
+    },
+    "abilities": {
+        "ability-0": "Shield Dust",
+        "ability-1": "Run Away"
+    },
+    "stats": {
+        "HP": {
+            "base": 45,
+            "min": 200,
+            "max": 294
+        },
+        "Attack": {
+            "base": 30,
+            "min": 58,
+            "max": 174
+        },
+        "Defense": {
+            "base": 35,
+            "min": 67,
+            "max": 185
+        },
+        "Sp. Atk": {
+            "base": 20,
+            "min": 40,
+            "max": 152
+        },
+        "Sp. Def": {
+            "base": 20,
+            "min": 40,
+            "max": 152
+        },
+        "Speed": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        }
+    }
+}

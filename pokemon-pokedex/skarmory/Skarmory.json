@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 227,
+    "type": {
+        "type-0": "Steel",
+        "type-1": "Flying"
+    },
+    "abilities": {
+        "ability-0": "Keen Eye",
+        "ability-1": "Sturdy",
+        "ability-2": "Weak Armor"
+    },
+    "stats": {
+        "HP": {
+            "base": 65,
+            "min": 240,
+            "max": 334
+        },
+        "Attack": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        },
+        "Defense": {
+            "base": 140,
+            "min": 256,
+            "max": 416
+        },
+        "Sp. Atk": {
+            "base": 40,
+            "min": 76,
+            "max": 196
+        },
+        "Sp. Def": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        },
+        "Speed": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        }
+    }
+}

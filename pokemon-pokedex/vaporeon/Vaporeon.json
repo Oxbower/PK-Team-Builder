@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 134,
+    "type": {
+        "type-0": "Water"
+    },
+    "abilities": {
+        "ability-0": "Water Absorb",
+        "ability-1": "Hydration"
+    },
+    "stats": {
+        "HP": {
+            "base": 130,
+            "min": 370,
+            "max": 464
+        },
+        "Attack": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Defense": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Sp. Atk": {
+            "base": 110,
+            "min": 202,
+            "max": 350
+        },
+        "Sp. Def": {
+            "base": 95,
+            "min": 175,
+            "max": 317
+        },
+        "Speed": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        }
+    }
+}

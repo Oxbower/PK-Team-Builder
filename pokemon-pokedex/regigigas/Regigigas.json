@@ -1,0 +1,41 @@
+{
+    "pokedex-no": 486,
+    "type": {
+        "type-0": "Normal"
+    },
+    "abilities": {
+        "ability-0": "Slow Start"
+    },
+    "stats": {
+        "HP": {
+            "base": 110,
+            "min": 330,
+            "max": 424
+        },
+        "Attack": {
+            "base": 160,
+            "min": 292,
+            "max": 460
+        },
+        "Defense": {
+            "base": 110,
+            "min": 202,
+            "max": 350
+        },
+        "Sp. Atk": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        },
+        "Sp. Def": {
+            "base": 110,
+            "min": 202,
+            "max": 350
+        },
+        "Speed": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        }
+    }
+}

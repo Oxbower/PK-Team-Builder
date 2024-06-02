@@ -1,0 +1,41 @@
+{
+    "pokedex-no": 602,
+    "type": {
+        "type-0": "Electric"
+    },
+    "abilities": {
+        "ability-0": "Levitate"
+    },
+    "stats": {
+        "HP": {
+            "base": 35,
+            "min": 180,
+            "max": 274
+        },
+        "Attack": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        },
+        "Defense": {
+            "base": 40,
+            "min": 76,
+            "max": 196
+        },
+        "Sp. Atk": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        },
+        "Sp. Def": {
+            "base": 40,
+            "min": 76,
+            "max": 196
+        },
+        "Speed": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        }
+    }
+}

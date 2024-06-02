@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 384,
+    "type": {
+        "type-0": "Dragon",
+        "type-1": "Flying"
+    },
+    "abilities": {
+        "ability-0": "Delta Stream"
+    },
+    "stats": {
+        "HP": {
+            "base": 105,
+            "min": 320,
+            "max": 414
+        },
+        "Attack": {
+            "base": 180,
+            "min": 328,
+            "max": 504
+        },
+        "Defense": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        },
+        "Sp. Atk": {
+            "base": 180,
+            "min": 328,
+            "max": 504
+        },
+        "Sp. Def": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        },
+        "Speed": {
+            "base": 115,
+            "min": 211,
+            "max": 361
+        }
+    }
+}

@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 1002,
+    "type": {
+        "type-0": "Dark",
+        "type-1": "Ice"
+    },
+    "abilities": {
+        "ability-0": "Sword of Ruin"
+    },
+    "stats": {
+        "HP": {
+            "base": 80,
+            "min": 270,
+            "max": 364
+        },
+        "Attack": {
+            "base": 120,
+            "min": 220,
+            "max": 372
+        },
+        "Defense": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        },
+        "Sp. Atk": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        },
+        "Sp. Def": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Speed": {
+            "base": 135,
+            "min": 247,
+            "max": 405
+        }
+    }
+}

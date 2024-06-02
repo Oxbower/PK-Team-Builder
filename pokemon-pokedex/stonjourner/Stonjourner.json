@@ -1,0 +1,41 @@
+{
+    "pokedex-no": 874,
+    "type": {
+        "type-0": "Rock"
+    },
+    "abilities": {
+        "ability-0": "Power Spot"
+    },
+    "stats": {
+        "HP": {
+            "base": 100,
+            "min": 310,
+            "max": 404
+        },
+        "Attack": {
+            "base": 125,
+            "min": 229,
+            "max": 383
+        },
+        "Defense": {
+            "base": 135,
+            "min": 247,
+            "max": 405
+        },
+        "Sp. Atk": {
+            "base": 20,
+            "min": 40,
+            "max": 152
+        },
+        "Sp. Def": {
+            "base": 20,
+            "min": 40,
+            "max": 152
+        },
+        "Speed": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        }
+    }
+}

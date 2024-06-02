@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 219,
+    "type": {
+        "type-0": "Fire",
+        "type-1": "Rock"
+    },
+    "abilities": {
+        "ability-0": "Magma Armor",
+        "ability-1": "Flame Body",
+        "ability-2": "Weak Armor"
+    },
+    "stats": {
+        "HP": {
+            "base": 60,
+            "min": 230,
+            "max": 324
+        },
+        "Attack": {
+            "base": 50,
+            "min": 94,
+            "max": 218
+        },
+        "Defense": {
+            "base": 120,
+            "min": 220,
+            "max": 372
+        },
+        "Sp. Atk": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        },
+        "Sp. Def": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        },
+        "Speed": {
+            "base": 30,
+            "min": 58,
+            "max": 174
+        }
+    }
+}

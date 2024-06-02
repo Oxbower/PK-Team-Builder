@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 993,
+    "type": {
+        "type-0": "Dark",
+        "type-1": "Flying"
+    },
+    "abilities": {
+        "ability-0": "Quark Drive"
+    },
+    "stats": {
+        "HP": {
+            "base": 94,
+            "min": 298,
+            "max": 392
+        },
+        "Attack": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        },
+        "Defense": {
+            "base": 86,
+            "min": 159,
+            "max": 298
+        },
+        "Sp. Atk": {
+            "base": 122,
+            "min": 224,
+            "max": 377
+        },
+        "Sp. Def": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        },
+        "Speed": {
+            "base": 108,
+            "min": 198,
+            "max": 346
+        }
+    }
+}

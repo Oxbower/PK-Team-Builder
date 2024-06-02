@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 168,
+    "type": {
+        "type-0": "Bug",
+        "type-1": "Poison"
+    },
+    "abilities": {
+        "ability-0": "Swarm",
+        "ability-1": "Insomnia",
+        "ability-2": "Sniper"
+    },
+    "stats": {
+        "HP": {
+            "base": 70,
+            "min": 250,
+            "max": 344
+        },
+        "Attack": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        },
+        "Defense": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        },
+        "Sp. Atk": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Sp. Def": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        },
+        "Speed": {
+            "base": 40,
+            "min": 76,
+            "max": 196
+        }
+    }
+}

@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 880,
+    "type": {
+        "type-0": "Electric",
+        "type-1": "Dragon"
+    },
+    "abilities": {
+        "ability-0": "Volt Absorb",
+        "ability-1": "Hustle",
+        "ability-2": "Sand Rush"
+    },
+    "stats": {
+        "HP": {
+            "base": 90,
+            "min": 290,
+            "max": 384
+        },
+        "Attack": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        },
+        "Defense": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        },
+        "Sp. Atk": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        },
+        "Sp. Def": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        },
+        "Speed": {
+            "base": 75,
+            "min": 139,
+            "max": 273
+        }
+    }
+}

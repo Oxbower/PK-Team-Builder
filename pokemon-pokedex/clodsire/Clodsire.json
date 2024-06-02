@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 980,
+    "type": {
+        "type-0": "Poison",
+        "type-1": "Ground"
+    },
+    "abilities": {
+        "ability-0": "Poison Point",
+        "ability-1": "Water Absorb",
+        "ability-2": "Unaware"
+    },
+    "stats": {
+        "HP": {
+            "base": 130,
+            "min": 370,
+            "max": 464
+        },
+        "Attack": {
+            "base": 75,
+            "min": 139,
+            "max": 273
+        },
+        "Defense": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Sp. Atk": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        },
+        "Sp. Def": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        },
+        "Speed": {
+            "base": 20,
+            "min": 40,
+            "max": 152
+        }
+    }
+}

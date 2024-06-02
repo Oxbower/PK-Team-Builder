@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 649,
+    "type": {
+        "type-0": "Bug",
+        "type-1": "Steel"
+    },
+    "abilities": {
+        "ability-0": "Download"
+    },
+    "stats": {
+        "HP": {
+            "base": 71,
+            "min": 252,
+            "max": 346
+        },
+        "Attack": {
+            "base": 120,
+            "min": 220,
+            "max": 372
+        },
+        "Defense": {
+            "base": 95,
+            "min": 175,
+            "max": 317
+        },
+        "Sp. Atk": {
+            "base": 120,
+            "min": 220,
+            "max": 372
+        },
+        "Sp. Def": {
+            "base": 95,
+            "min": 175,
+            "max": 317
+        },
+        "Speed": {
+            "base": 99,
+            "min": 182,
+            "max": 326
+        }
+    }
+}

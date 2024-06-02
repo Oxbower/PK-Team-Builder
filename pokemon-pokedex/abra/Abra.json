@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 63,
+    "type": {
+        "type-0": "Psychic"
+    },
+    "abilities": {
+        "ability-0": "Synchronize",
+        "ability-1": "Inner Focus",
+        "ability-2": "Magic Guard"
+    },
+    "stats": {
+        "HP": {
+            "base": 25,
+            "min": 160,
+            "max": 254
+        },
+        "Attack": {
+            "base": 20,
+            "min": 40,
+            "max": 152
+        },
+        "Defense": {
+            "base": 15,
+            "min": 31,
+            "max": 141
+        },
+        "Sp. Atk": {
+            "base": 105,
+            "min": 193,
+            "max": 339
+        },
+        "Sp. Def": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        },
+        "Speed": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        }
+    }
+}

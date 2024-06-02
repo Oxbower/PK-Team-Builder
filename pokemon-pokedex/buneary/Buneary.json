@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 427,
+    "type": {
+        "type-0": "Normal"
+    },
+    "abilities": {
+        "ability-0": "Run Away",
+        "ability-1": "Klutz",
+        "ability-2": "Limber"
+    },
+    "stats": {
+        "HP": {
+            "base": 55,
+            "min": 220,
+            "max": 314
+        },
+        "Attack": {
+            "base": 66,
+            "min": 123,
+            "max": 254
+        },
+        "Defense": {
+            "base": 44,
+            "min": 83,
+            "max": 205
+        },
+        "Sp. Atk": {
+            "base": 44,
+            "min": 83,
+            "max": 205
+        },
+        "Sp. Def": {
+            "base": 56,
+            "min": 105,
+            "max": 232
+        },
+        "Speed": {
+            "base": 85,
+            "min": 157,
+            "max": 295
+        }
+    }
+}

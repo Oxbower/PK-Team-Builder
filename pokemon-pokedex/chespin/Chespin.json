@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 650,
+    "type": {
+        "type-0": "Grass"
+    },
+    "abilities": {
+        "ability-0": "Overgrow",
+        "ability-1": "Bulletproof"
+    },
+    "stats": {
+        "HP": {
+            "base": 56,
+            "min": 222,
+            "max": 316
+        },
+        "Attack": {
+            "base": 61,
+            "min": 114,
+            "max": 243
+        },
+        "Defense": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Sp. Atk": {
+            "base": 48,
+            "min": 90,
+            "max": 214
+        },
+        "Sp. Def": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        },
+        "Speed": {
+            "base": 38,
+            "min": 72,
+            "max": 192
+        }
+    }
+}

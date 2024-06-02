@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 209,
+    "type": {
+        "type-0": "Fairy"
+    },
+    "abilities": {
+        "ability-0": "Intimidate",
+        "ability-1": "Run Away",
+        "ability-2": "Rattled"
+    },
+    "stats": {
+        "HP": {
+            "base": 60,
+            "min": 230,
+            "max": 324
+        },
+        "Attack": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        },
+        "Defense": {
+            "base": 50,
+            "min": 94,
+            "max": 218
+        },
+        "Sp. Atk": {
+            "base": 40,
+            "min": 76,
+            "max": 196
+        },
+        "Sp. Def": {
+            "base": 40,
+            "min": 76,
+            "max": 196
+        },
+        "Speed": {
+            "base": 30,
+            "min": 58,
+            "max": 174
+        }
+    }
+}

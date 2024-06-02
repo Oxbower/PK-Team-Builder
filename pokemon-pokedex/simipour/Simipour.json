@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 516,
+    "type": {
+        "type-0": "Water"
+    },
+    "abilities": {
+        "ability-0": "Gluttony",
+        "ability-1": "Torrent"
+    },
+    "stats": {
+        "HP": {
+            "base": 75,
+            "min": 260,
+            "max": 354
+        },
+        "Attack": {
+            "base": 98,
+            "min": 180,
+            "max": 324
+        },
+        "Defense": {
+            "base": 63,
+            "min": 117,
+            "max": 247
+        },
+        "Sp. Atk": {
+            "base": 98,
+            "min": 180,
+            "max": 324
+        },
+        "Sp. Def": {
+            "base": 63,
+            "min": 117,
+            "max": 247
+        },
+        "Speed": {
+            "base": 101,
+            "min": 186,
+            "max": 331
+        }
+    }
+}

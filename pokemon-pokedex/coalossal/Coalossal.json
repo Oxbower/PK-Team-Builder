@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 839,
+    "type": {
+        "type-0": "Rock",
+        "type-1": "Fire"
+    },
+    "abilities": {
+        "ability-0": "Steam Engine",
+        "ability-1": "Flame Body",
+        "ability-2": "Flash Fire"
+    },
+    "stats": {
+        "HP": {
+            "base": 110,
+            "min": 330,
+            "max": 424
+        },
+        "Attack": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        },
+        "Defense": {
+            "base": 120,
+            "min": 220,
+            "max": 372
+        },
+        "Sp. Atk": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        },
+        "Sp. Def": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        },
+        "Speed": {
+            "base": 30,
+            "min": 58,
+            "max": 174
+        }
+    }
+}

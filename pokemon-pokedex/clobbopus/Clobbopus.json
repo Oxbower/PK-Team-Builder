@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 852,
+    "type": {
+        "type-0": "Fighting"
+    },
+    "abilities": {
+        "ability-0": "Limber",
+        "ability-1": "Technician"
+    },
+    "stats": {
+        "HP": {
+            "base": 50,
+            "min": 210,
+            "max": 304
+        },
+        "Attack": {
+            "base": 68,
+            "min": 126,
+            "max": 258
+        },
+        "Defense": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Sp. Atk": {
+            "base": 50,
+            "min": 94,
+            "max": 218
+        },
+        "Sp. Def": {
+            "base": 50,
+            "min": 94,
+            "max": 218
+        },
+        "Speed": {
+            "base": 32,
+            "min": 62,
+            "max": 179
+        }
+    }
+}

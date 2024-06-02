@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 1017,
+    "type": {
+        "type-0": "Grass"
+    },
+    "abilities": {
+        "ability-0": "Defiant",
+        "ability-1": "Embody Aspect"
+    },
+    "stats": {
+        "HP": {
+            "base": 80,
+            "min": 270,
+            "max": 364
+        },
+        "Attack": {
+            "base": 120,
+            "min": 220,
+            "max": 372
+        },
+        "Defense": {
+            "base": 84,
+            "min": 155,
+            "max": 293
+        },
+        "Sp. Atk": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Sp. Def": {
+            "base": 96,
+            "min": 177,
+            "max": 320
+        },
+        "Speed": {
+            "base": 110,
+            "min": 202,
+            "max": 350
+        }
+    }
+}

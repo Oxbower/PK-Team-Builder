@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 368,
+    "type": {
+        "type-0": "Water"
+    },
+    "abilities": {
+        "ability-0": "Swift Swim",
+        "ability-1": "Hydration"
+    },
+    "stats": {
+        "HP": {
+            "base": 55,
+            "min": 220,
+            "max": 314
+        },
+        "Attack": {
+            "base": 84,
+            "min": 155,
+            "max": 293
+        },
+        "Defense": {
+            "base": 105,
+            "min": 193,
+            "max": 339
+        },
+        "Sp. Atk": {
+            "base": 114,
+            "min": 209,
+            "max": 359
+        },
+        "Sp. Def": {
+            "base": 75,
+            "min": 139,
+            "max": 273
+        },
+        "Speed": {
+            "base": 52,
+            "min": 98,
+            "max": 223
+        }
+    }
+}

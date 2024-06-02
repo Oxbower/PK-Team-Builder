@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 933,
+    "type": {
+        "type-0": "Rock"
+    },
+    "abilities": {
+        "ability-0": "Purifying Salt",
+        "ability-1": "Sturdy",
+        "ability-2": "Clear Body"
+    },
+    "stats": {
+        "HP": {
+            "base": 60,
+            "min": 230,
+            "max": 324
+        },
+        "Attack": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Defense": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        },
+        "Sp. Atk": {
+            "base": 35,
+            "min": 67,
+            "max": 185
+        },
+        "Sp. Def": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Speed": {
+            "base": 35,
+            "min": 67,
+            "max": 185
+        }
+    }
+}

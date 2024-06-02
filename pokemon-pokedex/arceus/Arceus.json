@@ -1,0 +1,41 @@
+{
+    "pokedex-no": 493,
+    "type": {
+        "type-0": "Normal"
+    },
+    "abilities": {
+        "ability-0": "Multitype"
+    },
+    "stats": {
+        "HP": {
+            "base": 120,
+            "min": 350,
+            "max": 444
+        },
+        "Attack": {
+            "base": 120,
+            "min": 220,
+            "max": 372
+        },
+        "Defense": {
+            "base": 120,
+            "min": 220,
+            "max": 372
+        },
+        "Sp. Atk": {
+            "base": 120,
+            "min": 220,
+            "max": 372
+        },
+        "Sp. Def": {
+            "base": 120,
+            "min": 220,
+            "max": 372
+        },
+        "Speed": {
+            "base": 120,
+            "min": 220,
+            "max": 372
+        }
+    }
+}

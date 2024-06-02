@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 791,
+    "type": {
+        "type-0": "Psychic",
+        "type-1": "Steel"
+    },
+    "abilities": {
+        "ability-0": "Full Metal Body"
+    },
+    "stats": {
+        "HP": {
+            "base": 137,
+            "min": 384,
+            "max": 478
+        },
+        "Attack": {
+            "base": 137,
+            "min": 251,
+            "max": 410
+        },
+        "Defense": {
+            "base": 107,
+            "min": 197,
+            "max": 344
+        },
+        "Sp. Atk": {
+            "base": 113,
+            "min": 207,
+            "max": 357
+        },
+        "Sp. Def": {
+            "base": 89,
+            "min": 164,
+            "max": 304
+        },
+        "Speed": {
+            "base": 97,
+            "min": 179,
+            "max": 322
+        }
+    }
+}

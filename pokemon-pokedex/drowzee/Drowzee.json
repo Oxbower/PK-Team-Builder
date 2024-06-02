@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 96,
+    "type": {
+        "type-0": "Psychic"
+    },
+    "abilities": {
+        "ability-0": "Insomnia",
+        "ability-1": "Forewarn",
+        "ability-2": "Inner Focus"
+    },
+    "stats": {
+        "HP": {
+            "base": 60,
+            "min": 230,
+            "max": 324
+        },
+        "Attack": {
+            "base": 48,
+            "min": 90,
+            "max": 214
+        },
+        "Defense": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        },
+        "Sp. Atk": {
+            "base": 43,
+            "min": 81,
+            "max": 203
+        },
+        "Sp. Def": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        },
+        "Speed": {
+            "base": 42,
+            "min": 80,
+            "max": 201
+        }
+    }
+}

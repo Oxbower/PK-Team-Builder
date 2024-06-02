@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 517,
+    "type": {
+        "type-0": "Psychic"
+    },
+    "abilities": {
+        "ability-0": "Forewarn",
+        "ability-1": "Synchronize",
+        "ability-2": "Telepathy"
+    },
+    "stats": {
+        "HP": {
+            "base": 76,
+            "min": 262,
+            "max": 356
+        },
+        "Attack": {
+            "base": 25,
+            "min": 49,
+            "max": 163
+        },
+        "Defense": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        },
+        "Sp. Atk": {
+            "base": 67,
+            "min": 125,
+            "max": 256
+        },
+        "Sp. Def": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        },
+        "Speed": {
+            "base": 24,
+            "min": 47,
+            "max": 161
+        }
+    }
+}

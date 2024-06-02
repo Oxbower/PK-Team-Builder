@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 499,
+    "type": {
+        "type-0": "Fire",
+        "type-1": "Fighting"
+    },
+    "abilities": {
+        "ability-0": "Blaze",
+        "ability-1": "Thick Fat"
+    },
+    "stats": {
+        "HP": {
+            "base": 90,
+            "min": 290,
+            "max": 384
+        },
+        "Attack": {
+            "base": 93,
+            "min": 171,
+            "max": 313
+        },
+        "Defense": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        },
+        "Sp. Atk": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        },
+        "Sp. Def": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        },
+        "Speed": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        }
+    }
+}

@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 738,
+    "type": {
+        "type-0": "Bug",
+        "type-1": "Electric"
+    },
+    "abilities": {
+        "ability-0": "Levitate"
+    },
+    "stats": {
+        "HP": {
+            "base": 77,
+            "min": 264,
+            "max": 358
+        },
+        "Attack": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        },
+        "Defense": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        },
+        "Sp. Atk": {
+            "base": 145,
+            "min": 265,
+            "max": 427
+        },
+        "Sp. Def": {
+            "base": 75,
+            "min": 139,
+            "max": 273
+        },
+        "Speed": {
+            "base": 43,
+            "min": 81,
+            "max": 203
+        }
+    }
+}

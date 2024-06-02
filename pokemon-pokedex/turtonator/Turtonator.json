@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 776,
+    "type": {
+        "type-0": "Fire",
+        "type-1": "Dragon"
+    },
+    "abilities": {
+        "ability-0": "Shell Armor"
+    },
+    "stats": {
+        "HP": {
+            "base": 60,
+            "min": 230,
+            "max": 324
+        },
+        "Attack": {
+            "base": 78,
+            "min": 144,
+            "max": 280
+        },
+        "Defense": {
+            "base": 135,
+            "min": 247,
+            "max": 405
+        },
+        "Sp. Atk": {
+            "base": 91,
+            "min": 168,
+            "max": 309
+        },
+        "Sp. Def": {
+            "base": 85,
+            "min": 157,
+            "max": 295
+        },
+        "Speed": {
+            "base": 36,
+            "min": 69,
+            "max": 188
+        }
+    }
+}

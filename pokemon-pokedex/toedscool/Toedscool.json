@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 948,
+    "type": {
+        "type-0": "Ground",
+        "type-1": "Grass"
+    },
+    "abilities": {
+        "ability-0": "Mycelium Might"
+    },
+    "stats": {
+        "HP": {
+            "base": 40,
+            "min": 190,
+            "max": 284
+        },
+        "Attack": {
+            "base": 40,
+            "min": 76,
+            "max": 196
+        },
+        "Defense": {
+            "base": 35,
+            "min": 67,
+            "max": 185
+        },
+        "Sp. Atk": {
+            "base": 50,
+            "min": 94,
+            "max": 218
+        },
+        "Sp. Def": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        },
+        "Speed": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        }
+    }
+}

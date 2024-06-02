@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 180,
+    "type": {
+        "type-0": "Electric"
+    },
+    "abilities": {
+        "ability-0": "Static",
+        "ability-1": "Plus"
+    },
+    "stats": {
+        "HP": {
+            "base": 70,
+            "min": 250,
+            "max": 344
+        },
+        "Attack": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        },
+        "Defense": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        },
+        "Sp. Atk": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        },
+        "Sp. Def": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Speed": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        }
+    }
+}

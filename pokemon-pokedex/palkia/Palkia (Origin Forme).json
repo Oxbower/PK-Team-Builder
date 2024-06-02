@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 484,
+    "type": {
+        "type-0": "Water",
+        "type-1": "Dragon"
+    },
+    "abilities": {
+        "ability-0": "Pressure",
+        "ability-1": "Telepathy"
+    },
+    "stats": {
+        "HP": {
+            "base": 90,
+            "min": 290,
+            "max": 384
+        },
+        "Attack": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        },
+        "Defense": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        },
+        "Sp. Atk": {
+            "base": 150,
+            "min": 274,
+            "max": 438
+        },
+        "Sp. Def": {
+            "base": 120,
+            "min": 220,
+            "max": 372
+        },
+        "Speed": {
+            "base": 120,
+            "min": 220,
+            "max": 372
+        }
+    }
+}

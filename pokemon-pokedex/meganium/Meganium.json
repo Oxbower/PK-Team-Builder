@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 154,
+    "type": {
+        "type-0": "Grass"
+    },
+    "abilities": {
+        "ability-0": "Overgrow",
+        "ability-1": "Leaf Guard"
+    },
+    "stats": {
+        "HP": {
+            "base": 80,
+            "min": 270,
+            "max": 364
+        },
+        "Attack": {
+            "base": 82,
+            "min": 152,
+            "max": 289
+        },
+        "Defense": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        },
+        "Sp. Atk": {
+            "base": 83,
+            "min": 153,
+            "max": 291
+        },
+        "Sp. Def": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        },
+        "Speed": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        }
+    }
+}

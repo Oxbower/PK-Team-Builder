@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 19,
+    "type": {
+        "type-0": "Dark",
+        "type-1": "Normal"
+    },
+    "abilities": {
+        "ability-0": "Gluttony",
+        "ability-1": "Hustle",
+        "ability-2": "Thick Fat"
+    },
+    "stats": {
+        "HP": {
+            "base": 30,
+            "min": 170,
+            "max": 264
+        },
+        "Attack": {
+            "base": 56,
+            "min": 105,
+            "max": 232
+        },
+        "Defense": {
+            "base": 35,
+            "min": 67,
+            "max": 185
+        },
+        "Sp. Atk": {
+            "base": 25,
+            "min": 49,
+            "max": 163
+        },
+        "Sp. Def": {
+            "base": 35,
+            "min": 67,
+            "max": 185
+        },
+        "Speed": {
+            "base": 72,
+            "min": 134,
+            "max": 267
+        }
+    }
+}

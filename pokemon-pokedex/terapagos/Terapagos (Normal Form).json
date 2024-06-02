@@ -1,0 +1,41 @@
+{
+    "pokedex-no": 1024,
+    "type": {
+        "type-0": "Normal"
+    },
+    "abilities": {
+        "ability-0": "Tera Shift"
+    },
+    "stats": {
+        "HP": {
+            "base": 90,
+            "min": 290,
+            "max": 384
+        },
+        "Attack": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Defense": {
+            "base": 85,
+            "min": 157,
+            "max": 295
+        },
+        "Sp. Atk": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Sp. Def": {
+            "base": 85,
+            "min": 157,
+            "max": 295
+        },
+        "Speed": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        }
+    }
+}

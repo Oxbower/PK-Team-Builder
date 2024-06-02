@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 306,
+    "type": {
+        "type-0": "Steel",
+        "type-1": "Rock"
+    },
+    "abilities": {
+        "ability-0": "Sturdy",
+        "ability-1": "Rock Head",
+        "ability-2": "Heavy Metal"
+    },
+    "stats": {
+        "HP": {
+            "base": 70,
+            "min": 250,
+            "max": 344
+        },
+        "Attack": {
+            "base": 110,
+            "min": 202,
+            "max": 350
+        },
+        "Defense": {
+            "base": 180,
+            "min": 328,
+            "max": 504
+        },
+        "Sp. Atk": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Sp. Def": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Speed": {
+            "base": 50,
+            "min": 94,
+            "max": 218
+        }
+    }
+}

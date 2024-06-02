@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 975,
+    "type": {
+        "type-0": "Ice"
+    },
+    "abilities": {
+        "ability-0": "Thick Fat",
+        "ability-1": "Slush Rush",
+        "ability-2": "Sheer Force"
+    },
+    "stats": {
+        "HP": {
+            "base": 170,
+            "min": 450,
+            "max": 544
+        },
+        "Attack": {
+            "base": 113,
+            "min": 207,
+            "max": 357
+        },
+        "Defense": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Sp. Atk": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        },
+        "Sp. Def": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        },
+        "Speed": {
+            "base": 73,
+            "min": 135,
+            "max": 269
+        }
+    }
+}

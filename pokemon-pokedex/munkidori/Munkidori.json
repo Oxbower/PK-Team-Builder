@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 1015,
+    "type": {
+        "type-0": "Poison",
+        "type-1": "Psychic"
+    },
+    "abilities": {
+        "ability-0": "Toxic Chain",
+        "ability-1": "Frisk"
+    },
+    "stats": {
+        "HP": {
+            "base": 88,
+            "min": 286,
+            "max": 380
+        },
+        "Attack": {
+            "base": 75,
+            "min": 139,
+            "max": 273
+        },
+        "Defense": {
+            "base": 66,
+            "min": 123,
+            "max": 254
+        },
+        "Sp. Atk": {
+            "base": 130,
+            "min": 238,
+            "max": 394
+        },
+        "Sp. Def": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        },
+        "Speed": {
+            "base": 106,
+            "min": 195,
+            "max": 342
+        }
+    }
+}

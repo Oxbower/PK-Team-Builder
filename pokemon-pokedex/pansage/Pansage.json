@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 511,
+    "type": {
+        "type-0": "Grass"
+    },
+    "abilities": {
+        "ability-0": "Gluttony",
+        "ability-1": "Overgrow"
+    },
+    "stats": {
+        "HP": {
+            "base": 50,
+            "min": 210,
+            "max": 304
+        },
+        "Attack": {
+            "base": 53,
+            "min": 99,
+            "max": 225
+        },
+        "Defense": {
+            "base": 48,
+            "min": 90,
+            "max": 214
+        },
+        "Sp. Atk": {
+            "base": 53,
+            "min": 99,
+            "max": 225
+        },
+        "Sp. Def": {
+            "base": 48,
+            "min": 90,
+            "max": 214
+        },
+        "Speed": {
+            "base": 64,
+            "min": 119,
+            "max": 249
+        }
+    }
+}

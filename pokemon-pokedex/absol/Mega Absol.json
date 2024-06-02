@@ -1,0 +1,41 @@
+{
+    "pokedex-no": 359,
+    "type": {
+        "type-0": "Dark"
+    },
+    "abilities": {
+        "ability-0": "Magic Bounce"
+    },
+    "stats": {
+        "HP": {
+            "base": 65,
+            "min": 240,
+            "max": 334
+        },
+        "Attack": {
+            "base": 150,
+            "min": 274,
+            "max": 438
+        },
+        "Defense": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Sp. Atk": {
+            "base": 115,
+            "min": 211,
+            "max": 361
+        },
+        "Sp. Def": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Speed": {
+            "base": 115,
+            "min": 211,
+            "max": 361
+        }
+    }
+}

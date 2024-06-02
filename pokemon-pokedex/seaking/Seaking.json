@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 119,
+    "type": {
+        "type-0": "Water"
+    },
+    "abilities": {
+        "ability-0": "Swift Swim",
+        "ability-1": "Water Veil",
+        "ability-2": "Lightning Rod"
+    },
+    "stats": {
+        "HP": {
+            "base": 80,
+            "min": 270,
+            "max": 364
+        },
+        "Attack": {
+            "base": 92,
+            "min": 170,
+            "max": 311
+        },
+        "Defense": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Sp. Atk": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Sp. Def": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        },
+        "Speed": {
+            "base": 68,
+            "min": 126,
+            "max": 258
+        }
+    }
+}

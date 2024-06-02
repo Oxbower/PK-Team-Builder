@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 469,
+    "type": {
+        "type-0": "Bug",
+        "type-1": "Flying"
+    },
+    "abilities": {
+        "ability-0": "Speed Boost",
+        "ability-1": "Tinted Lens",
+        "ability-2": "Frisk"
+    },
+    "stats": {
+        "HP": {
+            "base": 86,
+            "min": 282,
+            "max": 376
+        },
+        "Attack": {
+            "base": 76,
+            "min": 141,
+            "max": 276
+        },
+        "Defense": {
+            "base": 86,
+            "min": 159,
+            "max": 298
+        },
+        "Sp. Atk": {
+            "base": 116,
+            "min": 213,
+            "max": 364
+        },
+        "Sp. Def": {
+            "base": 56,
+            "min": 105,
+            "max": 232
+        },
+        "Speed": {
+            "base": 95,
+            "min": 175,
+            "max": 317
+        }
+    }
+}

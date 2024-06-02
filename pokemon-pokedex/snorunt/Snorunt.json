@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 361,
+    "type": {
+        "type-0": "Ice"
+    },
+    "abilities": {
+        "ability-0": "Inner Focus",
+        "ability-1": "Ice Body",
+        "ability-2": "Moody"
+    },
+    "stats": {
+        "HP": {
+            "base": 50,
+            "min": 210,
+            "max": 304
+        },
+        "Attack": {
+            "base": 50,
+            "min": 94,
+            "max": 218
+        },
+        "Defense": {
+            "base": 50,
+            "min": 94,
+            "max": 218
+        },
+        "Sp. Atk": {
+            "base": 50,
+            "min": 94,
+            "max": 218
+        },
+        "Sp. Def": {
+            "base": 50,
+            "min": 94,
+            "max": 218
+        },
+        "Speed": {
+            "base": 50,
+            "min": 94,
+            "max": 218
+        }
+    }
+}

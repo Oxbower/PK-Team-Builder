@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 1016,
+    "type": {
+        "type-0": "Poison",
+        "type-1": "Fairy"
+    },
+    "abilities": {
+        "ability-0": "Toxic Chain",
+        "ability-1": "Technician"
+    },
+    "stats": {
+        "HP": {
+            "base": 88,
+            "min": 286,
+            "max": 380
+        },
+        "Attack": {
+            "base": 91,
+            "min": 168,
+            "max": 309
+        },
+        "Defense": {
+            "base": 82,
+            "min": 152,
+            "max": 289
+        },
+        "Sp. Atk": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        },
+        "Sp. Def": {
+            "base": 125,
+            "min": 229,
+            "max": 383
+        },
+        "Speed": {
+            "base": 99,
+            "min": 182,
+            "max": 326
+        }
+    }
+}

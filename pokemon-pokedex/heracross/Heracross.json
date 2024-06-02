@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 214,
+    "type": {
+        "type-0": "Bug",
+        "type-1": "Fighting"
+    },
+    "abilities": {
+        "ability-0": "Swarm",
+        "ability-1": "Guts",
+        "ability-2": "Moxie"
+    },
+    "stats": {
+        "HP": {
+            "base": 80,
+            "min": 270,
+            "max": 364
+        },
+        "Attack": {
+            "base": 125,
+            "min": 229,
+            "max": 383
+        },
+        "Defense": {
+            "base": 75,
+            "min": 139,
+            "max": 273
+        },
+        "Sp. Atk": {
+            "base": 40,
+            "min": 76,
+            "max": 196
+        },
+        "Sp. Def": {
+            "base": 95,
+            "min": 175,
+            "max": 317
+        },
+        "Speed": {
+            "base": 85,
+            "min": 157,
+            "max": 295
+        }
+    }
+}

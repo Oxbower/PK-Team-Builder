@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 665,
+    "type": {
+        "type-0": "Bug"
+    },
+    "abilities": {
+        "ability-0": "Shed Skin",
+        "ability-1": "Friend Guard"
+    },
+    "stats": {
+        "HP": {
+            "base": 45,
+            "min": 200,
+            "max": 294
+        },
+        "Attack": {
+            "base": 22,
+            "min": 44,
+            "max": 157
+        },
+        "Defense": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Sp. Atk": {
+            "base": 27,
+            "min": 53,
+            "max": 168
+        },
+        "Sp. Def": {
+            "base": 30,
+            "min": 58,
+            "max": 174
+        },
+        "Speed": {
+            "base": 29,
+            "min": 56,
+            "max": 172
+        }
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 308,
+    "type": {
+        "type-0": "Fighting",
+        "type-1": "Psychic"
+    },
+    "abilities": {
+        "ability-0": "Pure Power",
+        "ability-1": "Telepathy"
+    },
+    "stats": {
+        "HP": {
+            "base": 60,
+            "min": 230,
+            "max": 324
+        },
+        "Attack": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Defense": {
+            "base": 75,
+            "min": 139,
+            "max": 273
+        },
+        "Sp. Atk": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Sp. Def": {
+            "base": 75,
+            "min": 139,
+            "max": 273
+        },
+        "Speed": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        }
+    }
+}

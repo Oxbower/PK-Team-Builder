@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 985,
+    "type": {
+        "type-0": "Fairy",
+        "type-1": "Psychic"
+    },
+    "abilities": {
+        "ability-0": "Protosynthesis"
+    },
+    "stats": {
+        "HP": {
+            "base": 115,
+            "min": 340,
+            "max": 434
+        },
+        "Attack": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Defense": {
+            "base": 99,
+            "min": 182,
+            "max": 326
+        },
+        "Sp. Atk": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Sp. Def": {
+            "base": 115,
+            "min": 211,
+            "max": 361
+        },
+        "Speed": {
+            "base": 111,
+            "min": 204,
+            "max": 353
+        }
+    }
+}

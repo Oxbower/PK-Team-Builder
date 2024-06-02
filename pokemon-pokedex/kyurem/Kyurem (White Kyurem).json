@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 646,
+    "type": {
+        "type-0": "Dragon",
+        "type-1": "Ice"
+    },
+    "abilities": {
+        "ability-0": "Turboblaze"
+    },
+    "stats": {
+        "HP": {
+            "base": 125,
+            "min": 360,
+            "max": 454
+        },
+        "Attack": {
+            "base": 120,
+            "min": 220,
+            "max": 372
+        },
+        "Defense": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        },
+        "Sp. Atk": {
+            "base": 170,
+            "min": 310,
+            "max": 482
+        },
+        "Sp. Def": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        },
+        "Speed": {
+            "base": 95,
+            "min": 175,
+            "max": 317
+        }
+    }
+}

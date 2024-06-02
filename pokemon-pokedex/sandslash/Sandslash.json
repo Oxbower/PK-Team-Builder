@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 28,
+    "type": {
+        "type-0": "Ground"
+    },
+    "abilities": {
+        "ability-0": "Sand Veil",
+        "ability-1": "Sand Rush"
+    },
+    "stats": {
+        "HP": {
+            "base": 75,
+            "min": 260,
+            "max": 354
+        },
+        "Attack": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        },
+        "Defense": {
+            "base": 110,
+            "min": 202,
+            "max": 350
+        },
+        "Sp. Atk": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        },
+        "Sp. Def": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        },
+        "Speed": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        }
+    }
+}

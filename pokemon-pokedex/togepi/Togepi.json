@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 175,
+    "type": {
+        "type-0": "Fairy"
+    },
+    "abilities": {
+        "ability-0": "Hustle",
+        "ability-1": "Serene Grace",
+        "ability-2": "Super Luck"
+    },
+    "stats": {
+        "HP": {
+            "base": 35,
+            "min": 180,
+            "max": 274
+        },
+        "Attack": {
+            "base": 20,
+            "min": 40,
+            "max": 152
+        },
+        "Defense": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Sp. Atk": {
+            "base": 40,
+            "min": 76,
+            "max": 196
+        },
+        "Sp. Def": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Speed": {
+            "base": 20,
+            "min": 40,
+            "max": 152
+        }
+    }
+}

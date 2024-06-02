@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 385,
+    "type": {
+        "type-0": "Steel",
+        "type-1": "Psychic"
+    },
+    "abilities": {
+        "ability-0": "Serene Grace"
+    },
+    "stats": {
+        "HP": {
+            "base": 100,
+            "min": 310,
+            "max": 404
+        },
+        "Attack": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        },
+        "Defense": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        },
+        "Sp. Atk": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        },
+        "Sp. Def": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        },
+        "Speed": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        }
+    }
+}

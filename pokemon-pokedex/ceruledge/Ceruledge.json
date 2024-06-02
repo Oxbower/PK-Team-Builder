@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 937,
+    "type": {
+        "type-0": "Fire",
+        "type-1": "Ghost"
+    },
+    "abilities": {
+        "ability-0": "Flash Fire",
+        "ability-1": "Weak Armor"
+    },
+    "stats": {
+        "HP": {
+            "base": 75,
+            "min": 260,
+            "max": 354
+        },
+        "Attack": {
+            "base": 125,
+            "min": 229,
+            "max": 383
+        },
+        "Defense": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        },
+        "Sp. Atk": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Sp. Def": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        },
+        "Speed": {
+            "base": 85,
+            "min": 157,
+            "max": 295
+        }
+    }
+}

@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 172,
+    "type": {
+        "type-0": "Electric"
+    },
+    "abilities": {
+        "ability-0": "Static",
+        "ability-1": "Lightning Rod"
+    },
+    "stats": {
+        "HP": {
+            "base": 20,
+            "min": 150,
+            "max": 244
+        },
+        "Attack": {
+            "base": 40,
+            "min": 76,
+            "max": 196
+        },
+        "Defense": {
+            "base": 15,
+            "min": 31,
+            "max": 141
+        },
+        "Sp. Atk": {
+            "base": 35,
+            "min": 67,
+            "max": 185
+        },
+        "Sp. Def": {
+            "base": 35,
+            "min": 67,
+            "max": 185
+        },
+        "Speed": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        }
+    }
+}

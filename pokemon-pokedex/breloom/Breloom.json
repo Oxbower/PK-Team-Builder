@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 286,
+    "type": {
+        "type-0": "Grass",
+        "type-1": "Fighting"
+    },
+    "abilities": {
+        "ability-0": "Effect Spore",
+        "ability-1": "Poison Heal",
+        "ability-2": "Technician"
+    },
+    "stats": {
+        "HP": {
+            "base": 60,
+            "min": 230,
+            "max": 324
+        },
+        "Attack": {
+            "base": 130,
+            "min": 238,
+            "max": 394
+        },
+        "Defense": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        },
+        "Sp. Atk": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Sp. Def": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Speed": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        }
+    }
+}

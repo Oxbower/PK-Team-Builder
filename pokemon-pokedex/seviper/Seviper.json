@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 336,
+    "type": {
+        "type-0": "Poison"
+    },
+    "abilities": {
+        "ability-0": "Shed Skin",
+        "ability-1": "Infiltrator"
+    },
+    "stats": {
+        "HP": {
+            "base": 73,
+            "min": 256,
+            "max": 350
+        },
+        "Attack": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        },
+        "Defense": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Sp. Atk": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        },
+        "Sp. Def": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Speed": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        }
+    }
+}

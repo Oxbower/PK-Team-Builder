@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 109,
+    "type": {
+        "type-0": "Poison"
+    },
+    "abilities": {
+        "ability-0": "Levitate",
+        "ability-1": "Neutralizing Gas",
+        "ability-2": "Stench"
+    },
+    "stats": {
+        "HP": {
+            "base": 40,
+            "min": 190,
+            "max": 284
+        },
+        "Attack": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Defense": {
+            "base": 95,
+            "min": 175,
+            "max": 317
+        },
+        "Sp. Atk": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Sp. Def": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        },
+        "Speed": {
+            "base": 35,
+            "min": 67,
+            "max": 185
+        }
+    }
+}

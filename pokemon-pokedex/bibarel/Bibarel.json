@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 400,
+    "type": {
+        "type-0": "Normal",
+        "type-1": "Water"
+    },
+    "abilities": {
+        "ability-0": "Simple",
+        "ability-1": "Unaware",
+        "ability-2": "Moody"
+    },
+    "stats": {
+        "HP": {
+            "base": 79,
+            "min": 268,
+            "max": 362
+        },
+        "Attack": {
+            "base": 85,
+            "min": 157,
+            "max": 295
+        },
+        "Defense": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Sp. Atk": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        },
+        "Sp. Def": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Speed": {
+            "base": 71,
+            "min": 132,
+            "max": 265
+        }
+    }
+}

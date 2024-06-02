@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 697,
+    "type": {
+        "type-0": "Rock",
+        "type-1": "Dragon"
+    },
+    "abilities": {
+        "ability-0": "Strong Jaw",
+        "ability-1": "Rock Head"
+    },
+    "stats": {
+        "HP": {
+            "base": 82,
+            "min": 274,
+            "max": 368
+        },
+        "Attack": {
+            "base": 121,
+            "min": 222,
+            "max": 375
+        },
+        "Defense": {
+            "base": 119,
+            "min": 218,
+            "max": 370
+        },
+        "Sp. Atk": {
+            "base": 69,
+            "min": 128,
+            "max": 260
+        },
+        "Sp. Def": {
+            "base": 59,
+            "min": 110,
+            "max": 238
+        },
+        "Speed": {
+            "base": 71,
+            "min": 132,
+            "max": 265
+        }
+    }
+}

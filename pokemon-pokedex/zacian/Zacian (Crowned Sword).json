@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 888,
+    "type": {
+        "type-0": "Fairy",
+        "type-1": "Steel"
+    },
+    "abilities": {
+        "ability-0": "Intrepid Sword"
+    },
+    "stats": {
+        "HP": {
+            "base": 92,
+            "min": 294,
+            "max": 388
+        },
+        "Attack": {
+            "base": 150,
+            "min": 274,
+            "max": 438
+        },
+        "Defense": {
+            "base": 115,
+            "min": 211,
+            "max": 361
+        },
+        "Sp. Atk": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        },
+        "Sp. Def": {
+            "base": 115,
+            "min": 211,
+            "max": 361
+        },
+        "Speed": {
+            "base": 148,
+            "min": 270,
+            "max": 434
+        }
+    }
+}

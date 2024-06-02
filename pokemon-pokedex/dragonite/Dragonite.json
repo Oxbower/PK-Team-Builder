@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 149,
+    "type": {
+        "type-0": "Dragon",
+        "type-1": "Flying"
+    },
+    "abilities": {
+        "ability-0": "Inner Focus",
+        "ability-1": "Multiscale"
+    },
+    "stats": {
+        "HP": {
+            "base": 91,
+            "min": 292,
+            "max": 386
+        },
+        "Attack": {
+            "base": 134,
+            "min": 245,
+            "max": 403
+        },
+        "Defense": {
+            "base": 95,
+            "min": 175,
+            "max": 317
+        },
+        "Sp. Atk": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        },
+        "Sp. Def": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        },
+        "Speed": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        }
+    }
+}

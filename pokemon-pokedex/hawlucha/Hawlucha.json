@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 701,
+    "type": {
+        "type-0": "Fighting",
+        "type-1": "Flying"
+    },
+    "abilities": {
+        "ability-0": "Limber",
+        "ability-1": "Unburden",
+        "ability-2": "Mold Breaker"
+    },
+    "stats": {
+        "HP": {
+            "base": 78,
+            "min": 266,
+            "max": 360
+        },
+        "Attack": {
+            "base": 92,
+            "min": 170,
+            "max": 311
+        },
+        "Defense": {
+            "base": 75,
+            "min": 139,
+            "max": 273
+        },
+        "Sp. Atk": {
+            "base": 74,
+            "min": 137,
+            "max": 271
+        },
+        "Sp. Def": {
+            "base": 63,
+            "min": 117,
+            "max": 247
+        },
+        "Speed": {
+            "base": 118,
+            "min": 216,
+            "max": 368
+        }
+    }
+}

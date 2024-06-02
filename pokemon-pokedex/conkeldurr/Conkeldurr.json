@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 534,
+    "type": {
+        "type-0": "Fighting"
+    },
+    "abilities": {
+        "ability-0": "Guts",
+        "ability-1": "Sheer Force",
+        "ability-2": "Iron Fist"
+    },
+    "stats": {
+        "HP": {
+            "base": 105,
+            "min": 320,
+            "max": 414
+        },
+        "Attack": {
+            "base": 140,
+            "min": 256,
+            "max": 416
+        },
+        "Defense": {
+            "base": 95,
+            "min": 175,
+            "max": 317
+        },
+        "Sp. Atk": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        },
+        "Sp. Def": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Speed": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        }
+    }
+}

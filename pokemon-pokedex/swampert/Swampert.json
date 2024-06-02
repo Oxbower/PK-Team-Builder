@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 260,
+    "type": {
+        "type-0": "Water",
+        "type-1": "Ground"
+    },
+    "abilities": {
+        "ability-0": "Torrent",
+        "ability-1": "Damp"
+    },
+    "stats": {
+        "HP": {
+            "base": 100,
+            "min": 310,
+            "max": 404
+        },
+        "Attack": {
+            "base": 110,
+            "min": 202,
+            "max": 350
+        },
+        "Defense": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        },
+        "Sp. Atk": {
+            "base": 85,
+            "min": 157,
+            "max": 295
+        },
+        "Sp. Def": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        },
+        "Speed": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        }
+    }
+}

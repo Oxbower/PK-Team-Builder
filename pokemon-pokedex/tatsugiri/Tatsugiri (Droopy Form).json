@@ -1,0 +1,40 @@
+{
+    "pokedex-no": 978,
+    "type": {
+        "type-0": "Dragon",
+        "type-1": "Water"
+    },
+    "abilities": {},
+    "stats": {
+        "HP": {
+            "base": 68,
+            "min": 246,
+            "max": 340
+        },
+        "Attack": {
+            "base": 50,
+            "min": 94,
+            "max": 218
+        },
+        "Defense": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Sp. Atk": {
+            "base": 120,
+            "min": 220,
+            "max": 372
+        },
+        "Sp. Def": {
+            "base": 95,
+            "min": 175,
+            "max": 317
+        },
+        "Speed": {
+            "base": 82,
+            "min": 152,
+            "max": 289
+        }
+    }
+}

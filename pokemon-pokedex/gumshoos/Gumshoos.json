@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 735,
+    "type": {
+        "type-0": "Normal"
+    },
+    "abilities": {
+        "ability-0": "Strong Jaw",
+        "ability-1": "Stakeout",
+        "ability-2": "Adaptability"
+    },
+    "stats": {
+        "HP": {
+            "base": 88,
+            "min": 286,
+            "max": 380
+        },
+        "Attack": {
+            "base": 110,
+            "min": 202,
+            "max": 350
+        },
+        "Defense": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Sp. Atk": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        },
+        "Sp. Def": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Speed": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        }
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 954,
+    "type": {
+        "type-0": "Bug",
+        "type-1": "Psychic"
+    },
+    "abilities": {
+        "ability-0": "Synchronize",
+        "ability-1": "Telepathy"
+    },
+    "stats": {
+        "HP": {
+            "base": 75,
+            "min": 260,
+            "max": 354
+        },
+        "Attack": {
+            "base": 50,
+            "min": 94,
+            "max": 218
+        },
+        "Defense": {
+            "base": 85,
+            "min": 157,
+            "max": 295
+        },
+        "Sp. Atk": {
+            "base": 115,
+            "min": 211,
+            "max": 361
+        },
+        "Sp. Def": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        },
+        "Speed": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        }
+    }
+}

@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 95,
+    "type": {
+        "type-0": "Rock",
+        "type-1": "Ground"
+    },
+    "abilities": {
+        "ability-0": "Rock Head",
+        "ability-1": "Sturdy",
+        "ability-2": "Weak Armor"
+    },
+    "stats": {
+        "HP": {
+            "base": 35,
+            "min": 180,
+            "max": 274
+        },
+        "Attack": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        },
+        "Defense": {
+            "base": 160,
+            "min": 292,
+            "max": 460
+        },
+        "Sp. Atk": {
+            "base": 30,
+            "min": 58,
+            "max": 174
+        },
+        "Sp. Def": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        },
+        "Speed": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        }
+    }
+}

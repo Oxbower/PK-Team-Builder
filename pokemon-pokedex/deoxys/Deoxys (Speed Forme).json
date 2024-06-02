@@ -1,0 +1,41 @@
+{
+    "pokedex-no": 386,
+    "type": {
+        "type-0": "Psychic"
+    },
+    "abilities": {
+        "ability-0": "Pressure"
+    },
+    "stats": {
+        "HP": {
+            "base": 50,
+            "min": 210,
+            "max": 304
+        },
+        "Attack": {
+            "base": 95,
+            "min": 175,
+            "max": 317
+        },
+        "Defense": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        },
+        "Sp. Atk": {
+            "base": 95,
+            "min": 175,
+            "max": 317
+        },
+        "Sp. Def": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        },
+        "Speed": {
+            "base": 180,
+            "min": 328,
+            "max": 504
+        }
+    }
+}

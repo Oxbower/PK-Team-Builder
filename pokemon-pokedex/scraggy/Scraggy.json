@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 559,
+    "type": {
+        "type-0": "Dark",
+        "type-1": "Fighting"
+    },
+    "abilities": {
+        "ability-0": "Shed Skin",
+        "ability-1": "Moxie",
+        "ability-2": "Intimidate"
+    },
+    "stats": {
+        "HP": {
+            "base": 50,
+            "min": 210,
+            "max": 304
+        },
+        "Attack": {
+            "base": 75,
+            "min": 139,
+            "max": 273
+        },
+        "Defense": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        },
+        "Sp. Atk": {
+            "base": 35,
+            "min": 67,
+            "max": 185
+        },
+        "Sp. Def": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        },
+        "Speed": {
+            "base": 48,
+            "min": 90,
+            "max": 214
+        }
+    }
+}

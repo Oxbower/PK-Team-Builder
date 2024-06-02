@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 815,
+    "type": {
+        "type-0": "Fire"
+    },
+    "abilities": {
+        "ability-0": "Blaze",
+        "ability-1": "Libero"
+    },
+    "stats": {
+        "HP": {
+            "base": 80,
+            "min": 270,
+            "max": 364
+        },
+        "Attack": {
+            "base": 116,
+            "min": 213,
+            "max": 364
+        },
+        "Defense": {
+            "base": 75,
+            "min": 139,
+            "max": 273
+        },
+        "Sp. Atk": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Sp. Def": {
+            "base": 75,
+            "min": 139,
+            "max": 273
+        },
+        "Speed": {
+            "base": 119,
+            "min": 218,
+            "max": 370
+        }
+    }
+}

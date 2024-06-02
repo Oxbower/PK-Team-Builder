@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 52,
+    "type": {
+        "type-0": "Dark"
+    },
+    "abilities": {
+        "ability-0": "Pickup",
+        "ability-1": "Technician",
+        "ability-2": "Rattled"
+    },
+    "stats": {
+        "HP": {
+            "base": 40,
+            "min": 190,
+            "max": 284
+        },
+        "Attack": {
+            "base": 35,
+            "min": 67,
+            "max": 185
+        },
+        "Defense": {
+            "base": 35,
+            "min": 67,
+            "max": 185
+        },
+        "Sp. Atk": {
+            "base": 50,
+            "min": 94,
+            "max": 218
+        },
+        "Sp. Def": {
+            "base": 40,
+            "min": 76,
+            "max": 196
+        },
+        "Speed": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        }
+    }
+}

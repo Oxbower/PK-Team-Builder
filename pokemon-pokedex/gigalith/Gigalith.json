@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 526,
+    "type": {
+        "type-0": "Rock"
+    },
+    "abilities": {
+        "ability-0": "Sturdy",
+        "ability-1": "Sand Stream",
+        "ability-2": "Sand Force"
+    },
+    "stats": {
+        "HP": {
+            "base": 85,
+            "min": 280,
+            "max": 374
+        },
+        "Attack": {
+            "base": 135,
+            "min": 247,
+            "max": 405
+        },
+        "Defense": {
+            "base": 130,
+            "min": 238,
+            "max": 394
+        },
+        "Sp. Atk": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Sp. Def": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        },
+        "Speed": {
+            "base": 25,
+            "min": 49,
+            "max": 163
+        }
+    }
+}

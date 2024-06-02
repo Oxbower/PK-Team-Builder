@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 329,
+    "type": {
+        "type-0": "Ground",
+        "type-1": "Dragon"
+    },
+    "abilities": {
+        "ability-0": "Levitate"
+    },
+    "stats": {
+        "HP": {
+            "base": 50,
+            "min": 210,
+            "max": 304
+        },
+        "Attack": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        },
+        "Defense": {
+            "base": 50,
+            "min": 94,
+            "max": 218
+        },
+        "Sp. Atk": {
+            "base": 50,
+            "min": 94,
+            "max": 218
+        },
+        "Sp. Def": {
+            "base": 50,
+            "min": 94,
+            "max": 218
+        },
+        "Speed": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        }
+    }
+}

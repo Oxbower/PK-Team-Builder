@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 745,
+    "type": {
+        "type-0": "Rock"
+    },
+    "abilities": {
+        "ability-0": "Keen Eye",
+        "ability-1": "Sand Rush",
+        "ability-2": "Steadfast"
+    },
+    "stats": {
+        "HP": {
+            "base": 75,
+            "min": 260,
+            "max": 354
+        },
+        "Attack": {
+            "base": 115,
+            "min": 211,
+            "max": 361
+        },
+        "Defense": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Sp. Atk": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        },
+        "Sp. Def": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Speed": {
+            "base": 112,
+            "min": 206,
+            "max": 355
+        }
+    }
+}

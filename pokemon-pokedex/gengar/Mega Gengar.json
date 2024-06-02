@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 94,
+    "type": {
+        "type-0": "Ghost",
+        "type-1": "Poison"
+    },
+    "abilities": {
+        "ability-0": "Shadow Tag"
+    },
+    "stats": {
+        "HP": {
+            "base": 60,
+            "min": 230,
+            "max": 324
+        },
+        "Attack": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Defense": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        },
+        "Sp. Atk": {
+            "base": 170,
+            "min": 310,
+            "max": 482
+        },
+        "Sp. Def": {
+            "base": 95,
+            "min": 175,
+            "max": 317
+        },
+        "Speed": {
+            "base": 130,
+            "min": 238,
+            "max": 394
+        }
+    }
+}

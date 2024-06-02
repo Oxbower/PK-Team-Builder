@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 465,
+    "type": {
+        "type-0": "Grass"
+    },
+    "abilities": {
+        "ability-0": "Chlorophyll",
+        "ability-1": "Leaf Guard",
+        "ability-2": "Regenerator"
+    },
+    "stats": {
+        "HP": {
+            "base": 100,
+            "min": 310,
+            "max": 404
+        },
+        "Attack": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        },
+        "Defense": {
+            "base": 125,
+            "min": 229,
+            "max": 383
+        },
+        "Sp. Atk": {
+            "base": 110,
+            "min": 202,
+            "max": 350
+        },
+        "Sp. Def": {
+            "base": 50,
+            "min": 94,
+            "max": 218
+        },
+        "Speed": {
+            "base": 50,
+            "min": 94,
+            "max": 218
+        }
+    }
+}

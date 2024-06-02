@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 523,
+    "type": {
+        "type-0": "Electric"
+    },
+    "abilities": {
+        "ability-0": "Lightning Rod",
+        "ability-1": "Motor Drive",
+        "ability-2": "Sap Sipper"
+    },
+    "stats": {
+        "HP": {
+            "base": 75,
+            "min": 260,
+            "max": 354
+        },
+        "Attack": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        },
+        "Defense": {
+            "base": 63,
+            "min": 117,
+            "max": 247
+        },
+        "Sp. Atk": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        },
+        "Sp. Def": {
+            "base": 63,
+            "min": 117,
+            "max": 247
+        },
+        "Speed": {
+            "base": 116,
+            "min": 213,
+            "max": 364
+        }
+    }
+}

@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 91,
+    "type": {
+        "type-0": "Water",
+        "type-1": "Ice"
+    },
+    "abilities": {
+        "ability-0": "Shell Armor",
+        "ability-1": "Skill Link",
+        "ability-2": "Overcoat"
+    },
+    "stats": {
+        "HP": {
+            "base": 50,
+            "min": 210,
+            "max": 304
+        },
+        "Attack": {
+            "base": 95,
+            "min": 175,
+            "max": 317
+        },
+        "Defense": {
+            "base": 180,
+            "min": 328,
+            "max": 504
+        },
+        "Sp. Atk": {
+            "base": 85,
+            "min": 157,
+            "max": 295
+        },
+        "Sp. Def": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        },
+        "Speed": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        }
+    }
+}

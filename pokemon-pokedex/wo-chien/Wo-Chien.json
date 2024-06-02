@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 1001,
+    "type": {
+        "type-0": "Dark",
+        "type-1": "Grass"
+    },
+    "abilities": {
+        "ability-0": "Tablets of Ruin"
+    },
+    "stats": {
+        "HP": {
+            "base": 85,
+            "min": 280,
+            "max": 374
+        },
+        "Attack": {
+            "base": 85,
+            "min": 157,
+            "max": 295
+        },
+        "Defense": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        },
+        "Sp. Atk": {
+            "base": 95,
+            "min": 175,
+            "max": 317
+        },
+        "Sp. Def": {
+            "base": 135,
+            "min": 247,
+            "max": 405
+        },
+        "Speed": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        }
+    }
+}

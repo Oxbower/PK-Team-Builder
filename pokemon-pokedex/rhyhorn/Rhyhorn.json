@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 111,
+    "type": {
+        "type-0": "Ground",
+        "type-1": "Rock"
+    },
+    "abilities": {
+        "ability-0": "Lightning Rod",
+        "ability-1": "Rock Head",
+        "ability-2": "Reckless"
+    },
+    "stats": {
+        "HP": {
+            "base": 80,
+            "min": 270,
+            "max": 364
+        },
+        "Attack": {
+            "base": 85,
+            "min": 157,
+            "max": 295
+        },
+        "Defense": {
+            "base": 95,
+            "min": 175,
+            "max": 317
+        },
+        "Sp. Atk": {
+            "base": 30,
+            "min": 58,
+            "max": 174
+        },
+        "Sp. Def": {
+            "base": 30,
+            "min": 58,
+            "max": 174
+        },
+        "Speed": {
+            "base": 25,
+            "min": 49,
+            "max": 163
+        }
+    }
+}

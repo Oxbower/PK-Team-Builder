@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 238,
+    "type": {
+        "type-0": "Ice",
+        "type-1": "Psychic"
+    },
+    "abilities": {
+        "ability-0": "Oblivious",
+        "ability-1": "Forewarn",
+        "ability-2": "Hydration"
+    },
+    "stats": {
+        "HP": {
+            "base": 45,
+            "min": 200,
+            "max": 294
+        },
+        "Attack": {
+            "base": 30,
+            "min": 58,
+            "max": 174
+        },
+        "Defense": {
+            "base": 15,
+            "min": 31,
+            "max": 141
+        },
+        "Sp. Atk": {
+            "base": 85,
+            "min": 157,
+            "max": 295
+        },
+        "Sp. Def": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Speed": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        }
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 658,
+    "type": {
+        "type-0": "Water",
+        "type-1": "Dark"
+    },
+    "abilities": {
+        "ability-0": "Torrent",
+        "ability-1": "Protean"
+    },
+    "stats": {
+        "HP": {
+            "base": 72,
+            "min": 254,
+            "max": 348
+        },
+        "Attack": {
+            "base": 95,
+            "min": 175,
+            "max": 317
+        },
+        "Defense": {
+            "base": 67,
+            "min": 125,
+            "max": 256
+        },
+        "Sp. Atk": {
+            "base": 103,
+            "min": 189,
+            "max": 335
+        },
+        "Sp. Def": {
+            "base": 71,
+            "min": 132,
+            "max": 265
+        },
+        "Speed": {
+            "base": 122,
+            "min": 224,
+            "max": 377
+        }
+    }
+}

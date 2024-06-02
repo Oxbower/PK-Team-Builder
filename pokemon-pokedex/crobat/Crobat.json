@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 169,
+    "type": {
+        "type-0": "Poison",
+        "type-1": "Flying"
+    },
+    "abilities": {
+        "ability-0": "Inner Focus",
+        "ability-1": "Infiltrator"
+    },
+    "stats": {
+        "HP": {
+            "base": 85,
+            "min": 280,
+            "max": 374
+        },
+        "Attack": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        },
+        "Defense": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        },
+        "Sp. Atk": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        },
+        "Sp. Def": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        },
+        "Speed": {
+            "base": 130,
+            "min": 238,
+            "max": 394
+        }
+    }
+}

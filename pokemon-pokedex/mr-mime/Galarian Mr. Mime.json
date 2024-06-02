@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 122,
+    "type": {
+        "type-0": "Ice",
+        "type-1": "Psychic"
+    },
+    "abilities": {
+        "ability-0": "Vital Spirit",
+        "ability-1": "Screen Cleaner",
+        "ability-2": "Ice Body"
+    },
+    "stats": {
+        "HP": {
+            "base": 50,
+            "min": 210,
+            "max": 304
+        },
+        "Attack": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Defense": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Sp. Atk": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        },
+        "Sp. Def": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        },
+        "Speed": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        }
+    }
+}

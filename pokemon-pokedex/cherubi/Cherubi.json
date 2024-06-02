@@ -1,0 +1,41 @@
+{
+    "pokedex-no": 420,
+    "type": {
+        "type-0": "Grass"
+    },
+    "abilities": {
+        "ability-0": "Chlorophyll"
+    },
+    "stats": {
+        "HP": {
+            "base": 45,
+            "min": 200,
+            "max": 294
+        },
+        "Attack": {
+            "base": 35,
+            "min": 67,
+            "max": 185
+        },
+        "Defense": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        },
+        "Sp. Atk": {
+            "base": 62,
+            "min": 116,
+            "max": 245
+        },
+        "Sp. Def": {
+            "base": 53,
+            "min": 99,
+            "max": 225
+        },
+        "Speed": {
+            "base": 35,
+            "min": 67,
+            "max": 185
+        }
+    }
+}

@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 46,
+    "type": {
+        "type-0": "Bug",
+        "type-1": "Grass"
+    },
+    "abilities": {
+        "ability-0": "Effect Spore",
+        "ability-1": "Dry Skin",
+        "ability-2": "Damp"
+    },
+    "stats": {
+        "HP": {
+            "base": 35,
+            "min": 180,
+            "max": 274
+        },
+        "Attack": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        },
+        "Defense": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        },
+        "Sp. Atk": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        },
+        "Sp. Def": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        },
+        "Speed": {
+            "base": 25,
+            "min": 49,
+            "max": 163
+        }
+    }
+}

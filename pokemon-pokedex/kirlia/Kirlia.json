@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 281,
+    "type": {
+        "type-0": "Psychic",
+        "type-1": "Fairy"
+    },
+    "abilities": {
+        "ability-0": "Synchronize",
+        "ability-1": "Trace",
+        "ability-2": "Telepathy"
+    },
+    "stats": {
+        "HP": {
+            "base": 38,
+            "min": 186,
+            "max": 280
+        },
+        "Attack": {
+            "base": 35,
+            "min": 67,
+            "max": 185
+        },
+        "Defense": {
+            "base": 35,
+            "min": 67,
+            "max": 185
+        },
+        "Sp. Atk": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Sp. Def": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        },
+        "Speed": {
+            "base": 50,
+            "min": 94,
+            "max": 218
+        }
+    }
+}

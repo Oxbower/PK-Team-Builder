@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 996,
+    "type": {
+        "type-0": "Dragon",
+        "type-1": "Ice"
+    },
+    "abilities": {
+        "ability-0": "Thermal Exchange",
+        "ability-1": "Ice Body"
+    },
+    "stats": {
+        "HP": {
+            "base": 65,
+            "min": 240,
+            "max": 334
+        },
+        "Attack": {
+            "base": 75,
+            "min": 139,
+            "max": 273
+        },
+        "Defense": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        },
+        "Sp. Atk": {
+            "base": 35,
+            "min": 67,
+            "max": 185
+        },
+        "Sp. Def": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        },
+        "Speed": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        }
+    }
+}

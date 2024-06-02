@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 77,
+    "type": {
+        "type-0": "Psychic"
+    },
+    "abilities": {
+        "ability-0": "Run Away",
+        "ability-1": "Pastel Veil",
+        "ability-2": "Anticipation"
+    },
+    "stats": {
+        "HP": {
+            "base": 50,
+            "min": 210,
+            "max": 304
+        },
+        "Attack": {
+            "base": 85,
+            "min": 157,
+            "max": 295
+        },
+        "Defense": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        },
+        "Sp. Atk": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Sp. Def": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Speed": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        }
+    }
+}

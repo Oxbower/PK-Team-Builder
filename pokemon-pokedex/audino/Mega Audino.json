@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 531,
+    "type": {
+        "type-0": "Normal",
+        "type-1": "Fairy"
+    },
+    "abilities": {
+        "ability-0": "Healer"
+    },
+    "stats": {
+        "HP": {
+            "base": 103,
+            "min": 316,
+            "max": 410
+        },
+        "Attack": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Defense": {
+            "base": 126,
+            "min": 231,
+            "max": 386
+        },
+        "Sp. Atk": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        },
+        "Sp. Def": {
+            "base": 126,
+            "min": 231,
+            "max": 386
+        },
+        "Speed": {
+            "base": 50,
+            "min": 94,
+            "max": 218
+        }
+    }
+}

@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 817,
+    "type": {
+        "type-0": "Water"
+    },
+    "abilities": {
+        "ability-0": "Torrent",
+        "ability-1": "Sniper"
+    },
+    "stats": {
+        "HP": {
+            "base": 65,
+            "min": 240,
+            "max": 334
+        },
+        "Attack": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Defense": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        },
+        "Sp. Atk": {
+            "base": 95,
+            "min": 175,
+            "max": 317
+        },
+        "Sp. Def": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        },
+        "Speed": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        }
+    }
+}

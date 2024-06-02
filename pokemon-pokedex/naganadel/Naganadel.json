@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 804,
+    "type": {
+        "type-0": "Poison",
+        "type-1": "Dragon"
+    },
+    "abilities": {
+        "ability-0": "Beast Boost"
+    },
+    "stats": {
+        "HP": {
+            "base": 73,
+            "min": 256,
+            "max": 350
+        },
+        "Attack": {
+            "base": 73,
+            "min": 135,
+            "max": 269
+        },
+        "Defense": {
+            "base": 73,
+            "min": 135,
+            "max": 269
+        },
+        "Sp. Atk": {
+            "base": 127,
+            "min": 233,
+            "max": 388
+        },
+        "Sp. Def": {
+            "base": 73,
+            "min": 135,
+            "max": 269
+        },
+        "Speed": {
+            "base": 121,
+            "min": 222,
+            "max": 375
+        }
+    }
+}

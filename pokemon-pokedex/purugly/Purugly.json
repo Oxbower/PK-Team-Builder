@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 432,
+    "type": {
+        "type-0": "Normal"
+    },
+    "abilities": {
+        "ability-0": "Thick Fat",
+        "ability-1": "Own Tempo",
+        "ability-2": "Defiant"
+    },
+    "stats": {
+        "HP": {
+            "base": 71,
+            "min": 252,
+            "max": 346
+        },
+        "Attack": {
+            "base": 82,
+            "min": 152,
+            "max": 289
+        },
+        "Defense": {
+            "base": 64,
+            "min": 119,
+            "max": 249
+        },
+        "Sp. Atk": {
+            "base": 64,
+            "min": 119,
+            "max": 249
+        },
+        "Sp. Def": {
+            "base": 59,
+            "min": 110,
+            "max": 238
+        },
+        "Speed": {
+            "base": 112,
+            "min": 206,
+            "max": 355
+        }
+    }
+}

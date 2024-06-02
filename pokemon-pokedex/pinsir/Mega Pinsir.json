@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 127,
+    "type": {
+        "type-0": "Bug",
+        "type-1": "Flying"
+    },
+    "abilities": {
+        "ability-0": "Aerilate"
+    },
+    "stats": {
+        "HP": {
+            "base": 65,
+            "min": 240,
+            "max": 334
+        },
+        "Attack": {
+            "base": 155,
+            "min": 283,
+            "max": 449
+        },
+        "Defense": {
+            "base": 120,
+            "min": 220,
+            "max": 372
+        },
+        "Sp. Atk": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Sp. Def": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        },
+        "Speed": {
+            "base": 105,
+            "min": 193,
+            "max": 339
+        }
+    }
+}

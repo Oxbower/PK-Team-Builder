@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 45,
+    "type": {
+        "type-0": "Grass",
+        "type-1": "Poison"
+    },
+    "abilities": {
+        "ability-0": "Chlorophyll",
+        "ability-1": "Effect Spore"
+    },
+    "stats": {
+        "HP": {
+            "base": 75,
+            "min": 260,
+            "max": 354
+        },
+        "Attack": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        },
+        "Defense": {
+            "base": 85,
+            "min": 157,
+            "max": 295
+        },
+        "Sp. Atk": {
+            "base": 110,
+            "min": 202,
+            "max": 350
+        },
+        "Sp. Def": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        },
+        "Speed": {
+            "base": 50,
+            "min": 94,
+            "max": 218
+        }
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 943,
+    "type": {
+        "type-0": "Dark"
+    },
+    "abilities": {
+        "ability-0": "Intimidate",
+        "ability-1": "Guard Dog",
+        "ability-2": "Stakeout"
+    },
+    "stats": {
+        "HP": {
+            "base": 80,
+            "min": 270,
+            "max": 364
+        },
+        "Attack": {
+            "base": 120,
+            "min": 220,
+            "max": 372
+        },
+        "Defense": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        },
+        "Sp. Atk": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Sp. Def": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        },
+        "Speed": {
+            "base": 85,
+            "min": 157,
+            "max": 295
+        }
+    }
+}

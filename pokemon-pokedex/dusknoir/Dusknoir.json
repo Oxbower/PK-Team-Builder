@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 477,
+    "type": {
+        "type-0": "Ghost"
+    },
+    "abilities": {
+        "ability-0": "Pressure",
+        "ability-1": "Frisk"
+    },
+    "stats": {
+        "HP": {
+            "base": 45,
+            "min": 200,
+            "max": 294
+        },
+        "Attack": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        },
+        "Defense": {
+            "base": 135,
+            "min": 247,
+            "max": 405
+        },
+        "Sp. Atk": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Sp. Def": {
+            "base": 135,
+            "min": 247,
+            "max": 405
+        },
+        "Speed": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        }
+    }
+}

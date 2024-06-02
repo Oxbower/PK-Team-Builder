@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 893,
+    "type": {
+        "type-0": "Dark",
+        "type-1": "Grass"
+    },
+    "abilities": {
+        "ability-0": "Leaf Guard"
+    },
+    "stats": {
+        "HP": {
+            "base": 105,
+            "min": 320,
+            "max": 414
+        },
+        "Attack": {
+            "base": 120,
+            "min": 220,
+            "max": 372
+        },
+        "Defense": {
+            "base": 105,
+            "min": 193,
+            "max": 339
+        },
+        "Sp. Atk": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        },
+        "Sp. Def": {
+            "base": 95,
+            "min": 175,
+            "max": 317
+        },
+        "Speed": {
+            "base": 105,
+            "min": 193,
+            "max": 339
+        }
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 485,
+    "type": {
+        "type-0": "Fire",
+        "type-1": "Steel"
+    },
+    "abilities": {
+        "ability-0": "Flash Fire",
+        "ability-1": "Flame Body"
+    },
+    "stats": {
+        "HP": {
+            "base": 91,
+            "min": 292,
+            "max": 386
+        },
+        "Attack": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        },
+        "Defense": {
+            "base": 106,
+            "min": 195,
+            "max": 342
+        },
+        "Sp. Atk": {
+            "base": 130,
+            "min": 238,
+            "max": 394
+        },
+        "Sp. Def": {
+            "base": 106,
+            "min": 195,
+            "max": 342
+        },
+        "Speed": {
+            "base": 77,
+            "min": 143,
+            "max": 278
+        }
+    }
+}

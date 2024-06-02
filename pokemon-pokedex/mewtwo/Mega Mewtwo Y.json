@@ -1,0 +1,41 @@
+{
+    "pokedex-no": 150,
+    "type": {
+        "type-0": "Psychic"
+    },
+    "abilities": {
+        "ability-0": "Insomnia"
+    },
+    "stats": {
+        "HP": {
+            "base": 106,
+            "min": 322,
+            "max": 416
+        },
+        "Attack": {
+            "base": 150,
+            "min": 274,
+            "max": 438
+        },
+        "Defense": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        },
+        "Sp. Atk": {
+            "base": 194,
+            "min": 353,
+            "max": 535
+        },
+        "Sp. Def": {
+            "base": 120,
+            "min": 220,
+            "max": 372
+        },
+        "Speed": {
+            "base": 140,
+            "min": 256,
+            "max": 416
+        }
+    }
+}

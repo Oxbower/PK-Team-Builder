@@ -1,0 +1,41 @@
+{
+    "pokedex-no": 773,
+    "type": {
+        "type-0": "Normal"
+    },
+    "abilities": {
+        "ability-0": "RKS System"
+    },
+    "stats": {
+        "HP": {
+            "base": 95,
+            "min": 300,
+            "max": 394
+        },
+        "Attack": {
+            "base": 95,
+            "min": 175,
+            "max": 317
+        },
+        "Defense": {
+            "base": 95,
+            "min": 175,
+            "max": 317
+        },
+        "Sp. Atk": {
+            "base": 95,
+            "min": 175,
+            "max": 317
+        },
+        "Sp. Def": {
+            "base": 95,
+            "min": 175,
+            "max": 317
+        },
+        "Speed": {
+            "base": 95,
+            "min": 175,
+            "max": 317
+        }
+    }
+}

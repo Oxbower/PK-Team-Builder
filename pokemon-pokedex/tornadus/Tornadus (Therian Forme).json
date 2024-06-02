@@ -1,0 +1,41 @@
+{
+    "pokedex-no": 641,
+    "type": {
+        "type-0": "Flying"
+    },
+    "abilities": {
+        "ability-0": "Regenerator"
+    },
+    "stats": {
+        "HP": {
+            "base": 79,
+            "min": 268,
+            "max": 362
+        },
+        "Attack": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        },
+        "Defense": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        },
+        "Sp. Atk": {
+            "base": 110,
+            "min": 202,
+            "max": 350
+        },
+        "Sp. Def": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        },
+        "Speed": {
+            "base": 121,
+            "min": 222,
+            "max": 375
+        }
+    }
+}

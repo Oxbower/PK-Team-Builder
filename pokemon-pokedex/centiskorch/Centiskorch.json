@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 851,
+    "type": {
+        "type-0": "Fire",
+        "type-1": "Bug"
+    },
+    "abilities": {
+        "ability-0": "Flash Fire",
+        "ability-1": "White Smoke",
+        "ability-2": "Flame Body"
+    },
+    "stats": {
+        "HP": {
+            "base": 100,
+            "min": 310,
+            "max": 404
+        },
+        "Attack": {
+            "base": 115,
+            "min": 211,
+            "max": 361
+        },
+        "Defense": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Sp. Atk": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        },
+        "Sp. Def": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        },
+        "Speed": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        }
+    }
+}

@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 878,
+    "type": {
+        "type-0": "Steel"
+    },
+    "abilities": {
+        "ability-0": "Sheer Force",
+        "ability-1": "Heavy Metal"
+    },
+    "stats": {
+        "HP": {
+            "base": 72,
+            "min": 254,
+            "max": 348
+        },
+        "Attack": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        },
+        "Defense": {
+            "base": 49,
+            "min": 92,
+            "max": 216
+        },
+        "Sp. Atk": {
+            "base": 40,
+            "min": 76,
+            "max": 196
+        },
+        "Sp. Def": {
+            "base": 49,
+            "min": 92,
+            "max": 216
+        },
+        "Speed": {
+            "base": 40,
+            "min": 76,
+            "max": 196
+        }
+    }
+}

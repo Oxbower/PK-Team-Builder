@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 449,
+    "type": {
+        "type-0": "Ground"
+    },
+    "abilities": {
+        "ability-0": "Sand Stream",
+        "ability-1": "Sand Force"
+    },
+    "stats": {
+        "HP": {
+            "base": 68,
+            "min": 246,
+            "max": 340
+        },
+        "Attack": {
+            "base": 72,
+            "min": 134,
+            "max": 267
+        },
+        "Defense": {
+            "base": 78,
+            "min": 144,
+            "max": 280
+        },
+        "Sp. Atk": {
+            "base": 38,
+            "min": 72,
+            "max": 192
+        },
+        "Sp. Def": {
+            "base": 42,
+            "min": 80,
+            "max": 201
+        },
+        "Speed": {
+            "base": 32,
+            "min": 62,
+            "max": 179
+        }
+    }
+}

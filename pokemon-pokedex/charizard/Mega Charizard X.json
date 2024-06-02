@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 6,
+    "type": {
+        "type-0": "Fire",
+        "type-1": "Dragon"
+    },
+    "abilities": {
+        "ability-0": "Tough Claws"
+    },
+    "stats": {
+        "HP": {
+            "base": 78,
+            "min": 266,
+            "max": 360
+        },
+        "Attack": {
+            "base": 130,
+            "min": 238,
+            "max": 394
+        },
+        "Defense": {
+            "base": 111,
+            "min": 204,
+            "max": 353
+        },
+        "Sp. Atk": {
+            "base": 130,
+            "min": 238,
+            "max": 394
+        },
+        "Sp. Def": {
+            "base": 85,
+            "min": 157,
+            "max": 295
+        },
+        "Speed": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        }
+    }
+}

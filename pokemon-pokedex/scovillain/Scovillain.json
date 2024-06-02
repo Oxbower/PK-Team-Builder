@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 952,
+    "type": {
+        "type-0": "Grass",
+        "type-1": "Fire"
+    },
+    "abilities": {
+        "ability-0": "Chlorophyll",
+        "ability-1": "Insomnia",
+        "ability-2": "Moody"
+    },
+    "stats": {
+        "HP": {
+            "base": 65,
+            "min": 240,
+            "max": 334
+        },
+        "Attack": {
+            "base": 108,
+            "min": 198,
+            "max": 346
+        },
+        "Defense": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Sp. Atk": {
+            "base": 108,
+            "min": 198,
+            "max": 346
+        },
+        "Sp. Def": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Speed": {
+            "base": 75,
+            "min": 139,
+            "max": 273
+        }
+    }
+}

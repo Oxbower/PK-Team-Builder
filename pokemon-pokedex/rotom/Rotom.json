@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 479,
+    "type": {
+        "type-0": "Electric",
+        "type-1": "Ghost"
+    },
+    "abilities": {
+        "ability-0": "Levitate"
+    },
+    "stats": {
+        "HP": {
+            "base": 50,
+            "min": 210,
+            "max": 304
+        },
+        "Attack": {
+            "base": 50,
+            "min": 94,
+            "max": 218
+        },
+        "Defense": {
+            "base": 77,
+            "min": 143,
+            "max": 278
+        },
+        "Sp. Atk": {
+            "base": 95,
+            "min": 175,
+            "max": 317
+        },
+        "Sp. Def": {
+            "base": 77,
+            "min": 143,
+            "max": 278
+        },
+        "Speed": {
+            "base": 91,
+            "min": 168,
+            "max": 309
+        }
+    }
+}

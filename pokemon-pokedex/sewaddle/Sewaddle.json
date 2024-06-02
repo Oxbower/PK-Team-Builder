@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 540,
+    "type": {
+        "type-0": "Bug",
+        "type-1": "Grass"
+    },
+    "abilities": {
+        "ability-0": "Swarm",
+        "ability-1": "Chlorophyll",
+        "ability-2": "Overcoat"
+    },
+    "stats": {
+        "HP": {
+            "base": 45,
+            "min": 200,
+            "max": 294
+        },
+        "Attack": {
+            "base": 53,
+            "min": 99,
+            "max": 225
+        },
+        "Defense": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        },
+        "Sp. Atk": {
+            "base": 40,
+            "min": 76,
+            "max": 196
+        },
+        "Sp. Def": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Speed": {
+            "base": 42,
+            "min": 80,
+            "max": 201
+        }
+    }
+}

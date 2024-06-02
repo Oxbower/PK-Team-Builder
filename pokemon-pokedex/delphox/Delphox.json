@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 655,
+    "type": {
+        "type-0": "Fire",
+        "type-1": "Psychic"
+    },
+    "abilities": {
+        "ability-0": "Blaze",
+        "ability-1": "Magician"
+    },
+    "stats": {
+        "HP": {
+            "base": 75,
+            "min": 260,
+            "max": 354
+        },
+        "Attack": {
+            "base": 69,
+            "min": 128,
+            "max": 260
+        },
+        "Defense": {
+            "base": 72,
+            "min": 134,
+            "max": 267
+        },
+        "Sp. Atk": {
+            "base": 114,
+            "min": 209,
+            "max": 359
+        },
+        "Sp. Def": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        },
+        "Speed": {
+            "base": 104,
+            "min": 191,
+            "max": 337
+        }
+    }
+}

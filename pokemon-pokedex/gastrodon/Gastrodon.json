@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 423,
+    "type": {
+        "type-0": "Water",
+        "type-1": "Ground"
+    },
+    "abilities": {
+        "ability-0": "Sticky Hold",
+        "ability-1": "Storm Drain",
+        "ability-2": "Sand Force"
+    },
+    "stats": {
+        "HP": {
+            "base": 111,
+            "min": 332,
+            "max": 426
+        },
+        "Attack": {
+            "base": 83,
+            "min": 153,
+            "max": 291
+        },
+        "Defense": {
+            "base": 68,
+            "min": 126,
+            "max": 258
+        },
+        "Sp. Atk": {
+            "base": 92,
+            "min": 170,
+            "max": 311
+        },
+        "Sp. Def": {
+            "base": 82,
+            "min": 152,
+            "max": 289
+        },
+        "Speed": {
+            "base": 39,
+            "min": 74,
+            "max": 194
+        }
+    }
+}

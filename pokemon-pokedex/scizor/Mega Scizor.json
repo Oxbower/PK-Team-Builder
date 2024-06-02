@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 212,
+    "type": {
+        "type-0": "Bug",
+        "type-1": "Steel"
+    },
+    "abilities": {
+        "ability-0": "Technician"
+    },
+    "stats": {
+        "HP": {
+            "base": 70,
+            "min": 250,
+            "max": 344
+        },
+        "Attack": {
+            "base": 150,
+            "min": 274,
+            "max": 438
+        },
+        "Defense": {
+            "base": 140,
+            "min": 256,
+            "max": 416
+        },
+        "Sp. Atk": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Sp. Def": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        },
+        "Speed": {
+            "base": 75,
+            "min": 139,
+            "max": 273
+        }
+    }
+}

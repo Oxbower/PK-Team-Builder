@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 296,
+    "type": {
+        "type-0": "Fighting"
+    },
+    "abilities": {
+        "ability-0": "Thick Fat",
+        "ability-1": "Guts",
+        "ability-2": "Sheer Force"
+    },
+    "stats": {
+        "HP": {
+            "base": 72,
+            "min": 254,
+            "max": 348
+        },
+        "Attack": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Defense": {
+            "base": 30,
+            "min": 58,
+            "max": 174
+        },
+        "Sp. Atk": {
+            "base": 20,
+            "min": 40,
+            "max": 152
+        },
+        "Sp. Def": {
+            "base": 30,
+            "min": 58,
+            "max": 174
+        },
+        "Speed": {
+            "base": 25,
+            "min": 49,
+            "max": 163
+        }
+    }
+}

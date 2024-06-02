@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 631,
+    "type": {
+        "type-0": "Fire"
+    },
+    "abilities": {
+        "ability-0": "Gluttony",
+        "ability-1": "Flash Fire",
+        "ability-2": "White Smoke"
+    },
+    "stats": {
+        "HP": {
+            "base": 85,
+            "min": 280,
+            "max": 374
+        },
+        "Attack": {
+            "base": 97,
+            "min": 179,
+            "max": 322
+        },
+        "Defense": {
+            "base": 66,
+            "min": 123,
+            "max": 254
+        },
+        "Sp. Atk": {
+            "base": 105,
+            "min": 193,
+            "max": 339
+        },
+        "Sp. Def": {
+            "base": 66,
+            "min": 123,
+            "max": 254
+        },
+        "Speed": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        }
+    }
+}

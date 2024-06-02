@@ -1,0 +1,41 @@
+{
+    "pokedex-no": 809,
+    "type": {
+        "type-0": "Steel"
+    },
+    "abilities": {
+        "ability-0": "Iron Fist"
+    },
+    "stats": {
+        "HP": {
+            "base": 135,
+            "min": 380,
+            "max": 474
+        },
+        "Attack": {
+            "base": 143,
+            "min": 261,
+            "max": 423
+        },
+        "Defense": {
+            "base": 143,
+            "min": 261,
+            "max": 423
+        },
+        "Sp. Atk": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        },
+        "Sp. Def": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Speed": {
+            "base": 34,
+            "min": 65,
+            "max": 183
+        }
+    }
+}

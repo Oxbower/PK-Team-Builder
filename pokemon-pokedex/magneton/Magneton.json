@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 82,
+    "type": {
+        "type-0": "Electric",
+        "type-1": "Steel"
+    },
+    "abilities": {
+        "ability-0": "Magnet Pull",
+        "ability-1": "Sturdy",
+        "ability-2": "Analytic"
+    },
+    "stats": {
+        "HP": {
+            "base": 50,
+            "min": 210,
+            "max": 304
+        },
+        "Attack": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Defense": {
+            "base": 95,
+            "min": 175,
+            "max": 317
+        },
+        "Sp. Atk": {
+            "base": 120,
+            "min": 220,
+            "max": 372
+        },
+        "Sp. Def": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        },
+        "Speed": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        }
+    }
+}

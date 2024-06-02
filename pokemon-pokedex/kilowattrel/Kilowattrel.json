@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 941,
+    "type": {
+        "type-0": "Electric",
+        "type-1": "Flying"
+    },
+    "abilities": {
+        "ability-0": "Wind Power",
+        "ability-1": "Volt Absorb",
+        "ability-2": "Competitive"
+    },
+    "stats": {
+        "HP": {
+            "base": 70,
+            "min": 250,
+            "max": 344
+        },
+        "Attack": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        },
+        "Defense": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Sp. Atk": {
+            "base": 105,
+            "min": 193,
+            "max": 339
+        },
+        "Sp. Def": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Speed": {
+            "base": 125,
+            "min": 229,
+            "max": 383
+        }
+    }
+}

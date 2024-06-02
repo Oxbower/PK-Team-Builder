@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 324,
+    "type": {
+        "type-0": "Fire"
+    },
+    "abilities": {
+        "ability-0": "White Smoke",
+        "ability-1": "Drought",
+        "ability-2": "Shell Armor"
+    },
+    "stats": {
+        "HP": {
+            "base": 70,
+            "min": 250,
+            "max": 344
+        },
+        "Attack": {
+            "base": 85,
+            "min": 157,
+            "max": 295
+        },
+        "Defense": {
+            "base": 140,
+            "min": 256,
+            "max": 416
+        },
+        "Sp. Atk": {
+            "base": 85,
+            "min": 157,
+            "max": 295
+        },
+        "Sp. Def": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        },
+        "Speed": {
+            "base": 20,
+            "min": 40,
+            "max": 152
+        }
+    }
+}

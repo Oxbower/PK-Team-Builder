@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 944,
+    "type": {
+        "type-0": "Poison",
+        "type-1": "Normal"
+    },
+    "abilities": {
+        "ability-0": "Unburden",
+        "ability-1": "Pickpocket",
+        "ability-2": "Prankster"
+    },
+    "stats": {
+        "HP": {
+            "base": 40,
+            "min": 190,
+            "max": 284
+        },
+        "Attack": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Defense": {
+            "base": 35,
+            "min": 67,
+            "max": 185
+        },
+        "Sp. Atk": {
+            "base": 40,
+            "min": 76,
+            "max": 196
+        },
+        "Sp. Def": {
+            "base": 35,
+            "min": 67,
+            "max": 185
+        },
+        "Speed": {
+            "base": 75,
+            "min": 139,
+            "max": 273
+        }
+    }
+}

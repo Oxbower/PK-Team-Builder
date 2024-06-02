@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 567,
+    "type": {
+        "type-0": "Rock",
+        "type-1": "Flying"
+    },
+    "abilities": {
+        "ability-0": "Defeatist"
+    },
+    "stats": {
+        "HP": {
+            "base": 75,
+            "min": 260,
+            "max": 354
+        },
+        "Attack": {
+            "base": 140,
+            "min": 256,
+            "max": 416
+        },
+        "Defense": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Sp. Atk": {
+            "base": 112,
+            "min": 206,
+            "max": 355
+        },
+        "Sp. Def": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Speed": {
+            "base": 110,
+            "min": 202,
+            "max": 350
+        }
+    }
+}

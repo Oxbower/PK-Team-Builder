@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 783,
+    "type": {
+        "type-0": "Dragon",
+        "type-1": "Fighting"
+    },
+    "abilities": {
+        "ability-0": "Bulletproof",
+        "ability-1": "Soundproof",
+        "ability-2": "Overcoat"
+    },
+    "stats": {
+        "HP": {
+            "base": 55,
+            "min": 220,
+            "max": 314
+        },
+        "Attack": {
+            "base": 75,
+            "min": 139,
+            "max": 273
+        },
+        "Defense": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        },
+        "Sp. Atk": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Sp. Def": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        },
+        "Speed": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        }
+    }
+}

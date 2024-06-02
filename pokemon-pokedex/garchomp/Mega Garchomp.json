@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 445,
+    "type": {
+        "type-0": "Dragon",
+        "type-1": "Ground"
+    },
+    "abilities": {
+        "ability-0": "Sand Force"
+    },
+    "stats": {
+        "HP": {
+            "base": 108,
+            "min": 326,
+            "max": 420
+        },
+        "Attack": {
+            "base": 170,
+            "min": 310,
+            "max": 482
+        },
+        "Defense": {
+            "base": 115,
+            "min": 211,
+            "max": 361
+        },
+        "Sp. Atk": {
+            "base": 120,
+            "min": 220,
+            "max": 372
+        },
+        "Sp. Def": {
+            "base": 95,
+            "min": 175,
+            "max": 317
+        },
+        "Speed": {
+            "base": 92,
+            "min": 170,
+            "max": 311
+        }
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 844,
+    "type": {
+        "type-0": "Ground"
+    },
+    "abilities": {
+        "ability-0": "Sand Spit",
+        "ability-1": "Shed Skin",
+        "ability-2": "Sand Veil"
+    },
+    "stats": {
+        "HP": {
+            "base": 72,
+            "min": 254,
+            "max": 348
+        },
+        "Attack": {
+            "base": 107,
+            "min": 197,
+            "max": 344
+        },
+        "Defense": {
+            "base": 125,
+            "min": 229,
+            "max": 383
+        },
+        "Sp. Atk": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Sp. Def": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        },
+        "Speed": {
+            "base": 71,
+            "min": 132,
+            "max": 265
+        }
+    }
+}

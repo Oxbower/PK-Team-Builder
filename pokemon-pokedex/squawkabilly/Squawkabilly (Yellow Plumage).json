@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 931,
+    "type": {
+        "type-0": "Normal",
+        "type-1": "Flying"
+    },
+    "abilities": {
+        "ability-0": "Intimidate",
+        "ability-1": "Hustle",
+        "ability-2": "Sheer Force"
+    },
+    "stats": {
+        "HP": {
+            "base": 82,
+            "min": 274,
+            "max": 368
+        },
+        "Attack": {
+            "base": 96,
+            "min": 177,
+            "max": 320
+        },
+        "Defense": {
+            "base": 51,
+            "min": 96,
+            "max": 221
+        },
+        "Sp. Atk": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        },
+        "Sp. Def": {
+            "base": 51,
+            "min": 96,
+            "max": 221
+        },
+        "Speed": {
+            "base": 92,
+            "min": 170,
+            "max": 311
+        }
+    }
+}

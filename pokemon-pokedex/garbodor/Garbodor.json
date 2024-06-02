@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 569,
+    "type": {
+        "type-0": "Poison"
+    },
+    "abilities": {
+        "ability-0": "Stench",
+        "ability-1": "Weak Armor",
+        "ability-2": "Aftermath"
+    },
+    "stats": {
+        "HP": {
+            "base": 80,
+            "min": 270,
+            "max": 364
+        },
+        "Attack": {
+            "base": 95,
+            "min": 175,
+            "max": 317
+        },
+        "Defense": {
+            "base": 82,
+            "min": 152,
+            "max": 289
+        },
+        "Sp. Atk": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Sp. Def": {
+            "base": 82,
+            "min": 152,
+            "max": 289
+        },
+        "Speed": {
+            "base": 75,
+            "min": 139,
+            "max": 273
+        }
+    }
+}

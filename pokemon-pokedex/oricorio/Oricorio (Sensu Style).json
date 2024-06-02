@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 741,
+    "type": {
+        "type-0": "Ghost",
+        "type-1": "Flying"
+    },
+    "abilities": {
+        "ability-0": "Dancer"
+    },
+    "stats": {
+        "HP": {
+            "base": 75,
+            "min": 260,
+            "max": 354
+        },
+        "Attack": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        },
+        "Defense": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        },
+        "Sp. Atk": {
+            "base": 98,
+            "min": 180,
+            "max": 324
+        },
+        "Sp. Def": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        },
+        "Speed": {
+            "base": 93,
+            "min": 171,
+            "max": 313
+        }
+    }
+}

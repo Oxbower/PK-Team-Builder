@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 595,
+    "type": {
+        "type-0": "Bug",
+        "type-1": "Electric"
+    },
+    "abilities": {
+        "ability-0": "Compound Eyes",
+        "ability-1": "Unnerve",
+        "ability-2": "Swarm"
+    },
+    "stats": {
+        "HP": {
+            "base": 50,
+            "min": 210,
+            "max": 304
+        },
+        "Attack": {
+            "base": 47,
+            "min": 89,
+            "max": 212
+        },
+        "Defense": {
+            "base": 50,
+            "min": 94,
+            "max": 218
+        },
+        "Sp. Atk": {
+            "base": 57,
+            "min": 107,
+            "max": 234
+        },
+        "Sp. Def": {
+            "base": 50,
+            "min": 94,
+            "max": 218
+        },
+        "Speed": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        }
+    }
+}

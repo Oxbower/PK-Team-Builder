@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 459,
+    "type": {
+        "type-0": "Grass",
+        "type-1": "Ice"
+    },
+    "abilities": {
+        "ability-0": "Snow Warning",
+        "ability-1": "Soundproof"
+    },
+    "stats": {
+        "HP": {
+            "base": 60,
+            "min": 230,
+            "max": 324
+        },
+        "Attack": {
+            "base": 62,
+            "min": 116,
+            "max": 245
+        },
+        "Defense": {
+            "base": 50,
+            "min": 94,
+            "max": 218
+        },
+        "Sp. Atk": {
+            "base": 62,
+            "min": 116,
+            "max": 245
+        },
+        "Sp. Def": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Speed": {
+            "base": 40,
+            "min": 76,
+            "max": 196
+        }
+    }
+}

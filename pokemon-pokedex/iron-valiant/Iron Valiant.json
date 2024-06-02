@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 1006,
+    "type": {
+        "type-0": "Fairy",
+        "type-1": "Fighting"
+    },
+    "abilities": {
+        "ability-0": "Quark Drive"
+    },
+    "stats": {
+        "HP": {
+            "base": 74,
+            "min": 258,
+            "max": 352
+        },
+        "Attack": {
+            "base": 130,
+            "min": 238,
+            "max": 394
+        },
+        "Defense": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        },
+        "Sp. Atk": {
+            "base": 120,
+            "min": 220,
+            "max": 372
+        },
+        "Sp. Def": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Speed": {
+            "base": 116,
+            "min": 213,
+            "max": 364
+        }
+    }
+}

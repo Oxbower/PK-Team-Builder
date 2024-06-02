@@ -1,0 +1,41 @@
+{
+    "pokedex-no": 789,
+    "type": {
+        "type-0": "Psychic"
+    },
+    "abilities": {
+        "ability-0": "Unaware"
+    },
+    "stats": {
+        "HP": {
+            "base": 43,
+            "min": 196,
+            "max": 290
+        },
+        "Attack": {
+            "base": 29,
+            "min": 56,
+            "max": 172
+        },
+        "Defense": {
+            "base": 31,
+            "min": 60,
+            "max": 177
+        },
+        "Sp. Atk": {
+            "base": 29,
+            "min": 56,
+            "max": 172
+        },
+        "Sp. Def": {
+            "base": 31,
+            "min": 60,
+            "max": 177
+        },
+        "Speed": {
+            "base": 37,
+            "min": 71,
+            "max": 190
+        }
+    }
+}

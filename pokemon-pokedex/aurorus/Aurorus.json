@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 699,
+    "type": {
+        "type-0": "Rock",
+        "type-1": "Ice"
+    },
+    "abilities": {
+        "ability-0": "Refrigerate",
+        "ability-1": "Snow Warning"
+    },
+    "stats": {
+        "HP": {
+            "base": 123,
+            "min": 356,
+            "max": 450
+        },
+        "Attack": {
+            "base": 77,
+            "min": 143,
+            "max": 278
+        },
+        "Defense": {
+            "base": 72,
+            "min": 134,
+            "max": 267
+        },
+        "Sp. Atk": {
+            "base": 99,
+            "min": 182,
+            "max": 326
+        },
+        "Sp. Def": {
+            "base": 92,
+            "min": 170,
+            "max": 311
+        },
+        "Speed": {
+            "base": 58,
+            "min": 108,
+            "max": 236
+        }
+    }
+}

@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 6,
+    "type": {
+        "type-0": "Fire",
+        "type-1": "Flying"
+    },
+    "abilities": {
+        "ability-0": "Drought"
+    },
+    "stats": {
+        "HP": {
+            "base": 78,
+            "min": 266,
+            "max": 360
+        },
+        "Attack": {
+            "base": 104,
+            "min": 191,
+            "max": 337
+        },
+        "Defense": {
+            "base": 78,
+            "min": 144,
+            "max": 280
+        },
+        "Sp. Atk": {
+            "base": 159,
+            "min": 290,
+            "max": 458
+        },
+        "Sp. Def": {
+            "base": 115,
+            "min": 211,
+            "max": 361
+        },
+        "Speed": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        }
+    }
+}

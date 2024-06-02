@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 564,
+    "type": {
+        "type-0": "Water",
+        "type-1": "Rock"
+    },
+    "abilities": {
+        "ability-0": "Solid Rock",
+        "ability-1": "Sturdy",
+        "ability-2": "Swift Swim"
+    },
+    "stats": {
+        "HP": {
+            "base": 54,
+            "min": 218,
+            "max": 312
+        },
+        "Attack": {
+            "base": 78,
+            "min": 144,
+            "max": 280
+        },
+        "Defense": {
+            "base": 103,
+            "min": 189,
+            "max": 335
+        },
+        "Sp. Atk": {
+            "base": 53,
+            "min": 99,
+            "max": 225
+        },
+        "Sp. Def": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        },
+        "Speed": {
+            "base": 22,
+            "min": 44,
+            "max": 157
+        }
+    }
+}

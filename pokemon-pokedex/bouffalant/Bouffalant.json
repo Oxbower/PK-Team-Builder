@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 626,
+    "type": {
+        "type-0": "Normal"
+    },
+    "abilities": {
+        "ability-0": "Reckless",
+        "ability-1": "Sap Sipper",
+        "ability-2": "Soundproof"
+    },
+    "stats": {
+        "HP": {
+            "base": 95,
+            "min": 300,
+            "max": 394
+        },
+        "Attack": {
+            "base": 110,
+            "min": 202,
+            "max": 350
+        },
+        "Defense": {
+            "base": 95,
+            "min": 175,
+            "max": 317
+        },
+        "Sp. Atk": {
+            "base": 40,
+            "min": 76,
+            "max": 196
+        },
+        "Sp. Def": {
+            "base": 95,
+            "min": 175,
+            "max": 317
+        },
+        "Speed": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        }
+    }
+}

@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 521,
+    "type": {
+        "type-0": "Normal",
+        "type-1": "Flying"
+    },
+    "abilities": {
+        "ability-0": "Big Pecks",
+        "ability-1": "Super Luck",
+        "ability-2": "Rivalry"
+    },
+    "stats": {
+        "HP": {
+            "base": 80,
+            "min": 270,
+            "max": 364
+        },
+        "Attack": {
+            "base": 115,
+            "min": 211,
+            "max": 361
+        },
+        "Defense": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        },
+        "Sp. Atk": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Sp. Def": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        },
+        "Speed": {
+            "base": 93,
+            "min": 171,
+            "max": 313
+        }
+    }
+}

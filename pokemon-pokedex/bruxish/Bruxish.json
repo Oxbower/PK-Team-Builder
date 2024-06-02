@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 779,
+    "type": {
+        "type-0": "Water",
+        "type-1": "Psychic"
+    },
+    "abilities": {
+        "ability-0": "Dazzling",
+        "ability-1": "Strong Jaw",
+        "ability-2": "Wonder Skin"
+    },
+    "stats": {
+        "HP": {
+            "base": 68,
+            "min": 246,
+            "max": 340
+        },
+        "Attack": {
+            "base": 105,
+            "min": 193,
+            "max": 339
+        },
+        "Defense": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        },
+        "Sp. Atk": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        },
+        "Sp. Def": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        },
+        "Speed": {
+            "base": 92,
+            "min": 170,
+            "max": 311
+        }
+    }
+}

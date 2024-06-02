@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 426,
+    "type": {
+        "type-0": "Ghost",
+        "type-1": "Flying"
+    },
+    "abilities": {
+        "ability-0": "Aftermath",
+        "ability-1": "Unburden",
+        "ability-2": "Flare Boost"
+    },
+    "stats": {
+        "HP": {
+            "base": 150,
+            "min": 410,
+            "max": 504
+        },
+        "Attack": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        },
+        "Defense": {
+            "base": 44,
+            "min": 83,
+            "max": 205
+        },
+        "Sp. Atk": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        },
+        "Sp. Def": {
+            "base": 54,
+            "min": 101,
+            "max": 227
+        },
+        "Speed": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        }
+    }
+}

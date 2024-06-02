@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 708,
+    "type": {
+        "type-0": "Ghost",
+        "type-1": "Grass"
+    },
+    "abilities": {
+        "ability-0": "Natural Cure",
+        "ability-1": "Frisk",
+        "ability-2": "Harvest"
+    },
+    "stats": {
+        "HP": {
+            "base": 43,
+            "min": 196,
+            "max": 290
+        },
+        "Attack": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        },
+        "Defense": {
+            "base": 48,
+            "min": 90,
+            "max": 214
+        },
+        "Sp. Atk": {
+            "base": 50,
+            "min": 94,
+            "max": 218
+        },
+        "Sp. Def": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Speed": {
+            "base": 38,
+            "min": 72,
+            "max": 192
+        }
+    }
+}

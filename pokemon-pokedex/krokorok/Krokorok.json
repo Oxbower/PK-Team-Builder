@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 552,
+    "type": {
+        "type-0": "Ground",
+        "type-1": "Dark"
+    },
+    "abilities": {
+        "ability-0": "Intimidate",
+        "ability-1": "Moxie",
+        "ability-2": "Anger Point"
+    },
+    "stats": {
+        "HP": {
+            "base": 60,
+            "min": 230,
+            "max": 324
+        },
+        "Attack": {
+            "base": 82,
+            "min": 152,
+            "max": 289
+        },
+        "Defense": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        },
+        "Sp. Atk": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        },
+        "Sp. Def": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        },
+        "Speed": {
+            "base": 74,
+            "min": 137,
+            "max": 271
+        }
+    }
+}

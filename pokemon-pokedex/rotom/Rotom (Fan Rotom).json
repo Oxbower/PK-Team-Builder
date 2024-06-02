@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 479,
+    "type": {
+        "type-0": "Electric",
+        "type-1": "Flying"
+    },
+    "abilities": {
+        "ability-0": "Levitate"
+    },
+    "stats": {
+        "HP": {
+            "base": 50,
+            "min": 210,
+            "max": 304
+        },
+        "Attack": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Defense": {
+            "base": 107,
+            "min": 197,
+            "max": 344
+        },
+        "Sp. Atk": {
+            "base": 105,
+            "min": 193,
+            "max": 339
+        },
+        "Sp. Def": {
+            "base": 107,
+            "min": 197,
+            "max": 344
+        },
+        "Speed": {
+            "base": 86,
+            "min": 159,
+            "max": 298
+        }
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 98,
+    "type": {
+        "type-0": "Water"
+    },
+    "abilities": {
+        "ability-0": "Hyper Cutter",
+        "ability-1": "Shell Armor",
+        "ability-2": "Sheer Force"
+    },
+    "stats": {
+        "HP": {
+            "base": 30,
+            "min": 170,
+            "max": 264
+        },
+        "Attack": {
+            "base": 105,
+            "min": 193,
+            "max": 339
+        },
+        "Defense": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        },
+        "Sp. Atk": {
+            "base": 25,
+            "min": 49,
+            "max": 163
+        },
+        "Sp. Def": {
+            "base": 25,
+            "min": 49,
+            "max": 163
+        },
+        "Speed": {
+            "base": 50,
+            "min": 94,
+            "max": 218
+        }
+    }
+}

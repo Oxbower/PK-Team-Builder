@@ -1,0 +1,41 @@
+{
+    "pokedex-no": 382,
+    "type": {
+        "type-0": "Water"
+    },
+    "abilities": {
+        "ability-0": "Drizzle"
+    },
+    "stats": {
+        "HP": {
+            "base": 100,
+            "min": 310,
+            "max": 404
+        },
+        "Attack": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        },
+        "Defense": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        },
+        "Sp. Atk": {
+            "base": 150,
+            "min": 274,
+            "max": 438
+        },
+        "Sp. Def": {
+            "base": 140,
+            "min": 256,
+            "max": 416
+        },
+        "Speed": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        }
+    }
+}

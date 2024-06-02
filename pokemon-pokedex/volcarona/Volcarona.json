@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 637,
+    "type": {
+        "type-0": "Bug",
+        "type-1": "Fire"
+    },
+    "abilities": {
+        "ability-0": "Flame Body",
+        "ability-1": "Swarm"
+    },
+    "stats": {
+        "HP": {
+            "base": 85,
+            "min": 280,
+            "max": 374
+        },
+        "Attack": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Defense": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Sp. Atk": {
+            "base": 135,
+            "min": 247,
+            "max": 405
+        },
+        "Sp. Def": {
+            "base": 105,
+            "min": 193,
+            "max": 339
+        },
+        "Speed": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        }
+    }
+}

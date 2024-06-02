@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 988,
+    "type": {
+        "type-0": "Bug",
+        "type-1": "Fighting"
+    },
+    "abilities": {
+        "ability-0": "Protosynthesis"
+    },
+    "stats": {
+        "HP": {
+            "base": 85,
+            "min": 280,
+            "max": 374
+        },
+        "Attack": {
+            "base": 135,
+            "min": 247,
+            "max": 405
+        },
+        "Defense": {
+            "base": 79,
+            "min": 146,
+            "max": 282
+        },
+        "Sp. Atk": {
+            "base": 85,
+            "min": 157,
+            "max": 295
+        },
+        "Sp. Def": {
+            "base": 105,
+            "min": 193,
+            "max": 339
+        },
+        "Speed": {
+            "base": 81,
+            "min": 150,
+            "max": 287
+        }
+    }
+}

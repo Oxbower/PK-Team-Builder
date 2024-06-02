@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 284,
+    "type": {
+        "type-0": "Bug",
+        "type-1": "Flying"
+    },
+    "abilities": {
+        "ability-0": "Intimidate",
+        "ability-1": "Unnerve"
+    },
+    "stats": {
+        "HP": {
+            "base": 70,
+            "min": 250,
+            "max": 344
+        },
+        "Attack": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Defense": {
+            "base": 62,
+            "min": 116,
+            "max": 245
+        },
+        "Sp. Atk": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        },
+        "Sp. Def": {
+            "base": 82,
+            "min": 152,
+            "max": 289
+        },
+        "Speed": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        }
+    }
+}

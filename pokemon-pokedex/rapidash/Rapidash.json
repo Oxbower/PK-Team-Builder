@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 78,
+    "type": {
+        "type-0": "Fire"
+    },
+    "abilities": {
+        "ability-0": "Run Away",
+        "ability-1": "Flash Fire",
+        "ability-2": "Flame Body"
+    },
+    "stats": {
+        "HP": {
+            "base": 65,
+            "min": 240,
+            "max": 334
+        },
+        "Attack": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        },
+        "Defense": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        },
+        "Sp. Atk": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        },
+        "Sp. Def": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        },
+        "Speed": {
+            "base": 105,
+            "min": 193,
+            "max": 339
+        }
+    }
+}

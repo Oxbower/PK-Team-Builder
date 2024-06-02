@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 694,
+    "type": {
+        "type-0": "Electric",
+        "type-1": "Normal"
+    },
+    "abilities": {
+        "ability-0": "Dry Skin",
+        "ability-1": "Sand Veil",
+        "ability-2": "Solar Power"
+    },
+    "stats": {
+        "HP": {
+            "base": 44,
+            "min": 198,
+            "max": 292
+        },
+        "Attack": {
+            "base": 38,
+            "min": 72,
+            "max": 192
+        },
+        "Defense": {
+            "base": 33,
+            "min": 63,
+            "max": 181
+        },
+        "Sp. Atk": {
+            "base": 61,
+            "min": 114,
+            "max": 243
+        },
+        "Sp. Def": {
+            "base": 43,
+            "min": 81,
+            "max": 203
+        },
+        "Speed": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        }
+    }
+}

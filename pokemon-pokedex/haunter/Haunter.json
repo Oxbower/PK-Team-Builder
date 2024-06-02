@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 93,
+    "type": {
+        "type-0": "Ghost",
+        "type-1": "Poison"
+    },
+    "abilities": {
+        "ability-0": "Levitate"
+    },
+    "stats": {
+        "HP": {
+            "base": 45,
+            "min": 200,
+            "max": 294
+        },
+        "Attack": {
+            "base": 50,
+            "min": 94,
+            "max": 218
+        },
+        "Defense": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        },
+        "Sp. Atk": {
+            "base": 115,
+            "min": 211,
+            "max": 361
+        },
+        "Sp. Def": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        },
+        "Speed": {
+            "base": 95,
+            "min": 175,
+            "max": 317
+        }
+    }
+}

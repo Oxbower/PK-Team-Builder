@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 380,
+    "type": {
+        "type-0": "Dragon",
+        "type-1": "Psychic"
+    },
+    "abilities": {
+        "ability-0": "Levitate"
+    },
+    "stats": {
+        "HP": {
+            "base": 80,
+            "min": 270,
+            "max": 364
+        },
+        "Attack": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        },
+        "Defense": {
+            "base": 120,
+            "min": 220,
+            "max": 372
+        },
+        "Sp. Atk": {
+            "base": 140,
+            "min": 256,
+            "max": 416
+        },
+        "Sp. Def": {
+            "base": 150,
+            "min": 274,
+            "max": 438
+        },
+        "Speed": {
+            "base": 110,
+            "min": 202,
+            "max": 350
+        }
+    }
+}

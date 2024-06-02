@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 561,
+    "type": {
+        "type-0": "Psychic",
+        "type-1": "Flying"
+    },
+    "abilities": {
+        "ability-0": "Wonder Skin",
+        "ability-1": "Magic Guard",
+        "ability-2": "Tinted Lens"
+    },
+    "stats": {
+        "HP": {
+            "base": 72,
+            "min": 254,
+            "max": 348
+        },
+        "Attack": {
+            "base": 58,
+            "min": 108,
+            "max": 236
+        },
+        "Defense": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        },
+        "Sp. Atk": {
+            "base": 103,
+            "min": 189,
+            "max": 335
+        },
+        "Sp. Def": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        },
+        "Speed": {
+            "base": 97,
+            "min": 179,
+            "max": 322
+        }
+    }
+}

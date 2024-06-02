@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 143,
+    "type": {
+        "type-0": "Normal"
+    },
+    "abilities": {
+        "ability-0": "Immunity",
+        "ability-1": "Thick Fat",
+        "ability-2": "Gluttony"
+    },
+    "stats": {
+        "HP": {
+            "base": 160,
+            "min": 430,
+            "max": 524
+        },
+        "Attack": {
+            "base": 110,
+            "min": 202,
+            "max": 350
+        },
+        "Defense": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Sp. Atk": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Sp. Def": {
+            "base": 110,
+            "min": 202,
+            "max": 350
+        },
+        "Speed": {
+            "base": 30,
+            "min": 58,
+            "max": 174
+        }
+    }
+}

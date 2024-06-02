@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 901,
+    "type": {
+        "type-0": "Ground",
+        "type-1": "Normal"
+    },
+    "abilities": {
+        "ability-0": "Guts",
+        "ability-1": "Bulletproof",
+        "ability-2": "Unnerve"
+    },
+    "stats": {
+        "HP": {
+            "base": 130,
+            "min": 370,
+            "max": 464
+        },
+        "Attack": {
+            "base": 140,
+            "min": 256,
+            "max": 416
+        },
+        "Defense": {
+            "base": 105,
+            "min": 193,
+            "max": 339
+        },
+        "Sp. Atk": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        },
+        "Sp. Def": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        },
+        "Speed": {
+            "base": 50,
+            "min": 94,
+            "max": 218
+        }
+    }
+}

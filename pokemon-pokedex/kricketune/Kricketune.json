@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 402,
+    "type": {
+        "type-0": "Bug"
+    },
+    "abilities": {
+        "ability-0": "Swarm",
+        "ability-1": "Technician"
+    },
+    "stats": {
+        "HP": {
+            "base": 77,
+            "min": 264,
+            "max": 358
+        },
+        "Attack": {
+            "base": 85,
+            "min": 157,
+            "max": 295
+        },
+        "Defense": {
+            "base": 51,
+            "min": 96,
+            "max": 221
+        },
+        "Sp. Atk": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        },
+        "Sp. Def": {
+            "base": 51,
+            "min": 96,
+            "max": 221
+        },
+        "Speed": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        }
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 314,
+    "type": {
+        "type-0": "Bug"
+    },
+    "abilities": {
+        "ability-0": "Oblivious",
+        "ability-1": "Tinted Lens",
+        "ability-2": "Prankster"
+    },
+    "stats": {
+        "HP": {
+            "base": 65,
+            "min": 240,
+            "max": 334
+        },
+        "Attack": {
+            "base": 47,
+            "min": 89,
+            "max": 212
+        },
+        "Defense": {
+            "base": 75,
+            "min": 139,
+            "max": 273
+        },
+        "Sp. Atk": {
+            "base": 73,
+            "min": 135,
+            "max": 269
+        },
+        "Sp. Def": {
+            "base": 85,
+            "min": 157,
+            "max": 295
+        },
+        "Speed": {
+            "base": 85,
+            "min": 157,
+            "max": 295
+        }
+    }
+}

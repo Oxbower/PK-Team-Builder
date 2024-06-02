@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 836,
+    "type": {
+        "type-0": "Electric"
+    },
+    "abilities": {
+        "ability-0": "Strong Jaw",
+        "ability-1": "Competitive"
+    },
+    "stats": {
+        "HP": {
+            "base": 69,
+            "min": 248,
+            "max": 342
+        },
+        "Attack": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        },
+        "Defense": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Sp. Atk": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        },
+        "Sp. Def": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Speed": {
+            "base": 121,
+            "min": 222,
+            "max": 375
+        }
+    }
+}

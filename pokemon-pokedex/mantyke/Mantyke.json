@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 458,
+    "type": {
+        "type-0": "Water",
+        "type-1": "Flying"
+    },
+    "abilities": {
+        "ability-0": "Swift Swim",
+        "ability-1": "Water Absorb",
+        "ability-2": "Water Veil"
+    },
+    "stats": {
+        "HP": {
+            "base": 45,
+            "min": 200,
+            "max": 294
+        },
+        "Attack": {
+            "base": 20,
+            "min": 40,
+            "max": 152
+        },
+        "Defense": {
+            "base": 50,
+            "min": 94,
+            "max": 218
+        },
+        "Sp. Atk": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Sp. Def": {
+            "base": 120,
+            "min": 220,
+            "max": 372
+        },
+        "Speed": {
+            "base": 50,
+            "min": 94,
+            "max": 218
+        }
+    }
+}

@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 866,
+    "type": {
+        "type-0": "Ice",
+        "type-1": "Psychic"
+    },
+    "abilities": {
+        "ability-0": "Tangled Feet",
+        "ability-1": "Screen Cleaner",
+        "ability-2": "Ice Body"
+    },
+    "stats": {
+        "HP": {
+            "base": 80,
+            "min": 270,
+            "max": 364
+        },
+        "Attack": {
+            "base": 85,
+            "min": 157,
+            "max": 295
+        },
+        "Defense": {
+            "base": 75,
+            "min": 139,
+            "max": 273
+        },
+        "Sp. Atk": {
+            "base": 110,
+            "min": 202,
+            "max": 350
+        },
+        "Sp. Def": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        },
+        "Speed": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        }
+    }
+}

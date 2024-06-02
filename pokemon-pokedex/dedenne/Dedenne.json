@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 702,
+    "type": {
+        "type-0": "Electric",
+        "type-1": "Fairy"
+    },
+    "abilities": {
+        "ability-0": "Cheek Pouch",
+        "ability-1": "Pickup",
+        "ability-2": "Plus"
+    },
+    "stats": {
+        "HP": {
+            "base": 67,
+            "min": 244,
+            "max": 338
+        },
+        "Attack": {
+            "base": 58,
+            "min": 108,
+            "max": 236
+        },
+        "Defense": {
+            "base": 57,
+            "min": 107,
+            "max": 234
+        },
+        "Sp. Atk": {
+            "base": 81,
+            "min": 150,
+            "max": 287
+        },
+        "Sp. Def": {
+            "base": 67,
+            "min": 125,
+            "max": 256
+        },
+        "Speed": {
+            "base": 101,
+            "min": 186,
+            "max": 331
+        }
+    }
+}

@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 645,
+    "type": {
+        "type-0": "Ground",
+        "type-1": "Flying"
+    },
+    "abilities": {
+        "ability-0": "Intimidate"
+    },
+    "stats": {
+        "HP": {
+            "base": 89,
+            "min": 288,
+            "max": 382
+        },
+        "Attack": {
+            "base": 145,
+            "min": 265,
+            "max": 427
+        },
+        "Defense": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        },
+        "Sp. Atk": {
+            "base": 105,
+            "min": 193,
+            "max": 339
+        },
+        "Sp. Def": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        },
+        "Speed": {
+            "base": 91,
+            "min": 168,
+            "max": 309
+        }
+    }
+}

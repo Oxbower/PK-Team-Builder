@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 244,
+    "type": {
+        "type-0": "Fire"
+    },
+    "abilities": {
+        "ability-0": "Pressure",
+        "ability-1": "Inner Focus"
+    },
+    "stats": {
+        "HP": {
+            "base": 115,
+            "min": 340,
+            "max": 434
+        },
+        "Attack": {
+            "base": 115,
+            "min": 211,
+            "max": 361
+        },
+        "Defense": {
+            "base": 85,
+            "min": 157,
+            "max": 295
+        },
+        "Sp. Atk": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        },
+        "Sp. Def": {
+            "base": 75,
+            "min": 139,
+            "max": 273
+        },
+        "Speed": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        }
+    }
+}

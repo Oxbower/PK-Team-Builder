@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 476,
+    "type": {
+        "type-0": "Rock",
+        "type-1": "Steel"
+    },
+    "abilities": {
+        "ability-0": "Sturdy",
+        "ability-1": "Magnet Pull",
+        "ability-2": "Sand Force"
+    },
+    "stats": {
+        "HP": {
+            "base": 60,
+            "min": 230,
+            "max": 324
+        },
+        "Attack": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        },
+        "Defense": {
+            "base": 145,
+            "min": 265,
+            "max": 427
+        },
+        "Sp. Atk": {
+            "base": 75,
+            "min": 139,
+            "max": 273
+        },
+        "Sp. Def": {
+            "base": 150,
+            "min": 274,
+            "max": 438
+        },
+        "Speed": {
+            "base": 40,
+            "min": 76,
+            "max": 196
+        }
+    }
+}

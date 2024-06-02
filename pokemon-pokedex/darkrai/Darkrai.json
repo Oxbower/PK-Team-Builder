@@ -1,0 +1,41 @@
+{
+    "pokedex-no": 491,
+    "type": {
+        "type-0": "Dark"
+    },
+    "abilities": {
+        "ability-0": "Bad Dreams"
+    },
+    "stats": {
+        "HP": {
+            "base": 70,
+            "min": 250,
+            "max": 344
+        },
+        "Attack": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        },
+        "Defense": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        },
+        "Sp. Atk": {
+            "base": 135,
+            "min": 247,
+            "max": 405
+        },
+        "Sp. Def": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        },
+        "Speed": {
+            "base": 125,
+            "min": 229,
+            "max": 383
+        }
+    }
+}

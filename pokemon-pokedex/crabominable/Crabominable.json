@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 740,
+    "type": {
+        "type-0": "Fighting",
+        "type-1": "Ice"
+    },
+    "abilities": {
+        "ability-0": "Hyper Cutter",
+        "ability-1": "Iron Fist",
+        "ability-2": "Anger Point"
+    },
+    "stats": {
+        "HP": {
+            "base": 97,
+            "min": 304,
+            "max": 398
+        },
+        "Attack": {
+            "base": 132,
+            "min": 242,
+            "max": 399
+        },
+        "Defense": {
+            "base": 77,
+            "min": 143,
+            "max": 278
+        },
+        "Sp. Atk": {
+            "base": 62,
+            "min": 116,
+            "max": 245
+        },
+        "Sp. Def": {
+            "base": 67,
+            "min": 125,
+            "max": 256
+        },
+        "Speed": {
+            "base": 43,
+            "min": 81,
+            "max": 203
+        }
+    }
+}

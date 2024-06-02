@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 582,
+    "type": {
+        "type-0": "Ice"
+    },
+    "abilities": {
+        "ability-0": "Ice Body",
+        "ability-1": "Snow Cloak",
+        "ability-2": "Weak Armor"
+    },
+    "stats": {
+        "HP": {
+            "base": 36,
+            "min": 182,
+            "max": 276
+        },
+        "Attack": {
+            "base": 50,
+            "min": 94,
+            "max": 218
+        },
+        "Defense": {
+            "base": 50,
+            "min": 94,
+            "max": 218
+        },
+        "Sp. Atk": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Sp. Def": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Speed": {
+            "base": 44,
+            "min": 83,
+            "max": 205
+        }
+    }
+}

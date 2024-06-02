@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 965,
+    "type": {
+        "type-0": "Steel",
+        "type-1": "Poison"
+    },
+    "abilities": {
+        "ability-0": "Overcoat",
+        "ability-1": "Slow Start"
+    },
+    "stats": {
+        "HP": {
+            "base": 45,
+            "min": 200,
+            "max": 294
+        },
+        "Attack": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        },
+        "Defense": {
+            "base": 63,
+            "min": 117,
+            "max": 247
+        },
+        "Sp. Atk": {
+            "base": 30,
+            "min": 58,
+            "max": 174
+        },
+        "Sp. Def": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        },
+        "Speed": {
+            "base": 47,
+            "min": 89,
+            "max": 212
+        }
+    }
+}

@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 275,
+    "type": {
+        "type-0": "Grass",
+        "type-1": "Dark"
+    },
+    "abilities": {
+        "ability-0": "Chlorophyll",
+        "ability-1": "Early Bird",
+        "ability-2": "Pickpocket"
+    },
+    "stats": {
+        "HP": {
+            "base": 90,
+            "min": 290,
+            "max": 384
+        },
+        "Attack": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        },
+        "Defense": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Sp. Atk": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        },
+        "Sp. Def": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Speed": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        }
+    }
+}

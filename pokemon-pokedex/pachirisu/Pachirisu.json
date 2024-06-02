@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 417,
+    "type": {
+        "type-0": "Electric"
+    },
+    "abilities": {
+        "ability-0": "Run Away",
+        "ability-1": "Pickup",
+        "ability-2": "Volt Absorb"
+    },
+    "stats": {
+        "HP": {
+            "base": 60,
+            "min": 230,
+            "max": 324
+        },
+        "Attack": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        },
+        "Defense": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        },
+        "Sp. Atk": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        },
+        "Sp. Def": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        },
+        "Speed": {
+            "base": 95,
+            "min": 175,
+            "max": 317
+        }
+    }
+}

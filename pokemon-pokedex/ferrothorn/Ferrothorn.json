@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 598,
+    "type": {
+        "type-0": "Grass",
+        "type-1": "Steel"
+    },
+    "abilities": {
+        "ability-0": "Iron Barbs",
+        "ability-1": "Anticipation"
+    },
+    "stats": {
+        "HP": {
+            "base": 74,
+            "min": 258,
+            "max": 352
+        },
+        "Attack": {
+            "base": 94,
+            "min": 173,
+            "max": 315
+        },
+        "Defense": {
+            "base": 131,
+            "min": 240,
+            "max": 397
+        },
+        "Sp. Atk": {
+            "base": 54,
+            "min": 101,
+            "max": 227
+        },
+        "Sp. Def": {
+            "base": 116,
+            "min": 213,
+            "max": 364
+        },
+        "Speed": {
+            "base": 20,
+            "min": 40,
+            "max": 152
+        }
+    }
+}

@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 430,
+    "type": {
+        "type-0": "Dark",
+        "type-1": "Flying"
+    },
+    "abilities": {
+        "ability-0": "Insomnia",
+        "ability-1": "Super Luck",
+        "ability-2": "Moxie"
+    },
+    "stats": {
+        "HP": {
+            "base": 100,
+            "min": 310,
+            "max": 404
+        },
+        "Attack": {
+            "base": 125,
+            "min": 229,
+            "max": 383
+        },
+        "Defense": {
+            "base": 52,
+            "min": 98,
+            "max": 223
+        },
+        "Sp. Atk": {
+            "base": 105,
+            "min": 193,
+            "max": 339
+        },
+        "Sp. Def": {
+            "base": 52,
+            "min": 98,
+            "max": 223
+        },
+        "Speed": {
+            "base": 71,
+            "min": 132,
+            "max": 265
+        }
+    }
+}

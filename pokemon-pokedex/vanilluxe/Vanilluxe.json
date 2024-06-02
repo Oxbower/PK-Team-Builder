@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 584,
+    "type": {
+        "type-0": "Ice"
+    },
+    "abilities": {
+        "ability-0": "Ice Body",
+        "ability-1": "Snow Warning",
+        "ability-2": "Weak Armor"
+    },
+    "stats": {
+        "HP": {
+            "base": 71,
+            "min": 252,
+            "max": 346
+        },
+        "Attack": {
+            "base": 95,
+            "min": 175,
+            "max": 317
+        },
+        "Defense": {
+            "base": 85,
+            "min": 157,
+            "max": 295
+        },
+        "Sp. Atk": {
+            "base": 110,
+            "min": 202,
+            "max": 350
+        },
+        "Sp. Def": {
+            "base": 95,
+            "min": 175,
+            "max": 317
+        },
+        "Speed": {
+            "base": 79,
+            "min": 146,
+            "max": 282
+        }
+    }
+}

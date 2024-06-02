@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 707,
+    "type": {
+        "type-0": "Steel",
+        "type-1": "Fairy"
+    },
+    "abilities": {
+        "ability-0": "Prankster",
+        "ability-1": "Magician"
+    },
+    "stats": {
+        "HP": {
+            "base": 57,
+            "min": 224,
+            "max": 318
+        },
+        "Attack": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        },
+        "Defense": {
+            "base": 91,
+            "min": 168,
+            "max": 309
+        },
+        "Sp. Atk": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        },
+        "Sp. Def": {
+            "base": 87,
+            "min": 161,
+            "max": 300
+        },
+        "Speed": {
+            "base": 75,
+            "min": 139,
+            "max": 273
+        }
+    }
+}

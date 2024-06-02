@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 415,
+    "type": {
+        "type-0": "Bug",
+        "type-1": "Flying"
+    },
+    "abilities": {
+        "ability-0": "Honey Gather",
+        "ability-1": "Hustle"
+    },
+    "stats": {
+        "HP": {
+            "base": 30,
+            "min": 170,
+            "max": 264
+        },
+        "Attack": {
+            "base": 30,
+            "min": 58,
+            "max": 174
+        },
+        "Defense": {
+            "base": 42,
+            "min": 80,
+            "max": 201
+        },
+        "Sp. Atk": {
+            "base": 30,
+            "min": 58,
+            "max": 174
+        },
+        "Sp. Def": {
+            "base": 42,
+            "min": 80,
+            "max": 201
+        },
+        "Speed": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        }
+    }
+}

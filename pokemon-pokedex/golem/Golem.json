@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 76,
+    "type": {
+        "type-0": "Rock",
+        "type-1": "Ground"
+    },
+    "abilities": {
+        "ability-0": "Rock Head",
+        "ability-1": "Sturdy",
+        "ability-2": "Sand Veil"
+    },
+    "stats": {
+        "HP": {
+            "base": 80,
+            "min": 270,
+            "max": 364
+        },
+        "Attack": {
+            "base": 120,
+            "min": 220,
+            "max": 372
+        },
+        "Defense": {
+            "base": 130,
+            "min": 238,
+            "max": 394
+        },
+        "Sp. Atk": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        },
+        "Sp. Def": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Speed": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        }
+    }
+}

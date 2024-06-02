@@ -1,0 +1,41 @@
+{
+    "pokedex-no": 201,
+    "type": {
+        "type-0": "Psychic"
+    },
+    "abilities": {
+        "ability-0": "Levitate"
+    },
+    "stats": {
+        "HP": {
+            "base": 48,
+            "min": 206,
+            "max": 300
+        },
+        "Attack": {
+            "base": 72,
+            "min": 134,
+            "max": 267
+        },
+        "Defense": {
+            "base": 48,
+            "min": 90,
+            "max": 214
+        },
+        "Sp. Atk": {
+            "base": 72,
+            "min": 134,
+            "max": 267
+        },
+        "Sp. Def": {
+            "base": 48,
+            "min": 90,
+            "max": 214
+        },
+        "Speed": {
+            "base": 48,
+            "min": 90,
+            "max": 214
+        }
+    }
+}

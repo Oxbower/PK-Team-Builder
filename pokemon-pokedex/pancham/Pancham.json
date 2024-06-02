@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 674,
+    "type": {
+        "type-0": "Fighting"
+    },
+    "abilities": {
+        "ability-0": "Iron Fist",
+        "ability-1": "Mold Breaker",
+        "ability-2": "Scrappy"
+    },
+    "stats": {
+        "HP": {
+            "base": 67,
+            "min": 244,
+            "max": 338
+        },
+        "Attack": {
+            "base": 82,
+            "min": 152,
+            "max": 289
+        },
+        "Defense": {
+            "base": 62,
+            "min": 116,
+            "max": 245
+        },
+        "Sp. Atk": {
+            "base": 46,
+            "min": 87,
+            "max": 210
+        },
+        "Sp. Def": {
+            "base": 48,
+            "min": 90,
+            "max": 214
+        },
+        "Speed": {
+            "base": 43,
+            "min": 81,
+            "max": 203
+        }
+    }
+}

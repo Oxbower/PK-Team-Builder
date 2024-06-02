@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 332,
+    "type": {
+        "type-0": "Grass",
+        "type-1": "Dark"
+    },
+    "abilities": {
+        "ability-0": "Sand Veil",
+        "ability-1": "Water Absorb"
+    },
+    "stats": {
+        "HP": {
+            "base": 70,
+            "min": 250,
+            "max": 344
+        },
+        "Attack": {
+            "base": 115,
+            "min": 211,
+            "max": 361
+        },
+        "Defense": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Sp. Atk": {
+            "base": 115,
+            "min": 211,
+            "max": 361
+        },
+        "Sp. Def": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Speed": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        }
+    }
+}

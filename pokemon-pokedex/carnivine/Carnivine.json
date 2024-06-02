@@ -1,0 +1,41 @@
+{
+    "pokedex-no": 455,
+    "type": {
+        "type-0": "Grass"
+    },
+    "abilities": {
+        "ability-0": "Levitate"
+    },
+    "stats": {
+        "HP": {
+            "base": 74,
+            "min": 258,
+            "max": 352
+        },
+        "Attack": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        },
+        "Defense": {
+            "base": 72,
+            "min": 134,
+            "max": 267
+        },
+        "Sp. Atk": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        },
+        "Sp. Def": {
+            "base": 72,
+            "min": 134,
+            "max": 267
+        },
+        "Speed": {
+            "base": 46,
+            "min": 87,
+            "max": 210
+        }
+    }
+}

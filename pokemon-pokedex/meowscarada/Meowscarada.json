@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 908,
+    "type": {
+        "type-0": "Grass",
+        "type-1": "Dark"
+    },
+    "abilities": {
+        "ability-0": "Overgrow",
+        "ability-1": "Protean"
+    },
+    "stats": {
+        "HP": {
+            "base": 76,
+            "min": 262,
+            "max": 356
+        },
+        "Attack": {
+            "base": 110,
+            "min": 202,
+            "max": 350
+        },
+        "Defense": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        },
+        "Sp. Atk": {
+            "base": 81,
+            "min": 150,
+            "max": 287
+        },
+        "Sp. Def": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        },
+        "Speed": {
+            "base": 123,
+            "min": 225,
+            "max": 379
+        }
+    }
+}

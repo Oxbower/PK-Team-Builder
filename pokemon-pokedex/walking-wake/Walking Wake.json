@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 1009,
+    "type": {
+        "type-0": "Water",
+        "type-1": "Dragon"
+    },
+    "abilities": {
+        "ability-0": "Protosynthesis"
+    },
+    "stats": {
+        "HP": {
+            "base": 99,
+            "min": 308,
+            "max": 402
+        },
+        "Attack": {
+            "base": 83,
+            "min": 153,
+            "max": 291
+        },
+        "Defense": {
+            "base": 91,
+            "min": 168,
+            "max": 309
+        },
+        "Sp. Atk": {
+            "base": 125,
+            "min": 229,
+            "max": 383
+        },
+        "Sp. Def": {
+            "base": 83,
+            "min": 153,
+            "max": 291
+        },
+        "Speed": {
+            "base": 109,
+            "min": 200,
+            "max": 348
+        }
+    }
+}

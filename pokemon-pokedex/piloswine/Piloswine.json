@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 221,
+    "type": {
+        "type-0": "Ice",
+        "type-1": "Ground"
+    },
+    "abilities": {
+        "ability-0": "Oblivious",
+        "ability-1": "Snow Cloak",
+        "ability-2": "Thick Fat"
+    },
+    "stats": {
+        "HP": {
+            "base": 100,
+            "min": 310,
+            "max": 404
+        },
+        "Attack": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        },
+        "Defense": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        },
+        "Sp. Atk": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Sp. Def": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Speed": {
+            "base": 50,
+            "min": 94,
+            "max": 218
+        }
+    }
+}

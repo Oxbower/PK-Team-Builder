@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 242,
+    "type": {
+        "type-0": "Normal"
+    },
+    "abilities": {
+        "ability-0": "Natural Cure",
+        "ability-1": "Serene Grace",
+        "ability-2": "Healer"
+    },
+    "stats": {
+        "HP": {
+            "base": 255,
+            "min": 620,
+            "max": 714
+        },
+        "Attack": {
+            "base": 10,
+            "min": 22,
+            "max": 130
+        },
+        "Defense": {
+            "base": 10,
+            "min": 22,
+            "max": 130
+        },
+        "Sp. Atk": {
+            "base": 75,
+            "min": 139,
+            "max": 273
+        },
+        "Sp. Def": {
+            "base": 135,
+            "min": 247,
+            "max": 405
+        },
+        "Speed": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        }
+    }
+}

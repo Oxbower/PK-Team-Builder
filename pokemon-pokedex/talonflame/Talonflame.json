@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 663,
+    "type": {
+        "type-0": "Fire",
+        "type-1": "Flying"
+    },
+    "abilities": {
+        "ability-0": "Flame Body",
+        "ability-1": "Gale Wings"
+    },
+    "stats": {
+        "HP": {
+            "base": 78,
+            "min": 266,
+            "max": 360
+        },
+        "Attack": {
+            "base": 81,
+            "min": 150,
+            "max": 287
+        },
+        "Defense": {
+            "base": 71,
+            "min": 132,
+            "max": 265
+        },
+        "Sp. Atk": {
+            "base": 74,
+            "min": 137,
+            "max": 271
+        },
+        "Sp. Def": {
+            "base": 69,
+            "min": 128,
+            "max": 260
+        },
+        "Speed": {
+            "base": 126,
+            "min": 231,
+            "max": 386
+        }
+    }
+}

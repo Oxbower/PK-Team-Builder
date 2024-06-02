@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 1020,
+    "type": {
+        "type-0": "Fire",
+        "type-1": "Dragon"
+    },
+    "abilities": {
+        "ability-0": "Protosynthesis"
+    },
+    "stats": {
+        "HP": {
+            "base": 105,
+            "min": 320,
+            "max": 414
+        },
+        "Attack": {
+            "base": 115,
+            "min": 211,
+            "max": 361
+        },
+        "Defense": {
+            "base": 121,
+            "min": 222,
+            "max": 375
+        },
+        "Sp. Atk": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Sp. Def": {
+            "base": 93,
+            "min": 171,
+            "max": 313
+        },
+        "Speed": {
+            "base": 91,
+            "min": 168,
+            "max": 309
+        }
+    }
+}

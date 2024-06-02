@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 648,
+    "type": {
+        "type-0": "Normal",
+        "type-1": "Psychic"
+    },
+    "abilities": {
+        "ability-0": "Serene Grace"
+    },
+    "stats": {
+        "HP": {
+            "base": 100,
+            "min": 310,
+            "max": 404
+        },
+        "Attack": {
+            "base": 77,
+            "min": 143,
+            "max": 278
+        },
+        "Defense": {
+            "base": 77,
+            "min": 143,
+            "max": 278
+        },
+        "Sp. Atk": {
+            "base": 128,
+            "min": 234,
+            "max": 390
+        },
+        "Sp. Def": {
+            "base": 128,
+            "min": 234,
+            "max": 390
+        },
+        "Speed": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        }
+    }
+}

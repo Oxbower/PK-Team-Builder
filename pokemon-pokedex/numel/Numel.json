@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 322,
+    "type": {
+        "type-0": "Fire",
+        "type-1": "Ground"
+    },
+    "abilities": {
+        "ability-0": "Oblivious",
+        "ability-1": "Simple",
+        "ability-2": "Own Tempo"
+    },
+    "stats": {
+        "HP": {
+            "base": 60,
+            "min": 230,
+            "max": 324
+        },
+        "Attack": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Defense": {
+            "base": 40,
+            "min": 76,
+            "max": 196
+        },
+        "Sp. Atk": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Sp. Def": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        },
+        "Speed": {
+            "base": 35,
+            "min": 67,
+            "max": 185
+        }
+    }
+}

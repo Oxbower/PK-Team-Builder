@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 660,
+    "type": {
+        "type-0": "Normal",
+        "type-1": "Ground"
+    },
+    "abilities": {
+        "ability-0": "Pickup",
+        "ability-1": "Cheek Pouch",
+        "ability-2": "Huge Power"
+    },
+    "stats": {
+        "HP": {
+            "base": 85,
+            "min": 280,
+            "max": 374
+        },
+        "Attack": {
+            "base": 56,
+            "min": 105,
+            "max": 232
+        },
+        "Defense": {
+            "base": 77,
+            "min": 143,
+            "max": 278
+        },
+        "Sp. Atk": {
+            "base": 50,
+            "min": 94,
+            "max": 218
+        },
+        "Sp. Def": {
+            "base": 77,
+            "min": 143,
+            "max": 278
+        },
+        "Speed": {
+            "base": 78,
+            "min": 144,
+            "max": 280
+        }
+    }
+}

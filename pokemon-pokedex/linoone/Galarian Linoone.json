@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 264,
+    "type": {
+        "type-0": "Dark",
+        "type-1": "Normal"
+    },
+    "abilities": {
+        "ability-0": "Pickup",
+        "ability-1": "Gluttony",
+        "ability-2": "Quick Feet"
+    },
+    "stats": {
+        "HP": {
+            "base": 78,
+            "min": 266,
+            "max": 360
+        },
+        "Attack": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        },
+        "Defense": {
+            "base": 61,
+            "min": 114,
+            "max": 243
+        },
+        "Sp. Atk": {
+            "base": 50,
+            "min": 94,
+            "max": 218
+        },
+        "Sp. Def": {
+            "base": 61,
+            "min": 114,
+            "max": 243
+        },
+        "Speed": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        }
+    }
+}

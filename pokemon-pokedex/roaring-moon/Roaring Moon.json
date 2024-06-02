@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 1005,
+    "type": {
+        "type-0": "Dragon",
+        "type-1": "Dark"
+    },
+    "abilities": {
+        "ability-0": "Protosynthesis"
+    },
+    "stats": {
+        "HP": {
+            "base": 105,
+            "min": 320,
+            "max": 414
+        },
+        "Attack": {
+            "base": 139,
+            "min": 254,
+            "max": 414
+        },
+        "Defense": {
+            "base": 71,
+            "min": 132,
+            "max": 265
+        },
+        "Sp. Atk": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        },
+        "Sp. Def": {
+            "base": 101,
+            "min": 186,
+            "max": 331
+        },
+        "Speed": {
+            "base": 119,
+            "min": 218,
+            "max": 370
+        }
+    }
+}

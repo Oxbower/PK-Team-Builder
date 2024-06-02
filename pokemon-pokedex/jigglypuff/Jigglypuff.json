@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 39,
+    "type": {
+        "type-0": "Normal",
+        "type-1": "Fairy"
+    },
+    "abilities": {
+        "ability-0": "Cute Charm",
+        "ability-1": "Competitive",
+        "ability-2": "Friend Guard"
+    },
+    "stats": {
+        "HP": {
+            "base": 115,
+            "min": 340,
+            "max": 434
+        },
+        "Attack": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        },
+        "Defense": {
+            "base": 20,
+            "min": 40,
+            "max": 152
+        },
+        "Sp. Atk": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        },
+        "Sp. Def": {
+            "base": 25,
+            "min": 49,
+            "max": 163
+        },
+        "Speed": {
+            "base": 20,
+            "min": 40,
+            "max": 152
+        }
+    }
+}

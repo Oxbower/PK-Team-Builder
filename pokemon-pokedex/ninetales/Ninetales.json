@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 38,
+    "type": {
+        "type-0": "Fire"
+    },
+    "abilities": {
+        "ability-0": "Flash Fire",
+        "ability-1": "Drought"
+    },
+    "stats": {
+        "HP": {
+            "base": 73,
+            "min": 256,
+            "max": 350
+        },
+        "Attack": {
+            "base": 76,
+            "min": 141,
+            "max": 276
+        },
+        "Defense": {
+            "base": 75,
+            "min": 139,
+            "max": 273
+        },
+        "Sp. Atk": {
+            "base": 81,
+            "min": 150,
+            "max": 287
+        },
+        "Sp. Def": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        },
+        "Speed": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        }
+    }
+}

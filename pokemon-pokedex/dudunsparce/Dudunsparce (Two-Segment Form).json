@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 982,
+    "type": {
+        "type-0": "Normal"
+    },
+    "abilities": {
+        "ability-0": "Serene Grace",
+        "ability-1": "Run Away",
+        "ability-2": "Rattled"
+    },
+    "stats": {
+        "HP": {
+            "base": 125,
+            "min": 360,
+            "max": 454
+        },
+        "Attack": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        },
+        "Defense": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        },
+        "Sp. Atk": {
+            "base": 85,
+            "min": 157,
+            "max": 295
+        },
+        "Sp. Def": {
+            "base": 75,
+            "min": 139,
+            "max": 273
+        },
+        "Speed": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        }
+    }
+}

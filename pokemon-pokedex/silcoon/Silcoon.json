@@ -1,0 +1,41 @@
+{
+    "pokedex-no": 266,
+    "type": {
+        "type-0": "Bug"
+    },
+    "abilities": {
+        "ability-0": "Shed Skin"
+    },
+    "stats": {
+        "HP": {
+            "base": 50,
+            "min": 210,
+            "max": 304
+        },
+        "Attack": {
+            "base": 35,
+            "min": 67,
+            "max": 185
+        },
+        "Defense": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        },
+        "Sp. Atk": {
+            "base": 25,
+            "min": 49,
+            "max": 163
+        },
+        "Sp. Def": {
+            "base": 25,
+            "min": 49,
+            "max": 163
+        },
+        "Speed": {
+            "base": 15,
+            "min": 31,
+            "max": 141
+        }
+    }
+}

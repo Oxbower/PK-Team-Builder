@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 806,
+    "type": {
+        "type-0": "Fire",
+        "type-1": "Ghost"
+    },
+    "abilities": {
+        "ability-0": "Beast Boost"
+    },
+    "stats": {
+        "HP": {
+            "base": 53,
+            "min": 216,
+            "max": 310
+        },
+        "Attack": {
+            "base": 127,
+            "min": 233,
+            "max": 388
+        },
+        "Defense": {
+            "base": 53,
+            "min": 99,
+            "max": 225
+        },
+        "Sp. Atk": {
+            "base": 151,
+            "min": 276,
+            "max": 441
+        },
+        "Sp. Def": {
+            "base": 79,
+            "min": 146,
+            "max": 282
+        },
+        "Speed": {
+            "base": 107,
+            "min": 197,
+            "max": 344
+        }
+    }
+}

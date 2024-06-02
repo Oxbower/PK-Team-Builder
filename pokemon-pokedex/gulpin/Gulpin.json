@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 316,
+    "type": {
+        "type-0": "Poison"
+    },
+    "abilities": {
+        "ability-0": "Liquid Ooze",
+        "ability-1": "Sticky Hold",
+        "ability-2": "Gluttony"
+    },
+    "stats": {
+        "HP": {
+            "base": 70,
+            "min": 250,
+            "max": 344
+        },
+        "Attack": {
+            "base": 43,
+            "min": 81,
+            "max": 203
+        },
+        "Defense": {
+            "base": 53,
+            "min": 99,
+            "max": 225
+        },
+        "Sp. Atk": {
+            "base": 43,
+            "min": 81,
+            "max": 203
+        },
+        "Sp. Def": {
+            "base": 53,
+            "min": 99,
+            "max": 225
+        },
+        "Speed": {
+            "base": 40,
+            "min": 76,
+            "max": 196
+        }
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 645,
+    "type": {
+        "type-0": "Ground",
+        "type-1": "Flying"
+    },
+    "abilities": {
+        "ability-0": "Sand Force",
+        "ability-1": "Sheer Force"
+    },
+    "stats": {
+        "HP": {
+            "base": 89,
+            "min": 288,
+            "max": 382
+        },
+        "Attack": {
+            "base": 125,
+            "min": 229,
+            "max": 383
+        },
+        "Defense": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        },
+        "Sp. Atk": {
+            "base": 115,
+            "min": 211,
+            "max": 361
+        },
+        "Sp. Def": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        },
+        "Speed": {
+            "base": 101,
+            "min": 186,
+            "max": 331
+        }
+    }
+}

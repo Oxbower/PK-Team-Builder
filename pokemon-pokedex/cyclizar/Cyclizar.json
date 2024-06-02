@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 967,
+    "type": {
+        "type-0": "Dragon",
+        "type-1": "Normal"
+    },
+    "abilities": {
+        "ability-0": "Shed Skin",
+        "ability-1": "Regenerator"
+    },
+    "stats": {
+        "HP": {
+            "base": 70,
+            "min": 250,
+            "max": 344
+        },
+        "Attack": {
+            "base": 95,
+            "min": 175,
+            "max": 317
+        },
+        "Defense": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Sp. Atk": {
+            "base": 85,
+            "min": 157,
+            "max": 295
+        },
+        "Sp. Def": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Speed": {
+            "base": 121,
+            "min": 222,
+            "max": 375
+        }
+    }
+}

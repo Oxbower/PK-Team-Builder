@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 799,
+    "type": {
+        "type-0": "Dark",
+        "type-1": "Dragon"
+    },
+    "abilities": {
+        "ability-0": "Beast Boost"
+    },
+    "stats": {
+        "HP": {
+            "base": 223,
+            "min": 556,
+            "max": 650
+        },
+        "Attack": {
+            "base": 101,
+            "min": 186,
+            "max": 331
+        },
+        "Defense": {
+            "base": 53,
+            "min": 99,
+            "max": 225
+        },
+        "Sp. Atk": {
+            "base": 97,
+            "min": 179,
+            "max": 322
+        },
+        "Sp. Def": {
+            "base": 53,
+            "min": 99,
+            "max": 225
+        },
+        "Speed": {
+            "base": 43,
+            "min": 81,
+            "max": 203
+        }
+    }
+}

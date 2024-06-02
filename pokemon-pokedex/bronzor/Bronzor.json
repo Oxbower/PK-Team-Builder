@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 436,
+    "type": {
+        "type-0": "Steel",
+        "type-1": "Psychic"
+    },
+    "abilities": {
+        "ability-0": "Levitate",
+        "ability-1": "Heatproof",
+        "ability-2": "Heavy Metal"
+    },
+    "stats": {
+        "HP": {
+            "base": 57,
+            "min": 224,
+            "max": 318
+        },
+        "Attack": {
+            "base": 24,
+            "min": 47,
+            "max": 161
+        },
+        "Defense": {
+            "base": 86,
+            "min": 159,
+            "max": 298
+        },
+        "Sp. Atk": {
+            "base": 24,
+            "min": 47,
+            "max": 161
+        },
+        "Sp. Def": {
+            "base": 86,
+            "min": 159,
+            "max": 298
+        },
+        "Speed": {
+            "base": 23,
+            "min": 45,
+            "max": 159
+        }
+    }
+}

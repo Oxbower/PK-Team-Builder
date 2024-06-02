@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 549,
+    "type": {
+        "type-0": "Grass",
+        "type-1": "Fighting"
+    },
+    "abilities": {
+        "ability-0": "Chlorophyll",
+        "ability-1": "Hustle",
+        "ability-2": "Leaf Guard"
+    },
+    "stats": {
+        "HP": {
+            "base": 70,
+            "min": 250,
+            "max": 344
+        },
+        "Attack": {
+            "base": 105,
+            "min": 193,
+            "max": 339
+        },
+        "Defense": {
+            "base": 75,
+            "min": 139,
+            "max": 273
+        },
+        "Sp. Atk": {
+            "base": 50,
+            "min": 94,
+            "max": 218
+        },
+        "Sp. Def": {
+            "base": 75,
+            "min": 139,
+            "max": 273
+        },
+        "Speed": {
+            "base": 105,
+            "min": 193,
+            "max": 339
+        }
+    }
+}

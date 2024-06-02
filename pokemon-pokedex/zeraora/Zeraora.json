@@ -1,0 +1,41 @@
+{
+    "pokedex-no": 807,
+    "type": {
+        "type-0": "Electric"
+    },
+    "abilities": {
+        "ability-0": "Volt Absorb"
+    },
+    "stats": {
+        "HP": {
+            "base": 88,
+            "min": 286,
+            "max": 380
+        },
+        "Attack": {
+            "base": 112,
+            "min": 206,
+            "max": 355
+        },
+        "Defense": {
+            "base": 75,
+            "min": 139,
+            "max": 273
+        },
+        "Sp. Atk": {
+            "base": 102,
+            "min": 188,
+            "max": 333
+        },
+        "Sp. Def": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        },
+        "Speed": {
+            "base": 143,
+            "min": 261,
+            "max": 423
+        }
+    }
+}

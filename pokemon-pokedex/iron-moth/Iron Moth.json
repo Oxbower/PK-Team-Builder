@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 994,
+    "type": {
+        "type-0": "Fire",
+        "type-1": "Poison"
+    },
+    "abilities": {
+        "ability-0": "Quark Drive"
+    },
+    "stats": {
+        "HP": {
+            "base": 80,
+            "min": 270,
+            "max": 364
+        },
+        "Attack": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        },
+        "Defense": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Sp. Atk": {
+            "base": 140,
+            "min": 256,
+            "max": 416
+        },
+        "Sp. Def": {
+            "base": 110,
+            "min": 202,
+            "max": 350
+        },
+        "Speed": {
+            "base": 110,
+            "min": 202,
+            "max": 350
+        }
+    }
+}

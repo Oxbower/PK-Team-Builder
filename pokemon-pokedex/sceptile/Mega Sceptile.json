@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 254,
+    "type": {
+        "type-0": "Grass",
+        "type-1": "Dragon"
+    },
+    "abilities": {
+        "ability-0": "Lightning Rod"
+    },
+    "stats": {
+        "HP": {
+            "base": 70,
+            "min": 250,
+            "max": 344
+        },
+        "Attack": {
+            "base": 110,
+            "min": 202,
+            "max": 350
+        },
+        "Defense": {
+            "base": 75,
+            "min": 139,
+            "max": 273
+        },
+        "Sp. Atk": {
+            "base": 145,
+            "min": 265,
+            "max": 427
+        },
+        "Sp. Def": {
+            "base": 85,
+            "min": 157,
+            "max": 295
+        },
+        "Speed": {
+            "base": 145,
+            "min": 265,
+            "max": 427
+        }
+    }
+}

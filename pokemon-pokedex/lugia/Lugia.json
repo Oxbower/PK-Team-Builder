@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 249,
+    "type": {
+        "type-0": "Psychic",
+        "type-1": "Flying"
+    },
+    "abilities": {
+        "ability-0": "Pressure",
+        "ability-1": "Multiscale"
+    },
+    "stats": {
+        "HP": {
+            "base": 106,
+            "min": 322,
+            "max": 416
+        },
+        "Attack": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        },
+        "Defense": {
+            "base": 130,
+            "min": 238,
+            "max": 394
+        },
+        "Sp. Atk": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        },
+        "Sp. Def": {
+            "base": 154,
+            "min": 281,
+            "max": 447
+        },
+        "Speed": {
+            "base": 110,
+            "min": 202,
+            "max": 350
+        }
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 758,
+    "type": {
+        "type-0": "Poison",
+        "type-1": "Fire"
+    },
+    "abilities": {
+        "ability-0": "Corrosion",
+        "ability-1": "Oblivious"
+    },
+    "stats": {
+        "HP": {
+            "base": 68,
+            "min": 246,
+            "max": 340
+        },
+        "Attack": {
+            "base": 64,
+            "min": 119,
+            "max": 249
+        },
+        "Defense": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Sp. Atk": {
+            "base": 111,
+            "min": 204,
+            "max": 353
+        },
+        "Sp. Def": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Speed": {
+            "base": 117,
+            "min": 215,
+            "max": 366
+        }
+    }
+}

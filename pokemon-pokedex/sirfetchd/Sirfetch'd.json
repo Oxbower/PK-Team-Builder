@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 865,
+    "type": {
+        "type-0": "Fighting"
+    },
+    "abilities": {
+        "ability-0": "Steadfast",
+        "ability-1": "Scrappy"
+    },
+    "stats": {
+        "HP": {
+            "base": 62,
+            "min": 234,
+            "max": 328
+        },
+        "Attack": {
+            "base": 135,
+            "min": 247,
+            "max": 405
+        },
+        "Defense": {
+            "base": 95,
+            "min": 175,
+            "max": 317
+        },
+        "Sp. Atk": {
+            "base": 68,
+            "min": 126,
+            "max": 258
+        },
+        "Sp. Def": {
+            "base": 82,
+            "min": 152,
+            "max": 289
+        },
+        "Speed": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        }
+    }
+}

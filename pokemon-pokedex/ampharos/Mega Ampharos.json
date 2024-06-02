@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 181,
+    "type": {
+        "type-0": "Electric",
+        "type-1": "Dragon"
+    },
+    "abilities": {
+        "ability-0": "Mold Breaker"
+    },
+    "stats": {
+        "HP": {
+            "base": 90,
+            "min": 290,
+            "max": 384
+        },
+        "Attack": {
+            "base": 95,
+            "min": 175,
+            "max": 317
+        },
+        "Defense": {
+            "base": 105,
+            "min": 193,
+            "max": 339
+        },
+        "Sp. Atk": {
+            "base": 165,
+            "min": 301,
+            "max": 471
+        },
+        "Sp. Def": {
+            "base": 110,
+            "min": 202,
+            "max": 350
+        },
+        "Speed": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        }
+    }
+}

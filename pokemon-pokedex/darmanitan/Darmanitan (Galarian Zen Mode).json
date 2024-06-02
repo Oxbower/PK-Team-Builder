@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 555,
+    "type": {
+        "type-0": "Ice",
+        "type-1": "Fire"
+    },
+    "abilities": {
+        "ability-0": "Gorilla Tactics",
+        "ability-1": "Zen Mode"
+    },
+    "stats": {
+        "HP": {
+            "base": 105,
+            "min": 320,
+            "max": 414
+        },
+        "Attack": {
+            "base": 160,
+            "min": 292,
+            "max": 460
+        },
+        "Defense": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        },
+        "Sp. Atk": {
+            "base": 30,
+            "min": 58,
+            "max": 174
+        },
+        "Sp. Def": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        },
+        "Speed": {
+            "base": 135,
+            "min": 247,
+            "max": 405
+        }
+    }
+}

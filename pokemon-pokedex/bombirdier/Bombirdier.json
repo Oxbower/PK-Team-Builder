@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 962,
+    "type": {
+        "type-0": "Flying",
+        "type-1": "Dark"
+    },
+    "abilities": {
+        "ability-0": "Big Pecks",
+        "ability-1": "Keen Eye",
+        "ability-2": "Rocky Payload"
+    },
+    "stats": {
+        "HP": {
+            "base": 70,
+            "min": 250,
+            "max": 344
+        },
+        "Attack": {
+            "base": 103,
+            "min": 189,
+            "max": 335
+        },
+        "Defense": {
+            "base": 85,
+            "min": 157,
+            "max": 295
+        },
+        "Sp. Atk": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Sp. Def": {
+            "base": 85,
+            "min": 157,
+            "max": 295
+        },
+        "Speed": {
+            "base": 82,
+            "min": 152,
+            "max": 289
+        }
+    }
+}

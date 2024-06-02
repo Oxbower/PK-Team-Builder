@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 88,
+    "type": {
+        "type-0": "Poison",
+        "type-1": "Dark"
+    },
+    "abilities": {
+        "ability-0": "Poison Touch",
+        "ability-1": "Gluttony",
+        "ability-2": "Power of Alchemy"
+    },
+    "stats": {
+        "HP": {
+            "base": 80,
+            "min": 270,
+            "max": 364
+        },
+        "Attack": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        },
+        "Defense": {
+            "base": 50,
+            "min": 94,
+            "max": 218
+        },
+        "Sp. Atk": {
+            "base": 40,
+            "min": 76,
+            "max": 196
+        },
+        "Sp. Def": {
+            "base": 50,
+            "min": 94,
+            "max": 218
+        },
+        "Speed": {
+            "base": 25,
+            "min": 49,
+            "max": 163
+        }
+    }
+}

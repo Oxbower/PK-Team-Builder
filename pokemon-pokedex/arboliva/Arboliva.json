@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 930,
+    "type": {
+        "type-0": "Grass",
+        "type-1": "Normal"
+    },
+    "abilities": {
+        "ability-0": "Seed Sower",
+        "ability-1": "Harvest"
+    },
+    "stats": {
+        "HP": {
+            "base": 78,
+            "min": 266,
+            "max": 360
+        },
+        "Attack": {
+            "base": 69,
+            "min": 128,
+            "max": 260
+        },
+        "Defense": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        },
+        "Sp. Atk": {
+            "base": 125,
+            "min": 229,
+            "max": 383
+        },
+        "Sp. Def": {
+            "base": 109,
+            "min": 200,
+            "max": 348
+        },
+        "Speed": {
+            "base": 39,
+            "min": 74,
+            "max": 194
+        }
+    }
+}

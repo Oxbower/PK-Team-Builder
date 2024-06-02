@@ -1,0 +1,41 @@
+{
+    "pokedex-no": 563,
+    "type": {
+        "type-0": "Ghost"
+    },
+    "abilities": {
+        "ability-0": "Mummy"
+    },
+    "stats": {
+        "HP": {
+            "base": 58,
+            "min": 226,
+            "max": 320
+        },
+        "Attack": {
+            "base": 50,
+            "min": 94,
+            "max": 218
+        },
+        "Defense": {
+            "base": 145,
+            "min": 265,
+            "max": 427
+        },
+        "Sp. Atk": {
+            "base": 95,
+            "min": 175,
+            "max": 317
+        },
+        "Sp. Def": {
+            "base": 105,
+            "min": 193,
+            "max": 339
+        },
+        "Speed": {
+            "base": 30,
+            "min": 58,
+            "max": 174
+        }
+    }
+}

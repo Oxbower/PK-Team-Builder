@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 290,
+    "type": {
+        "type-0": "Bug",
+        "type-1": "Ground"
+    },
+    "abilities": {
+        "ability-0": "Compound Eyes",
+        "ability-1": "Run Away"
+    },
+    "stats": {
+        "HP": {
+            "base": 31,
+            "min": 172,
+            "max": 266
+        },
+        "Attack": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        },
+        "Defense": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        },
+        "Sp. Atk": {
+            "base": 30,
+            "min": 58,
+            "max": 174
+        },
+        "Sp. Def": {
+            "base": 30,
+            "min": 58,
+            "max": 174
+        },
+        "Speed": {
+            "base": 40,
+            "min": 76,
+            "max": 196
+        }
+    }
+}

@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 918,
+    "type": {
+        "type-0": "Bug"
+    },
+    "abilities": {
+        "ability-0": "Insomnia",
+        "ability-1": "Stakeout"
+    },
+    "stats": {
+        "HP": {
+            "base": 60,
+            "min": 230,
+            "max": 324
+        },
+        "Attack": {
+            "base": 79,
+            "min": 146,
+            "max": 282
+        },
+        "Defense": {
+            "base": 92,
+            "min": 170,
+            "max": 311
+        },
+        "Sp. Atk": {
+            "base": 52,
+            "min": 98,
+            "max": 223
+        },
+        "Sp. Def": {
+            "base": 86,
+            "min": 159,
+            "max": 298
+        },
+        "Speed": {
+            "base": 35,
+            "min": 67,
+            "max": 185
+        }
+    }
+}

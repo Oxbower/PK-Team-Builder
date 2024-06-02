@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 590,
+    "type": {
+        "type-0": "Grass",
+        "type-1": "Poison"
+    },
+    "abilities": {
+        "ability-0": "Effect Spore",
+        "ability-1": "Regenerator"
+    },
+    "stats": {
+        "HP": {
+            "base": 69,
+            "min": 248,
+            "max": 342
+        },
+        "Attack": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        },
+        "Defense": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        },
+        "Sp. Atk": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        },
+        "Sp. Def": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        },
+        "Speed": {
+            "base": 15,
+            "min": 31,
+            "max": 141
+        }
+    }
+}

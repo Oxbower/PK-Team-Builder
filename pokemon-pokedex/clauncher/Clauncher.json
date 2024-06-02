@@ -1,0 +1,41 @@
+{
+    "pokedex-no": 692,
+    "type": {
+        "type-0": "Water"
+    },
+    "abilities": {
+        "ability-0": "Mega Launcher"
+    },
+    "stats": {
+        "HP": {
+            "base": 50,
+            "min": 210,
+            "max": 304
+        },
+        "Attack": {
+            "base": 53,
+            "min": 99,
+            "max": 225
+        },
+        "Defense": {
+            "base": 62,
+            "min": 116,
+            "max": 245
+        },
+        "Sp. Atk": {
+            "base": 58,
+            "min": 108,
+            "max": 236
+        },
+        "Sp. Def": {
+            "base": 63,
+            "min": 117,
+            "max": 247
+        },
+        "Speed": {
+            "base": 44,
+            "min": 83,
+            "max": 205
+        }
+    }
+}

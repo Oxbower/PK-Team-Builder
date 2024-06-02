@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 442,
+    "type": {
+        "type-0": "Ghost",
+        "type-1": "Dark"
+    },
+    "abilities": {
+        "ability-0": "Pressure",
+        "ability-1": "Infiltrator"
+    },
+    "stats": {
+        "HP": {
+            "base": 50,
+            "min": 210,
+            "max": 304
+        },
+        "Attack": {
+            "base": 92,
+            "min": 170,
+            "max": 311
+        },
+        "Defense": {
+            "base": 108,
+            "min": 198,
+            "max": 346
+        },
+        "Sp. Atk": {
+            "base": 92,
+            "min": 170,
+            "max": 311
+        },
+        "Sp. Def": {
+            "base": 108,
+            "min": 198,
+            "max": 346
+        },
+        "Speed": {
+            "base": 35,
+            "min": 67,
+            "max": 185
+        }
+    }
+}

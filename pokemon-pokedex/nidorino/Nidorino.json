@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 33,
+    "type": {
+        "type-0": "Poison"
+    },
+    "abilities": {
+        "ability-0": "Poison Point",
+        "ability-1": "Rivalry",
+        "ability-2": "Hustle"
+    },
+    "stats": {
+        "HP": {
+            "base": 61,
+            "min": 232,
+            "max": 326
+        },
+        "Attack": {
+            "base": 72,
+            "min": 134,
+            "max": 267
+        },
+        "Defense": {
+            "base": 57,
+            "min": 107,
+            "max": 234
+        },
+        "Sp. Atk": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        },
+        "Sp. Def": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        },
+        "Speed": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        }
+    }
+}

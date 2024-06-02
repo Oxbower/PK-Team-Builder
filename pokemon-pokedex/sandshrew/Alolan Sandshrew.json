@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 27,
+    "type": {
+        "type-0": "Ice",
+        "type-1": "Steel"
+    },
+    "abilities": {
+        "ability-0": "Snow Cloak",
+        "ability-1": "Slush Rush"
+    },
+    "stats": {
+        "HP": {
+            "base": 50,
+            "min": 210,
+            "max": 304
+        },
+        "Attack": {
+            "base": 75,
+            "min": 139,
+            "max": 273
+        },
+        "Defense": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        },
+        "Sp. Atk": {
+            "base": 10,
+            "min": 22,
+            "max": 130
+        },
+        "Sp. Def": {
+            "base": 35,
+            "min": 67,
+            "max": 185
+        },
+        "Speed": {
+            "base": 40,
+            "min": 76,
+            "max": 196
+        }
+    }
+}

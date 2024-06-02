@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 342,
+    "type": {
+        "type-0": "Water",
+        "type-1": "Dark"
+    },
+    "abilities": {
+        "ability-0": "Hyper Cutter",
+        "ability-1": "Shell Armor",
+        "ability-2": "Adaptability"
+    },
+    "stats": {
+        "HP": {
+            "base": 63,
+            "min": 236,
+            "max": 330
+        },
+        "Attack": {
+            "base": 120,
+            "min": 220,
+            "max": 372
+        },
+        "Defense": {
+            "base": 85,
+            "min": 157,
+            "max": 295
+        },
+        "Sp. Atk": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        },
+        "Sp. Def": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        },
+        "Speed": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        }
+    }
+}

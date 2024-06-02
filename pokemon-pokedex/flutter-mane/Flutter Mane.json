@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 987,
+    "type": {
+        "type-0": "Ghost",
+        "type-1": "Fairy"
+    },
+    "abilities": {
+        "ability-0": "Protosynthesis"
+    },
+    "stats": {
+        "HP": {
+            "base": 55,
+            "min": 220,
+            "max": 314
+        },
+        "Attack": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        },
+        "Defense": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        },
+        "Sp. Atk": {
+            "base": 135,
+            "min": 247,
+            "max": 405
+        },
+        "Sp. Def": {
+            "base": 135,
+            "min": 247,
+            "max": 405
+        },
+        "Speed": {
+            "base": 135,
+            "min": 247,
+            "max": 405
+        }
+    }
+}

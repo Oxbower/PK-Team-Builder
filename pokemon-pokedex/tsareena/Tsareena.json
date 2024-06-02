@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 763,
+    "type": {
+        "type-0": "Grass"
+    },
+    "abilities": {
+        "ability-0": "Leaf Guard",
+        "ability-1": "Queenly Majesty",
+        "ability-2": "Sweet Veil"
+    },
+    "stats": {
+        "HP": {
+            "base": 72,
+            "min": 254,
+            "max": 348
+        },
+        "Attack": {
+            "base": 120,
+            "min": 220,
+            "max": 372
+        },
+        "Defense": {
+            "base": 98,
+            "min": 180,
+            "max": 324
+        },
+        "Sp. Atk": {
+            "base": 50,
+            "min": 94,
+            "max": 218
+        },
+        "Sp. Def": {
+            "base": 98,
+            "min": 180,
+            "max": 324
+        },
+        "Speed": {
+            "base": 72,
+            "min": 134,
+            "max": 267
+        }
+    }
+}

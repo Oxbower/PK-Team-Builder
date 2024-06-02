@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 1000,
+    "type": {
+        "type-0": "Steel",
+        "type-1": "Ghost"
+    },
+    "abilities": {
+        "ability-0": "Good as Gold"
+    },
+    "stats": {
+        "HP": {
+            "base": 87,
+            "min": 284,
+            "max": 378
+        },
+        "Attack": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Defense": {
+            "base": 95,
+            "min": 175,
+            "max": 317
+        },
+        "Sp. Atk": {
+            "base": 133,
+            "min": 243,
+            "max": 401
+        },
+        "Sp. Def": {
+            "base": 91,
+            "min": 168,
+            "max": 309
+        },
+        "Speed": {
+            "base": 84,
+            "min": 155,
+            "max": 293
+        }
+    }
+}

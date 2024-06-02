@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 18,
+    "type": {
+        "type-0": "Normal",
+        "type-1": "Flying"
+    },
+    "abilities": {
+        "ability-0": "No Guard"
+    },
+    "stats": {
+        "HP": {
+            "base": 83,
+            "min": 276,
+            "max": 370
+        },
+        "Attack": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        },
+        "Defense": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        },
+        "Sp. Atk": {
+            "base": 135,
+            "min": 247,
+            "max": 405
+        },
+        "Sp. Def": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        },
+        "Speed": {
+            "base": 121,
+            "min": 222,
+            "max": 375
+        }
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 612,
+    "type": {
+        "type-0": "Dragon"
+    },
+    "abilities": {
+        "ability-0": "Rivalry",
+        "ability-1": "Mold Breaker",
+        "ability-2": "Unnerve"
+    },
+    "stats": {
+        "HP": {
+            "base": 76,
+            "min": 262,
+            "max": 356
+        },
+        "Attack": {
+            "base": 147,
+            "min": 269,
+            "max": 432
+        },
+        "Defense": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        },
+        "Sp. Atk": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Sp. Def": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        },
+        "Speed": {
+            "base": 97,
+            "min": 179,
+            "max": 322
+        }
+    }
+}

@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 366,
+    "type": {
+        "type-0": "Water"
+    },
+    "abilities": {
+        "ability-0": "Shell Armor",
+        "ability-1": "Rattled"
+    },
+    "stats": {
+        "HP": {
+            "base": 35,
+            "min": 180,
+            "max": 274
+        },
+        "Attack": {
+            "base": 64,
+            "min": 119,
+            "max": 249
+        },
+        "Defense": {
+            "base": 85,
+            "min": 157,
+            "max": 295
+        },
+        "Sp. Atk": {
+            "base": 74,
+            "min": 137,
+            "max": 271
+        },
+        "Sp. Def": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        },
+        "Speed": {
+            "base": 32,
+            "min": 62,
+            "max": 179
+        }
+    }
+}

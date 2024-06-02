@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 743,
+    "type": {
+        "type-0": "Bug",
+        "type-1": "Fairy"
+    },
+    "abilities": {
+        "ability-0": "Honey Gather",
+        "ability-1": "Shield Dust",
+        "ability-2": "Sweet Veil"
+    },
+    "stats": {
+        "HP": {
+            "base": 60,
+            "min": 230,
+            "max": 324
+        },
+        "Attack": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        },
+        "Defense": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Sp. Atk": {
+            "base": 95,
+            "min": 175,
+            "max": 317
+        },
+        "Sp. Def": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        },
+        "Speed": {
+            "base": 124,
+            "min": 227,
+            "max": 381
+        }
+    }
+}

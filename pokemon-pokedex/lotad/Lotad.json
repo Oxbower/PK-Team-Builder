@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 270,
+    "type": {
+        "type-0": "Water",
+        "type-1": "Grass"
+    },
+    "abilities": {
+        "ability-0": "Swift Swim",
+        "ability-1": "Rain Dish",
+        "ability-2": "Own Tempo"
+    },
+    "stats": {
+        "HP": {
+            "base": 40,
+            "min": 190,
+            "max": 284
+        },
+        "Attack": {
+            "base": 30,
+            "min": 58,
+            "max": 174
+        },
+        "Defense": {
+            "base": 30,
+            "min": 58,
+            "max": 174
+        },
+        "Sp. Atk": {
+            "base": 40,
+            "min": 76,
+            "max": 196
+        },
+        "Sp. Def": {
+            "base": 50,
+            "min": 94,
+            "max": 218
+        },
+        "Speed": {
+            "base": 30,
+            "min": 58,
+            "max": 174
+        }
+    }
+}

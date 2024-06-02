@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 464,
+    "type": {
+        "type-0": "Ground",
+        "type-1": "Rock"
+    },
+    "abilities": {
+        "ability-0": "Lightning Rod",
+        "ability-1": "Solid Rock",
+        "ability-2": "Reckless"
+    },
+    "stats": {
+        "HP": {
+            "base": 115,
+            "min": 340,
+            "max": 434
+        },
+        "Attack": {
+            "base": 140,
+            "min": 256,
+            "max": 416
+        },
+        "Defense": {
+            "base": 130,
+            "min": 238,
+            "max": 394
+        },
+        "Sp. Atk": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        },
+        "Sp. Def": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        },
+        "Speed": {
+            "base": 40,
+            "min": 76,
+            "max": 196
+        }
+    }
+}

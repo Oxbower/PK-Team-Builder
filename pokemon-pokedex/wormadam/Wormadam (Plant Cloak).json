@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 413,
+    "type": {
+        "type-0": "Bug",
+        "type-1": "Grass"
+    },
+    "abilities": {
+        "ability-0": "Anticipation",
+        "ability-1": "Overcoat"
+    },
+    "stats": {
+        "HP": {
+            "base": 60,
+            "min": 230,
+            "max": 324
+        },
+        "Attack": {
+            "base": 59,
+            "min": 110,
+            "max": 238
+        },
+        "Defense": {
+            "base": 85,
+            "min": 157,
+            "max": 295
+        },
+        "Sp. Atk": {
+            "base": 79,
+            "min": 146,
+            "max": 282
+        },
+        "Sp. Def": {
+            "base": 105,
+            "min": 193,
+            "max": 339
+        },
+        "Speed": {
+            "base": 36,
+            "min": 69,
+            "max": 188
+        }
+    }
+}

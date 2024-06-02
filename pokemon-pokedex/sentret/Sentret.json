@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 161,
+    "type": {
+        "type-0": "Normal"
+    },
+    "abilities": {
+        "ability-0": "Run Away",
+        "ability-1": "Keen Eye",
+        "ability-2": "Frisk"
+    },
+    "stats": {
+        "HP": {
+            "base": 35,
+            "min": 180,
+            "max": 274
+        },
+        "Attack": {
+            "base": 46,
+            "min": 87,
+            "max": 210
+        },
+        "Defense": {
+            "base": 34,
+            "min": 65,
+            "max": 183
+        },
+        "Sp. Atk": {
+            "base": 35,
+            "min": 67,
+            "max": 185
+        },
+        "Sp. Def": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        },
+        "Speed": {
+            "base": 20,
+            "min": 40,
+            "max": 152
+        }
+    }
+}

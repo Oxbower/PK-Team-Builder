@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 431,
+    "type": {
+        "type-0": "Normal"
+    },
+    "abilities": {
+        "ability-0": "Limber",
+        "ability-1": "Own Tempo",
+        "ability-2": "Keen Eye"
+    },
+    "stats": {
+        "HP": {
+            "base": 49,
+            "min": 208,
+            "max": 302
+        },
+        "Attack": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        },
+        "Defense": {
+            "base": 42,
+            "min": 80,
+            "max": 201
+        },
+        "Sp. Atk": {
+            "base": 42,
+            "min": 80,
+            "max": 201
+        },
+        "Sp. Def": {
+            "base": 37,
+            "min": 71,
+            "max": 190
+        },
+        "Speed": {
+            "base": 85,
+            "min": 157,
+            "max": 295
+        }
+    }
+}

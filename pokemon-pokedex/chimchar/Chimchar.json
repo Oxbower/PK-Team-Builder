@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 390,
+    "type": {
+        "type-0": "Fire"
+    },
+    "abilities": {
+        "ability-0": "Blaze",
+        "ability-1": "Iron Fist"
+    },
+    "stats": {
+        "HP": {
+            "base": 44,
+            "min": 198,
+            "max": 292
+        },
+        "Attack": {
+            "base": 58,
+            "min": 108,
+            "max": 236
+        },
+        "Defense": {
+            "base": 44,
+            "min": 83,
+            "max": 205
+        },
+        "Sp. Atk": {
+            "base": 58,
+            "min": 108,
+            "max": 236
+        },
+        "Sp. Def": {
+            "base": 44,
+            "min": 83,
+            "max": 205
+        },
+        "Speed": {
+            "base": 61,
+            "min": 114,
+            "max": 243
+        }
+    }
+}

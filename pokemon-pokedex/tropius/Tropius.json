@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 357,
+    "type": {
+        "type-0": "Grass",
+        "type-1": "Flying"
+    },
+    "abilities": {
+        "ability-0": "Chlorophyll",
+        "ability-1": "Solar Power",
+        "ability-2": "Harvest"
+    },
+    "stats": {
+        "HP": {
+            "base": 99,
+            "min": 308,
+            "max": 402
+        },
+        "Attack": {
+            "base": 68,
+            "min": 126,
+            "max": 258
+        },
+        "Defense": {
+            "base": 83,
+            "min": 153,
+            "max": 291
+        },
+        "Sp. Atk": {
+            "base": 72,
+            "min": 134,
+            "max": 267
+        },
+        "Sp. Def": {
+            "base": 87,
+            "min": 161,
+            "max": 300
+        },
+        "Speed": {
+            "base": 51,
+            "min": 96,
+            "max": 221
+        }
+    }
+}

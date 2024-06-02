@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 638,
+    "type": {
+        "type-0": "Steel",
+        "type-1": "Fighting"
+    },
+    "abilities": {
+        "ability-0": "Justified"
+    },
+    "stats": {
+        "HP": {
+            "base": 91,
+            "min": 292,
+            "max": 386
+        },
+        "Attack": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        },
+        "Defense": {
+            "base": 129,
+            "min": 236,
+            "max": 392
+        },
+        "Sp. Atk": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        },
+        "Sp. Def": {
+            "base": 72,
+            "min": 134,
+            "max": 267
+        },
+        "Speed": {
+            "base": 108,
+            "min": 198,
+            "max": 346
+        }
+    }
+}

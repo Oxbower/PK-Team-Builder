@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 376,
+    "type": {
+        "type-0": "Steel",
+        "type-1": "Psychic"
+    },
+    "abilities": {
+        "ability-0": "Tough Claws"
+    },
+    "stats": {
+        "HP": {
+            "base": 80,
+            "min": 270,
+            "max": 364
+        },
+        "Attack": {
+            "base": 145,
+            "min": 265,
+            "max": 427
+        },
+        "Defense": {
+            "base": 150,
+            "min": 274,
+            "max": 438
+        },
+        "Sp. Atk": {
+            "base": 105,
+            "min": 193,
+            "max": 339
+        },
+        "Sp. Def": {
+            "base": 110,
+            "min": 202,
+            "max": 350
+        },
+        "Speed": {
+            "base": 110,
+            "min": 202,
+            "max": 350
+        }
+    }
+}

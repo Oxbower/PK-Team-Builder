@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 728,
+    "type": {
+        "type-0": "Water"
+    },
+    "abilities": {
+        "ability-0": "Torrent",
+        "ability-1": "Liquid Voice"
+    },
+    "stats": {
+        "HP": {
+            "base": 50,
+            "min": 210,
+            "max": 304
+        },
+        "Attack": {
+            "base": 54,
+            "min": 101,
+            "max": 227
+        },
+        "Defense": {
+            "base": 54,
+            "min": 101,
+            "max": 227
+        },
+        "Sp. Atk": {
+            "base": 66,
+            "min": 123,
+            "max": 254
+        },
+        "Sp. Def": {
+            "base": 56,
+            "min": 105,
+            "max": 232
+        },
+        "Speed": {
+            "base": 40,
+            "min": 76,
+            "max": 196
+        }
+    }
+}

@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 630,
+    "type": {
+        "type-0": "Dark",
+        "type-1": "Flying"
+    },
+    "abilities": {
+        "ability-0": "Big Pecks",
+        "ability-1": "Overcoat",
+        "ability-2": "Weak Armor"
+    },
+    "stats": {
+        "HP": {
+            "base": 110,
+            "min": 330,
+            "max": 424
+        },
+        "Attack": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Defense": {
+            "base": 105,
+            "min": 193,
+            "max": 339
+        },
+        "Sp. Atk": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        },
+        "Sp. Def": {
+            "base": 95,
+            "min": 175,
+            "max": 317
+        },
+        "Speed": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        }
+    }
+}

@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 122,
+    "type": {
+        "type-0": "Psychic",
+        "type-1": "Fairy"
+    },
+    "abilities": {
+        "ability-0": "Soundproof",
+        "ability-1": "Filter",
+        "ability-2": "Technician"
+    },
+    "stats": {
+        "HP": {
+            "base": 40,
+            "min": 190,
+            "max": 284
+        },
+        "Attack": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        },
+        "Defense": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Sp. Atk": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        },
+        "Sp. Def": {
+            "base": 120,
+            "min": 220,
+            "max": 372
+        },
+        "Speed": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        }
+    }
+}

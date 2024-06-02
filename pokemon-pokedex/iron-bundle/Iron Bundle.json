@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 991,
+    "type": {
+        "type-0": "Ice",
+        "type-1": "Water"
+    },
+    "abilities": {
+        "ability-0": "Quark Drive"
+    },
+    "stats": {
+        "HP": {
+            "base": 56,
+            "min": 222,
+            "max": 316
+        },
+        "Attack": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        },
+        "Defense": {
+            "base": 114,
+            "min": 209,
+            "max": 359
+        },
+        "Sp. Atk": {
+            "base": 124,
+            "min": 227,
+            "max": 381
+        },
+        "Sp. Def": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Speed": {
+            "base": 136,
+            "min": 249,
+            "max": 408
+        }
+    }
+}

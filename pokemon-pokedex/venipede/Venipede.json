@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 543,
+    "type": {
+        "type-0": "Bug",
+        "type-1": "Poison"
+    },
+    "abilities": {
+        "ability-0": "Poison Point",
+        "ability-1": "Swarm",
+        "ability-2": "Speed Boost"
+    },
+    "stats": {
+        "HP": {
+            "base": 30,
+            "min": 170,
+            "max": 264
+        },
+        "Attack": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        },
+        "Defense": {
+            "base": 59,
+            "min": 110,
+            "max": 238
+        },
+        "Sp. Atk": {
+            "base": 30,
+            "min": 58,
+            "max": 174
+        },
+        "Sp. Def": {
+            "base": 39,
+            "min": 74,
+            "max": 194
+        },
+        "Speed": {
+            "base": 57,
+            "min": 107,
+            "max": 234
+        }
+    }
+}

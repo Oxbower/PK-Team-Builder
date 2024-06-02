@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 672,
+    "type": {
+        "type-0": "Grass"
+    },
+    "abilities": {
+        "ability-0": "Sap Sipper",
+        "ability-1": "Grass Pelt"
+    },
+    "stats": {
+        "HP": {
+            "base": 66,
+            "min": 242,
+            "max": 336
+        },
+        "Attack": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Defense": {
+            "base": 48,
+            "min": 90,
+            "max": 214
+        },
+        "Sp. Atk": {
+            "base": 62,
+            "min": 116,
+            "max": 245
+        },
+        "Sp. Def": {
+            "base": 57,
+            "min": 107,
+            "max": 234
+        },
+        "Speed": {
+            "base": 52,
+            "min": 98,
+            "max": 223
+        }
+    }
+}

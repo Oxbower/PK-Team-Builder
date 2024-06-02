@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 689,
+    "type": {
+        "type-0": "Rock",
+        "type-1": "Water"
+    },
+    "abilities": {
+        "ability-0": "Sniper",
+        "ability-1": "Tough Claws",
+        "ability-2": "Pickpocket"
+    },
+    "stats": {
+        "HP": {
+            "base": 72,
+            "min": 254,
+            "max": 348
+        },
+        "Attack": {
+            "base": 105,
+            "min": 193,
+            "max": 339
+        },
+        "Defense": {
+            "base": 115,
+            "min": 211,
+            "max": 361
+        },
+        "Sp. Atk": {
+            "base": 54,
+            "min": 101,
+            "max": 227
+        },
+        "Sp. Def": {
+            "base": 86,
+            "min": 159,
+            "max": 298
+        },
+        "Speed": {
+            "base": 68,
+            "min": 126,
+            "max": 258
+        }
+    }
+}

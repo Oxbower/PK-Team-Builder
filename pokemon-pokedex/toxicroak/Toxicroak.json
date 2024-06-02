@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 454,
+    "type": {
+        "type-0": "Poison",
+        "type-1": "Fighting"
+    },
+    "abilities": {
+        "ability-0": "Anticipation",
+        "ability-1": "Dry Skin",
+        "ability-2": "Poison Touch"
+    },
+    "stats": {
+        "HP": {
+            "base": 83,
+            "min": 276,
+            "max": 370
+        },
+        "Attack": {
+            "base": 106,
+            "min": 195,
+            "max": 342
+        },
+        "Defense": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Sp. Atk": {
+            "base": 86,
+            "min": 159,
+            "max": 298
+        },
+        "Sp. Def": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Speed": {
+            "base": 85,
+            "min": 157,
+            "max": 295
+        }
+    }
+}

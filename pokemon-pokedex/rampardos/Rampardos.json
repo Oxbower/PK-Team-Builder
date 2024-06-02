@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 409,
+    "type": {
+        "type-0": "Rock"
+    },
+    "abilities": {
+        "ability-0": "Mold Breaker",
+        "ability-1": "Sheer Force"
+    },
+    "stats": {
+        "HP": {
+            "base": 97,
+            "min": 304,
+            "max": 398
+        },
+        "Attack": {
+            "base": 165,
+            "min": 301,
+            "max": 471
+        },
+        "Defense": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Sp. Atk": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Sp. Def": {
+            "base": 50,
+            "min": 94,
+            "max": 218
+        },
+        "Speed": {
+            "base": 58,
+            "min": 108,
+            "max": 236
+        }
+    }
+}

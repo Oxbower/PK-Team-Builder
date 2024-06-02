@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 52,
+    "type": {
+        "type-0": "Steel"
+    },
+    "abilities": {
+        "ability-0": "Pickup",
+        "ability-1": "Tough Claws",
+        "ability-2": "Unnerve"
+    },
+    "stats": {
+        "HP": {
+            "base": 50,
+            "min": 210,
+            "max": 304
+        },
+        "Attack": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Defense": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        },
+        "Sp. Atk": {
+            "base": 40,
+            "min": 76,
+            "max": 196
+        },
+        "Sp. Def": {
+            "base": 40,
+            "min": 76,
+            "max": 196
+        },
+        "Speed": {
+            "base": 40,
+            "min": 76,
+            "max": 196
+        }
+    }
+}

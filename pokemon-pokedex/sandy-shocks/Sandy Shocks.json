@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 989,
+    "type": {
+        "type-0": "Electric",
+        "type-1": "Ground"
+    },
+    "abilities": {
+        "ability-0": "Protosynthesis"
+    },
+    "stats": {
+        "HP": {
+            "base": 85,
+            "min": 280,
+            "max": 374
+        },
+        "Attack": {
+            "base": 81,
+            "min": 150,
+            "max": 287
+        },
+        "Defense": {
+            "base": 97,
+            "min": 179,
+            "max": 322
+        },
+        "Sp. Atk": {
+            "base": 121,
+            "min": 222,
+            "max": 375
+        },
+        "Sp. Def": {
+            "base": 85,
+            "min": 157,
+            "max": 295
+        },
+        "Speed": {
+            "base": 101,
+            "min": 186,
+            "max": 331
+        }
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 587,
+    "type": {
+        "type-0": "Electric",
+        "type-1": "Flying"
+    },
+    "abilities": {
+        "ability-0": "Static",
+        "ability-1": "Motor Drive"
+    },
+    "stats": {
+        "HP": {
+            "base": 55,
+            "min": 220,
+            "max": 314
+        },
+        "Attack": {
+            "base": 75,
+            "min": 139,
+            "max": 273
+        },
+        "Defense": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Sp. Atk": {
+            "base": 75,
+            "min": 139,
+            "max": 273
+        },
+        "Sp. Def": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Speed": {
+            "base": 103,
+            "min": 189,
+            "max": 335
+        }
+    }
+}

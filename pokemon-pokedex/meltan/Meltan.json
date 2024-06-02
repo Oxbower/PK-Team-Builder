@@ -1,0 +1,41 @@
+{
+    "pokedex-no": 808,
+    "type": {
+        "type-0": "Steel"
+    },
+    "abilities": {
+        "ability-0": "Magnet Pull"
+    },
+    "stats": {
+        "HP": {
+            "base": 46,
+            "min": 202,
+            "max": 296
+        },
+        "Attack": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Defense": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Sp. Atk": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        },
+        "Sp. Def": {
+            "base": 35,
+            "min": 67,
+            "max": 185
+        },
+        "Speed": {
+            "base": 34,
+            "min": 65,
+            "max": 183
+        }
+    }
+}

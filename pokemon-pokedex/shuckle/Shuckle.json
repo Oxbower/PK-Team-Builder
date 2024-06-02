@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 213,
+    "type": {
+        "type-0": "Bug",
+        "type-1": "Rock"
+    },
+    "abilities": {
+        "ability-0": "Sturdy",
+        "ability-1": "Gluttony",
+        "ability-2": "Contrary"
+    },
+    "stats": {
+        "HP": {
+            "base": 20,
+            "min": 150,
+            "max": 244
+        },
+        "Attack": {
+            "base": 10,
+            "min": 22,
+            "max": 130
+        },
+        "Defense": {
+            "base": 230,
+            "min": 418,
+            "max": 614
+        },
+        "Sp. Atk": {
+            "base": 10,
+            "min": 22,
+            "max": 130
+        },
+        "Sp. Def": {
+            "base": 230,
+            "min": 418,
+            "max": 614
+        },
+        "Speed": {
+            "base": 5,
+            "min": 13,
+            "max": 119
+        }
+    }
+}

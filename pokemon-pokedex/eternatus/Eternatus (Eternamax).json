@@ -1,0 +1,40 @@
+{
+    "pokedex-no": 890,
+    "type": {
+        "type-0": "Poison",
+        "type-1": "Dragon"
+    },
+    "abilities": {},
+    "stats": {
+        "HP": {
+            "base": 255,
+            "min": 620,
+            "max": 714
+        },
+        "Attack": {
+            "base": 115,
+            "min": 211,
+            "max": 361
+        },
+        "Defense": {
+            "base": 250,
+            "min": 454,
+            "max": 658
+        },
+        "Sp. Atk": {
+            "base": 125,
+            "min": 229,
+            "max": 383
+        },
+        "Sp. Def": {
+            "base": 250,
+            "min": 454,
+            "max": 658
+        },
+        "Speed": {
+            "base": 130,
+            "min": 238,
+            "max": 394
+        }
+    }
+}

@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 848,
+    "type": {
+        "type-0": "Electric",
+        "type-1": "Poison"
+    },
+    "abilities": {
+        "ability-0": "Rattled",
+        "ability-1": "Static",
+        "ability-2": "Klutz"
+    },
+    "stats": {
+        "HP": {
+            "base": 40,
+            "min": 190,
+            "max": 284
+        },
+        "Attack": {
+            "base": 38,
+            "min": 72,
+            "max": 192
+        },
+        "Defense": {
+            "base": 35,
+            "min": 67,
+            "max": 185
+        },
+        "Sp. Atk": {
+            "base": 54,
+            "min": 101,
+            "max": 227
+        },
+        "Sp. Def": {
+            "base": 35,
+            "min": 67,
+            "max": 185
+        },
+        "Speed": {
+            "base": 40,
+            "min": 76,
+            "max": 196
+        }
+    }
+}

@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 3,
+    "type": {
+        "type-0": "Grass",
+        "type-1": "Poison"
+    },
+    "abilities": {
+        "ability-0": "Thick Fat"
+    },
+    "stats": {
+        "HP": {
+            "base": 80,
+            "min": 270,
+            "max": 364
+        },
+        "Attack": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        },
+        "Defense": {
+            "base": 123,
+            "min": 225,
+            "max": 379
+        },
+        "Sp. Atk": {
+            "base": 122,
+            "min": 224,
+            "max": 377
+        },
+        "Sp. Def": {
+            "base": 120,
+            "min": 220,
+            "max": 372
+        },
+        "Speed": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        }
+    }
+}

@@ -1,0 +1,41 @@
+{
+    "pokedex-no": 803,
+    "type": {
+        "type-0": "Poison"
+    },
+    "abilities": {
+        "ability-0": "Beast Boost"
+    },
+    "stats": {
+        "HP": {
+            "base": 67,
+            "min": 244,
+            "max": 338
+        },
+        "Attack": {
+            "base": 73,
+            "min": 135,
+            "max": 269
+        },
+        "Defense": {
+            "base": 67,
+            "min": 125,
+            "max": 256
+        },
+        "Sp. Atk": {
+            "base": 73,
+            "min": 135,
+            "max": 269
+        },
+        "Sp. Def": {
+            "base": 67,
+            "min": 125,
+            "max": 256
+        },
+        "Speed": {
+            "base": 73,
+            "min": 135,
+            "max": 269
+        }
+    }
+}

@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 580,
+    "type": {
+        "type-0": "Water",
+        "type-1": "Flying"
+    },
+    "abilities": {
+        "ability-0": "Keen Eye",
+        "ability-1": "Big Pecks",
+        "ability-2": "Hydration"
+    },
+    "stats": {
+        "HP": {
+            "base": 62,
+            "min": 234,
+            "max": 328
+        },
+        "Attack": {
+            "base": 44,
+            "min": 83,
+            "max": 205
+        },
+        "Defense": {
+            "base": 50,
+            "min": 94,
+            "max": 218
+        },
+        "Sp. Atk": {
+            "base": 44,
+            "min": 83,
+            "max": 205
+        },
+        "Sp. Def": {
+            "base": 50,
+            "min": 94,
+            "max": 218
+        },
+        "Speed": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        }
+    }
+}

@@ -1,0 +1,41 @@
+{
+    "pokedex-no": 889,
+    "type": {
+        "type-0": "Fighting"
+    },
+    "abilities": {
+        "ability-0": "Dauntless Shield"
+    },
+    "stats": {
+        "HP": {
+            "base": 92,
+            "min": 294,
+            "max": 388
+        },
+        "Attack": {
+            "base": 120,
+            "min": 220,
+            "max": 372
+        },
+        "Defense": {
+            "base": 115,
+            "min": 211,
+            "max": 361
+        },
+        "Sp. Atk": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        },
+        "Sp. Def": {
+            "base": 115,
+            "min": 211,
+            "max": 361
+        },
+        "Speed": {
+            "base": 138,
+            "min": 252,
+            "max": 412
+        }
+    }
+}

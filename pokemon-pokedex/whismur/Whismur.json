@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 293,
+    "type": {
+        "type-0": "Normal"
+    },
+    "abilities": {
+        "ability-0": "Soundproof",
+        "ability-1": "Rattled"
+    },
+    "stats": {
+        "HP": {
+            "base": 64,
+            "min": 238,
+            "max": 332
+        },
+        "Attack": {
+            "base": 51,
+            "min": 96,
+            "max": 221
+        },
+        "Defense": {
+            "base": 23,
+            "min": 45,
+            "max": 159
+        },
+        "Sp. Atk": {
+            "base": 51,
+            "min": 96,
+            "max": 221
+        },
+        "Sp. Def": {
+            "base": 23,
+            "min": 45,
+            "max": 159
+        },
+        "Speed": {
+            "base": 28,
+            "min": 54,
+            "max": 170
+        }
+    }
+}

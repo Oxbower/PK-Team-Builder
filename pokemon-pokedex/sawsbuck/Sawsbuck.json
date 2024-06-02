@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 586,
+    "type": {
+        "type-0": "Normal",
+        "type-1": "Grass"
+    },
+    "abilities": {
+        "ability-0": "Chlorophyll",
+        "ability-1": "Sap Sipper",
+        "ability-2": "Serene Grace"
+    },
+    "stats": {
+        "HP": {
+            "base": 80,
+            "min": 270,
+            "max": 364
+        },
+        "Attack": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        },
+        "Defense": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        },
+        "Sp. Atk": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Sp. Def": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        },
+        "Speed": {
+            "base": 95,
+            "min": 175,
+            "max": 317
+        }
+    }
+}

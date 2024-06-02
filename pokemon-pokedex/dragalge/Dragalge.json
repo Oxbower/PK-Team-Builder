@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 691,
+    "type": {
+        "type-0": "Poison",
+        "type-1": "Dragon"
+    },
+    "abilities": {
+        "ability-0": "Poison Point",
+        "ability-1": "Poison Touch",
+        "ability-2": "Adaptability"
+    },
+    "stats": {
+        "HP": {
+            "base": 65,
+            "min": 240,
+            "max": 334
+        },
+        "Attack": {
+            "base": 75,
+            "min": 139,
+            "max": 273
+        },
+        "Defense": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        },
+        "Sp. Atk": {
+            "base": 97,
+            "min": 179,
+            "max": 322
+        },
+        "Sp. Def": {
+            "base": 123,
+            "min": 225,
+            "max": 379
+        },
+        "Speed": {
+            "base": 44,
+            "min": 83,
+            "max": 205
+        }
+    }
+}

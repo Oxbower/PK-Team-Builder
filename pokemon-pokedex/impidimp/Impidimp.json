@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 859,
+    "type": {
+        "type-0": "Dark",
+        "type-1": "Fairy"
+    },
+    "abilities": {
+        "ability-0": "Prankster",
+        "ability-1": "Frisk",
+        "ability-2": "Pickpocket"
+    },
+    "stats": {
+        "HP": {
+            "base": 45,
+            "min": 200,
+            "max": 294
+        },
+        "Attack": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        },
+        "Defense": {
+            "base": 30,
+            "min": 58,
+            "max": 174
+        },
+        "Sp. Atk": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        },
+        "Sp. Def": {
+            "base": 40,
+            "min": 76,
+            "max": 196
+        },
+        "Speed": {
+            "base": 50,
+            "min": 94,
+            "max": 218
+        }
+    }
+}

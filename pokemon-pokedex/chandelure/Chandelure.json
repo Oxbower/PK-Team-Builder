@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 609,
+    "type": {
+        "type-0": "Ghost",
+        "type-1": "Fire"
+    },
+    "abilities": {
+        "ability-0": "Flash Fire",
+        "ability-1": "Flame Body",
+        "ability-2": "Infiltrator"
+    },
+    "stats": {
+        "HP": {
+            "base": 60,
+            "min": 230,
+            "max": 324
+        },
+        "Attack": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        },
+        "Defense": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        },
+        "Sp. Atk": {
+            "base": 145,
+            "min": 265,
+            "max": 427
+        },
+        "Sp. Def": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        },
+        "Speed": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        }
+    }
+}

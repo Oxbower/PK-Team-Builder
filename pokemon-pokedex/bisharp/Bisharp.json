@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 625,
+    "type": {
+        "type-0": "Dark",
+        "type-1": "Steel"
+    },
+    "abilities": {
+        "ability-0": "Defiant",
+        "ability-1": "Inner Focus",
+        "ability-2": "Pressure"
+    },
+    "stats": {
+        "HP": {
+            "base": 65,
+            "min": 240,
+            "max": 334
+        },
+        "Attack": {
+            "base": 125,
+            "min": 229,
+            "max": 383
+        },
+        "Defense": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        },
+        "Sp. Atk": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Sp. Def": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        },
+        "Speed": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        }
+    }
+}

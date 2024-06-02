@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 705,
+    "type": {
+        "type-0": "Steel",
+        "type-1": "Dragon"
+    },
+    "abilities": {
+        "ability-0": "Sap Sipper",
+        "ability-1": "Shell Armor",
+        "ability-2": "Gooey"
+    },
+    "stats": {
+        "HP": {
+            "base": 58,
+            "min": 226,
+            "max": 320
+        },
+        "Attack": {
+            "base": 75,
+            "min": 139,
+            "max": 273
+        },
+        "Defense": {
+            "base": 83,
+            "min": 153,
+            "max": 291
+        },
+        "Sp. Atk": {
+            "base": 83,
+            "min": 153,
+            "max": 291
+        },
+        "Sp. Def": {
+            "base": 113,
+            "min": 207,
+            "max": 357
+        },
+        "Speed": {
+            "base": 40,
+            "min": 76,
+            "max": 196
+        }
+    }
+}

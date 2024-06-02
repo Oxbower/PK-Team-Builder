@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 354,
+    "type": {
+        "type-0": "Ghost"
+    },
+    "abilities": {
+        "ability-0": "Insomnia",
+        "ability-1": "Frisk",
+        "ability-2": "Cursed Body"
+    },
+    "stats": {
+        "HP": {
+            "base": 64,
+            "min": 238,
+            "max": 332
+        },
+        "Attack": {
+            "base": 115,
+            "min": 211,
+            "max": 361
+        },
+        "Defense": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Sp. Atk": {
+            "base": 83,
+            "min": 153,
+            "max": 291
+        },
+        "Sp. Def": {
+            "base": 63,
+            "min": 117,
+            "max": 247
+        },
+        "Speed": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        }
+    }
+}

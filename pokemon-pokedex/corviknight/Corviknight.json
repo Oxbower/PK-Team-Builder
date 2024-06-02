@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 823,
+    "type": {
+        "type-0": "Flying",
+        "type-1": "Steel"
+    },
+    "abilities": {
+        "ability-0": "Pressure",
+        "ability-1": "Unnerve",
+        "ability-2": "Mirror Armor"
+    },
+    "stats": {
+        "HP": {
+            "base": 98,
+            "min": 306,
+            "max": 400
+        },
+        "Attack": {
+            "base": 87,
+            "min": 161,
+            "max": 300
+        },
+        "Defense": {
+            "base": 105,
+            "min": 193,
+            "max": 339
+        },
+        "Sp. Atk": {
+            "base": 53,
+            "min": 99,
+            "max": 225
+        },
+        "Sp. Def": {
+            "base": 85,
+            "min": 157,
+            "max": 295
+        },
+        "Speed": {
+            "base": 67,
+            "min": 125,
+            "max": 256
+        }
+    }
+}

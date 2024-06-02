@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 189,
+    "type": {
+        "type-0": "Grass",
+        "type-1": "Flying"
+    },
+    "abilities": {
+        "ability-0": "Chlorophyll",
+        "ability-1": "Leaf Guard",
+        "ability-2": "Infiltrator"
+    },
+    "stats": {
+        "HP": {
+            "base": 75,
+            "min": 260,
+            "max": 354
+        },
+        "Attack": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        },
+        "Defense": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        },
+        "Sp. Atk": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        },
+        "Sp. Def": {
+            "base": 95,
+            "min": 175,
+            "max": 317
+        },
+        "Speed": {
+            "base": 110,
+            "min": 202,
+            "max": 350
+        }
+    }
+}

@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 257,
+    "type": {
+        "type-0": "Fire",
+        "type-1": "Fighting"
+    },
+    "abilities": {
+        "ability-0": "Speed Boost"
+    },
+    "stats": {
+        "HP": {
+            "base": 80,
+            "min": 270,
+            "max": 364
+        },
+        "Attack": {
+            "base": 160,
+            "min": 292,
+            "max": 460
+        },
+        "Defense": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        },
+        "Sp. Atk": {
+            "base": 130,
+            "min": 238,
+            "max": 394
+        },
+        "Sp. Def": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        },
+        "Speed": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        }
+    }
+}

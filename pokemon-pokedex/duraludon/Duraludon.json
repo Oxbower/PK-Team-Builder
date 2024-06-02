@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 884,
+    "type": {
+        "type-0": "Steel",
+        "type-1": "Dragon"
+    },
+    "abilities": {
+        "ability-0": "Light Metal",
+        "ability-1": "Heavy Metal",
+        "ability-2": "Stalwart"
+    },
+    "stats": {
+        "HP": {
+            "base": 70,
+            "min": 250,
+            "max": 344
+        },
+        "Attack": {
+            "base": 95,
+            "min": 175,
+            "max": 317
+        },
+        "Defense": {
+            "base": 115,
+            "min": 211,
+            "max": 361
+        },
+        "Sp. Atk": {
+            "base": 120,
+            "min": 220,
+            "max": 372
+        },
+        "Sp. Def": {
+            "base": 50,
+            "min": 94,
+            "max": 218
+        },
+        "Speed": {
+            "base": 85,
+            "min": 157,
+            "max": 295
+        }
+    }
+}

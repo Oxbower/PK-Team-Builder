@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 862,
+    "type": {
+        "type-0": "Dark",
+        "type-1": "Normal"
+    },
+    "abilities": {
+        "ability-0": "Reckless",
+        "ability-1": "Guts",
+        "ability-2": "Defiant"
+    },
+    "stats": {
+        "HP": {
+            "base": 93,
+            "min": 296,
+            "max": 390
+        },
+        "Attack": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        },
+        "Defense": {
+            "base": 101,
+            "min": 186,
+            "max": 331
+        },
+        "Sp. Atk": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Sp. Def": {
+            "base": 81,
+            "min": 150,
+            "max": 287
+        },
+        "Speed": {
+            "base": 95,
+            "min": 175,
+            "max": 317
+        }
+    }
+}

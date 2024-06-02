@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 922,
+    "type": {
+        "type-0": "Electric",
+        "type-1": "Fighting"
+    },
+    "abilities": {
+        "ability-0": "Volt Absorb",
+        "ability-1": "Natural Cure",
+        "ability-2": "Iron Fist"
+    },
+    "stats": {
+        "HP": {
+            "base": 60,
+            "min": 230,
+            "max": 324
+        },
+        "Attack": {
+            "base": 75,
+            "min": 139,
+            "max": 273
+        },
+        "Defense": {
+            "base": 40,
+            "min": 76,
+            "max": 196
+        },
+        "Sp. Atk": {
+            "base": 50,
+            "min": 94,
+            "max": 218
+        },
+        "Sp. Def": {
+            "base": 40,
+            "min": 76,
+            "max": 196
+        },
+        "Speed": {
+            "base": 85,
+            "min": 157,
+            "max": 295
+        }
+    }
+}

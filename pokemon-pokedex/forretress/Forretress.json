@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 205,
+    "type": {
+        "type-0": "Bug",
+        "type-1": "Steel"
+    },
+    "abilities": {
+        "ability-0": "Sturdy",
+        "ability-1": "Overcoat"
+    },
+    "stats": {
+        "HP": {
+            "base": 75,
+            "min": 260,
+            "max": 354
+        },
+        "Attack": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        },
+        "Defense": {
+            "base": 140,
+            "min": 256,
+            "max": 416
+        },
+        "Sp. Atk": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Sp. Def": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Speed": {
+            "base": 40,
+            "min": 76,
+            "max": 196
+        }
+    }
+}

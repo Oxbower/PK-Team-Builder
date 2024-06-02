@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 383,
+    "type": {
+        "type-0": "Ground",
+        "type-1": "Fire"
+    },
+    "abilities": {
+        "ability-0": "Desolate Land"
+    },
+    "stats": {
+        "HP": {
+            "base": 100,
+            "min": 310,
+            "max": 404
+        },
+        "Attack": {
+            "base": 180,
+            "min": 328,
+            "max": 504
+        },
+        "Defense": {
+            "base": 160,
+            "min": 292,
+            "max": 460
+        },
+        "Sp. Atk": {
+            "base": 150,
+            "min": 274,
+            "max": 438
+        },
+        "Sp. Def": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        },
+        "Speed": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        }
+    }
+}

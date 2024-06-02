@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 50,
+    "type": {
+        "type-0": "Ground"
+    },
+    "abilities": {
+        "ability-0": "Sand Veil",
+        "ability-1": "Arena Trap",
+        "ability-2": "Sand Force"
+    },
+    "stats": {
+        "HP": {
+            "base": 10,
+            "min": 130,
+            "max": 224
+        },
+        "Attack": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        },
+        "Defense": {
+            "base": 25,
+            "min": 49,
+            "max": 163
+        },
+        "Sp. Atk": {
+            "base": 35,
+            "min": 67,
+            "max": 185
+        },
+        "Sp. Def": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        },
+        "Speed": {
+            "base": 95,
+            "min": 175,
+            "max": 317
+        }
+    }
+}

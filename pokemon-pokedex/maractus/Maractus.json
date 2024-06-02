@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 556,
+    "type": {
+        "type-0": "Grass"
+    },
+    "abilities": {
+        "ability-0": "Water Absorb",
+        "ability-1": "Chlorophyll",
+        "ability-2": "Storm Drain"
+    },
+    "stats": {
+        "HP": {
+            "base": 75,
+            "min": 260,
+            "max": 354
+        },
+        "Attack": {
+            "base": 86,
+            "min": 159,
+            "max": 298
+        },
+        "Defense": {
+            "base": 67,
+            "min": 125,
+            "max": 256
+        },
+        "Sp. Atk": {
+            "base": 106,
+            "min": 195,
+            "max": 342
+        },
+        "Sp. Def": {
+            "base": 67,
+            "min": 125,
+            "max": 256
+        },
+        "Speed": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        }
+    }
+}

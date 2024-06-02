@@ -1,0 +1,41 @@
+{
+    "pokedex-no": 800,
+    "type": {
+        "type-0": "Psychic"
+    },
+    "abilities": {
+        "ability-0": "Prism Armor"
+    },
+    "stats": {
+        "HP": {
+            "base": 97,
+            "min": 304,
+            "max": 398
+        },
+        "Attack": {
+            "base": 107,
+            "min": 197,
+            "max": 344
+        },
+        "Defense": {
+            "base": 101,
+            "min": 186,
+            "max": 331
+        },
+        "Sp. Atk": {
+            "base": 127,
+            "min": 233,
+            "max": 388
+        },
+        "Sp. Def": {
+            "base": 89,
+            "min": 164,
+            "max": 304
+        },
+        "Speed": {
+            "base": 79,
+            "min": 146,
+            "max": 282
+        }
+    }
+}

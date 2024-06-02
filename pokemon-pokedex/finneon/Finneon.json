@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 456,
+    "type": {
+        "type-0": "Water"
+    },
+    "abilities": {
+        "ability-0": "Swift Swim",
+        "ability-1": "Storm Drain",
+        "ability-2": "Water Veil"
+    },
+    "stats": {
+        "HP": {
+            "base": 49,
+            "min": 208,
+            "max": 302
+        },
+        "Attack": {
+            "base": 49,
+            "min": 92,
+            "max": 216
+        },
+        "Defense": {
+            "base": 56,
+            "min": 105,
+            "max": 232
+        },
+        "Sp. Atk": {
+            "base": 49,
+            "min": 92,
+            "max": 216
+        },
+        "Sp. Def": {
+            "base": 61,
+            "min": 114,
+            "max": 243
+        },
+        "Speed": {
+            "base": 66,
+            "min": 123,
+            "max": 254
+        }
+    }
+}

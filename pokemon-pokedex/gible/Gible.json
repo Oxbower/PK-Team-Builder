@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 443,
+    "type": {
+        "type-0": "Dragon",
+        "type-1": "Ground"
+    },
+    "abilities": {
+        "ability-0": "Sand Veil",
+        "ability-1": "Rough Skin"
+    },
+    "stats": {
+        "HP": {
+            "base": 58,
+            "min": 226,
+            "max": 320
+        },
+        "Attack": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        },
+        "Defense": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        },
+        "Sp. Atk": {
+            "base": 40,
+            "min": 76,
+            "max": 196
+        },
+        "Sp. Def": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        },
+        "Speed": {
+            "base": 42,
+            "min": 80,
+            "max": 201
+        }
+    }
+}

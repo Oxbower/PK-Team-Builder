@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 821,
+    "type": {
+        "type-0": "Flying"
+    },
+    "abilities": {
+        "ability-0": "Keen Eye",
+        "ability-1": "Unnerve",
+        "ability-2": "Big Pecks"
+    },
+    "stats": {
+        "HP": {
+            "base": 38,
+            "min": 186,
+            "max": 280
+        },
+        "Attack": {
+            "base": 47,
+            "min": 89,
+            "max": 212
+        },
+        "Defense": {
+            "base": 35,
+            "min": 67,
+            "max": 185
+        },
+        "Sp. Atk": {
+            "base": 33,
+            "min": 63,
+            "max": 181
+        },
+        "Sp. Def": {
+            "base": 35,
+            "min": 67,
+            "max": 185
+        },
+        "Speed": {
+            "base": 57,
+            "min": 107,
+            "max": 234
+        }
+    }
+}

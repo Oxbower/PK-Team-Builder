@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 666,
+    "type": {
+        "type-0": "Bug",
+        "type-1": "Flying"
+    },
+    "abilities": {
+        "ability-0": "Shield Dust",
+        "ability-1": "Compound Eyes",
+        "ability-2": "Friend Guard"
+    },
+    "stats": {
+        "HP": {
+            "base": 80,
+            "min": 270,
+            "max": 364
+        },
+        "Attack": {
+            "base": 52,
+            "min": 98,
+            "max": 223
+        },
+        "Defense": {
+            "base": 50,
+            "min": 94,
+            "max": 218
+        },
+        "Sp. Atk": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        },
+        "Sp. Def": {
+            "base": 50,
+            "min": 94,
+            "max": 218
+        },
+        "Speed": {
+            "base": 89,
+            "min": 164,
+            "max": 304
+        }
+    }
+}

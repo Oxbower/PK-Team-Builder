@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 718,
+    "type": {
+        "type-0": "Dragon",
+        "type-1": "Ground"
+    },
+    "abilities": {
+        "ability-0": "Aura Break",
+        "ability-1": "Power Construct"
+    },
+    "stats": {
+        "HP": {
+            "base": 54,
+            "min": 218,
+            "max": 312
+        },
+        "Attack": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        },
+        "Defense": {
+            "base": 71,
+            "min": 132,
+            "max": 265
+        },
+        "Sp. Atk": {
+            "base": 61,
+            "min": 114,
+            "max": 243
+        },
+        "Sp. Def": {
+            "base": 85,
+            "min": 157,
+            "max": 295
+        },
+        "Speed": {
+            "base": 115,
+            "min": 211,
+            "max": 361
+        }
+    }
+}

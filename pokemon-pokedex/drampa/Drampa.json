@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 780,
+    "type": {
+        "type-0": "Normal",
+        "type-1": "Dragon"
+    },
+    "abilities": {
+        "ability-0": "Berserk",
+        "ability-1": "Sap Sipper",
+        "ability-2": "Cloud Nine"
+    },
+    "stats": {
+        "HP": {
+            "base": 78,
+            "min": 266,
+            "max": 360
+        },
+        "Attack": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Defense": {
+            "base": 85,
+            "min": 157,
+            "max": 295
+        },
+        "Sp. Atk": {
+            "base": 135,
+            "min": 247,
+            "max": 405
+        },
+        "Sp. Def": {
+            "base": 91,
+            "min": 168,
+            "max": 309
+        },
+        "Speed": {
+            "base": 36,
+            "min": 69,
+            "max": 188
+        }
+    }
+}

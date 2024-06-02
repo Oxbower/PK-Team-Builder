@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 334,
+    "type": {
+        "type-0": "Dragon",
+        "type-1": "Fairy"
+    },
+    "abilities": {
+        "ability-0": "Pixilate"
+    },
+    "stats": {
+        "HP": {
+            "base": 75,
+            "min": 260,
+            "max": 354
+        },
+        "Attack": {
+            "base": 110,
+            "min": 202,
+            "max": 350
+        },
+        "Defense": {
+            "base": 110,
+            "min": 202,
+            "max": 350
+        },
+        "Sp. Atk": {
+            "base": 110,
+            "min": 202,
+            "max": 350
+        },
+        "Sp. Def": {
+            "base": 105,
+            "min": 193,
+            "max": 339
+        },
+        "Speed": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        }
+    }
+}

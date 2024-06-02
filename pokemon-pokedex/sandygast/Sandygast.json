@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 769,
+    "type": {
+        "type-0": "Ghost",
+        "type-1": "Ground"
+    },
+    "abilities": {
+        "ability-0": "Water Compaction",
+        "ability-1": "Sand Veil"
+    },
+    "stats": {
+        "HP": {
+            "base": 55,
+            "min": 220,
+            "max": 314
+        },
+        "Attack": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        },
+        "Defense": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        },
+        "Sp. Atk": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        },
+        "Sp. Def": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        },
+        "Speed": {
+            "base": 15,
+            "min": 31,
+            "max": 141
+        }
+    }
+}

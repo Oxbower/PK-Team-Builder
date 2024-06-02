@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 936,
+    "type": {
+        "type-0": "Fire",
+        "type-1": "Psychic"
+    },
+    "abilities": {
+        "ability-0": "Flash Fire",
+        "ability-1": "Weak Armor"
+    },
+    "stats": {
+        "HP": {
+            "base": 85,
+            "min": 280,
+            "max": 374
+        },
+        "Attack": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Defense": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        },
+        "Sp. Atk": {
+            "base": 125,
+            "min": 229,
+            "max": 383
+        },
+        "Sp. Def": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        },
+        "Speed": {
+            "base": 75,
+            "min": 139,
+            "max": 273
+        }
+    }
+}

@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 225,
+    "type": {
+        "type-0": "Ice",
+        "type-1": "Flying"
+    },
+    "abilities": {
+        "ability-0": "Vital Spirit",
+        "ability-1": "Hustle",
+        "ability-2": "Insomnia"
+    },
+    "stats": {
+        "HP": {
+            "base": 45,
+            "min": 200,
+            "max": 294
+        },
+        "Attack": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        },
+        "Defense": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        },
+        "Sp. Atk": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Sp. Def": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        },
+        "Speed": {
+            "base": 75,
+            "min": 139,
+            "max": 273
+        }
+    }
+}

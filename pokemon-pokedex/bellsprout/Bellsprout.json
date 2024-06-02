@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 69,
+    "type": {
+        "type-0": "Grass",
+        "type-1": "Poison"
+    },
+    "abilities": {
+        "ability-0": "Chlorophyll",
+        "ability-1": "Gluttony"
+    },
+    "stats": {
+        "HP": {
+            "base": 50,
+            "min": 210,
+            "max": 304
+        },
+        "Attack": {
+            "base": 75,
+            "min": 139,
+            "max": 273
+        },
+        "Defense": {
+            "base": 35,
+            "min": 67,
+            "max": 185
+        },
+        "Sp. Atk": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        },
+        "Sp. Def": {
+            "base": 30,
+            "min": 58,
+            "max": 174
+        },
+        "Speed": {
+            "base": 40,
+            "min": 76,
+            "max": 196
+        }
+    }
+}

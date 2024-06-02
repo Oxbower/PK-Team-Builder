@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 215,
+    "type": {
+        "type-0": "Dark",
+        "type-1": "Ice"
+    },
+    "abilities": {
+        "ability-0": "Inner Focus",
+        "ability-1": "Keen Eye",
+        "ability-2": "Pickpocket"
+    },
+    "stats": {
+        "HP": {
+            "base": 55,
+            "min": 220,
+            "max": 314
+        },
+        "Attack": {
+            "base": 95,
+            "min": 175,
+            "max": 317
+        },
+        "Defense": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        },
+        "Sp. Atk": {
+            "base": 35,
+            "min": 67,
+            "max": 185
+        },
+        "Sp. Def": {
+            "base": 75,
+            "min": 139,
+            "max": 273
+        },
+        "Speed": {
+            "base": 115,
+            "min": 211,
+            "max": 361
+        }
+    }
+}

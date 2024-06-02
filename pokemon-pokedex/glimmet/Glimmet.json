@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 969,
+    "type": {
+        "type-0": "Rock",
+        "type-1": "Poison"
+    },
+    "abilities": {
+        "ability-0": "Toxic Debris",
+        "ability-1": "Corrosion"
+    },
+    "stats": {
+        "HP": {
+            "base": 48,
+            "min": 206,
+            "max": 300
+        },
+        "Attack": {
+            "base": 35,
+            "min": 67,
+            "max": 185
+        },
+        "Defense": {
+            "base": 42,
+            "min": 80,
+            "max": 201
+        },
+        "Sp. Atk": {
+            "base": 105,
+            "min": 193,
+            "max": 339
+        },
+        "Sp. Def": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Speed": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        }
+    }
+}

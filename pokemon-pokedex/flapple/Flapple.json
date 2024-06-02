@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 841,
+    "type": {
+        "type-0": "Grass",
+        "type-1": "Dragon"
+    },
+    "abilities": {
+        "ability-0": "Ripen",
+        "ability-1": "Gluttony",
+        "ability-2": "Hustle"
+    },
+    "stats": {
+        "HP": {
+            "base": 70,
+            "min": 250,
+            "max": 344
+        },
+        "Attack": {
+            "base": 110,
+            "min": 202,
+            "max": 350
+        },
+        "Defense": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        },
+        "Sp. Atk": {
+            "base": 95,
+            "min": 175,
+            "max": 317
+        },
+        "Sp. Def": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Speed": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        }
+    }
+}

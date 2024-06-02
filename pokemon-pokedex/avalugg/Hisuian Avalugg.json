@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 713,
+    "type": {
+        "type-0": "Ice",
+        "type-1": "Rock"
+    },
+    "abilities": {
+        "ability-0": "Strong Jaw",
+        "ability-1": "Ice Body",
+        "ability-2": "Sturdy"
+    },
+    "stats": {
+        "HP": {
+            "base": 95,
+            "min": 300,
+            "max": 394
+        },
+        "Attack": {
+            "base": 127,
+            "min": 233,
+            "max": 388
+        },
+        "Defense": {
+            "base": 184,
+            "min": 335,
+            "max": 513
+        },
+        "Sp. Atk": {
+            "base": 34,
+            "min": 65,
+            "max": 183
+        },
+        "Sp. Def": {
+            "base": 36,
+            "min": 69,
+            "max": 188
+        },
+        "Speed": {
+            "base": 38,
+            "min": 72,
+            "max": 192
+        }
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 345,
+    "type": {
+        "type-0": "Rock",
+        "type-1": "Grass"
+    },
+    "abilities": {
+        "ability-0": "Suction Cups",
+        "ability-1": "Storm Drain"
+    },
+    "stats": {
+        "HP": {
+            "base": 66,
+            "min": 242,
+            "max": 336
+        },
+        "Attack": {
+            "base": 41,
+            "min": 78,
+            "max": 199
+        },
+        "Defense": {
+            "base": 77,
+            "min": 143,
+            "max": 278
+        },
+        "Sp. Atk": {
+            "base": 61,
+            "min": 114,
+            "max": 243
+        },
+        "Sp. Def": {
+            "base": 87,
+            "min": 161,
+            "max": 300
+        },
+        "Speed": {
+            "base": 23,
+            "min": 45,
+            "max": 159
+        }
+    }
+}

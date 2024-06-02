@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 452,
+    "type": {
+        "type-0": "Poison",
+        "type-1": "Dark"
+    },
+    "abilities": {
+        "ability-0": "Battle Armor",
+        "ability-1": "Sniper",
+        "ability-2": "Keen Eye"
+    },
+    "stats": {
+        "HP": {
+            "base": 70,
+            "min": 250,
+            "max": 344
+        },
+        "Attack": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        },
+        "Defense": {
+            "base": 110,
+            "min": 202,
+            "max": 350
+        },
+        "Sp. Atk": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Sp. Def": {
+            "base": 75,
+            "min": 139,
+            "max": 273
+        },
+        "Speed": {
+            "base": 95,
+            "min": 175,
+            "max": 317
+        }
+    }
+}

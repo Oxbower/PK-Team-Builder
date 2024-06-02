@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 1023,
+    "type": {
+        "type-0": "Steel",
+        "type-1": "Psychic"
+    },
+    "abilities": {
+        "ability-0": "Quark Drive"
+    },
+    "stats": {
+        "HP": {
+            "base": 90,
+            "min": 290,
+            "max": 384
+        },
+        "Attack": {
+            "base": 72,
+            "min": 134,
+            "max": 267
+        },
+        "Defense": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        },
+        "Sp. Atk": {
+            "base": 122,
+            "min": 224,
+            "max": 377
+        },
+        "Sp. Def": {
+            "base": 108,
+            "min": 198,
+            "max": 346
+        },
+        "Speed": {
+            "base": 98,
+            "min": 180,
+            "max": 324
+        }
+    }
+}

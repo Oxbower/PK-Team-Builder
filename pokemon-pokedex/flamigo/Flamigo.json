@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 973,
+    "type": {
+        "type-0": "Flying",
+        "type-1": "Fighting"
+    },
+    "abilities": {
+        "ability-0": "Scrappy",
+        "ability-1": "Tangled Feet",
+        "ability-2": "Costar"
+    },
+    "stats": {
+        "HP": {
+            "base": 82,
+            "min": 274,
+            "max": 368
+        },
+        "Attack": {
+            "base": 115,
+            "min": 211,
+            "max": 361
+        },
+        "Defense": {
+            "base": 74,
+            "min": 137,
+            "max": 271
+        },
+        "Sp. Atk": {
+            "base": 75,
+            "min": 139,
+            "max": 273
+        },
+        "Sp. Def": {
+            "base": 64,
+            "min": 119,
+            "max": 249
+        },
+        "Speed": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        }
+    }
+}

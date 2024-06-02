@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 295,
+    "type": {
+        "type-0": "Normal"
+    },
+    "abilities": {
+        "ability-0": "Soundproof",
+        "ability-1": "Scrappy"
+    },
+    "stats": {
+        "HP": {
+            "base": 104,
+            "min": 318,
+            "max": 412
+        },
+        "Attack": {
+            "base": 91,
+            "min": 168,
+            "max": 309
+        },
+        "Defense": {
+            "base": 63,
+            "min": 117,
+            "max": 247
+        },
+        "Sp. Atk": {
+            "base": 91,
+            "min": 168,
+            "max": 309
+        },
+        "Sp. Def": {
+            "base": 73,
+            "min": 135,
+            "max": 269
+        },
+        "Speed": {
+            "base": 68,
+            "min": 126,
+            "max": 258
+        }
+    }
+}

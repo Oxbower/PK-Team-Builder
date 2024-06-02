@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 142,
+    "type": {
+        "type-0": "Rock",
+        "type-1": "Flying"
+    },
+    "abilities": {
+        "ability-0": "Rock Head",
+        "ability-1": "Pressure",
+        "ability-2": "Unnerve"
+    },
+    "stats": {
+        "HP": {
+            "base": 80,
+            "min": 270,
+            "max": 364
+        },
+        "Attack": {
+            "base": 105,
+            "min": 193,
+            "max": 339
+        },
+        "Defense": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Sp. Atk": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Sp. Def": {
+            "base": 75,
+            "min": 139,
+            "max": 273
+        },
+        "Speed": {
+            "base": 130,
+            "min": 238,
+            "max": 394
+        }
+    }
+}

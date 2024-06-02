@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 687,
+    "type": {
+        "type-0": "Dark",
+        "type-1": "Psychic"
+    },
+    "abilities": {
+        "ability-0": "Contrary",
+        "ability-1": "Suction Cups",
+        "ability-2": "Infiltrator"
+    },
+    "stats": {
+        "HP": {
+            "base": 86,
+            "min": 282,
+            "max": 376
+        },
+        "Attack": {
+            "base": 92,
+            "min": 170,
+            "max": 311
+        },
+        "Defense": {
+            "base": 88,
+            "min": 162,
+            "max": 302
+        },
+        "Sp. Atk": {
+            "base": 68,
+            "min": 126,
+            "max": 258
+        },
+        "Sp. Def": {
+            "base": 75,
+            "min": 139,
+            "max": 273
+        },
+        "Speed": {
+            "base": 73,
+            "min": 135,
+            "max": 269
+        }
+    }
+}

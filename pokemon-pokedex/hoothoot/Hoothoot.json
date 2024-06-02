@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 163,
+    "type": {
+        "type-0": "Normal",
+        "type-1": "Flying"
+    },
+    "abilities": {
+        "ability-0": "Insomnia",
+        "ability-1": "Keen Eye",
+        "ability-2": "Tinted Lens"
+    },
+    "stats": {
+        "HP": {
+            "base": 60,
+            "min": 230,
+            "max": 324
+        },
+        "Attack": {
+            "base": 30,
+            "min": 58,
+            "max": 174
+        },
+        "Defense": {
+            "base": 30,
+            "min": 58,
+            "max": 174
+        },
+        "Sp. Atk": {
+            "base": 36,
+            "min": 69,
+            "max": 188
+        },
+        "Sp. Def": {
+            "base": 56,
+            "min": 105,
+            "max": 232
+        },
+        "Speed": {
+            "base": 50,
+            "min": 94,
+            "max": 218
+        }
+    }
+}

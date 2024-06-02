@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 1012,
+    "type": {
+        "type-0": "Grass",
+        "type-1": "Ghost"
+    },
+    "abilities": {
+        "ability-0": "Hospitality",
+        "ability-1": "Heatproof"
+    },
+    "stats": {
+        "HP": {
+            "base": 40,
+            "min": 190,
+            "max": 284
+        },
+        "Attack": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        },
+        "Defense": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        },
+        "Sp. Atk": {
+            "base": 74,
+            "min": 137,
+            "max": 271
+        },
+        "Sp. Def": {
+            "base": 54,
+            "min": 101,
+            "max": 227
+        },
+        "Speed": {
+            "base": 50,
+            "min": 94,
+            "max": 218
+        }
+    }
+}

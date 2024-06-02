@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 824,
+    "type": {
+        "type-0": "Bug"
+    },
+    "abilities": {
+        "ability-0": "Swarm",
+        "ability-1": "Compound Eyes",
+        "ability-2": "Telepathy"
+    },
+    "stats": {
+        "HP": {
+            "base": 25,
+            "min": 160,
+            "max": 254
+        },
+        "Attack": {
+            "base": 20,
+            "min": 40,
+            "max": 152
+        },
+        "Defense": {
+            "base": 20,
+            "min": 40,
+            "max": 152
+        },
+        "Sp. Atk": {
+            "base": 25,
+            "min": 49,
+            "max": 163
+        },
+        "Sp. Def": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        },
+        "Speed": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        }
+    }
+}

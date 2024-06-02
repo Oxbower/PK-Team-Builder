@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 661,
+    "type": {
+        "type-0": "Normal",
+        "type-1": "Flying"
+    },
+    "abilities": {
+        "ability-0": "Big Pecks",
+        "ability-1": "Gale Wings"
+    },
+    "stats": {
+        "HP": {
+            "base": 45,
+            "min": 200,
+            "max": 294
+        },
+        "Attack": {
+            "base": 50,
+            "min": 94,
+            "max": 218
+        },
+        "Defense": {
+            "base": 43,
+            "min": 81,
+            "max": 203
+        },
+        "Sp. Atk": {
+            "base": 40,
+            "min": 76,
+            "max": 196
+        },
+        "Sp. Def": {
+            "base": 38,
+            "min": 72,
+            "max": 192
+        },
+        "Speed": {
+            "base": 62,
+            "min": 116,
+            "max": 245
+        }
+    }
+}

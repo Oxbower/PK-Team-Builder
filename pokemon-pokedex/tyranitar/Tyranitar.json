@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 248,
+    "type": {
+        "type-0": "Rock",
+        "type-1": "Dark"
+    },
+    "abilities": {
+        "ability-0": "Sand Stream",
+        "ability-1": "Unnerve"
+    },
+    "stats": {
+        "HP": {
+            "base": 100,
+            "min": 310,
+            "max": 404
+        },
+        "Attack": {
+            "base": 134,
+            "min": 245,
+            "max": 403
+        },
+        "Defense": {
+            "base": 110,
+            "min": 202,
+            "max": 350
+        },
+        "Sp. Atk": {
+            "base": 95,
+            "min": 175,
+            "max": 317
+        },
+        "Sp. Def": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        },
+        "Speed": {
+            "base": 61,
+            "min": 114,
+            "max": 243
+        }
+    }
+}

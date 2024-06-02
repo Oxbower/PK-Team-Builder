@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 643,
+    "type": {
+        "type-0": "Dragon",
+        "type-1": "Fire"
+    },
+    "abilities": {
+        "ability-0": "Turboblaze"
+    },
+    "stats": {
+        "HP": {
+            "base": 100,
+            "min": 310,
+            "max": 404
+        },
+        "Attack": {
+            "base": 120,
+            "min": 220,
+            "max": 372
+        },
+        "Defense": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        },
+        "Sp. Atk": {
+            "base": 150,
+            "min": 274,
+            "max": 438
+        },
+        "Sp. Def": {
+            "base": 120,
+            "min": 220,
+            "max": 372
+        },
+        "Speed": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        }
+    }
+}

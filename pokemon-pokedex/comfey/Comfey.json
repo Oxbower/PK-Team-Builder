@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 764,
+    "type": {
+        "type-0": "Fairy"
+    },
+    "abilities": {
+        "ability-0": "Flower Veil",
+        "ability-1": "Triage",
+        "ability-2": "Natural Cure"
+    },
+    "stats": {
+        "HP": {
+            "base": 51,
+            "min": 212,
+            "max": 306
+        },
+        "Attack": {
+            "base": 52,
+            "min": 98,
+            "max": 223
+        },
+        "Defense": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        },
+        "Sp. Atk": {
+            "base": 82,
+            "min": 152,
+            "max": 289
+        },
+        "Sp. Def": {
+            "base": 110,
+            "min": 202,
+            "max": 350
+        },
+        "Speed": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        }
+    }
+}

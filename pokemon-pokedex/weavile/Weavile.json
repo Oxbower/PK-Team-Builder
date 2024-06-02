@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 461,
+    "type": {
+        "type-0": "Dark",
+        "type-1": "Ice"
+    },
+    "abilities": {
+        "ability-0": "Pressure",
+        "ability-1": "Pickpocket"
+    },
+    "stats": {
+        "HP": {
+            "base": 70,
+            "min": 250,
+            "max": 344
+        },
+        "Attack": {
+            "base": 120,
+            "min": 220,
+            "max": 372
+        },
+        "Defense": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Sp. Atk": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        },
+        "Sp. Def": {
+            "base": 85,
+            "min": 157,
+            "max": 295
+        },
+        "Speed": {
+            "base": 125,
+            "min": 229,
+            "max": 383
+        }
+    }
+}

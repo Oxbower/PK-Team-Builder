@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 446,
+    "type": {
+        "type-0": "Normal"
+    },
+    "abilities": {
+        "ability-0": "Pickup",
+        "ability-1": "Thick Fat",
+        "ability-2": "Gluttony"
+    },
+    "stats": {
+        "HP": {
+            "base": 135,
+            "min": 380,
+            "max": 474
+        },
+        "Attack": {
+            "base": 85,
+            "min": 157,
+            "max": 295
+        },
+        "Defense": {
+            "base": 40,
+            "min": 76,
+            "max": 196
+        },
+        "Sp. Atk": {
+            "base": 40,
+            "min": 76,
+            "max": 196
+        },
+        "Sp. Def": {
+            "base": 85,
+            "min": 157,
+            "max": 295
+        },
+        "Speed": {
+            "base": 5,
+            "min": 13,
+            "max": 119
+        }
+    }
+}

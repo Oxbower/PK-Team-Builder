@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 158,
+    "type": {
+        "type-0": "Water"
+    },
+    "abilities": {
+        "ability-0": "Torrent",
+        "ability-1": "Sheer Force"
+    },
+    "stats": {
+        "HP": {
+            "base": 50,
+            "min": 210,
+            "max": 304
+        },
+        "Attack": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Defense": {
+            "base": 64,
+            "min": 119,
+            "max": 249
+        },
+        "Sp. Atk": {
+            "base": 44,
+            "min": 83,
+            "max": 205
+        },
+        "Sp. Def": {
+            "base": 48,
+            "min": 90,
+            "max": 214
+        },
+        "Speed": {
+            "base": 43,
+            "min": 81,
+            "max": 203
+        }
+    }
+}

@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 905,
+    "type": {
+        "type-0": "Fairy",
+        "type-1": "Flying"
+    },
+    "abilities": {
+        "ability-0": "Overcoat"
+    },
+    "stats": {
+        "HP": {
+            "base": 74,
+            "min": 258,
+            "max": 352
+        },
+        "Attack": {
+            "base": 115,
+            "min": 211,
+            "max": 361
+        },
+        "Defense": {
+            "base": 110,
+            "min": 202,
+            "max": 350
+        },
+        "Sp. Atk": {
+            "base": 135,
+            "min": 247,
+            "max": 405
+        },
+        "Sp. Def": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        },
+        "Speed": {
+            "base": 46,
+            "min": 87,
+            "max": 210
+        }
+    }
+}

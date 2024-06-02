@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 1021,
+    "type": {
+        "type-0": "Electric",
+        "type-1": "Dragon"
+    },
+    "abilities": {
+        "ability-0": "Protosynthesis"
+    },
+    "stats": {
+        "HP": {
+            "base": 125,
+            "min": 360,
+            "max": 454
+        },
+        "Attack": {
+            "base": 73,
+            "min": 135,
+            "max": 269
+        },
+        "Defense": {
+            "base": 91,
+            "min": 168,
+            "max": 309
+        },
+        "Sp. Atk": {
+            "base": 137,
+            "min": 251,
+            "max": 410
+        },
+        "Sp. Def": {
+            "base": 89,
+            "min": 164,
+            "max": 304
+        },
+        "Speed": {
+            "base": 75,
+            "min": 139,
+            "max": 273
+        }
+    }
+}

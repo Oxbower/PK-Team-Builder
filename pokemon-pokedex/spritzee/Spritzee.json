@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 682,
+    "type": {
+        "type-0": "Fairy"
+    },
+    "abilities": {
+        "ability-0": "Healer",
+        "ability-1": "Aroma Veil"
+    },
+    "stats": {
+        "HP": {
+            "base": 78,
+            "min": 266,
+            "max": 360
+        },
+        "Attack": {
+            "base": 52,
+            "min": 98,
+            "max": 223
+        },
+        "Defense": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Sp. Atk": {
+            "base": 63,
+            "min": 117,
+            "max": 247
+        },
+        "Sp. Def": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Speed": {
+            "base": 23,
+            "min": 45,
+            "max": 159
+        }
+    }
+}

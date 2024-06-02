@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 170,
+    "type": {
+        "type-0": "Water",
+        "type-1": "Electric"
+    },
+    "abilities": {
+        "ability-0": "Volt Absorb",
+        "ability-1": "Illuminate",
+        "ability-2": "Water Absorb"
+    },
+    "stats": {
+        "HP": {
+            "base": 75,
+            "min": 260,
+            "max": 354
+        },
+        "Attack": {
+            "base": 38,
+            "min": 72,
+            "max": 192
+        },
+        "Defense": {
+            "base": 38,
+            "min": 72,
+            "max": 192
+        },
+        "Sp. Atk": {
+            "base": 56,
+            "min": 105,
+            "max": 232
+        },
+        "Sp. Def": {
+            "base": 56,
+            "min": 105,
+            "max": 232
+        },
+        "Speed": {
+            "base": 67,
+            "min": 125,
+            "max": 256
+        }
+    }
+}

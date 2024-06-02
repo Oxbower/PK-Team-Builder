@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 705,
+    "type": {
+        "type-0": "Dragon"
+    },
+    "abilities": {
+        "ability-0": "Sap Sipper",
+        "ability-1": "Hydration",
+        "ability-2": "Gooey"
+    },
+    "stats": {
+        "HP": {
+            "base": 68,
+            "min": 246,
+            "max": 340
+        },
+        "Attack": {
+            "base": 75,
+            "min": 139,
+            "max": 273
+        },
+        "Defense": {
+            "base": 53,
+            "min": 99,
+            "max": 225
+        },
+        "Sp. Atk": {
+            "base": 83,
+            "min": 153,
+            "max": 291
+        },
+        "Sp. Def": {
+            "base": 113,
+            "min": 207,
+            "max": 357
+        },
+        "Speed": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        }
+    }
+}

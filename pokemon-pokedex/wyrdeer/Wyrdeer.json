@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 899,
+    "type": {
+        "type-0": "Normal",
+        "type-1": "Psychic"
+    },
+    "abilities": {
+        "ability-0": "Intimidate",
+        "ability-1": "Frisk",
+        "ability-2": "Sap Sipper"
+    },
+    "stats": {
+        "HP": {
+            "base": 103,
+            "min": 316,
+            "max": 410
+        },
+        "Attack": {
+            "base": 105,
+            "min": 193,
+            "max": 339
+        },
+        "Defense": {
+            "base": 72,
+            "min": 134,
+            "max": 267
+        },
+        "Sp. Atk": {
+            "base": 105,
+            "min": 193,
+            "max": 339
+        },
+        "Sp. Def": {
+            "base": 75,
+            "min": 139,
+            "max": 273
+        },
+        "Speed": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        }
+    }
+}

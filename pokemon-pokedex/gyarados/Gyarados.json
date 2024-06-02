@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 130,
+    "type": {
+        "type-0": "Water",
+        "type-1": "Flying"
+    },
+    "abilities": {
+        "ability-0": "Intimidate",
+        "ability-1": "Moxie"
+    },
+    "stats": {
+        "HP": {
+            "base": 95,
+            "min": 300,
+            "max": 394
+        },
+        "Attack": {
+            "base": 125,
+            "min": 229,
+            "max": 383
+        },
+        "Defense": {
+            "base": 79,
+            "min": 146,
+            "max": 282
+        },
+        "Sp. Atk": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Sp. Def": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        },
+        "Speed": {
+            "base": 81,
+            "min": 150,
+            "max": 287
+        }
+    }
+}

@@ -1,0 +1,41 @@
+{
+    "pokedex-no": 382,
+    "type": {
+        "type-0": "Water"
+    },
+    "abilities": {
+        "ability-0": "Primordial Sea"
+    },
+    "stats": {
+        "HP": {
+            "base": 100,
+            "min": 310,
+            "max": 404
+        },
+        "Attack": {
+            "base": 150,
+            "min": 274,
+            "max": 438
+        },
+        "Defense": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        },
+        "Sp. Atk": {
+            "base": 180,
+            "min": 328,
+            "max": 504
+        },
+        "Sp. Def": {
+            "base": 160,
+            "min": 292,
+            "max": 460
+        },
+        "Speed": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        }
+    }
+}

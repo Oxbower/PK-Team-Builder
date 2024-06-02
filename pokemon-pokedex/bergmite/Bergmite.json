@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 712,
+    "type": {
+        "type-0": "Ice"
+    },
+    "abilities": {
+        "ability-0": "Own Tempo",
+        "ability-1": "Ice Body",
+        "ability-2": "Sturdy"
+    },
+    "stats": {
+        "HP": {
+            "base": 55,
+            "min": 220,
+            "max": 314
+        },
+        "Attack": {
+            "base": 69,
+            "min": 128,
+            "max": 260
+        },
+        "Defense": {
+            "base": 85,
+            "min": 157,
+            "max": 295
+        },
+        "Sp. Atk": {
+            "base": 32,
+            "min": 62,
+            "max": 179
+        },
+        "Sp. Def": {
+            "base": 35,
+            "min": 67,
+            "max": 185
+        },
+        "Speed": {
+            "base": 28,
+            "min": 54,
+            "max": 170
+        }
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 6,
+    "type": {
+        "type-0": "Fire",
+        "type-1": "Flying"
+    },
+    "abilities": {
+        "ability-0": "Blaze",
+        "ability-1": "Solar Power"
+    },
+    "stats": {
+        "HP": {
+            "base": 78,
+            "min": 266,
+            "max": 360
+        },
+        "Attack": {
+            "base": 84,
+            "min": 155,
+            "max": 293
+        },
+        "Defense": {
+            "base": 78,
+            "min": 144,
+            "max": 280
+        },
+        "Sp. Atk": {
+            "base": 109,
+            "min": 200,
+            "max": 348
+        },
+        "Sp. Def": {
+            "base": 85,
+            "min": 157,
+            "max": 295
+        },
+        "Speed": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        }
+    }
+}

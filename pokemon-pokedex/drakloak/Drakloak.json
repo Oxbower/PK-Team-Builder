@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 886,
+    "type": {
+        "type-0": "Dragon",
+        "type-1": "Ghost"
+    },
+    "abilities": {
+        "ability-0": "Clear Body",
+        "ability-1": "Infiltrator",
+        "ability-2": "Cursed Body"
+    },
+    "stats": {
+        "HP": {
+            "base": 68,
+            "min": 246,
+            "max": 340
+        },
+        "Attack": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        },
+        "Defense": {
+            "base": 50,
+            "min": 94,
+            "max": 218
+        },
+        "Sp. Atk": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Sp. Def": {
+            "base": 50,
+            "min": 94,
+            "max": 218
+        },
+        "Speed": {
+            "base": 102,
+            "min": 188,
+            "max": 333
+        }
+    }
+}

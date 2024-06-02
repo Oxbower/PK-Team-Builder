@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 873,
+    "type": {
+        "type-0": "Ice",
+        "type-1": "Bug"
+    },
+    "abilities": {
+        "ability-0": "Shield Dust",
+        "ability-1": "Ice Scales"
+    },
+    "stats": {
+        "HP": {
+            "base": 70,
+            "min": 250,
+            "max": 344
+        },
+        "Attack": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Defense": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Sp. Atk": {
+            "base": 125,
+            "min": 229,
+            "max": 383
+        },
+        "Sp. Def": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        },
+        "Speed": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        }
+    }
+}

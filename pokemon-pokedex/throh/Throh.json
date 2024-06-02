@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 538,
+    "type": {
+        "type-0": "Fighting"
+    },
+    "abilities": {
+        "ability-0": "Guts",
+        "ability-1": "Inner Focus",
+        "ability-2": "Mold Breaker"
+    },
+    "stats": {
+        "HP": {
+            "base": 120,
+            "min": 350,
+            "max": 444
+        },
+        "Attack": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        },
+        "Defense": {
+            "base": 85,
+            "min": 157,
+            "max": 295
+        },
+        "Sp. Atk": {
+            "base": 30,
+            "min": 58,
+            "max": 174
+        },
+        "Sp. Def": {
+            "base": 85,
+            "min": 157,
+            "max": 295
+        },
+        "Speed": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        }
+    }
+}

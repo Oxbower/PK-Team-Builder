@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 957,
+    "type": {
+        "type-0": "Fairy",
+        "type-1": "Steel"
+    },
+    "abilities": {
+        "ability-0": "Mold Breaker",
+        "ability-1": "Own Tempo",
+        "ability-2": "Pickpocket"
+    },
+    "stats": {
+        "HP": {
+            "base": 50,
+            "min": 210,
+            "max": 304
+        },
+        "Attack": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        },
+        "Defense": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        },
+        "Sp. Atk": {
+            "base": 35,
+            "min": 67,
+            "max": 185
+        },
+        "Sp. Def": {
+            "base": 64,
+            "min": 119,
+            "max": 249
+        },
+        "Speed": {
+            "base": 58,
+            "min": 108,
+            "max": 236
+        }
+    }
+}

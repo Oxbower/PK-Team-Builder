@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 760,
+    "type": {
+        "type-0": "Normal",
+        "type-1": "Fighting"
+    },
+    "abilities": {
+        "ability-0": "Fluffy",
+        "ability-1": "Klutz",
+        "ability-2": "Unnerve"
+    },
+    "stats": {
+        "HP": {
+            "base": 120,
+            "min": 350,
+            "max": 444
+        },
+        "Attack": {
+            "base": 125,
+            "min": 229,
+            "max": 383
+        },
+        "Defense": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        },
+        "Sp. Atk": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        },
+        "Sp. Def": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Speed": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        }
+    }
+}

@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 747,
+    "type": {
+        "type-0": "Poison",
+        "type-1": "Water"
+    },
+    "abilities": {
+        "ability-0": "Merciless",
+        "ability-1": "Limber",
+        "ability-2": "Regenerator"
+    },
+    "stats": {
+        "HP": {
+            "base": 50,
+            "min": 210,
+            "max": 304
+        },
+        "Attack": {
+            "base": 53,
+            "min": 99,
+            "max": 225
+        },
+        "Defense": {
+            "base": 62,
+            "min": 116,
+            "max": 245
+        },
+        "Sp. Atk": {
+            "base": 43,
+            "min": 81,
+            "max": 203
+        },
+        "Sp. Def": {
+            "base": 52,
+            "min": 98,
+            "max": 223
+        },
+        "Speed": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        }
+    }
+}

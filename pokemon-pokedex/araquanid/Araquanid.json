@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 752,
+    "type": {
+        "type-0": "Water",
+        "type-1": "Bug"
+    },
+    "abilities": {
+        "ability-0": "Water Bubble",
+        "ability-1": "Water Absorb"
+    },
+    "stats": {
+        "HP": {
+            "base": 68,
+            "min": 246,
+            "max": 340
+        },
+        "Attack": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        },
+        "Defense": {
+            "base": 92,
+            "min": 170,
+            "max": 311
+        },
+        "Sp. Atk": {
+            "base": 50,
+            "min": 94,
+            "max": 218
+        },
+        "Sp. Def": {
+            "base": 132,
+            "min": 242,
+            "max": 399
+        },
+        "Speed": {
+            "base": 42,
+            "min": 80,
+            "max": 201
+        }
+    }
+}

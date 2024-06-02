@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 710,
+    "type": {
+        "type-0": "Ghost",
+        "type-1": "Grass"
+    },
+    "abilities": {
+        "ability-0": "Pickup",
+        "ability-1": "Frisk",
+        "ability-2": "Insomnia"
+    },
+    "stats": {
+        "HP": {
+            "base": 54,
+            "min": 218,
+            "max": 312
+        },
+        "Attack": {
+            "base": 66,
+            "min": 123,
+            "max": 254
+        },
+        "Defense": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        },
+        "Sp. Atk": {
+            "base": 44,
+            "min": 83,
+            "max": 205
+        },
+        "Sp. Def": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        },
+        "Speed": {
+            "base": 46,
+            "min": 87,
+            "max": 210
+        }
+    }
+}

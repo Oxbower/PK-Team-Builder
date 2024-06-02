@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 401,
+    "type": {
+        "type-0": "Bug"
+    },
+    "abilities": {
+        "ability-0": "Shed Skin",
+        "ability-1": "Run Away"
+    },
+    "stats": {
+        "HP": {
+            "base": 37,
+            "min": 184,
+            "max": 278
+        },
+        "Attack": {
+            "base": 25,
+            "min": 49,
+            "max": 163
+        },
+        "Defense": {
+            "base": 41,
+            "min": 78,
+            "max": 199
+        },
+        "Sp. Atk": {
+            "base": 25,
+            "min": 49,
+            "max": 163
+        },
+        "Sp. Def": {
+            "base": 41,
+            "min": 78,
+            "max": 199
+        },
+        "Speed": {
+            "base": 25,
+            "min": 49,
+            "max": 163
+        }
+    }
+}

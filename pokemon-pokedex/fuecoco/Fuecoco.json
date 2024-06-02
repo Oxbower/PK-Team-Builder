@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 909,
+    "type": {
+        "type-0": "Fire"
+    },
+    "abilities": {
+        "ability-0": "Blaze",
+        "ability-1": "Unaware"
+    },
+    "stats": {
+        "HP": {
+            "base": 67,
+            "min": 244,
+            "max": 338
+        },
+        "Attack": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        },
+        "Defense": {
+            "base": 59,
+            "min": 110,
+            "max": 238
+        },
+        "Sp. Atk": {
+            "base": 63,
+            "min": 117,
+            "max": 247
+        },
+        "Sp. Def": {
+            "base": 40,
+            "min": 76,
+            "max": 196
+        },
+        "Speed": {
+            "base": 36,
+            "min": 69,
+            "max": 188
+        }
+    }
+}

@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 800,
+    "type": {
+        "type-0": "Psychic",
+        "type-1": "Dragon"
+    },
+    "abilities": {
+        "ability-0": "Neuroforce"
+    },
+    "stats": {
+        "HP": {
+            "base": 97,
+            "min": 304,
+            "max": 398
+        },
+        "Attack": {
+            "base": 167,
+            "min": 305,
+            "max": 476
+        },
+        "Defense": {
+            "base": 97,
+            "min": 179,
+            "max": 322
+        },
+        "Sp. Atk": {
+            "base": 167,
+            "min": 305,
+            "max": 476
+        },
+        "Sp. Def": {
+            "base": 97,
+            "min": 179,
+            "max": 322
+        },
+        "Speed": {
+            "base": 129,
+            "min": 236,
+            "max": 392
+        }
+    }
+}

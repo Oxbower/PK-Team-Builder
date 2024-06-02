@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 505,
+    "type": {
+        "type-0": "Normal"
+    },
+    "abilities": {
+        "ability-0": "Illuminate",
+        "ability-1": "Keen Eye",
+        "ability-2": "Analytic"
+    },
+    "stats": {
+        "HP": {
+            "base": 60,
+            "min": 230,
+            "max": 324
+        },
+        "Attack": {
+            "base": 85,
+            "min": 157,
+            "max": 295
+        },
+        "Defense": {
+            "base": 69,
+            "min": 128,
+            "max": 260
+        },
+        "Sp. Atk": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Sp. Def": {
+            "base": 69,
+            "min": 128,
+            "max": 260
+        },
+        "Speed": {
+            "base": 77,
+            "min": 143,
+            "max": 278
+        }
+    }
+}

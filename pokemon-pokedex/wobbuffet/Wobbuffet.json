@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 202,
+    "type": {
+        "type-0": "Psychic"
+    },
+    "abilities": {
+        "ability-0": "Shadow Tag",
+        "ability-1": "Telepathy"
+    },
+    "stats": {
+        "HP": {
+            "base": 190,
+            "min": 490,
+            "max": 584
+        },
+        "Attack": {
+            "base": 33,
+            "min": 63,
+            "max": 181
+        },
+        "Defense": {
+            "base": 58,
+            "min": 108,
+            "max": 236
+        },
+        "Sp. Atk": {
+            "base": 33,
+            "min": 63,
+            "max": 181
+        },
+        "Sp. Def": {
+            "base": 58,
+            "min": 108,
+            "max": 236
+        },
+        "Speed": {
+            "base": 33,
+            "min": 63,
+            "max": 181
+        }
+    }
+}

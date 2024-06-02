@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 448,
+    "type": {
+        "type-0": "Fighting",
+        "type-1": "Steel"
+    },
+    "abilities": {
+        "ability-0": "Steadfast",
+        "ability-1": "Inner Focus",
+        "ability-2": "Justified"
+    },
+    "stats": {
+        "HP": {
+            "base": 70,
+            "min": 250,
+            "max": 344
+        },
+        "Attack": {
+            "base": 110,
+            "min": 202,
+            "max": 350
+        },
+        "Defense": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        },
+        "Sp. Atk": {
+            "base": 115,
+            "min": 211,
+            "max": 361
+        },
+        "Sp. Def": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        },
+        "Speed": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        }
+    }
+}

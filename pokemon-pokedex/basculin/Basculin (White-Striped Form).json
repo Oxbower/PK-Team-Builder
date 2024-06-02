@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 550,
+    "type": {
+        "type-0": "Water"
+    },
+    "abilities": {
+        "ability-0": "Rattled",
+        "ability-1": "Adaptability",
+        "ability-2": "Mold Breaker"
+    },
+    "stats": {
+        "HP": {
+            "base": 70,
+            "min": 250,
+            "max": 344
+        },
+        "Attack": {
+            "base": 92,
+            "min": 170,
+            "max": 311
+        },
+        "Defense": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Sp. Atk": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        },
+        "Sp. Def": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        },
+        "Speed": {
+            "base": 98,
+            "min": 180,
+            "max": 324
+        }
+    }
+}

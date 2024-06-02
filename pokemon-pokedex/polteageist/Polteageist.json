@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 855,
+    "type": {
+        "type-0": "Ghost"
+    },
+    "abilities": {
+        "ability-0": "Weak Armor",
+        "ability-1": "Cursed Body"
+    },
+    "stats": {
+        "HP": {
+            "base": 60,
+            "min": 230,
+            "max": 324
+        },
+        "Attack": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Defense": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Sp. Atk": {
+            "base": 134,
+            "min": 245,
+            "max": 403
+        },
+        "Sp. Def": {
+            "base": 114,
+            "min": 209,
+            "max": 359
+        },
+        "Speed": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        }
+    }
+}

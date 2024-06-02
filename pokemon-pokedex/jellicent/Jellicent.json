@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 593,
+    "type": {
+        "type-0": "Water",
+        "type-1": "Ghost"
+    },
+    "abilities": {
+        "ability-0": "Water Absorb",
+        "ability-1": "Cursed Body",
+        "ability-2": "Damp"
+    },
+    "stats": {
+        "HP": {
+            "base": 100,
+            "min": 310,
+            "max": 404
+        },
+        "Attack": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Defense": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        },
+        "Sp. Atk": {
+            "base": 85,
+            "min": 157,
+            "max": 295
+        },
+        "Sp. Def": {
+            "base": 105,
+            "min": 193,
+            "max": 339
+        },
+        "Speed": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        }
+    }
+}

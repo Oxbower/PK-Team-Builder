@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 730,
+    "type": {
+        "type-0": "Water",
+        "type-1": "Fairy"
+    },
+    "abilities": {
+        "ability-0": "Torrent",
+        "ability-1": "Liquid Voice"
+    },
+    "stats": {
+        "HP": {
+            "base": 80,
+            "min": 270,
+            "max": 364
+        },
+        "Attack": {
+            "base": 74,
+            "min": 137,
+            "max": 271
+        },
+        "Defense": {
+            "base": 74,
+            "min": 137,
+            "max": 271
+        },
+        "Sp. Atk": {
+            "base": 126,
+            "min": 231,
+            "max": 386
+        },
+        "Sp. Def": {
+            "base": 116,
+            "min": 213,
+            "max": 364
+        },
+        "Speed": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        }
+    }
+}

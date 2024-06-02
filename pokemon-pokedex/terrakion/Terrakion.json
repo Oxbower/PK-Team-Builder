@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 639,
+    "type": {
+        "type-0": "Rock",
+        "type-1": "Fighting"
+    },
+    "abilities": {
+        "ability-0": "Justified"
+    },
+    "stats": {
+        "HP": {
+            "base": 91,
+            "min": 292,
+            "max": 386
+        },
+        "Attack": {
+            "base": 129,
+            "min": 236,
+            "max": 392
+        },
+        "Defense": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        },
+        "Sp. Atk": {
+            "base": 72,
+            "min": 134,
+            "max": 267
+        },
+        "Sp. Def": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        },
+        "Speed": {
+            "base": 108,
+            "min": 198,
+            "max": 346
+        }
+    }
+}

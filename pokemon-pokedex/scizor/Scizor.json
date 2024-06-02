@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 212,
+    "type": {
+        "type-0": "Bug",
+        "type-1": "Steel"
+    },
+    "abilities": {
+        "ability-0": "Swarm",
+        "ability-1": "Technician",
+        "ability-2": "Light Metal"
+    },
+    "stats": {
+        "HP": {
+            "base": 70,
+            "min": 250,
+            "max": 344
+        },
+        "Attack": {
+            "base": 130,
+            "min": 238,
+            "max": 394
+        },
+        "Defense": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        },
+        "Sp. Atk": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        },
+        "Sp. Def": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        },
+        "Speed": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        }
+    }
+}

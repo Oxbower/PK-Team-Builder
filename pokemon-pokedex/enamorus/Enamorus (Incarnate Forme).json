@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 905,
+    "type": {
+        "type-0": "Fairy",
+        "type-1": "Flying"
+    },
+    "abilities": {
+        "ability-0": "Cute Charm",
+        "ability-1": "Contrary"
+    },
+    "stats": {
+        "HP": {
+            "base": 74,
+            "min": 258,
+            "max": 352
+        },
+        "Attack": {
+            "base": 115,
+            "min": 211,
+            "max": 361
+        },
+        "Defense": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        },
+        "Sp. Atk": {
+            "base": 135,
+            "min": 247,
+            "max": 405
+        },
+        "Sp. Def": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        },
+        "Speed": {
+            "base": 106,
+            "min": 195,
+            "max": 342
+        }
+    }
+}

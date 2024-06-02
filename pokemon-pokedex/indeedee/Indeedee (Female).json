@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 876,
+    "type": {
+        "type-0": "Psychic",
+        "type-1": "Normal"
+    },
+    "abilities": {
+        "ability-0": "Own Tempo",
+        "ability-1": "Synchronize",
+        "ability-2": "Psychic Surge"
+    },
+    "stats": {
+        "HP": {
+            "base": 70,
+            "min": 250,
+            "max": 344
+        },
+        "Attack": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        },
+        "Defense": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Sp. Atk": {
+            "base": 95,
+            "min": 175,
+            "max": 317
+        },
+        "Sp. Def": {
+            "base": 105,
+            "min": 193,
+            "max": 339
+        },
+        "Speed": {
+            "base": 85,
+            "min": 157,
+            "max": 295
+        }
+    }
+}

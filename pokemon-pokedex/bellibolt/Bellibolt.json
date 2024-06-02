@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 939,
+    "type": {
+        "type-0": "Electric"
+    },
+    "abilities": {
+        "ability-0": "Electromorphosis",
+        "ability-1": "Static",
+        "ability-2": "Damp"
+    },
+    "stats": {
+        "HP": {
+            "base": 109,
+            "min": 328,
+            "max": 422
+        },
+        "Attack": {
+            "base": 64,
+            "min": 119,
+            "max": 249
+        },
+        "Defense": {
+            "base": 91,
+            "min": 168,
+            "max": 309
+        },
+        "Sp. Atk": {
+            "base": 103,
+            "min": 189,
+            "max": 335
+        },
+        "Sp. Def": {
+            "base": 83,
+            "min": 153,
+            "max": 291
+        },
+        "Speed": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        }
+    }
+}

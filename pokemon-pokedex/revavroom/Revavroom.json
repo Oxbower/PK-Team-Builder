@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 966,
+    "type": {
+        "type-0": "Steel",
+        "type-1": "Poison"
+    },
+    "abilities": {
+        "ability-0": "Overcoat",
+        "ability-1": "Filter"
+    },
+    "stats": {
+        "HP": {
+            "base": 80,
+            "min": 270,
+            "max": 364
+        },
+        "Attack": {
+            "base": 119,
+            "min": 218,
+            "max": 370
+        },
+        "Defense": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        },
+        "Sp. Atk": {
+            "base": 54,
+            "min": 101,
+            "max": 227
+        },
+        "Sp. Def": {
+            "base": 67,
+            "min": 125,
+            "max": 256
+        },
+        "Speed": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        }
+    }
+}

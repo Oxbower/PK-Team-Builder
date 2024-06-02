@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 38,
+    "type": {
+        "type-0": "Ice",
+        "type-1": "Fairy"
+    },
+    "abilities": {
+        "ability-0": "Snow Cloak",
+        "ability-1": "Snow Warning"
+    },
+    "stats": {
+        "HP": {
+            "base": 73,
+            "min": 256,
+            "max": 350
+        },
+        "Attack": {
+            "base": 67,
+            "min": 125,
+            "max": 256
+        },
+        "Defense": {
+            "base": 75,
+            "min": 139,
+            "max": 273
+        },
+        "Sp. Atk": {
+            "base": 81,
+            "min": 150,
+            "max": 287
+        },
+        "Sp. Def": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        },
+        "Speed": {
+            "base": 109,
+            "min": 200,
+            "max": 348
+        }
+    }
+}

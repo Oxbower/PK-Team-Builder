@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 79,
+    "type": {
+        "type-0": "Water",
+        "type-1": "Psychic"
+    },
+    "abilities": {
+        "ability-0": "Oblivious",
+        "ability-1": "Own Tempo",
+        "ability-2": "Regenerator"
+    },
+    "stats": {
+        "HP": {
+            "base": 90,
+            "min": 290,
+            "max": 384
+        },
+        "Attack": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Defense": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Sp. Atk": {
+            "base": 40,
+            "min": 76,
+            "max": 196
+        },
+        "Sp. Def": {
+            "base": 40,
+            "min": 76,
+            "max": 196
+        },
+        "Speed": {
+            "base": 15,
+            "min": 31,
+            "max": 141
+        }
+    }
+}

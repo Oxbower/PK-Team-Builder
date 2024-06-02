@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 992,
+    "type": {
+        "type-0": "Fighting",
+        "type-1": "Electric"
+    },
+    "abilities": {
+        "ability-0": "Quark Drive"
+    },
+    "stats": {
+        "HP": {
+            "base": 154,
+            "min": 418,
+            "max": 512
+        },
+        "Attack": {
+            "base": 140,
+            "min": 256,
+            "max": 416
+        },
+        "Defense": {
+            "base": 108,
+            "min": 198,
+            "max": 346
+        },
+        "Sp. Atk": {
+            "base": 50,
+            "min": 94,
+            "max": 218
+        },
+        "Sp. Def": {
+            "base": 68,
+            "min": 126,
+            "max": 258
+        },
+        "Speed": {
+            "base": 50,
+            "min": 94,
+            "max": 218
+        }
+    }
+}

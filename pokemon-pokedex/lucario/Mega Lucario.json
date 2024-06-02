@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 448,
+    "type": {
+        "type-0": "Fighting",
+        "type-1": "Steel"
+    },
+    "abilities": {
+        "ability-0": "Adaptability"
+    },
+    "stats": {
+        "HP": {
+            "base": 70,
+            "min": 250,
+            "max": 344
+        },
+        "Attack": {
+            "base": 145,
+            "min": 265,
+            "max": 427
+        },
+        "Defense": {
+            "base": 88,
+            "min": 162,
+            "max": 302
+        },
+        "Sp. Atk": {
+            "base": 140,
+            "min": 256,
+            "max": 416
+        },
+        "Sp. Def": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        },
+        "Speed": {
+            "base": 112,
+            "min": 206,
+            "max": 355
+        }
+    }
+}

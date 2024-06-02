@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 618,
+    "type": {
+        "type-0": "Ground",
+        "type-1": "Electric"
+    },
+    "abilities": {
+        "ability-0": "Static",
+        "ability-1": "Limber",
+        "ability-2": "Sand Veil"
+    },
+    "stats": {
+        "HP": {
+            "base": 109,
+            "min": 328,
+            "max": 422
+        },
+        "Attack": {
+            "base": 66,
+            "min": 123,
+            "max": 254
+        },
+        "Defense": {
+            "base": 84,
+            "min": 155,
+            "max": 293
+        },
+        "Sp. Atk": {
+            "base": 81,
+            "min": 150,
+            "max": 287
+        },
+        "Sp. Def": {
+            "base": 99,
+            "min": 182,
+            "max": 326
+        },
+        "Speed": {
+            "base": 32,
+            "min": 62,
+            "max": 179
+        }
+    }
+}

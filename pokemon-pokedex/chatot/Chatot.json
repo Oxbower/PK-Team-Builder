@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 441,
+    "type": {
+        "type-0": "Normal",
+        "type-1": "Flying"
+    },
+    "abilities": {
+        "ability-0": "Keen Eye",
+        "ability-1": "Tangled Feet",
+        "ability-2": "Big Pecks"
+    },
+    "stats": {
+        "HP": {
+            "base": 76,
+            "min": 262,
+            "max": 356
+        },
+        "Attack": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Defense": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        },
+        "Sp. Atk": {
+            "base": 92,
+            "min": 170,
+            "max": 311
+        },
+        "Sp. Def": {
+            "base": 42,
+            "min": 80,
+            "max": 201
+        },
+        "Speed": {
+            "base": 91,
+            "min": 168,
+            "max": 309
+        }
+    }
+}

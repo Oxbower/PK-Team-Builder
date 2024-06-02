@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 394,
+    "type": {
+        "type-0": "Water"
+    },
+    "abilities": {
+        "ability-0": "Torrent",
+        "ability-1": "Defiant"
+    },
+    "stats": {
+        "HP": {
+            "base": 64,
+            "min": 238,
+            "max": 332
+        },
+        "Attack": {
+            "base": 66,
+            "min": 123,
+            "max": 254
+        },
+        "Defense": {
+            "base": 68,
+            "min": 126,
+            "max": 258
+        },
+        "Sp. Atk": {
+            "base": 81,
+            "min": 150,
+            "max": 287
+        },
+        "Sp. Def": {
+            "base": 76,
+            "min": 141,
+            "max": 276
+        },
+        "Speed": {
+            "base": 50,
+            "min": 94,
+            "max": 218
+        }
+    }
+}

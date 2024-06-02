@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 826,
+    "type": {
+        "type-0": "Bug",
+        "type-1": "Psychic"
+    },
+    "abilities": {
+        "ability-0": "Swarm",
+        "ability-1": "Frisk",
+        "ability-2": "Telepathy"
+    },
+    "stats": {
+        "HP": {
+            "base": 60,
+            "min": 230,
+            "max": 324
+        },
+        "Attack": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        },
+        "Defense": {
+            "base": 110,
+            "min": 202,
+            "max": 350
+        },
+        "Sp. Atk": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        },
+        "Sp. Def": {
+            "base": 120,
+            "min": 220,
+            "max": 372
+        },
+        "Speed": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        }
+    }
+}

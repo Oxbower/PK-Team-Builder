@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 1025,
+    "type": {
+        "type-0": "Poison",
+        "type-1": "Ghost"
+    },
+    "abilities": {
+        "ability-0": "Poison Puppeteer"
+    },
+    "stats": {
+        "HP": {
+            "base": 88,
+            "min": 286,
+            "max": 380
+        },
+        "Attack": {
+            "base": 88,
+            "min": 162,
+            "max": 302
+        },
+        "Defense": {
+            "base": 160,
+            "min": 292,
+            "max": 460
+        },
+        "Sp. Atk": {
+            "base": 88,
+            "min": 162,
+            "max": 302
+        },
+        "Sp. Def": {
+            "base": 88,
+            "min": 162,
+            "max": 302
+        },
+        "Speed": {
+            "base": 88,
+            "min": 162,
+            "max": 302
+        }
+    }
+}

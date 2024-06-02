@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 487,
+    "type": {
+        "type-0": "Ghost",
+        "type-1": "Dragon"
+    },
+    "abilities": {
+        "ability-0": "Pressure",
+        "ability-1": "Telepathy"
+    },
+    "stats": {
+        "HP": {
+            "base": 150,
+            "min": 410,
+            "max": 504
+        },
+        "Attack": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        },
+        "Defense": {
+            "base": 120,
+            "min": 220,
+            "max": 372
+        },
+        "Sp. Atk": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        },
+        "Sp. Def": {
+            "base": 120,
+            "min": 220,
+            "max": 372
+        },
+        "Speed": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        }
+    }
+}

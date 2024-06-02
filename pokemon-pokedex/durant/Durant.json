@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 632,
+    "type": {
+        "type-0": "Bug",
+        "type-1": "Steel"
+    },
+    "abilities": {
+        "ability-0": "Swarm",
+        "ability-1": "Hustle",
+        "ability-2": "Truant"
+    },
+    "stats": {
+        "HP": {
+            "base": 58,
+            "min": 226,
+            "max": 320
+        },
+        "Attack": {
+            "base": 109,
+            "min": 200,
+            "max": 348
+        },
+        "Defense": {
+            "base": 112,
+            "min": 206,
+            "max": 355
+        },
+        "Sp. Atk": {
+            "base": 48,
+            "min": 90,
+            "max": 214
+        },
+        "Sp. Def": {
+            "base": 48,
+            "min": 90,
+            "max": 214
+        },
+        "Speed": {
+            "base": 109,
+            "min": 200,
+            "max": 348
+        }
+    }
+}

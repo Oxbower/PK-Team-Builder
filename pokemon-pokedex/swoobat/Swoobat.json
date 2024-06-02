@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 528,
+    "type": {
+        "type-0": "Psychic",
+        "type-1": "Flying"
+    },
+    "abilities": {
+        "ability-0": "Unaware",
+        "ability-1": "Klutz",
+        "ability-2": "Simple"
+    },
+    "stats": {
+        "HP": {
+            "base": 67,
+            "min": 244,
+            "max": 338
+        },
+        "Attack": {
+            "base": 57,
+            "min": 107,
+            "max": 234
+        },
+        "Defense": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        },
+        "Sp. Atk": {
+            "base": 77,
+            "min": 143,
+            "max": 278
+        },
+        "Sp. Def": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        },
+        "Speed": {
+            "base": 114,
+            "min": 209,
+            "max": 359
+        }
+    }
+}

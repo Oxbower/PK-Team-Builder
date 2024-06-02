@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 677,
+    "type": {
+        "type-0": "Psychic"
+    },
+    "abilities": {
+        "ability-0": "Keen Eye",
+        "ability-1": "Infiltrator",
+        "ability-2": "Own Tempo"
+    },
+    "stats": {
+        "HP": {
+            "base": 62,
+            "min": 234,
+            "max": 328
+        },
+        "Attack": {
+            "base": 48,
+            "min": 90,
+            "max": 214
+        },
+        "Defense": {
+            "base": 54,
+            "min": 101,
+            "max": 227
+        },
+        "Sp. Atk": {
+            "base": 63,
+            "min": 117,
+            "max": 247
+        },
+        "Sp. Def": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Speed": {
+            "base": 68,
+            "min": 126,
+            "max": 258
+        }
+    }
+}

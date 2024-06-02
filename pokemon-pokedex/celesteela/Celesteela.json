@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 797,
+    "type": {
+        "type-0": "Steel",
+        "type-1": "Flying"
+    },
+    "abilities": {
+        "ability-0": "Beast Boost"
+    },
+    "stats": {
+        "HP": {
+            "base": 97,
+            "min": 304,
+            "max": 398
+        },
+        "Attack": {
+            "base": 101,
+            "min": 186,
+            "max": 331
+        },
+        "Defense": {
+            "base": 103,
+            "min": 189,
+            "max": 335
+        },
+        "Sp. Atk": {
+            "base": 107,
+            "min": 197,
+            "max": 344
+        },
+        "Sp. Def": {
+            "base": 101,
+            "min": 186,
+            "max": 331
+        },
+        "Speed": {
+            "base": 61,
+            "min": 114,
+            "max": 243
+        }
+    }
+}

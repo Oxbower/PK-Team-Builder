@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 623,
+    "type": {
+        "type-0": "Ground",
+        "type-1": "Ghost"
+    },
+    "abilities": {
+        "ability-0": "Iron Fist",
+        "ability-1": "Klutz",
+        "ability-2": "No Guard"
+    },
+    "stats": {
+        "HP": {
+            "base": 89,
+            "min": 288,
+            "max": 382
+        },
+        "Attack": {
+            "base": 124,
+            "min": 227,
+            "max": 381
+        },
+        "Defense": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        },
+        "Sp. Atk": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        },
+        "Sp. Def": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        },
+        "Speed": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        }
+    }
+}

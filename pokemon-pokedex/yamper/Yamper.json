@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 835,
+    "type": {
+        "type-0": "Electric"
+    },
+    "abilities": {
+        "ability-0": "Ball Fetch",
+        "ability-1": "Rattled"
+    },
+    "stats": {
+        "HP": {
+            "base": 59,
+            "min": 228,
+            "max": 322
+        },
+        "Attack": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        },
+        "Defense": {
+            "base": 50,
+            "min": 94,
+            "max": 218
+        },
+        "Sp. Atk": {
+            "base": 40,
+            "min": 76,
+            "max": 196
+        },
+        "Sp. Def": {
+            "base": 50,
+            "min": 94,
+            "max": 218
+        },
+        "Speed": {
+            "base": 26,
+            "min": 51,
+            "max": 166
+        }
+    }
+}

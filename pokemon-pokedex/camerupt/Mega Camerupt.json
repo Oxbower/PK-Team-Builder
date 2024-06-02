@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 323,
+    "type": {
+        "type-0": "Fire",
+        "type-1": "Ground"
+    },
+    "abilities": {
+        "ability-0": "Sheer Force"
+    },
+    "stats": {
+        "HP": {
+            "base": 70,
+            "min": 250,
+            "max": 344
+        },
+        "Attack": {
+            "base": 120,
+            "min": 220,
+            "max": 372
+        },
+        "Defense": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        },
+        "Sp. Atk": {
+            "base": 145,
+            "min": 265,
+            "max": 427
+        },
+        "Sp. Def": {
+            "base": 105,
+            "min": 193,
+            "max": 339
+        },
+        "Speed": {
+            "base": 20,
+            "min": 40,
+            "max": 152
+        }
+    }
+}

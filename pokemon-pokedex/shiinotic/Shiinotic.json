@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 756,
+    "type": {
+        "type-0": "Grass",
+        "type-1": "Fairy"
+    },
+    "abilities": {
+        "ability-0": "Illuminate",
+        "ability-1": "Effect Spore",
+        "ability-2": "Rain Dish"
+    },
+    "stats": {
+        "HP": {
+            "base": 60,
+            "min": 230,
+            "max": 324
+        },
+        "Attack": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        },
+        "Defense": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        },
+        "Sp. Atk": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        },
+        "Sp. Def": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        },
+        "Speed": {
+            "base": 30,
+            "min": 58,
+            "max": 174
+        }
+    }
+}

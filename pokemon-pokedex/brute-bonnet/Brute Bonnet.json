@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 986,
+    "type": {
+        "type-0": "Grass",
+        "type-1": "Dark"
+    },
+    "abilities": {
+        "ability-0": "Protosynthesis"
+    },
+    "stats": {
+        "HP": {
+            "base": 111,
+            "min": 332,
+            "max": 426
+        },
+        "Attack": {
+            "base": 127,
+            "min": 233,
+            "max": 388
+        },
+        "Defense": {
+            "base": 99,
+            "min": 182,
+            "max": 326
+        },
+        "Sp. Atk": {
+            "base": 79,
+            "min": 146,
+            "max": 282
+        },
+        "Sp. Def": {
+            "base": 99,
+            "min": 182,
+            "max": 326
+        },
+        "Speed": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        }
+    }
+}

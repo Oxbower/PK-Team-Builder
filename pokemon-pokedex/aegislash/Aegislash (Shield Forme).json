@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 681,
+    "type": {
+        "type-0": "Steel",
+        "type-1": "Ghost"
+    },
+    "abilities": {
+        "ability-0": "Stance Change"
+    },
+    "stats": {
+        "HP": {
+            "base": 60,
+            "min": 230,
+            "max": 324
+        },
+        "Attack": {
+            "base": 50,
+            "min": 94,
+            "max": 218
+        },
+        "Defense": {
+            "base": 140,
+            "min": 256,
+            "max": 416
+        },
+        "Sp. Atk": {
+            "base": 50,
+            "min": 94,
+            "max": 218
+        },
+        "Sp. Def": {
+            "base": 140,
+            "min": 256,
+            "max": 416
+        },
+        "Speed": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        }
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 103,
+    "type": {
+        "type-0": "Grass",
+        "type-1": "Psychic"
+    },
+    "abilities": {
+        "ability-0": "Chlorophyll",
+        "ability-1": "Harvest"
+    },
+    "stats": {
+        "HP": {
+            "base": 95,
+            "min": 300,
+            "max": 394
+        },
+        "Attack": {
+            "base": 95,
+            "min": 175,
+            "max": 317
+        },
+        "Defense": {
+            "base": 85,
+            "min": 157,
+            "max": 295
+        },
+        "Sp. Atk": {
+            "base": 125,
+            "min": 229,
+            "max": 383
+        },
+        "Sp. Def": {
+            "base": 75,
+            "min": 139,
+            "max": 273
+        },
+        "Speed": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        }
+    }
+}

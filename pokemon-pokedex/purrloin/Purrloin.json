@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 509,
+    "type": {
+        "type-0": "Dark"
+    },
+    "abilities": {
+        "ability-0": "Limber",
+        "ability-1": "Unburden",
+        "ability-2": "Prankster"
+    },
+    "stats": {
+        "HP": {
+            "base": 41,
+            "min": 192,
+            "max": 286
+        },
+        "Attack": {
+            "base": 50,
+            "min": 94,
+            "max": 218
+        },
+        "Defense": {
+            "base": 37,
+            "min": 71,
+            "max": 190
+        },
+        "Sp. Atk": {
+            "base": 50,
+            "min": 94,
+            "max": 218
+        },
+        "Sp. Def": {
+            "base": 37,
+            "min": 71,
+            "max": 190
+        },
+        "Speed": {
+            "base": 66,
+            "min": 123,
+            "max": 254
+        }
+    }
+}

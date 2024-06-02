@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 869,
+    "type": {
+        "type-0": "Fairy"
+    },
+    "abilities": {
+        "ability-0": "Sweet Veil",
+        "ability-1": "Aroma Veil"
+    },
+    "stats": {
+        "HP": {
+            "base": 65,
+            "min": 240,
+            "max": 334
+        },
+        "Attack": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Defense": {
+            "base": 75,
+            "min": 139,
+            "max": 273
+        },
+        "Sp. Atk": {
+            "base": 110,
+            "min": 202,
+            "max": 350
+        },
+        "Sp. Def": {
+            "base": 121,
+            "min": 222,
+            "max": 375
+        },
+        "Speed": {
+            "base": 64,
+            "min": 119,
+            "max": 249
+        }
+    }
+}

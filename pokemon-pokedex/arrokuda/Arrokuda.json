@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 846,
+    "type": {
+        "type-0": "Water"
+    },
+    "abilities": {
+        "ability-0": "Swift Swim",
+        "ability-1": "Propeller Tail"
+    },
+    "stats": {
+        "HP": {
+            "base": 41,
+            "min": 192,
+            "max": 286
+        },
+        "Attack": {
+            "base": 63,
+            "min": 117,
+            "max": 247
+        },
+        "Defense": {
+            "base": 40,
+            "min": 76,
+            "max": 196
+        },
+        "Sp. Atk": {
+            "base": 40,
+            "min": 76,
+            "max": 196
+        },
+        "Sp. Def": {
+            "base": 30,
+            "min": 58,
+            "max": 174
+        },
+        "Speed": {
+            "base": 66,
+            "min": 123,
+            "max": 254
+        }
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 762,
+    "type": {
+        "type-0": "Grass"
+    },
+    "abilities": {
+        "ability-0": "Leaf Guard",
+        "ability-1": "Oblivious",
+        "ability-2": "Sweet Veil"
+    },
+    "stats": {
+        "HP": {
+            "base": 52,
+            "min": 214,
+            "max": 308
+        },
+        "Attack": {
+            "base": 40,
+            "min": 76,
+            "max": 196
+        },
+        "Defense": {
+            "base": 48,
+            "min": 90,
+            "max": 214
+        },
+        "Sp. Atk": {
+            "base": 40,
+            "min": 76,
+            "max": 196
+        },
+        "Sp. Def": {
+            "base": 48,
+            "min": 90,
+            "max": 214
+        },
+        "Speed": {
+            "base": 62,
+            "min": 116,
+            "max": 245
+        }
+    }
+}

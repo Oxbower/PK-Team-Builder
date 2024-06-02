@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 828,
+    "type": {
+        "type-0": "Dark"
+    },
+    "abilities": {
+        "ability-0": "Run Away",
+        "ability-1": "Unburden",
+        "ability-2": "Stakeout"
+    },
+    "stats": {
+        "HP": {
+            "base": 70,
+            "min": 250,
+            "max": 344
+        },
+        "Attack": {
+            "base": 58,
+            "min": 108,
+            "max": 236
+        },
+        "Defense": {
+            "base": 58,
+            "min": 108,
+            "max": 236
+        },
+        "Sp. Atk": {
+            "base": 87,
+            "min": 161,
+            "max": 300
+        },
+        "Sp. Def": {
+            "base": 92,
+            "min": 170,
+            "max": 311
+        },
+        "Speed": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        }
+    }
+}

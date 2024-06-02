@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 641,
+    "type": {
+        "type-0": "Flying"
+    },
+    "abilities": {
+        "ability-0": "Prankster",
+        "ability-1": "Defiant"
+    },
+    "stats": {
+        "HP": {
+            "base": 79,
+            "min": 268,
+            "max": 362
+        },
+        "Attack": {
+            "base": 115,
+            "min": 211,
+            "max": 361
+        },
+        "Defense": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        },
+        "Sp. Atk": {
+            "base": 125,
+            "min": 229,
+            "max": 383
+        },
+        "Sp. Def": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        },
+        "Speed": {
+            "base": 111,
+            "min": 204,
+            "max": 353
+        }
+    }
+}

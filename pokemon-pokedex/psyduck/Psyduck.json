@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 54,
+    "type": {
+        "type-0": "Water"
+    },
+    "abilities": {
+        "ability-0": "Damp",
+        "ability-1": "Cloud Nine",
+        "ability-2": "Swift Swim"
+    },
+    "stats": {
+        "HP": {
+            "base": 50,
+            "min": 210,
+            "max": 304
+        },
+        "Attack": {
+            "base": 52,
+            "min": 98,
+            "max": 223
+        },
+        "Defense": {
+            "base": 48,
+            "min": 90,
+            "max": 214
+        },
+        "Sp. Atk": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Sp. Def": {
+            "base": 50,
+            "min": 94,
+            "max": 218
+        },
+        "Speed": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        }
+    }
+}

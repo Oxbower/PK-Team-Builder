@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 670,
+    "type": {
+        "type-0": "Fairy"
+    },
+    "abilities": {
+        "ability-0": "Flower Veil",
+        "ability-1": "Symbiosis"
+    },
+    "stats": {
+        "HP": {
+            "base": 54,
+            "min": 218,
+            "max": 312
+        },
+        "Attack": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        },
+        "Defense": {
+            "base": 47,
+            "min": 89,
+            "max": 212
+        },
+        "Sp. Atk": {
+            "base": 75,
+            "min": 139,
+            "max": 273
+        },
+        "Sp. Def": {
+            "base": 98,
+            "min": 180,
+            "max": 324
+        },
+        "Speed": {
+            "base": 52,
+            "min": 98,
+            "max": 223
+        }
+    }
+}

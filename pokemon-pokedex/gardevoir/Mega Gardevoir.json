@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 282,
+    "type": {
+        "type-0": "Psychic",
+        "type-1": "Fairy"
+    },
+    "abilities": {
+        "ability-0": "Pixilate"
+    },
+    "stats": {
+        "HP": {
+            "base": 68,
+            "min": 246,
+            "max": 340
+        },
+        "Attack": {
+            "base": 85,
+            "min": 157,
+            "max": 295
+        },
+        "Defense": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Sp. Atk": {
+            "base": 165,
+            "min": 301,
+            "max": 471
+        },
+        "Sp. Def": {
+            "base": 135,
+            "min": 247,
+            "max": 405
+        },
+        "Speed": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        }
+    }
+}

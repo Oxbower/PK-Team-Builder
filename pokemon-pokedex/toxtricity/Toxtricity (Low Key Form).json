@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 849,
+    "type": {
+        "type-0": "Electric",
+        "type-1": "Poison"
+    },
+    "abilities": {
+        "ability-0": "Punk Rock",
+        "ability-1": "Minus",
+        "ability-2": "Technician"
+    },
+    "stats": {
+        "HP": {
+            "base": 75,
+            "min": 260,
+            "max": 354
+        },
+        "Attack": {
+            "base": 98,
+            "min": 180,
+            "max": 324
+        },
+        "Defense": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        },
+        "Sp. Atk": {
+            "base": 114,
+            "min": 209,
+            "max": 359
+        },
+        "Sp. Def": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        },
+        "Speed": {
+            "base": 75,
+            "min": 139,
+            "max": 273
+        }
+    }
+}

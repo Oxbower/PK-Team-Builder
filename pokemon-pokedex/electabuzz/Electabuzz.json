@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 125,
+    "type": {
+        "type-0": "Electric"
+    },
+    "abilities": {
+        "ability-0": "Static",
+        "ability-1": "Vital Spirit"
+    },
+    "stats": {
+        "HP": {
+            "base": 65,
+            "min": 240,
+            "max": 334
+        },
+        "Attack": {
+            "base": 83,
+            "min": 153,
+            "max": 291
+        },
+        "Defense": {
+            "base": 57,
+            "min": 107,
+            "max": 234
+        },
+        "Sp. Atk": {
+            "base": 95,
+            "min": 175,
+            "max": 317
+        },
+        "Sp. Def": {
+            "base": 85,
+            "min": 157,
+            "max": 295
+        },
+        "Speed": {
+            "base": 105,
+            "min": 193,
+            "max": 339
+        }
+    }
+}

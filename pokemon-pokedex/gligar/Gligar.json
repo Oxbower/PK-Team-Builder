@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 207,
+    "type": {
+        "type-0": "Ground",
+        "type-1": "Flying"
+    },
+    "abilities": {
+        "ability-0": "Hyper Cutter",
+        "ability-1": "Sand Veil",
+        "ability-2": "Immunity"
+    },
+    "stats": {
+        "HP": {
+            "base": 65,
+            "min": 240,
+            "max": 334
+        },
+        "Attack": {
+            "base": 75,
+            "min": 139,
+            "max": 273
+        },
+        "Defense": {
+            "base": 105,
+            "min": 193,
+            "max": 339
+        },
+        "Sp. Atk": {
+            "base": 35,
+            "min": 67,
+            "max": 185
+        },
+        "Sp. Def": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Speed": {
+            "base": 85,
+            "min": 157,
+            "max": 295
+        }
+    }
+}

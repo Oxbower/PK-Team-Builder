@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 132,
+    "type": {
+        "type-0": "Normal"
+    },
+    "abilities": {
+        "ability-0": "Limber",
+        "ability-1": "Imposter"
+    },
+    "stats": {
+        "HP": {
+            "base": 48,
+            "min": 206,
+            "max": 300
+        },
+        "Attack": {
+            "base": 48,
+            "min": 90,
+            "max": 214
+        },
+        "Defense": {
+            "base": 48,
+            "min": 90,
+            "max": 214
+        },
+        "Sp. Atk": {
+            "base": 48,
+            "min": 90,
+            "max": 214
+        },
+        "Sp. Def": {
+            "base": 48,
+            "min": 90,
+            "max": 214
+        },
+        "Speed": {
+            "base": 48,
+            "min": 90,
+            "max": 214
+        }
+    }
+}

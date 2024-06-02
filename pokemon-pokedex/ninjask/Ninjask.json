@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 291,
+    "type": {
+        "type-0": "Bug",
+        "type-1": "Flying"
+    },
+    "abilities": {
+        "ability-0": "Speed Boost",
+        "ability-1": "Infiltrator"
+    },
+    "stats": {
+        "HP": {
+            "base": 61,
+            "min": 232,
+            "max": 326
+        },
+        "Attack": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        },
+        "Defense": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        },
+        "Sp. Atk": {
+            "base": 50,
+            "min": 94,
+            "max": 218
+        },
+        "Sp. Def": {
+            "base": 50,
+            "min": 94,
+            "max": 218
+        },
+        "Speed": {
+            "base": 160,
+            "min": 292,
+            "max": 460
+        }
+    }
+}

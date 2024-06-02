@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 475,
+    "type": {
+        "type-0": "Psychic",
+        "type-1": "Fighting"
+    },
+    "abilities": {
+        "ability-0": "Inner Focus"
+    },
+    "stats": {
+        "HP": {
+            "base": 68,
+            "min": 246,
+            "max": 340
+        },
+        "Attack": {
+            "base": 165,
+            "min": 301,
+            "max": 471
+        },
+        "Defense": {
+            "base": 95,
+            "min": 175,
+            "max": 317
+        },
+        "Sp. Atk": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Sp. Def": {
+            "base": 115,
+            "min": 211,
+            "max": 361
+        },
+        "Speed": {
+            "base": 110,
+            "min": 202,
+            "max": 350
+        }
+    }
+}

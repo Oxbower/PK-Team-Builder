@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 1,
+    "type": {
+        "type-0": "Grass",
+        "type-1": "Poison"
+    },
+    "abilities": {
+        "ability-0": "Overgrow",
+        "ability-1": "Chlorophyll"
+    },
+    "stats": {
+        "HP": {
+            "base": 45,
+            "min": 200,
+            "max": 294
+        },
+        "Attack": {
+            "base": 49,
+            "min": 92,
+            "max": 216
+        },
+        "Defense": {
+            "base": 49,
+            "min": 92,
+            "max": 216
+        },
+        "Sp. Atk": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Sp. Def": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Speed": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        }
+    }
+}

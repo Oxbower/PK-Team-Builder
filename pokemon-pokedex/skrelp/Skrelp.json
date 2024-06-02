@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 690,
+    "type": {
+        "type-0": "Poison",
+        "type-1": "Water"
+    },
+    "abilities": {
+        "ability-0": "Poison Point",
+        "ability-1": "Poison Touch",
+        "ability-2": "Adaptability"
+    },
+    "stats": {
+        "HP": {
+            "base": 50,
+            "min": 210,
+            "max": 304
+        },
+        "Attack": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Defense": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Sp. Atk": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Sp. Def": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Speed": {
+            "base": 30,
+            "min": 58,
+            "max": 174
+        }
+    }
+}

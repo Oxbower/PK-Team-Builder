@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 340,
+    "type": {
+        "type-0": "Water",
+        "type-1": "Ground"
+    },
+    "abilities": {
+        "ability-0": "Oblivious",
+        "ability-1": "Anticipation",
+        "ability-2": "Hydration"
+    },
+    "stats": {
+        "HP": {
+            "base": 110,
+            "min": 330,
+            "max": 424
+        },
+        "Attack": {
+            "base": 78,
+            "min": 144,
+            "max": 280
+        },
+        "Defense": {
+            "base": 73,
+            "min": 135,
+            "max": 269
+        },
+        "Sp. Atk": {
+            "base": 76,
+            "min": 141,
+            "max": 276
+        },
+        "Sp. Def": {
+            "base": 71,
+            "min": 132,
+            "max": 265
+        },
+        "Speed": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        }
+    }
+}

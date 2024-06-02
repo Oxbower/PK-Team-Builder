@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 298,
+    "type": {
+        "type-0": "Normal",
+        "type-1": "Fairy"
+    },
+    "abilities": {
+        "ability-0": "Thick Fat",
+        "ability-1": "Huge Power",
+        "ability-2": "Sap Sipper"
+    },
+    "stats": {
+        "HP": {
+            "base": 50,
+            "min": 210,
+            "max": 304
+        },
+        "Attack": {
+            "base": 20,
+            "min": 40,
+            "max": 152
+        },
+        "Defense": {
+            "base": 40,
+            "min": 76,
+            "max": 196
+        },
+        "Sp. Atk": {
+            "base": 20,
+            "min": 40,
+            "max": 152
+        },
+        "Sp. Def": {
+            "base": 40,
+            "min": 76,
+            "max": 196
+        },
+        "Speed": {
+            "base": 20,
+            "min": 40,
+            "max": 152
+        }
+    }
+}

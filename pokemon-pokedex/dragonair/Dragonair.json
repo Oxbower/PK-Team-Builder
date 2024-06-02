@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 148,
+    "type": {
+        "type-0": "Dragon"
+    },
+    "abilities": {
+        "ability-0": "Shed Skin",
+        "ability-1": "Marvel Scale"
+    },
+    "stats": {
+        "HP": {
+            "base": 61,
+            "min": 232,
+            "max": 326
+        },
+        "Attack": {
+            "base": 84,
+            "min": 155,
+            "max": 293
+        },
+        "Defense": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Sp. Atk": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        },
+        "Sp. Def": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        },
+        "Speed": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        }
+    }
+}

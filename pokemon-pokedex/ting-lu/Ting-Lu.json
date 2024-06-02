@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 1003,
+    "type": {
+        "type-0": "Dark",
+        "type-1": "Ground"
+    },
+    "abilities": {
+        "ability-0": "Vessel of Ruin"
+    },
+    "stats": {
+        "HP": {
+            "base": 155,
+            "min": 420,
+            "max": 514
+        },
+        "Attack": {
+            "base": 110,
+            "min": 202,
+            "max": 350
+        },
+        "Defense": {
+            "base": 125,
+            "min": 229,
+            "max": 383
+        },
+        "Sp. Atk": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        },
+        "Sp. Def": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        },
+        "Speed": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        }
+    }
+}

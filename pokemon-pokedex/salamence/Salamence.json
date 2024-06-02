@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 373,
+    "type": {
+        "type-0": "Dragon",
+        "type-1": "Flying"
+    },
+    "abilities": {
+        "ability-0": "Intimidate",
+        "ability-1": "Moxie"
+    },
+    "stats": {
+        "HP": {
+            "base": 95,
+            "min": 300,
+            "max": 394
+        },
+        "Attack": {
+            "base": 135,
+            "min": 247,
+            "max": 405
+        },
+        "Defense": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        },
+        "Sp. Atk": {
+            "base": 110,
+            "min": 202,
+            "max": 350
+        },
+        "Sp. Def": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        },
+        "Speed": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        }
+    }
+}

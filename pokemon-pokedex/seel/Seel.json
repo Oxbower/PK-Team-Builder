@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 86,
+    "type": {
+        "type-0": "Water"
+    },
+    "abilities": {
+        "ability-0": "Thick Fat",
+        "ability-1": "Hydration",
+        "ability-2": "Ice Body"
+    },
+    "stats": {
+        "HP": {
+            "base": 65,
+            "min": 240,
+            "max": 334
+        },
+        "Attack": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        },
+        "Defense": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        },
+        "Sp. Atk": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        },
+        "Sp. Def": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        },
+        "Speed": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        }
+    }
+}

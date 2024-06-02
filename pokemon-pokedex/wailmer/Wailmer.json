@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 320,
+    "type": {
+        "type-0": "Water"
+    },
+    "abilities": {
+        "ability-0": "Water Veil",
+        "ability-1": "Oblivious",
+        "ability-2": "Pressure"
+    },
+    "stats": {
+        "HP": {
+            "base": 130,
+            "min": 370,
+            "max": 464
+        },
+        "Attack": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        },
+        "Defense": {
+            "base": 35,
+            "min": 67,
+            "max": 185
+        },
+        "Sp. Atk": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        },
+        "Sp. Def": {
+            "base": 35,
+            "min": 67,
+            "max": 185
+        },
+        "Speed": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        }
+    }
+}

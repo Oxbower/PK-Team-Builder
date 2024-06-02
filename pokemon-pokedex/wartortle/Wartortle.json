@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 8,
+    "type": {
+        "type-0": "Water"
+    },
+    "abilities": {
+        "ability-0": "Torrent",
+        "ability-1": "Rain Dish"
+    },
+    "stats": {
+        "HP": {
+            "base": 59,
+            "min": 228,
+            "max": 322
+        },
+        "Attack": {
+            "base": 63,
+            "min": 117,
+            "max": 247
+        },
+        "Defense": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        },
+        "Sp. Atk": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Sp. Def": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        },
+        "Speed": {
+            "base": 58,
+            "min": 108,
+            "max": 236
+        }
+    }
+}

@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 214,
+    "type": {
+        "type-0": "Bug",
+        "type-1": "Fighting"
+    },
+    "abilities": {
+        "ability-0": "Skill Link"
+    },
+    "stats": {
+        "HP": {
+            "base": 80,
+            "min": 270,
+            "max": 364
+        },
+        "Attack": {
+            "base": 185,
+            "min": 337,
+            "max": 515
+        },
+        "Defense": {
+            "base": 115,
+            "min": 211,
+            "max": 361
+        },
+        "Sp. Atk": {
+            "base": 40,
+            "min": 76,
+            "max": 196
+        },
+        "Sp. Def": {
+            "base": 105,
+            "min": 193,
+            "max": 339
+        },
+        "Speed": {
+            "base": 75,
+            "min": 139,
+            "max": 273
+        }
+    }
+}

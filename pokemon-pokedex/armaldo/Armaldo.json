@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 348,
+    "type": {
+        "type-0": "Rock",
+        "type-1": "Bug"
+    },
+    "abilities": {
+        "ability-0": "Battle Armor",
+        "ability-1": "Swift Swim"
+    },
+    "stats": {
+        "HP": {
+            "base": 75,
+            "min": 260,
+            "max": 354
+        },
+        "Attack": {
+            "base": 125,
+            "min": 229,
+            "max": 383
+        },
+        "Defense": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        },
+        "Sp. Atk": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        },
+        "Sp. Def": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        },
+        "Speed": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        }
+    }
+}

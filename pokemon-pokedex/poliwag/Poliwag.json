@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 60,
+    "type": {
+        "type-0": "Water"
+    },
+    "abilities": {
+        "ability-0": "Water Absorb",
+        "ability-1": "Damp",
+        "ability-2": "Swift Swim"
+    },
+    "stats": {
+        "HP": {
+            "base": 40,
+            "min": 190,
+            "max": 284
+        },
+        "Attack": {
+            "base": 50,
+            "min": 94,
+            "max": 218
+        },
+        "Defense": {
+            "base": 40,
+            "min": 76,
+            "max": 196
+        },
+        "Sp. Atk": {
+            "base": 40,
+            "min": 76,
+            "max": 196
+        },
+        "Sp. Def": {
+            "base": 40,
+            "min": 76,
+            "max": 196
+        },
+        "Speed": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        }
+    }
+}

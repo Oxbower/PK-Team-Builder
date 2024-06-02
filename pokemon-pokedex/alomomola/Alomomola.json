@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 594,
+    "type": {
+        "type-0": "Water"
+    },
+    "abilities": {
+        "ability-0": "Healer",
+        "ability-1": "Hydration",
+        "ability-2": "Regenerator"
+    },
+    "stats": {
+        "HP": {
+            "base": 165,
+            "min": 440,
+            "max": 534
+        },
+        "Attack": {
+            "base": 75,
+            "min": 139,
+            "max": 273
+        },
+        "Defense": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        },
+        "Sp. Atk": {
+            "base": 40,
+            "min": 76,
+            "max": 196
+        },
+        "Sp. Def": {
+            "base": 45,
+            "min": 85,
+            "max": 207
+        },
+        "Speed": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        }
+    }
+}

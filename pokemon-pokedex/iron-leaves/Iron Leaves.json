@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 1010,
+    "type": {
+        "type-0": "Grass",
+        "type-1": "Psychic"
+    },
+    "abilities": {
+        "ability-0": "Quark Drive"
+    },
+    "stats": {
+        "HP": {
+            "base": 90,
+            "min": 290,
+            "max": 384
+        },
+        "Attack": {
+            "base": 130,
+            "min": 238,
+            "max": 394
+        },
+        "Defense": {
+            "base": 88,
+            "min": 162,
+            "max": 302
+        },
+        "Sp. Atk": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        },
+        "Sp. Def": {
+            "base": 108,
+            "min": 198,
+            "max": 346
+        },
+        "Speed": {
+            "base": 104,
+            "min": 191,
+            "max": 337
+        }
+    }
+}

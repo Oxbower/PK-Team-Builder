@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 83,
+    "type": {
+        "type-0": "Normal",
+        "type-1": "Flying"
+    },
+    "abilities": {
+        "ability-0": "Keen Eye",
+        "ability-1": "Inner Focus",
+        "ability-2": "Defiant"
+    },
+    "stats": {
+        "HP": {
+            "base": 52,
+            "min": 214,
+            "max": 308
+        },
+        "Attack": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        },
+        "Defense": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        },
+        "Sp. Atk": {
+            "base": 58,
+            "min": 108,
+            "max": 236
+        },
+        "Sp. Def": {
+            "base": 62,
+            "min": 116,
+            "max": 245
+        },
+        "Speed": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        }
+    }
+}

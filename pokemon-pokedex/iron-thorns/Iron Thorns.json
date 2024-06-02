@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 995,
+    "type": {
+        "type-0": "Rock",
+        "type-1": "Electric"
+    },
+    "abilities": {
+        "ability-0": "Quark Drive"
+    },
+    "stats": {
+        "HP": {
+            "base": 100,
+            "min": 310,
+            "max": 404
+        },
+        "Attack": {
+            "base": 134,
+            "min": 245,
+            "max": 403
+        },
+        "Defense": {
+            "base": 110,
+            "min": 202,
+            "max": 350
+        },
+        "Sp. Atk": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        },
+        "Sp. Def": {
+            "base": 84,
+            "min": 155,
+            "max": 293
+        },
+        "Speed": {
+            "base": 72,
+            "min": 134,
+            "max": 267
+        }
+    }
+}

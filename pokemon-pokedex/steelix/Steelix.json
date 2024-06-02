@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 208,
+    "type": {
+        "type-0": "Steel",
+        "type-1": "Ground"
+    },
+    "abilities": {
+        "ability-0": "Rock Head",
+        "ability-1": "Sturdy",
+        "ability-2": "Sheer Force"
+    },
+    "stats": {
+        "HP": {
+            "base": 75,
+            "min": 260,
+            "max": 354
+        },
+        "Attack": {
+            "base": 85,
+            "min": 157,
+            "max": 295
+        },
+        "Defense": {
+            "base": 200,
+            "min": 364,
+            "max": 548
+        },
+        "Sp. Atk": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        },
+        "Sp. Def": {
+            "base": 65,
+            "min": 121,
+            "max": 251
+        },
+        "Speed": {
+            "base": 30,
+            "min": 58,
+            "max": 174
+        }
+    }
+}

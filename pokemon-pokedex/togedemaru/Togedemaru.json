@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 777,
+    "type": {
+        "type-0": "Electric",
+        "type-1": "Steel"
+    },
+    "abilities": {
+        "ability-0": "Iron Barbs",
+        "ability-1": "Lightning Rod",
+        "ability-2": "Sturdy"
+    },
+    "stats": {
+        "HP": {
+            "base": 65,
+            "min": 240,
+            "max": 334
+        },
+        "Attack": {
+            "base": 98,
+            "min": 180,
+            "max": 324
+        },
+        "Defense": {
+            "base": 63,
+            "min": 117,
+            "max": 247
+        },
+        "Sp. Atk": {
+            "base": 40,
+            "min": 76,
+            "max": 196
+        },
+        "Sp. Def": {
+            "base": 73,
+            "min": 135,
+            "max": 269
+        },
+        "Speed": {
+            "base": 96,
+            "min": 177,
+            "max": 320
+        }
+    }
+}

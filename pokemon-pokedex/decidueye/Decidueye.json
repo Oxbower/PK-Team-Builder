@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 724,
+    "type": {
+        "type-0": "Grass",
+        "type-1": "Ghost"
+    },
+    "abilities": {
+        "ability-0": "Overgrow",
+        "ability-1": "Long Reach"
+    },
+    "stats": {
+        "HP": {
+            "base": 78,
+            "min": 266,
+            "max": 360
+        },
+        "Attack": {
+            "base": 107,
+            "min": 197,
+            "max": 344
+        },
+        "Defense": {
+            "base": 75,
+            "min": 139,
+            "max": 273
+        },
+        "Sp. Atk": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        },
+        "Sp. Def": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        },
+        "Speed": {
+            "base": 70,
+            "min": 130,
+            "max": 262
+        }
+    }
+}

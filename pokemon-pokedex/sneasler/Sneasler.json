@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 903,
+    "type": {
+        "type-0": "Fighting",
+        "type-1": "Poison"
+    },
+    "abilities": {
+        "ability-0": "Pressure",
+        "ability-1": "Unburden",
+        "ability-2": "Poison Touch"
+    },
+    "stats": {
+        "HP": {
+            "base": 80,
+            "min": 270,
+            "max": 364
+        },
+        "Attack": {
+            "base": 130,
+            "min": 238,
+            "max": 394
+        },
+        "Defense": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Sp. Atk": {
+            "base": 40,
+            "min": 76,
+            "max": 196
+        },
+        "Sp. Def": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        },
+        "Speed": {
+            "base": 120,
+            "min": 220,
+            "max": 372
+        }
+    }
+}

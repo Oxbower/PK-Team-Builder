@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 229,
+    "type": {
+        "type-0": "Dark",
+        "type-1": "Fire"
+    },
+    "abilities": {
+        "ability-0": "Solar Power"
+    },
+    "stats": {
+        "HP": {
+            "base": 75,
+            "min": 260,
+            "max": 354
+        },
+        "Attack": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        },
+        "Defense": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        },
+        "Sp. Atk": {
+            "base": 140,
+            "min": 256,
+            "max": 416
+        },
+        "Sp. Def": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        },
+        "Speed": {
+            "base": 115,
+            "min": 211,
+            "max": 361
+        }
+    }
+}

@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 794,
+    "type": {
+        "type-0": "Bug",
+        "type-1": "Fighting"
+    },
+    "abilities": {
+        "ability-0": "Beast Boost"
+    },
+    "stats": {
+        "HP": {
+            "base": 107,
+            "min": 324,
+            "max": 418
+        },
+        "Attack": {
+            "base": 139,
+            "min": 254,
+            "max": 414
+        },
+        "Defense": {
+            "base": 139,
+            "min": 254,
+            "max": 414
+        },
+        "Sp. Atk": {
+            "base": 53,
+            "min": 99,
+            "max": 225
+        },
+        "Sp. Def": {
+            "base": 53,
+            "min": 99,
+            "max": 225
+        },
+        "Speed": {
+            "base": 79,
+            "min": 146,
+            "max": 282
+        }
+    }
+}

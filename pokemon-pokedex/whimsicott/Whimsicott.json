@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 547,
+    "type": {
+        "type-0": "Grass",
+        "type-1": "Fairy"
+    },
+    "abilities": {
+        "ability-0": "Prankster",
+        "ability-1": "Infiltrator",
+        "ability-2": "Chlorophyll"
+    },
+    "stats": {
+        "HP": {
+            "base": 60,
+            "min": 230,
+            "max": 324
+        },
+        "Attack": {
+            "base": 67,
+            "min": 125,
+            "max": 256
+        },
+        "Defense": {
+            "base": 85,
+            "min": 157,
+            "max": 295
+        },
+        "Sp. Atk": {
+            "base": 77,
+            "min": 143,
+            "max": 278
+        },
+        "Sp. Def": {
+            "base": 75,
+            "min": 139,
+            "max": 273
+        },
+        "Speed": {
+            "base": 116,
+            "min": 213,
+            "max": 364
+        }
+    }
+}

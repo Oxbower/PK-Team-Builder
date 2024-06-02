@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 1014,
+    "type": {
+        "type-0": "Poison",
+        "type-1": "Fighting"
+    },
+    "abilities": {
+        "ability-0": "Toxic Chain",
+        "ability-1": "Guard Dog"
+    },
+    "stats": {
+        "HP": {
+            "base": 88,
+            "min": 286,
+            "max": 380
+        },
+        "Attack": {
+            "base": 128,
+            "min": 234,
+            "max": 390
+        },
+        "Defense": {
+            "base": 115,
+            "min": 211,
+            "max": 361
+        },
+        "Sp. Atk": {
+            "base": 58,
+            "min": 108,
+            "max": 236
+        },
+        "Sp. Def": {
+            "base": 86,
+            "min": 159,
+            "max": 298
+        },
+        "Speed": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        }
+    }
+}

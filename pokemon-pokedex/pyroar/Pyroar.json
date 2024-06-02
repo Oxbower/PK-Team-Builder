@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 668,
+    "type": {
+        "type-0": "Fire",
+        "type-1": "Normal"
+    },
+    "abilities": {
+        "ability-0": "Rivalry",
+        "ability-1": "Unnerve",
+        "ability-2": "Moxie"
+    },
+    "stats": {
+        "HP": {
+            "base": 86,
+            "min": 282,
+            "max": 376
+        },
+        "Attack": {
+            "base": 68,
+            "min": 126,
+            "max": 258
+        },
+        "Defense": {
+            "base": 72,
+            "min": 134,
+            "max": 267
+        },
+        "Sp. Atk": {
+            "base": 109,
+            "min": 200,
+            "max": 348
+        },
+        "Sp. Def": {
+            "base": 66,
+            "min": 123,
+            "max": 254
+        },
+        "Speed": {
+            "base": 106,
+            "min": 195,
+            "max": 342
+        }
+    }
+}

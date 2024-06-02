@@ -1,0 +1,41 @@
+{
+    "pokedex-no": 796,
+    "type": {
+        "type-0": "Electric"
+    },
+    "abilities": {
+        "ability-0": "Beast Boost"
+    },
+    "stats": {
+        "HP": {
+            "base": 83,
+            "min": 276,
+            "max": 370
+        },
+        "Attack": {
+            "base": 89,
+            "min": 164,
+            "max": 304
+        },
+        "Defense": {
+            "base": 71,
+            "min": 132,
+            "max": 265
+        },
+        "Sp. Atk": {
+            "base": 173,
+            "min": 315,
+            "max": 489
+        },
+        "Sp. Def": {
+            "base": 71,
+            "min": 132,
+            "max": 265
+        },
+        "Speed": {
+            "base": 83,
+            "min": 153,
+            "max": 291
+        }
+    }
+}

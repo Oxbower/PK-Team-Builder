@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 834,
+    "type": {
+        "type-0": "Water",
+        "type-1": "Rock"
+    },
+    "abilities": {
+        "ability-0": "Strong Jaw",
+        "ability-1": "Shell Armor",
+        "ability-2": "Swift Swim"
+    },
+    "stats": {
+        "HP": {
+            "base": 90,
+            "min": 290,
+            "max": 384
+        },
+        "Attack": {
+            "base": 115,
+            "min": 211,
+            "max": 361
+        },
+        "Defense": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        },
+        "Sp. Atk": {
+            "base": 48,
+            "min": 90,
+            "max": 214
+        },
+        "Sp. Def": {
+            "base": 68,
+            "min": 126,
+            "max": 258
+        },
+        "Speed": {
+            "base": 74,
+            "min": 137,
+            "max": 271
+        }
+    }
+}

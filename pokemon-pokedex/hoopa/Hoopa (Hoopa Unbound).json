@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 720,
+    "type": {
+        "type-0": "Psychic",
+        "type-1": "Dark"
+    },
+    "abilities": {
+        "ability-0": "Magician"
+    },
+    "stats": {
+        "HP": {
+            "base": 80,
+            "min": 270,
+            "max": 364
+        },
+        "Attack": {
+            "base": 160,
+            "min": 292,
+            "max": 460
+        },
+        "Defense": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Sp. Atk": {
+            "base": 170,
+            "min": 310,
+            "max": 482
+        },
+        "Sp. Def": {
+            "base": 130,
+            "min": 238,
+            "max": 394
+        },
+        "Speed": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        }
+    }
+}

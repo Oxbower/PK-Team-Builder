@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 771,
+    "type": {
+        "type-0": "Water"
+    },
+    "abilities": {
+        "ability-0": "Innards Out",
+        "ability-1": "Unaware"
+    },
+    "stats": {
+        "HP": {
+            "base": 55,
+            "min": 220,
+            "max": 314
+        },
+        "Attack": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Defense": {
+            "base": 130,
+            "min": 238,
+            "max": 394
+        },
+        "Sp. Atk": {
+            "base": 30,
+            "min": 58,
+            "max": 174
+        },
+        "Sp. Def": {
+            "base": 130,
+            "min": 238,
+            "max": 394
+        },
+        "Speed": {
+            "base": 5,
+            "min": 13,
+            "max": 119
+        }
+    }
+}

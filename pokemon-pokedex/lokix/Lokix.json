@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 920,
+    "type": {
+        "type-0": "Bug",
+        "type-1": "Dark"
+    },
+    "abilities": {
+        "ability-0": "Swarm",
+        "ability-1": "Tinted Lens"
+    },
+    "stats": {
+        "HP": {
+            "base": 71,
+            "min": 252,
+            "max": 346
+        },
+        "Attack": {
+            "base": 102,
+            "min": 188,
+            "max": 333
+        },
+        "Defense": {
+            "base": 78,
+            "min": 144,
+            "max": 280
+        },
+        "Sp. Atk": {
+            "base": 52,
+            "min": 98,
+            "max": 223
+        },
+        "Sp. Def": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        },
+        "Speed": {
+            "base": 92,
+            "min": 170,
+            "max": 311
+        }
+    }
+}

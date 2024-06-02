@@ -1,0 +1,43 @@
+{
+    "pokedex-no": 621,
+    "type": {
+        "type-0": "Dragon"
+    },
+    "abilities": {
+        "ability-0": "Rough Skin",
+        "ability-1": "Sheer Force",
+        "ability-2": "Mold Breaker"
+    },
+    "stats": {
+        "HP": {
+            "base": 77,
+            "min": 264,
+            "max": 358
+        },
+        "Attack": {
+            "base": 120,
+            "min": 220,
+            "max": 372
+        },
+        "Defense": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        },
+        "Sp. Atk": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Sp. Def": {
+            "base": 90,
+            "min": 166,
+            "max": 306
+        },
+        "Speed": {
+            "base": 48,
+            "min": 90,
+            "max": 214
+        }
+    }
+}

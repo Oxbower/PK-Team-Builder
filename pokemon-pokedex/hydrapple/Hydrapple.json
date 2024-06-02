@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 1019,
+    "type": {
+        "type-0": "Grass",
+        "type-1": "Dragon"
+    },
+    "abilities": {
+        "ability-0": "Supersweet Syrup",
+        "ability-1": "Regenerator",
+        "ability-2": "Sticky Hold"
+    },
+    "stats": {
+        "HP": {
+            "base": 106,
+            "min": 322,
+            "max": 416
+        },
+        "Attack": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        },
+        "Defense": {
+            "base": 110,
+            "min": 202,
+            "max": 350
+        },
+        "Sp. Atk": {
+            "base": 120,
+            "min": 220,
+            "max": 372
+        },
+        "Sp. Def": {
+            "base": 80,
+            "min": 148,
+            "max": 284
+        },
+        "Speed": {
+            "base": 44,
+            "min": 83,
+            "max": 205
+        }
+    }
+}

@@ -1,0 +1,42 @@
+{
+    "pokedex-no": 892,
+    "type": {
+        "type-0": "Fighting",
+        "type-1": "Water"
+    },
+    "abilities": {
+        "ability-0": "Unseen Fist"
+    },
+    "stats": {
+        "HP": {
+            "base": 100,
+            "min": 310,
+            "max": 404
+        },
+        "Attack": {
+            "base": 130,
+            "min": 238,
+            "max": 394
+        },
+        "Defense": {
+            "base": 100,
+            "min": 184,
+            "max": 328
+        },
+        "Sp. Atk": {
+            "base": 63,
+            "min": 117,
+            "max": 247
+        },
+        "Sp. Def": {
+            "base": 60,
+            "min": 112,
+            "max": 240
+        },
+        "Speed": {
+            "base": 97,
+            "min": 179,
+            "max": 322
+        }
+    }
+}

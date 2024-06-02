@@ -1,0 +1,44 @@
+{
+    "pokedex-no": 363,
+    "type": {
+        "type-0": "Ice",
+        "type-1": "Water"
+    },
+    "abilities": {
+        "ability-0": "Thick Fat",
+        "ability-1": "Ice Body",
+        "ability-2": "Oblivious"
+    },
+    "stats": {
+        "HP": {
+            "base": 70,
+            "min": 250,
+            "max": 344
+        },
+        "Attack": {
+            "base": 40,
+            "min": 76,
+            "max": 196
+        },
+        "Defense": {
+            "base": 50,
+            "min": 94,
+            "max": 218
+        },
+        "Sp. Atk": {
+            "base": 55,
+            "min": 103,
+            "max": 229
+        },
+        "Sp. Def": {
+            "base": 50,
+            "min": 94,
+            "max": 218
+        },
+        "Speed": {
+            "base": 25,
+            "min": 49,
+            "max": 163
+        }
+    }
+}
