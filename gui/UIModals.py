@@ -262,7 +262,7 @@ class UIModals:
         :return: None
         """
         row_label = ["", "HP", "Attack", "Defense", "Sp. Atk", "Sp. Def", "Speed", "Total"]
-        column_label = ["Base", "", "Min", "Max"]
+        column_label = ["Base", "", "", ""]
 
         # Build Row
         for row in range(1, 9):  # hard-coded range(), update if they add new stats
@@ -312,6 +312,12 @@ class UIModals:
         for col in range(len(column_label)):
             if col != 1:
                 self.stats_widget[""][col].configure(text=column_label[col])
+
+        self.stats_widget["Total"][2].configure(text="Min")
+        self.stats_widget["Total"][3].configure(text="Max")
+
+
+        self.modal_interact.set_stats_widget(self.stats_widget)
 
         # test = [1,2,3,4,5,6,7]
         #

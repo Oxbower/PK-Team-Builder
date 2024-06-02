@@ -18,6 +18,9 @@ class ModalInteraction:
         self.searchAlgorithm = SearchResult.SearchResult()
         self.modalUpdate = ModalUpdate.ModalUpdate(gui, ctk, mainWindow, Frame, self)
 
+    def set_stats_widget(self, stats_widget):
+        self.modalUpdate.set_stats_widget(stats_widget)
+
     def set_search_modal_frame(self, Frame):
         """
         Set search frame after it was built
@@ -80,6 +83,13 @@ class ModalInteraction:
         self.modalUpdate.destroy_result_frame()
 
     def clicked_variation_button(self, parentFrame, parentButton, image_ref):
+        """
+        Buttons in the sliding frame to change which variation is active
+        :param parentFrame: parent frame of the variation button
+        :param parentButton: parent button of the variation button
+        :param image_ref: reference for the arrow image for the button to open the variation menu
+        :return: None
+        """
         self.mainWindow.root.focus_set()
 
         self.modalUpdate.build_dynamic_variation_button(parentFrame, parentButton, image_ref)

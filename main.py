@@ -25,7 +25,7 @@ def main():
     new_window.create_window()
     window = new_window.root
 
-    app.load_app()
+    # app.load_app()
 
     # run window main loop
     window.mainloop()

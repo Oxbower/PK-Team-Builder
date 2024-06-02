@@ -42,17 +42,11 @@ def unwrap_json(json_data):
     return text
 
 
-def load_csv():
+def json_load(path):
     """
     Load JSON files into ram
     """
-    d_ref = ['types', 'pokemon', 'abilities', 'moves']
+    with open(path, "r") as ref:
+        data = json.load(ref)
 
-    for i in range(len(d_ref)):
-        with open(build_path(d_ref[i])) as ref:
-            val = json.load(ref)
-            d_ref[i] = val
-
-    unwrapped_data = unwrap_json(d_ref[1])
-
-    return d_ref[0], unwrapped_data, d_ref[2], d_ref[3]
+    return data

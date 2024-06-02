@@ -1,6 +1,7 @@
 import gui.SearchUI as SearchUI
 import os
-from interaction.ReadFiles import build_img_ref
+import json
+from interaction.ReadFiles import build_img_ref, json_load
 from PIL import Image
 
 
@@ -21,6 +22,7 @@ class ModalUpdate:
         self.img_holder = None
         self.var_frame = None
         self.stringvar = None
+        self.stats_widget = None
 
         self.delta_width = 10
         self.frames = 25
@@ -34,7 +36,16 @@ class ModalUpdate:
                                             width=self.gui.img_width,
                                             corner_radius=self.gui.rounded_corner)
 
+    def set_stats_widget(self, stats_widget):
+        self.stats_widget = stats_widget
+
     def set_variation_frame(self, Frame, stringvar):
+        """
+        pass in the variation frame to display current pokemons different forms
+        :param Frame: frame to put the forms in
+        :param stringvar: passed in function to update name display
+        :return: None
+        """
         self.var_frame = Frame
         self.stringvar = stringvar
 
@@ -102,7 +113,7 @@ class ModalUpdate:
                                       size=(image_ref[1].width, image_ref[1].height))
             parentButton.configure(image=image)
 
-    def build_dynamic_variation_modal(self, ref_path):
+    def build_dynamic_variation_modal(self, ref_path, folder_name):
         """
         Builds a dynamic modal for the number of variations this pokemon has, this only runs once on query
         :return: None
@@ -134,7 +145,7 @@ class ModalUpdate:
                                                   width=self.frames * self.delta_width,
                                                   image=image_container,
                                                   text=name,
-                                                  command=lambda string=value: self.build_image(string))
+                                                  command=lambda string=value: self.update_display(string))
 
             if self.variation_frame:
                 variation_button.grid(sticky="news", pady=5, padx=5, column=0)
@@ -149,14 +160,14 @@ class ModalUpdate:
                 name = name.split(".jpg")[0]
 
             if not any(s in name for s in variant):
-                self.build_image(value)
+                self.update_display(value)
                 self.stringvar(name)
                 break
 
     def build_path_ref(self, string):
         """
         Builds the image frame
-        :return:
+        :return: None
         """
         name = string.lower()
         name = name.split(' ')
@@ -164,7 +175,7 @@ class ModalUpdate:
 
         print("Clicked Result: " + name)
         ref_path = build_img_ref(name)
-        self.build_dynamic_variation_modal(ref_path)
+        self.build_dynamic_variation_modal(ref_path, name)
 
     def build_image(self, image_path):  # Modular do not mess with this anymore
         """
@@ -193,3 +204,28 @@ class ModalUpdate:
         self.img_holder.configure(image=image_container)
 
         self.img_holder.pack()
+
+    def update_display(self, string):
+        stats_folder = 'pokemon-pokedex'
+
+        path = os.path.split(string)
+        head_path = os.path.split(path[0])[1]
+        tail_path = path[1].split('.')[0]
+
+        self.build_image(string)
+        self.update_stats_widget(os.path.join(stats_folder, head_path, tail_path + '.json'))
+
+    def update_stats_widget(self, json_path):
+        data = json_load(json_path)
+        print(json.dumps(data['stats'], indent=4))
+        row_label = ["HP", "Attack", "Defense", "Sp. Atk", "Sp. Def", "Speed"]
+
+        total = 0
+
+        for i in row_label:
+            self.stats_widget[i][0].configure(text=data['stats'][i]['base'])
+            self.stats_widget[i][2].configure(text=data['stats'][i]['min'])
+            self.stats_widget[i][3].configure(text=data['stats'][i]['max'])
+            total = total + data['stats'][i]['base']
+
+        self.stats_widget["Total"][0].configure(text=total)
