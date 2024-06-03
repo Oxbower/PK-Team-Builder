@@ -139,12 +139,12 @@ class ModalUpdate:
                                                 size=(image.width, image.height))
 
             variation_button = self.ctk.CTkButton(master=self.var_frame,
-                                                  height=(self.var_frame.cget('height') / len(ref_path)) - 10,
-                                                  fg_color='#ffffff',
-                                                  hover_color='#ffffff',
-                                                  text_color='#000000',
+                                                  height=50,
+                                                  # fg_color='#ffffff',
+                                                  # hover_color='#ffffff',
+                                                  # text_color='#000000',
                                                   width=self.frames * self.delta_width,
-                                                  image=image_container,
+                                                  # image=image_container,
                                                   text=name,
                                                   command=lambda string=value: self.update_display(string))
 

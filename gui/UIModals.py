@@ -97,6 +97,12 @@ class UIModals:
         image_ref = []
         path = ["./assets/rightarrowhead.png", "./assets/leftarrowhead.png"]
 
+        frame = self.Frame(master=parentFrame,
+                           width=parentFrame.cget("width"),
+                           height=parentFrame.cget("height"))
+        frame.grid()
+        frame.grid_propagate(False)
+
         for i in path:
             image = Image.open(i)
             image.thumbnail(size=(10, 10))
@@ -126,6 +132,8 @@ class UIModals:
                      x=-5,
                      relx=1.0,
                      rely=0.2)
+
+        return frame
 
     def build_item_ability_modal(self, parentFrame):
         """
