@@ -84,7 +84,6 @@ class ModalUpdate:
             print(E)
 
     def build_dynamic_variation_button(self, parentFrame, parentButton, image_ref):
-
         if self.variation_frame:
             for i in self.var_frame.winfo_children():
                 i.grid_remove()
