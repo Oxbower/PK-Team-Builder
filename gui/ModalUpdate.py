@@ -1,6 +1,7 @@
 import gui.SearchUI as SearchUI
 import os
 import json
+from interaction.StatColorUpdate import stat_color_update
 from interaction.ReadFiles import build_img_ref, json_load
 from PIL import Image
 
@@ -217,15 +218,33 @@ class ModalUpdate:
 
     def update_stats_widget(self, json_path):
         data = json_load(json_path)
-        print(json.dumps(data['stats'], indent=4))
+
         row_label = ["HP", "Attack", "Defense", "Sp. Atk", "Sp. Def", "Speed"]
 
         total = 0
+        max_val = 255
+
+        max_height = self.stats_widget["HP"][1].cget("height")
+        max_width = self.stats_widget["HP"][1].cget("width")
 
         for i in row_label:
             self.stats_widget[i][0].configure(text=data['stats'][i]['base'])
             self.stats_widget[i][2].configure(text=data['stats'][i]['min'])
             self.stats_widget[i][3].configure(text=data['stats'][i]['max'])
+
+            percentile = (data['stats'][i]['base'] / max_val)
             total = total + data['stats'][i]['base']
+            for widget in self.stats_widget[i][1].winfo_children():
+                widget.destroy()
+
+            display_width = max_width * percentile
+            if max_width * percentile < 5:
+                display_width += 5
+
+            inner_frame = self.Frame(master=self.stats_widget[i][1],
+                                     fg_color=stat_color_update(data['stats'][i]['base']),
+                                     height=max_height,
+                                     width=display_width)
+            inner_frame.grid()
 
         self.stats_widget["Total"][0].configure(text=total)

@@ -289,6 +289,7 @@ class UIModals:
                                    # border_color="#ff0000"
                                    )
                 frame.grid(row=row, column=col, sticky=self.gui.expand_all)
+                frame.grid_propagate(False)
 
                 if col != 2:
                     label = self.ctk.CTkLabel(master=frame,
@@ -316,10 +317,15 @@ class UIModals:
         self.stats_widget["Total"][2].configure(text="Min")
         self.stats_widget["Total"][3].configure(text="Max")
 
+        for i in row_label[1:-1]:
+            outer_frame = self.Frame(master=self.stats_widget[i][1],
+                                     height=self.stats_widget[i][1].cget("height") - 20,
+                                     width=self.stats_widget[i][1].cget("width"))
+            outer_frame.grid(pady=10)
+            outer_frame.grid_propagate(False)
+
+            self.stats_widget[i][1] = outer_frame
 
         self.modal_interact.set_stats_widget(self.stats_widget)
 
-        # test = [1,2,3,4,5,6,7]
-        #
-        # for i in range(1,8):
-        #     self.stats_widget[row_label[i]][3].configure(text=test[i-1])
+
