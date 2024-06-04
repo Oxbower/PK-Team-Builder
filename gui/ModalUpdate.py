@@ -32,6 +32,11 @@ class ModalUpdate:
         self.frames = 25
 
     def set_img_frame(self, Frame):
+        """
+        Sets image frame to display creature art
+        :param Frame: Parent frame
+        :return: None
+        """
         self.img_holder = self.ctk.CTkLabel(master=Frame,
                                             image=None,
                                             text=None,
@@ -41,6 +46,11 @@ class ModalUpdate:
                                             corner_radius=self.gui.rounded_corner)
 
     def set_stats_widget(self, stats_widget):
+        """
+        Sets the stats widget
+        :param stats_widget: dictionary to update the stats widget
+        :return: None
+        """
         self.stats_widget = stats_widget
 
     def set_variation_frame(self, Frame, stringvar):
@@ -140,7 +150,7 @@ class ModalUpdate:
             image_container = self.ctk.CTkImage(light_image=image,
                                                 size=(image.width, image.height))
 
-            variation_button = self.ctk.CTkButton(master=self.var_frame,
+            variation_button = self.ctk.CTkButton(master=self.var_frame, # Change to self.var_frame
                                                   height=50,
                                                   fg_color='#ffffff',
                                                   hover_color='#ffffff',
@@ -209,6 +219,11 @@ class ModalUpdate:
         self.img_holder.pack()
 
     def update_display(self, string):
+        """
+        Updates the entire frame with new data
+        :param string: name of the pokemon currently displayed
+        :return: None
+        """
         stats_folder = 'pokemon-pokedex'
 
         path = os.path.split(string)
@@ -219,6 +234,11 @@ class ModalUpdate:
         self.update_stats_widget(os.path.join(stats_folder, head_path, tail_path + '.json'))
 
     def update_stats_widget(self, json_path):
+        """
+        Updates the displayed stats for the appropriate pokemon
+        :param json_path: path to open json stats
+        :return: None
+        """
         data = json_load(json_path)
 
         row_label = ["HP", "Attack", "Defense", "Sp. Atk", "Sp. Def", "Speed"]
