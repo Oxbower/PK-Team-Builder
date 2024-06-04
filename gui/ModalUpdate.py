@@ -1,7 +1,9 @@
 import gui.SearchUI as SearchUI
 import os
-import json
+import time
+
 from interaction.StatColorUpdate import stat_color_update
+from interaction.VariationFrameAnimation import open_variation_frame, close_variation_frame
 from interaction.ReadFiles import build_img_ref, json_load
 from PIL import Image
 
@@ -26,6 +28,7 @@ class ModalUpdate:
         self.stats_widget = None
 
         self.delta_width = 10
+        self.frame_width = 250
         self.frames = 25
 
     def set_img_frame(self, Frame):
@@ -84,34 +87,34 @@ class ModalUpdate:
             print(E)
 
     def build_dynamic_variation_button(self, parentFrame, parentButton, image_ref):
-        if self.variation_frame:
+        """
+        Build the different form modals inside variation frame
+        :param parentFrame: parentFrame to put the modal variations into
+        :param parentButton: parentButton change arrow direction
+        :param image_ref: references change arrow direction
+        :return: None
+        """
+        if self.variation_frame:    # Close the variation frame
+            # Remove remaining children inside var_frame
             for i in self.var_frame.winfo_children():
                 i.grid_remove()
-
-            for i in range(self.frames):
-                parentFrame.configure(width=parentFrame.cget('width') - self.delta_width)
-                parentFrame.update()
-            self.variation_frame = False
 
             image = self.ctk.CTkImage(light_image=image_ref[0],
                                       size=(image_ref[1].width, image_ref[1].height))
             parentButton.configure(image=image)
 
-        elif not self.variation_frame:
-            for i in range(self.frames):
-                parentFrame.configure(width=parentFrame.cget('width') + self.delta_width)
-                parentFrame.update()
-            self.variation_frame = True
+            close_variation_frame(parentFrame, self.delta_width)
 
-            for i in self.var_frame.winfo_children():
-                i.grid(sticky="news",
-                       pady=5,
-                       padx=5,
-                       column=0)
+            self.variation_frame = False
 
+        elif not self.variation_frame:  # Open the variation frame
             image = self.ctk.CTkImage(light_image=image_ref[1],
                                       size=(image_ref[1].width, image_ref[1].height))
             parentButton.configure(image=image)
+
+            open_variation_frame(parentFrame, self.delta_width, self.frame_width, self.var_frame)
+
+            self.variation_frame = True
 
     def build_dynamic_variation_modal(self, ref_path, folder_name):
         """
@@ -139,9 +142,9 @@ class ModalUpdate:
 
             variation_button = self.ctk.CTkButton(master=self.var_frame,
                                                   height=50,
-                                                  # fg_color='#ffffff',
-                                                  # hover_color='#ffffff',
-                                                  # text_color='#000000',
+                                                  fg_color='#ffffff',
+                                                  hover_color='#ffffff',
+                                                  text_color='#000000',
                                                   width=self.frames * self.delta_width,
                                                   # image=image_container,
                                                   text=name,
