@@ -161,16 +161,16 @@ class UI:
 
     def __build_variation_frame(self):
         # variations frame
-        extend_frame = self.Frame(master=self.root,
-                                  height=self.img_height - 20,
-                                  width=0,
-                                  fg_color='#232323',
-                                  corner_radius=0)
+        frame = self.Frame(master=self.root,
+                           height=self.img_height - 20,
+                           width=0,
+                           fg_color='#232323',
+                           corner_radius=0)
 
-        extend_frame.place(x=self.img_width + self.pad_x,
-                           y=self.pad_y * 2 + 10)
+        frame.place(x=self.img_width + self.pad_x,
+                    y=self.pad_y * 2 + 10)
 
-        return extend_frame
+        return frame
 
     def __build_type_frame(self):
         """

@@ -19,11 +19,16 @@ class ModalInteraction:
         self.modalUpdate = ModalUpdate.ModalUpdate(gui, ctk, mainWindow, Frame, self)
 
     def set_stats_widget(self, stats_widget):
+        """
+        Passes the statistics widget to ModalUpdate
+        :param stats_widget: the statistics widget dictionary
+        :return: None
+        """
         self.modalUpdate.set_stats_widget(stats_widget)
 
     def set_search_modal_frame(self, Frame):
         """
-        Set search frame after it was built
+        Sets the search frame after it was built
         :param Frame: search frame widget
         :return: None
         """
@@ -47,6 +52,11 @@ class ModalInteraction:
         self.modalUpdate.set_variation_frame(Frame, self.set_string_var)
 
     def set_string_var(self, string):
+        """
+        Sets the string_var which is the callback function for the
+        :param string: String being passed into the search bar callback
+        :return: None
+        """
         self.string_var.set(string)
         # destroy result frame
         self.modalUpdate.destroy_result_frame()
@@ -54,7 +64,7 @@ class ModalInteraction:
     def search_bar_callback(self, *args):
         """
         Handles search bar inputs to do string searches
-        :param args: None
+        :param args: Necessary arguments for the call back function
         :return: None
         """
         search_string = self.string_var.get()
