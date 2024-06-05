@@ -4,7 +4,8 @@ import os
 from interaction.StatColorUpdate import stat_color_update
 from interaction.AnimateStatBars import start_animation
 from interaction.VariationFrameAnimation import open_variation_frame, close_variation_frame
-from interaction.ReadFiles import build_img_ref, json_load
+from interaction.ReadFiles import build_img_ref
+from app_io.LoadJson import json_load
 from app_io.LoadImage import read_image
 
 
@@ -26,6 +27,7 @@ class ModalUpdate:
         self.var_frame = None
         self.stringvar = None
         self.stats_widget = None
+        self.type_widget = None
 
         self.delta_width = 10
         self.frame_width = 250
@@ -52,6 +54,9 @@ class ModalUpdate:
         :return: None
         """
         self.stats_widget = stats_widget
+
+    def set_type_widget(self, type_widget):
+        self.type_widget = type_widget
 
     def set_variation_frame(self, Frame, stringvar):
         """
@@ -227,17 +232,37 @@ class ModalUpdate:
         head_path = os.path.split(path[0])[1]
         tail_path = path[1].split('.')[0]
 
-        self.build_image(string)
-        self.update_stats_widget(os.path.join(stats_folder, head_path, tail_path + '.json'))
+        json_path = os.path.join(stats_folder, head_path, tail_path + '.json')
+        data = json_load(json_path)
 
-    def update_stats_widget(self, json_path):
+        self.build_image(string)
+
+        # Update the stats widget
+        self.update_stats_widget(data)
+
+        self.update_type_displayed(data)
+
+    def update_type_displayed(self, data):
+        types = data['type']
+        for i in self.type_widget:
+            for j in i.winfo_children():
+                j.destroy()
+
+        height = self.type_widget[0].cget("height")
+        width = self.type_widget[0].cget("width")
+
+        for index, value in enumerate(types):
+            self.ctk.CTkLabel(master=self.type_widget[index],
+                              text=types[value],
+                              height=height,
+                              width=width).pack()
+
+    def update_stats_widget(self, data):
         """
         Updates the displayed stats for the appropriate pokemon
         :param json_path: path to open json stats
         :return: None
         """
-        data = json_load(json_path)
-
         row_label = ["HP", "Attack", "Defense", "Sp. Atk", "Sp. Def", "Speed"]
 
         total = 0
@@ -270,7 +295,7 @@ class ModalUpdate:
             inner_frame = self.Frame(master=self.stats_widget[i][1],
                                      fg_color=stat_color_update(data['stats'][i]['base']),
                                      height=max_height,
-                                     width=0)
+                                     width=2)
             inner_frame.grid()
 
             start_animation((inner_frame, display_width))

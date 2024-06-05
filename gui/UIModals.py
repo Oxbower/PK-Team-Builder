@@ -180,6 +180,7 @@ class UIModals:
                        sticky="nsew")
 
             self.types[index] = frame
+        self.modal_interact.set_type_widget(self.types)
 
     def build_type_adv_modal(self, parentFrame):
         """

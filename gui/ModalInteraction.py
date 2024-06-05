@@ -26,6 +26,9 @@ class ModalInteraction:
         """
         self.modalUpdate.set_stats_widget(stats_widget)
 
+    def set_type_widget(self, type_widget):
+        self.modalUpdate.set_type_widget(type_widget)
+
     def set_search_modal_frame(self, Frame):
         """
         Sets the search frame after it was built
