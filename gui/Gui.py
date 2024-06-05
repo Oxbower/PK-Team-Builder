@@ -160,6 +160,10 @@ class UI:
         return img_frame
 
     def __build_variation_frame(self):
+        """
+        Builds the sliding frame which contains the different variations of the current pokemon
+        :return: the frame
+        """
         # variations frame
         frame = self.Frame(master=self.root,
                            height=self.img_height - 20,
@@ -170,7 +174,15 @@ class UI:
         frame.place(x=self.img_width + self.pad_x,
                     y=self.pad_y * 2 + 10)
 
-        return frame
+        inner_frame = self.Frame(master=frame,
+                                 height=self.img_height - 20,
+                                 width=0,
+                                 fg_color='#232323',
+                                 corner_radius=0)
+        inner_frame.grid()
+        inner_frame.grid_propagate(False)
+
+        return inner_frame
 
     def __build_type_frame(self):
         """

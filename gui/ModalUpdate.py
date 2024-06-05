@@ -1,11 +1,10 @@
 import gui.SearchUI as SearchUI
 import os
-import time
 
 from interaction.StatColorUpdate import stat_color_update
 from interaction.VariationFrameAnimation import open_variation_frame, close_variation_frame
 from interaction.ReadFiles import build_img_ref, json_load
-from PIL import Image
+from app_io.LoadImage import read_image
 
 
 class ModalUpdate:
@@ -126,15 +125,19 @@ class ModalUpdate:
 
             self.variation_frame = True
 
-    def build_dynamic_variation_modal(self, ref_path, folder_name):
+    def build_dynamic_variation_modal(self, ref_path: str):
         """
         Builds a dynamic modal for the number of variations this pokemon has, this only runs once on query
+        :param ref_path: reference path to pokemon passed in by the clicked result
         :return: None
         """
+
+        # On query select run this once to get rid of stuff currently in the image
         for widget in self.var_frame.winfo_children():
             widget.destroy()
 
         for index, value in enumerate(ref_path):
+            # Check if theres only 1 variation of this pokemon, if so then escape
             if len(ref_path) == 1:
                 break
             name = os.path.split(value)[-1]
@@ -143,26 +146,19 @@ class ModalUpdate:
             else:
                 name = name.split(".jpg")[0]
 
-            # Change this in the future
-            image = Image.open(value)
-            image.thumbnail(size=(30, 30))
-
-            image_container = self.ctk.CTkImage(light_image=image,
-                                                size=(image.width, image.height))
-
             variation_button = self.ctk.CTkButton(master=self.var_frame, # Change to self.var_frame
-                                                  height=50,
+                                                  height=30,
                                                   fg_color='#ffffff',
                                                   hover_color='#ffffff',
                                                   text_color='#000000',
-                                                  width=self.frames * self.delta_width,
-                                                  # image=image_container,
+                                                  width=self.frames * self.delta_width - 10,
                                                   text=name,
                                                   command=lambda string=value: self.update_display(string))
 
             if self.variation_frame:
                 variation_button.grid(sticky="news", pady=5, padx=5, column=0)
 
+        # Runs on query to show base form of pokemon (redo)
         variant = ["Mega", "Alolan", "Galarian", "Hisuian", "Paldean"]
 
         for value in ref_path:
@@ -188,7 +184,7 @@ class ModalUpdate:
 
         print("Clicked Result: " + name)
         ref_path = build_img_ref(name)
-        self.build_dynamic_variation_modal(ref_path, name)
+        self.build_dynamic_variation_modal(ref_path)
 
     def build_image(self, image_path):  # Modular do not mess with this anymore
         """
@@ -206,9 +202,10 @@ class ModalUpdate:
 
         self.stringvar(name)
 
-        image = Image.open(image_path)
-        image.thumbnail(size=(self.gui.img_height - self.gui.rounded_corner,
-                              self.gui.img_width - self.gui.rounded_corner))
+        # Only returns a single image
+        image = read_image([image_path], "thumbnail",
+                           (self.gui.img_height - self.gui.rounded_corner,
+                            self.gui.img_width - self.gui.rounded_corner))[0]
 
         image_container = self.ctk.CTkImage(light_image=image,
                                             size=(image.width - self.gui.rounded_corner,

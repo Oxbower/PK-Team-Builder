@@ -1,5 +1,5 @@
 import gui.ModalInteraction as ModalInteraction
-from PIL import Image
+from app_io.LoadImage import read_image
 
 
 class UIModals:
@@ -8,7 +8,6 @@ class UIModals:
         Initialize UI modals this is the stuff inside the
         frames.
         """
-
         self.ctk = ctk
         self.mainWindow = mainWindow
         self.Frame = Frame
@@ -94,19 +93,11 @@ class UIModals:
         :param parentFrame: parentFrame to hold modal
         :return: None
         """
-        image_ref = []
-        path = ["./assets/rightarrowhead.png", "./assets/leftarrowhead.png"]
+        path = ["./assets/rightarrowhead.png",
+                "./assets/leftarrowhead.png"]
 
-        # frame = self.Frame(master=parentFrame,
-        #                    width=200,
-        #                    height=parentFrame.cget("height"))
-        # frame.grid()
-        # frame.grid_propagate(False)
-
-        for i in path:
-            image = Image.open(i)
-            image.thumbnail(size=(10, 10))
-            image_ref.append(image)
+        # Load image using app_io
+        image_ref = read_image(path, "thumbnail", (10, 10))
 
         image = self.ctk.CTkImage(light_image=image_ref[0],
                                   size=(image_ref[1].width, image_ref[1].height))

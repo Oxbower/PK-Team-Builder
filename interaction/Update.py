@@ -1,9 +1,3 @@
-import re
-import sys
-
-from PIL import ImageTk
-
-import interaction.ReadFiles as read_file
 import interaction.JsonHandler as json_
 
 
