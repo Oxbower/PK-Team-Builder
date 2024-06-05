@@ -118,7 +118,7 @@ class UI:
         # build the modal to show the variations of this pokemon (variations should still be searchable)
         self.modals.build_variation_modal(variation_frame)
 
-        self.modals.build_type_modal(type_frame)
+        # self.modals.build_type_modal(type_frame)
 
         self.modals.build_item_ability_modal(item_ability_frame)
 
@@ -190,16 +190,17 @@ class UI:
         :return: created frame
         """
         # type frame
-        type_frame = self.Frame(master=self.root,
-                                height=50,
-                                width=self.img_width)
+        frame = self.Frame(master=self.root,
+                           fg_color='',
+                           height=50,
+                           width=self.img_width)
 
-        type_frame.grid(row=2,
-                        column=0,
-                        padx=(self.pad_x, 0),
-                        sticky="nsew")
+        frame.grid(row=2,
+                   column=0,
+                   padx=(self.pad_x, 0),
+                   sticky="nsew")
 
-        return type_frame
+        return frame
 
     def __build_moves_frame(self):
         """

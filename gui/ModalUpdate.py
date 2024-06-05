@@ -243,19 +243,20 @@ class ModalUpdate:
         self.update_type_displayed(data)
 
     def update_type_displayed(self, data):
-        types = data['type']
-        for i in self.type_widget:
-            for j in i.winfo_children():
-                j.destroy()
-
-        height = self.type_widget[0].cget("height")
-        width = self.type_widget[0].cget("width")
-
-        for index, value in enumerate(types):
-            self.ctk.CTkLabel(master=self.type_widget[index],
-                              text=types[value],
-                              height=height,
-                              width=width).pack()
+        # types = data['type']
+        # for i in self.type_widget:
+        #     for j in i.winfo_children():
+        #         j.destroy()
+        #
+        # height = self.type_widget[0].cget("height")
+        # width = self.type_widget[0].cget("width")
+        #
+        # for index, value in enumerate(types):
+        #     self.ctk.CTkLabel(master=self.type_widget[index],
+        #                       text=types[value],
+        #                       height=height,
+        #                       width=width).pack()
+        pass
 
     def update_stats_widget(self, data):
         """
@@ -298,6 +299,6 @@ class ModalUpdate:
                                      width=2)
             inner_frame.grid()
 
-            start_animation((inner_frame, display_width))
+            start_animation(inner_frame, display_width)
 
         self.stats_widget["Total"][0].configure(text=total)
