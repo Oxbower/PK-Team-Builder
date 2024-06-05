@@ -93,36 +93,37 @@ class UIModals:
         :param parentFrame: parentFrame to hold modal
         :return: None
         """
-        path = ["./assets/rightarrowhead.png",
-                "./assets/leftarrowhead.png"]
-
-        # Load image using app_io
-        image_ref = read_image(path, "thumbnail", (10, 10))
-
-        image = self.ctk.CTkImage(light_image=image_ref[0],
-                                  size=(image_ref[1].width, image_ref[1].height))
-        self.modal_interact.set_variation_frame(parentFrame)
-
-        button = self.ctk.CTkButton(master=self.gui.root,
-                                    image=image,
-                                    text=None,
-                                    width=25,
-                                    height=80,
-                                    fg_color='#999999',
-                                    corner_radius=0,
-                                    hover_color=self.gui.hover_color,
-                                    cursor="hand2",
-                                    command=lambda: self.modal_interact.clicked_variation_button(parentFrame,
-                                                                                                 button,
-                                                                                                 image_ref)
-                                    )
-
-        button.place(in_=parentFrame,
-                     bordermode="outside",
-                     anchor="nw",
-                     x=-5,
-                     relx=1.0,
-                     rely=0.2)
+        # path = ["./assets/rightarrowhead.png",
+        #         "./assets/leftarrowhead.png"]
+        #
+        # # Load image using app_io
+        # image_ref = read_image(path, "thumbnail", (10, 10))
+        #
+        # image = self.ctk.CTkImage(light_image=image_ref[0],
+        #                           size=(image_ref[1].width, image_ref[1].height))
+        # self.modal_interact.set_variation_frame(parentFrame)
+        #
+        # button = self.ctk.CTkButton(master=self.gui.root,
+        #                             image=image,
+        #                             text=None,
+        #                             width=25,
+        #                             height=80,
+        #                             fg_color='#999999',
+        #                             corner_radius=0,
+        #                             hover_color=self.gui.hover_color,
+        #                             cursor="hand2",
+        #                             command=lambda: self.modal_interact.clicked_variation_button(parentFrame,
+        #                                                                                          button,
+        #                                                                                          image_ref)
+        #                             )
+        #
+        # button.place(in_=parentFrame,
+        #              bordermode="outside",
+        #              anchor="nw",
+        #              x=-5,
+        #              relx=1.0,
+        #              rely=0.2)
+        pass
 
     def build_item_ability_modal(self, parentFrame):
         """
