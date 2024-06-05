@@ -2,7 +2,7 @@ import gui.SearchUI as SearchUI
 import os
 
 from interaction.StatColorUpdate import stat_color_update
-from interaction.AnimateStatBars import animate_stat_bar
+from interaction.AnimateStatBars import start_animation
 from interaction.VariationFrameAnimation import open_variation_frame, close_variation_frame
 from interaction.ReadFiles import build_img_ref, json_load
 from app_io.LoadImage import read_image
@@ -273,6 +273,6 @@ class ModalUpdate:
                                      width=0)
             inner_frame.grid()
 
-            animate_stat_bar(inner_frame, display_width)
+            start_animation((inner_frame, display_width))
 
         self.stats_widget["Total"][0].configure(text=total)
