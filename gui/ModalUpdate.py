@@ -2,6 +2,7 @@ import gui.SearchUI as SearchUI
 import os
 
 from interaction.StatColorUpdate import stat_color_update
+from interaction.AnimateStatBars import start_animation
 from interaction.VariationFrameAnimation import open_variation_frame, close_variation_frame
 from interaction.ReadFiles import build_img_ref, json_load
 from app_io.LoadImage import read_image
@@ -148,9 +149,8 @@ class ModalUpdate:
 
             variation_button = self.ctk.CTkButton(master=self.var_frame, # Change to self.var_frame
                                                   height=30,
-                                                  fg_color='#ffffff',
-                                                  hover_color='#ffffff',
-                                                  text_color='#000000',
+                                                  fg_color='#232323',
+                                                  hover_color='#3a3a3a',
                                                   width=self.frames * self.delta_width - 10,
                                                   text=name,
                                                   command=lambda string=value: self.update_display(string))
@@ -251,19 +251,28 @@ class ModalUpdate:
             self.stats_widget[i][2].configure(text=data['stats'][i]['min'])
             self.stats_widget[i][3].configure(text=data['stats'][i]['max'])
 
+            # How much of the bar should be visible
             percentile = (data['stats'][i]['base'] / max_val)
+
+            # Accumulate value of base stat (Generally not useful in actual play)
             total = total + data['stats'][i]['base']
+
+            # Destroy the current bar in display
             for widget in self.stats_widget[i][1].winfo_children():
                 widget.destroy()
 
             display_width = max_width * percentile
+
+            # Minimum bar fill
             if max_width * percentile < 5:
-                display_width += 5
+                display_width = 5
 
             inner_frame = self.Frame(master=self.stats_widget[i][1],
                                      fg_color=stat_color_update(data['stats'][i]['base']),
                                      height=max_height,
-                                     width=display_width)
+                                     width=0)
             inner_frame.grid()
+
+            start_animation((inner_frame, display_width))
 
         self.stats_widget["Total"][0].configure(text=total)

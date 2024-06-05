@@ -1,9 +1,8 @@
 import os
+import platform
 import sys
-import customtkinter as ctk
 
-from gui import Window as wd
-from interaction import Update as run_app
+from app.Application import App
 
 
 def main():
@@ -11,24 +10,17 @@ def main():
     Main function to run app
     """
 
-    # initial OS check
+    # OS check
     if os.name == "nt" or os.name == "posix":
-        print("Supported OS")
+        print(f"OS: {platform.system()}{platform.release()}--{platform.architecture()[0]}"
+              f"--Version:{platform.version()}")
+        print(f"Python Version: {platform.python_version()}")
     else:
-        sys.exit("Unsupported operating system")
-
-    # initialize
-    app = run_app.Run()
+        sys.exit(f"Unsupported OS, Running on {platform.system()} {platform.release()} {platform.architecture()}")
 
     # create window object
-    new_window = wd.Window(ctk, os, app)
-    new_window.create_window()
-    window = new_window.root
-
-    # app.load_app()
-
-    # run window main loop
-    window.mainloop()
+    run_app = App()
+    run_app.run()
 
 
 if __name__ == '__main__':

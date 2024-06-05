@@ -11,8 +11,3 @@ def read_image(reference_list: list[str], str_option: str, size: tuple[int, int]
         loaded_image.append(image)
 
     return loaded_image
-
-
-def read_json():
-    pass
-

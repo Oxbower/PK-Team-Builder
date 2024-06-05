@@ -1,3 +1,4 @@
+import customtkinter as ctk
 import gui.UIModals as modals
 
 
@@ -6,25 +7,24 @@ class UI:
         Builds the public facing interface
     """
 
-    def __init__(self, mainWindow, FrameObj):
+    def __init__(self, current_window):
         """
         Initialize the UI
         :param mainWindow: window object
-        :param FrameObj: ctkframe object
         :param app: app class
         """
 
         # Root Object
-        self.root = mainWindow.root
+        self.root = current_window.root
         # Window Object
-        self.mainWindow = mainWindow
+        self.current_window = current_window
         # customTkinter object
-        self.ctk = self.mainWindow.ctk
+        self.ctk = ctk
         # frame object
-        self.Frame = FrameObj
+        self.Frame = ctk.CTkFrame
 
         # modal class
-        self.modals = modals.UIModals(self, self.ctk, self.mainWindow, self.Frame)
+        self.modals = modals.UIModals(self, self.ctk, self.current_window, self.Frame)
 
         # ui settings
         self.pad_y = 30
@@ -42,7 +42,7 @@ class UI:
         self.light_grey = '#3b3b3b'
         self.dark_grey = '#2a2a2a'
 
-        # hovver color
+        # hover color
         self.hover_color = '#3f3f3f'
 
         # img width
@@ -64,7 +64,7 @@ class UI:
         self.__build_gui()
 
         # allow user to focus on all widgets
-        #self.root.bind_all("<Button-1>", lambda event: event.widget.focus_set())  # redo later
+        # self.root.bind_all("<Button-1>", lambda event: event.widget.focus_set())  # redo later
 
     def __build_gui(self):
         """
@@ -93,7 +93,7 @@ class UI:
         # build moves frame
         move_frame = self.__build_moves_frame()
 
-        # build this pokemons type frame
+        # build this pokemon type frame
         type_adv_frame = self.__build_type_adv_frame()
 
         '''
@@ -127,12 +127,12 @@ class UI:
     def __build_file_bar(self):
         """
         Builds the 'file' bar i.e. the strip on top with file, options, etc
-        :return: None
+        :return: created frame
         """
 
         # Builds frame for 'file' area
         file_bar = self.Frame(master=self.root,
-                              width=self.mainWindow.width,
+                              width=self.current_window.width,
                               corner_radius=self.flat_corner,
                               fg_color=self.dark_grey)
         # position file_bar
@@ -145,7 +145,7 @@ class UI:
     def __build_img_frame(self):
         """
         Build the img_frame for image container
-        :return: None
+        :return: created frame
         """
 
         img_frame = self.Frame(master=self.root,
@@ -162,7 +162,7 @@ class UI:
     def __build_variation_frame(self):
         """
         Builds the sliding frame which contains the different variations of the current pokemon
-        :return: the frame
+        :return: created frame
         """
         # variations frame
         frame = self.Frame(master=self.root,
@@ -177,7 +177,7 @@ class UI:
         inner_frame = self.Frame(master=frame,
                                  height=self.img_height - 20,
                                  width=0,
-                                 fg_color='#232323',
+                                 fg_color='#2A2A2A',
                                  corner_radius=0)
         inner_frame.grid()
         inner_frame.grid_propagate(False)
@@ -186,7 +186,7 @@ class UI:
 
     def __build_type_frame(self):
         """
-        the chosen pokemon's type
+        Builds the chosen pokemon's type
         :return: created frame
         """
         # type frame
@@ -203,7 +203,7 @@ class UI:
 
     def __build_moves_frame(self):
         """
-        Build container for move modals
+        Builds the frame for move modals
         :return: created frame
         """
         frame = self.Frame(master=self.root,
@@ -217,7 +217,7 @@ class UI:
 
     def __build_type_adv_frame(self):
         """
-        This pokemons weakness and strengths
+        Builds the frame for a pokemon weakness and strengths
         :return: created frame
         """
         frame = self.Frame(master=self.root,
