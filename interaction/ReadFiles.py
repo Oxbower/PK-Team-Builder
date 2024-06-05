@@ -1,8 +1,6 @@
 import json
 import os
 
-from PIL import Image
-
 
 def build_img_ref(inner_path):
     """
