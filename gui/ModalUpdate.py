@@ -152,14 +152,14 @@ class ModalUpdate:
             image = self.ctk.CTkImage(light_image=image, size=(image.width, image.height))
             variation_button = self.ctk.CTkButton(master=self.sidebar_widget,  # Change to self.var_frame
                                                   height=40,
-                                                  fg_color='#ffffff',
-                                                  hover_color='#ffffff',
+                                                  fg_color='#aa0066',
+                                                  hover_color='#330066',
                                                   width=50,
                                                   text=None,
                                                   image=image,
                                                   command=lambda string=value: self.update_display(string))
 
-            variation_button.grid(row=index, column=0, padx=5)
+            variation_button.grid(row=index, column=0, padx=5, pady=(0, 5))
 
         # Runs on query to show base form of pokemon (redo)
         variant = ["Mega ", "Alolan ", "Galarian ", "Hisuian ", "Paldean "]

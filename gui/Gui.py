@@ -161,13 +161,20 @@ class UI:
         """
         frame = self.Frame(master=self.root,
                            height=self.img_height,
+                           fg_color='#242424',
                            width=50)
         frame.grid(row=1,
                    column=1,
                    sticky='w',
                    pady=(self.pad_y, 0))
 
-        return frame
+        inner_frame = self.Frame(master=frame,
+                                 height=self.img_height-20,
+                                 fg_color='#242424',
+                                 width=50)
+        inner_frame.place(anchor='ne', relx=1, rely=.1, relheight=.9)
+
+        return inner_frame
 
     def __build_type_frame(self):
         """
