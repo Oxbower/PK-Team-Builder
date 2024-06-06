@@ -3,7 +3,6 @@ import os
 
 from interaction.StatColorUpdate import stat_color_update
 from interaction.AnimateStatBars import start_animation
-from interaction.VariationFrameAnimation import open_variation_frame, close_variation_frame
 from interaction.ReadFiles import build_img_ref
 from app_io.LoadJson import json_load
 from app_io.LoadImage import read_image
@@ -14,7 +13,6 @@ class ModalUpdate:
     Updates the modals when interaction occurs
     """
     def __init__(self, gui, ctk, mainWindow, Frame, modalInteract):
-        self.variation_frame = False
         self.gui = gui
         self.ctk = ctk
         self.mainWindow = mainWindow
@@ -25,9 +23,11 @@ class ModalUpdate:
         self.container_frame = None
         self.img_holder = None
         self.var_frame = None
-        self.stringvar = None
+        self.string_var = None
         self.stats_widget = None
         self.type_widget = None
+        self.name_plate_focused = None
+        self.type_frame = None
 
         self.delta_width = 10
         self.frame_width = 250
@@ -43,6 +43,7 @@ class ModalUpdate:
                                             image=None,
                                             text=None,
                                             fg_color='#ffffff',
+                                            bg_color='#212121',
                                             height=self.gui.img_height,
                                             width=self.gui.img_width,
                                             corner_radius=self.gui.rounded_corner)
@@ -55,20 +56,23 @@ class ModalUpdate:
         """
         self.stats_widget = stats_widget
 
-    def set_type_widget(self, type_widget):
+    def set_type_widget(self, type_widget, type_frame):
         self.type_widget = type_widget
+        self.type_frame = type_frame
 
-    def set_variation_frame(self, Frame, stringvar):
+    def set_variation_frame(self, Frame, string_var, name_plate_focused):
         """
         pass in the variation frame to display current pokemons different forms
+        :param name_plate_focused: passed in function to update the name_plate_focus
         :param Frame: frame to put the forms in
-        :param stringvar: passed in function to update name display
+        :param string_var: passed in function to update name display
         :return: None
         """
         self.var_frame = Frame
-        self.stringvar = stringvar
+        self.string_var = string_var
+        self.name_plate_focused = name_plate_focused
 
-    def build_search_result(self, result_list, parentFrame):
+    def build_search_result(self, result_list: list[str], parentFrame):
         """
         Builds search result
         :param result_list: list to build search result for
@@ -97,41 +101,11 @@ class ModalUpdate:
         """
         try:
             self.container_frame.destroy()
-            print("Destroyed frame...")
+            print("Destroying result frame...")
         except Exception as E:
             print(E)
 
-    def build_dynamic_variation_button(self, parentFrame, parentButton, image_ref):
-        """
-        Build the different form modals inside variation frame
-        :param parentFrame: parentFrame to put the modal variations into
-        :param parentButton: parentButton change arrow direction
-        :param image_ref: references change arrow direction
-        :return: None
-        """
-        if self.variation_frame:    # Close the variation frame
-            # Remove remaining children inside var_frame
-            for i in self.var_frame.winfo_children():
-                i.grid_remove()
-
-            image = self.ctk.CTkImage(light_image=image_ref[0],
-                                      size=(image_ref[1].width, image_ref[1].height))
-            parentButton.configure(image=image)
-
-            close_variation_frame(parentFrame, self.delta_width)
-
-            self.variation_frame = False
-
-        elif not self.variation_frame:  # Open the variation frame
-            image = self.ctk.CTkImage(light_image=image_ref[1],
-                                      size=(image_ref[1].width, image_ref[1].height))
-            parentButton.configure(image=image)
-
-            open_variation_frame(parentFrame, self.delta_width, self.frame_width, self.var_frame)
-
-            self.variation_frame = True
-
-    def build_dynamic_variation_modal(self, ref_path: str):
+    def build_dynamic_variation_modal(self, ref_path: list[str]):
         """
         Builds a dynamic modal for the number of variations this pokemon has, this only runs once on query
         :param ref_path: reference path to pokemon passed in by the clicked result
@@ -143,25 +117,19 @@ class ModalUpdate:
             widget.destroy()
 
         for index, value in enumerate(ref_path):
-            # Check if theres only 1 variation of this pokemon, if so then escape
-            if len(ref_path) == 1:
-                break
-            name = os.path.split(value)[-1]
-            if name.endswith(".png"):
-                name = name.split(".png")[0]
-            else:
-                name = name.split(".jpg")[0]
+            image = read_image([value], "thumbnail", size=(100, 100))[0]
+            image = self.ctk.CTkImage(light_image=image)
 
-            variation_button = self.ctk.CTkButton(master=self.var_frame, # Change to self.var_frame
-                                                  height=30,
-                                                  fg_color='#232323',
-                                                  hover_color='#3a3a3a',
-                                                  width=self.frames * self.delta_width - 10,
-                                                  text=name,
+            variation_button = self.ctk.CTkButton(master=self.var_frame,  # Change to self.var_frame
+                                                  height=50,
+                                                  fg_color='#ffffff',
+                                                  hover_color='#ffffff',
+                                                  width=30,
+                                                  text=None,
+                                                  image=image,
                                                   command=lambda string=value: self.update_display(string))
 
-            if self.variation_frame:
-                variation_button.grid(sticky="news", pady=5, padx=5, column=0)
+            variation_button.grid(row=0, column=index, sticky="news", padx=5)
 
         # Runs on query to show base form of pokemon (redo)
         variant = ["Mega", "Alolan", "Galarian", "Hisuian", "Paldean"]
@@ -175,7 +143,7 @@ class ModalUpdate:
 
             if not any(s in name for s in variant):
                 self.update_display(value)
-                self.stringvar(name)
+                self.string_var(name)
                 break
 
     def build_path_ref(self, string):
@@ -205,7 +173,7 @@ class ModalUpdate:
         else:
             name = name.split(".jpg")[0]
 
-        self.stringvar(name)
+        self.string_var(name)
 
         # Only returns a single image
         image = read_image([image_path], "thumbnail",
@@ -226,6 +194,8 @@ class ModalUpdate:
         :param string: name of the pokemon currently displayed
         :return: None
         """
+        self.name_plate_focused(False)
+
         stats_folder = 'pokemon-pokedex'
 
         path = os.path.split(string)
@@ -239,24 +209,44 @@ class ModalUpdate:
 
         # Update the stats widget
         self.update_stats_widget(data)
-
+        self.update_pokemon_id(data)
         self.update_type_displayed(data)
 
+    def update_pokemon_id(self, data):
+        # Left pad 0's until there are 4 figures
+        pokedex_no = str(data['pokedex-no']).zfill(4)
+
+        label = self.ctk.CTkLabel(master=self.type_widget,
+                                  text='#' + pokedex_no,
+                                  font=('Helvetica', 20, 'bold'),
+                                  width=100,
+                                  height=40)
+        label.grid(row=0, column=0)
+
+        label.grid_propagate(False)
+
     def update_type_displayed(self, data):
-        # types = data['type']
-        # for i in self.type_widget:
-        #     for j in i.winfo_children():
-        #         j.destroy()
-        #
-        # height = self.type_widget[0].cget("height")
-        # width = self.type_widget[0].cget("width")
-        #
-        # for index, value in enumerate(types):
-        #     self.ctk.CTkLabel(master=self.type_widget[index],
-        #                       text=types[value],
-        #                       height=height,
-        #                       width=width).pack()
-        pass
+        for value in self.type_frame.winfo_children():
+            value.destroy()
+
+        type_data = data['type']
+
+        for index, value in enumerate(type_data):
+            image = read_image(
+                [os.path.join('.', 'assets', 'type-icon', type_data[value].lower()) + '.png'],
+                'thumbnail', size=(200, 200))[0]
+            image = self.ctk.CTkImage(light_image=image, size=(30, 30))
+
+            types = self.Frame(master=self.type_frame,
+                               fg_color='#aaaaaa',
+                               width=40,
+                               height=46)
+
+            types.grid(row=0, column=index, padx=5, sticky='en')
+            types.grid_propagate(False)
+
+            label = self.ctk.CTkLabel(master=types, image=image, text=None)
+            label.place(anchor="center", relx=.5, rely=.55)
 
     def update_stats_widget(self, data):
         """

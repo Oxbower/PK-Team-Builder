@@ -18,8 +18,7 @@ class UIModals:
         # instantiate modal_interact class can only be accessed by UIModals
         self.modal_interact = ModalInteraction.ModalInteraction(self.string_var, gui, ctk, mainWindow, Frame)
 
-        self.types = [0, 0]
-
+        self.pokemon_id = None
         self.types_adv = [0, 0]
 
         '''
@@ -60,6 +59,34 @@ class UIModals:
     def build_img_modal(self, parentFrame):
         self.modal_interact.set_img_frame(parentFrame)
 
+    def build_type_modal(self, parentFrame):
+        """
+
+        :param parentFrame:
+        :return: None
+        """
+
+        frame = self.Frame(master=parentFrame,
+                           fg_color='#666666',
+                           height=45,
+                           width=100)
+
+        frame.grid(row=0, column=0, padx=5, sticky='nw')
+        frame.grid_propagate(False)
+
+        type_frame = self.Frame(master=parentFrame,
+                                fg_color='#242424',
+                                height=45,
+                                width=100)
+
+        type_frame.place(anchor='ne', rely=-0.1, relx=.96)
+
+        # type_frame.grid(row=0, column=1, padx=5, sticky='ne')
+        # type_frame.columnconfigure(0, weight=1)
+        type_frame.grid_propagate(False)
+
+        self.modal_interact.set_type_widget(frame, type_frame)
+
     def build_search_bar_modal(self, parentFrame):
         """
         Build the search bar modal
@@ -80,50 +107,14 @@ class UIModals:
                         column=0,
                         padx=10,
                         pady=10,
-                        sticky=self.gui.expand_all,
-                        )
+                        sticky=self.gui.expand_all)
 
         self.modal_interact.set_search_modal_frame(parentFrame)
 
-        self.string_var.trace('w', self.modal_interact.search_bar_callback)
+        name_plate.bind('<FocusIn>', lambda _: self.modal_interact.name_plate_focus(True))
+        name_plate.bind('<FocusOut>', lambda _: self.modal_interact.name_plate_focus(False))
 
-    def build_variation_modal(self, parentFrame):
-        """
-        Needs information about diff variation handled by modal update (dynamic)
-        :param parentFrame: parentFrame to hold modal
-        :return: None
-        """
-        # path = ["./assets/rightarrowhead.png",
-        #         "./assets/leftarrowhead.png"]
-        #
-        # # Load image using app_io
-        # image_ref = read_image(path, "thumbnail", (10, 10))
-        #
-        # image = self.ctk.CTkImage(light_image=image_ref[0],
-        #                           size=(image_ref[1].width, image_ref[1].height))
-        # self.modal_interact.set_variation_frame(parentFrame)
-        #
-        # button = self.ctk.CTkButton(master=self.gui.root,
-        #                             image=image,
-        #                             text=None,
-        #                             width=25,
-        #                             height=80,
-        #                             fg_color='#999999',
-        #                             corner_radius=0,
-        #                             hover_color=self.gui.hover_color,
-        #                             cursor="hand2",
-        #                             command=lambda: self.modal_interact.clicked_variation_button(parentFrame,
-        #                                                                                          button,
-        #                                                                                          image_ref)
-        #                             )
-        #
-        # button.place(in_=parentFrame,
-        #              bordermode="outside",
-        #              anchor="nw",
-        #              x=-5,
-        #              relx=1.0,
-        #              rely=0.2)
-        pass
+        self.string_var.trace('w', self.modal_interact.search_bar_callback)
 
     def build_item_ability_modal(self, parentFrame):
         """
@@ -158,30 +149,30 @@ class UIModals:
                    pady=(0, 5),
                    padx=5)
 
-    def build_type_modal(self, parentFrame):
-        """
-        builds modal holding this pokemons diff types
-        :param parentFrame: parent frame to hold modal
-        :return: None
-        """
-        max_height = parentFrame.cget("height")
-
-        # build type frame, store frame inside types to allow modalUpdate to access on change
-
-        for index, value in enumerate(self.types):
-            frame = self.Frame(master=parentFrame,
-                               height=max_height - 10,
-                               width=(self.gui.img_width / 2) - 10
-                               )
-
-            frame.grid(row=0,
-                       column=index,
-                       padx=5,
-                       pady=5,
-                       sticky="nsew")
-
-            self.types[index] = frame
-        self.modal_interact.set_type_widget(self.types)
+    # def build_type_modal(self, parentFrame):
+    #     """
+    #     builds modal holding this pokemons diff types
+    #     :param parentFrame: parent frame to hold modal
+    #     :return: None
+    #     """
+    #     max_height = parentFrame.cget("height")
+    #
+    #     # build type frame, store frame inside types to allow modalUpdate to access on change
+    #
+    #     for index, value in enumerate(self.types):
+    #         frame = self.Frame(master=parentFrame,
+    #                            height=max_height - 10,
+    #                            width=(self.gui.img_width / 2) - 10
+    #                            )
+    #
+    #         frame.grid(row=0,
+    #                    column=index,
+    #                    padx=5,
+    #                    pady=5,
+    #                    sticky="nsew")
+    #
+    #         self.types[index] = frame
+    #     self.modal_interact.set_type_widget(self.types)
 
     def build_type_adv_modal(self, parentFrame):
         """
@@ -270,7 +261,7 @@ class UIModals:
             stat_frame = self.Frame(master=parentFrame,
                                     corner_radius=self.gui.flat_corner,
                                     height=self.gui.stat_subcategory_height)
-            stat_frame.grid(row=row, column=0, sticky="se", padx=10)
+            stat_frame.grid(row=row, column=0, sticky="ne", padx=10)
 
             # Build Col
             for col in range(5):
@@ -288,7 +279,6 @@ class UIModals:
                                    # border_color="#ff0000"
                                    )
                 frame.grid(row=row, column=col, sticky=self.gui.expand_all)
-                frame.grid_propagate(False)
 
                 if col != 2:
                     label = self.ctk.CTkLabel(master=frame,
@@ -325,6 +315,13 @@ class UIModals:
 
             self.stats_widget[i][1] = outer_frame
 
-        self.modal_interact.set_stats_widget(self.stats_widget)
+        var_frame = self.Frame(master=parentFrame,
+                               height=50,
+                               width=360,
+                               fg_color='#212121',
+                               corner_radius=0)
+        var_frame.place(anchor="ne",
+                        relx=.93,
+                        rely=.143)
 
-
+        self.modal_interact.set_stats_widget(self.stats_widget, var_frame)

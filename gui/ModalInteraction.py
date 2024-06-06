@@ -1,9 +1,5 @@
-from tkinter import StringVar
-
-import interaction.SearchResult as SearchResult
+import interaction.SearchingAlgorithm as SearchResult
 import gui.ModalUpdate as ModalUpdate
-
-import time
 
 
 class ModalInteraction:
@@ -12,22 +8,25 @@ class ModalInteraction:
         self.string_var = stringVar
 
         self.searchFrame = None
+        self.name_plate_focused = False
 
         self.mainWindow = mainWindow
 
         self.searchAlgorithm = SearchResult.SearchResult()
         self.modalUpdate = ModalUpdate.ModalUpdate(gui, ctk, mainWindow, Frame, self)
 
-    def set_stats_widget(self, stats_widget):
+    def set_stats_widget(self, stats_widget, type_frame):
         """
         Passes the statistics widget to ModalUpdate
+        :param type_frame:
         :param stats_widget: the statistics widget dictionary
         :return: None
         """
         self.modalUpdate.set_stats_widget(stats_widget)
+        self.modalUpdate.set_variation_frame(type_frame, self.set_string_var, self.name_plate_focus)
 
-    def set_type_widget(self, type_widget):
-        self.modalUpdate.set_type_widget(type_widget)
+    def set_type_widget(self, type_widget, type_frame):
+        self.modalUpdate.set_type_widget(type_widget, type_frame)
 
     def set_search_modal_frame(self, Frame):
         """
@@ -46,14 +45,6 @@ class ModalInteraction:
         """
         self.modalUpdate.set_img_frame(Frame)
 
-    def set_variation_frame(self, Frame):
-        """
-        Sets the variation frame to be dynamic depending on how many variations a pokemon has
-        :param Frame: the frame container
-        :return: None
-        """
-        self.modalUpdate.set_variation_frame(Frame, self.set_string_var)
-
     def set_string_var(self, string):
         """
         Sets the string_var which is the callback function for the
@@ -61,8 +52,6 @@ class ModalInteraction:
         :return: None
         """
         self.string_var.set(string)
-        # destroy result frame
-        self.modalUpdate.destroy_result_frame()
 
     def search_bar_callback(self, *args):
         """
@@ -76,11 +65,15 @@ class ModalInteraction:
             print("Empty String")
             self.modalUpdate.destroy_result_frame()
         else:
-            # build the list containing all matches of string
-            search_string = self.searchAlgorithm.build_search_list(search_string)
+            if self.name_plate_focused:
+                # build the list containing all matches of string
+                search_string = self.searchAlgorithm.build_search_list(search_string)
 
-            # pass in the list to build result frame from
-            self.modalUpdate.build_search_result(search_string, self.searchFrame)
+                # pass in the list to build result frame from
+                self.modalUpdate.build_search_result(search_string, self.searchFrame)
+
+    def name_plate_focus(self, boolean: bool):
+        self.name_plate_focused = boolean
 
     def clicked_search_query(self, string):
         """
@@ -94,15 +87,3 @@ class ModalInteraction:
         self.mainWindow.root.focus_set()
         # destroy result frame
         self.modalUpdate.destroy_result_frame()
-
-    def clicked_variation_button(self, parentFrame, parentButton, image_ref):
-        """
-        Buttons in the sliding frame to change which variation is active
-        :param parentFrame: parent frame of the variation button
-        :param parentButton: parent button of the variation button
-        :param image_ref: reference for the arrow image for the button to open the variation menu
-        :return: None
-        """
-        self.mainWindow.root.focus_set()
-
-        self.modalUpdate.build_dynamic_variation_button(parentFrame, parentButton, image_ref)
