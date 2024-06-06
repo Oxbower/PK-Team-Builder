@@ -25,8 +25,11 @@ class ModalInteraction:
         self.modalUpdate.set_stats_widget(stats_widget)
         self.modalUpdate.set_variation_frame(type_frame, self.set_string_var, self.name_plate_focus)
 
-    def set_type_widget(self, type_widget, type_frame):
-        self.modalUpdate.set_type_widget(type_widget, type_frame)
+    def set_type_widget(self, pokedex_no, type_frame):
+        self.modalUpdate.set_type_widget(pokedex_no, type_frame)
+
+    def set_sidebar_widget(self, sidebar_widget):
+        self.modalUpdate.set_sidebar_widget(sidebar_widget)
 
     def set_search_modal_frame(self, Frame):
         """
@@ -45,7 +48,7 @@ class ModalInteraction:
         """
         self.modalUpdate.set_img_frame(Frame)
 
-    def set_string_var(self, string):
+    def set_string_var(self, string: str) -> None:
         """
         Sets the string_var which is the callback function for the
         :param string: String being passed into the search bar callback
@@ -72,10 +75,10 @@ class ModalInteraction:
                 # pass in the list to build result frame from
                 self.modalUpdate.build_search_result(search_string, self.searchFrame)
 
-    def name_plate_focus(self, boolean: bool):
+    def name_plate_focus(self, boolean: bool) -> None:
         self.name_plate_focused = boolean
 
-    def clicked_search_query(self, string):
+    def clicked_search_query(self, string: str) -> None:
         """
         Detect when any of the search results are clicked
         :param string: name of the clicked result

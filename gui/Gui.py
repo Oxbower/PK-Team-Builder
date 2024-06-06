@@ -4,7 +4,7 @@ import gui.UIModals as modals
 
 class UI:
     """
-        Builds the public facing interface
+    Builds the public facing interface
     """
 
     def __init__(self, current_window):
@@ -32,8 +32,6 @@ class UI:
         self.flat_corner = 0
         self.rounded_corner = 10
         self.expand_all = "nswe"
-        self.expand_vertical = "ns"
-        self.expand_horizontal = "ew"
 
         # sys font
         self.font = ("Arial Bold", 15)
@@ -51,8 +49,6 @@ class UI:
 
         self.name_stat_frame_height = 500
         self.stat_subcategory_height = 40
-
-        self.image_disp = 0
 
     def setup_ui(self):
         """
@@ -105,7 +101,10 @@ class UI:
         # build the 'stats' inside the info_stat frame
         self.modals.build_stat_modal(search_stat_frame)
 
+        # build the items inside the type container i.e. pokedex-no and type display
         self.modals.build_type_modal(type_frame)
+
+        self.modals.build_side_container(side_frame)
 
         # build search bar inside the info_stat frame block
         self.modals.build_search_bar_modal(search_stat_frame)

@@ -57,15 +57,22 @@ class UIModals:
             file.grid(row=0, column=index)
 
     def build_img_modal(self, parentFrame):
+        """
+        Passes image frame to modalUpdate to allow for this frame to be updated
+        :param parentFrame: the parent container
+        :return: None
+        """
         self.modal_interact.set_img_frame(parentFrame)
+
+    def build_side_container(self, parentFrame):
+        self.modal_interact.set_sidebar_widget(parentFrame)
 
     def build_type_modal(self, parentFrame):
         """
-
-        :param parentFrame:
+        Builds the pokedex-no container
+        :param parentFrame: the parent container
         :return: None
         """
-
         frame = self.Frame(master=parentFrame,
                            fg_color='#666666',
                            height=45,
@@ -80,10 +87,6 @@ class UIModals:
                                 width=100)
 
         type_frame.place(anchor='ne', rely=-0.1, relx=.96)
-
-        # type_frame.grid(row=0, column=1, padx=5, sticky='ne')
-        # type_frame.columnconfigure(0, weight=1)
-        type_frame.grid_propagate(False)
 
         self.modal_interact.set_type_widget(frame, type_frame)
 
@@ -148,31 +151,6 @@ class UIModals:
         items.grid(row=1,
                    pady=(0, 5),
                    padx=5)
-
-    # def build_type_modal(self, parentFrame):
-    #     """
-    #     builds modal holding this pokemons diff types
-    #     :param parentFrame: parent frame to hold modal
-    #     :return: None
-    #     """
-    #     max_height = parentFrame.cget("height")
-    #
-    #     # build type frame, store frame inside types to allow modalUpdate to access on change
-    #
-    #     for index, value in enumerate(self.types):
-    #         frame = self.Frame(master=parentFrame,
-    #                            height=max_height - 10,
-    #                            width=(self.gui.img_width / 2) - 10
-    #                            )
-    #
-    #         frame.grid(row=0,
-    #                    column=index,
-    #                    padx=5,
-    #                    pady=5,
-    #                    sticky="nsew")
-    #
-    #         self.types[index] = frame
-    #     self.modal_interact.set_type_widget(self.types)
 
     def build_type_adv_modal(self, parentFrame):
         """
@@ -306,6 +284,9 @@ class UIModals:
         self.stats_widget["Total"][2].configure(text="Min")
         self.stats_widget["Total"][3].configure(text="Max")
 
+        """
+        Container for the 'stat' bar
+        """
         for i in row_label[1:-1]:
             outer_frame = self.Frame(master=self.stats_widget[i][1],
                                      height=self.stats_widget[i][1].cget("height") - 20,
@@ -315,6 +296,9 @@ class UIModals:
 
             self.stats_widget[i][1] = outer_frame
 
+        """
+        Container for pokemon variations
+        """
         var_frame = self.Frame(master=parentFrame,
                                height=50,
                                width=360,

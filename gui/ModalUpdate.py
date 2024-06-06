@@ -4,6 +4,7 @@ import os
 from interaction.StatColorUpdate import stat_color_update
 from interaction.AnimateStatBars import start_animation
 from interaction.ReadFiles import build_img_ref
+from interaction.MegaEvolutionVariantHandler import variant_handler
 from app_io.LoadJson import json_load
 from app_io.LoadImage import read_image
 
@@ -25,9 +26,10 @@ class ModalUpdate:
         self.var_frame = None
         self.string_var = None
         self.stats_widget = None
-        self.type_widget = None
+        self.pokedex_no = None
         self.name_plate_focused = None
         self.type_frame = None
+        self.sidebar_widget = None
 
         self.delta_width = 10
         self.frame_width = 250
@@ -36,6 +38,7 @@ class ModalUpdate:
     def set_img_frame(self, Frame):
         """
         Sets image frame to display creature art
+
         :param Frame: Parent frame
         :return: None
         """
@@ -51,18 +54,23 @@ class ModalUpdate:
     def set_stats_widget(self, stats_widget):
         """
         Sets the stats widget
+
         :param stats_widget: dictionary to update the stats widget
         :return: None
         """
         self.stats_widget = stats_widget
 
-    def set_type_widget(self, type_widget, type_frame):
-        self.type_widget = type_widget
+    def set_sidebar_widget(self, sidebar_widget):
+        self.sidebar_widget = sidebar_widget
+
+    def set_type_widget(self, pokedex_no, type_frame):
+        self.pokedex_no = pokedex_no
         self.type_frame = type_frame
 
     def set_variation_frame(self, Frame, string_var, name_plate_focused):
         """
         pass in the variation frame to display current pokemons different forms
+
         :param name_plate_focused: passed in function to update the name_plate_focus
         :param Frame: frame to put the forms in
         :param string_var: passed in function to update name display
@@ -75,6 +83,7 @@ class ModalUpdate:
     def build_search_result(self, result_list: list[str], parentFrame):
         """
         Builds search result
+
         :param result_list: list to build search result for
         :param parentFrame: parentFrame for this class so stat_frame
         :return: None
@@ -97,6 +106,7 @@ class ModalUpdate:
     def destroy_result_frame(self):
         """
         Destroy frame after user has chosen a result
+
         :return: None
         """
         try:
@@ -108,6 +118,7 @@ class ModalUpdate:
     def build_dynamic_variation_modal(self, ref_path: list[str]):
         """
         Builds a dynamic modal for the number of variations this pokemon has, this only runs once on query
+
         :param ref_path: reference path to pokemon passed in by the clicked result
         :return: None
         """
@@ -116,9 +127,14 @@ class ModalUpdate:
         for widget in self.var_frame.winfo_children():
             widget.destroy()
 
-        for index, value in enumerate(ref_path):
-            image = read_image([value], "thumbnail", size=(100, 100))[0]
-            image = self.ctk.CTkImage(light_image=image)
+        for widget in self.sidebar_widget.winfo_children():
+            widget.destroy()
+
+        split_ref = variant_handler(ref_path)
+
+        for index, value in enumerate(split_ref['standard']):
+            image = read_image([value], "thumbnail", size=(20, 50))[0]
+            image = self.ctk.CTkImage(light_image=image, size=(image.width, image.height))
 
             variation_button = self.ctk.CTkButton(master=self.var_frame,  # Change to self.var_frame
                                                   height=50,
@@ -129,17 +145,27 @@ class ModalUpdate:
                                                   image=image,
                                                   command=lambda string=value: self.update_display(string))
 
-            variation_button.grid(row=0, column=index, sticky="news", padx=5)
+            variation_button.grid(row=0, column=index, padx=5)
+
+        for index, value in enumerate(split_ref['mega']):
+            image = read_image([os.path.join('.', 'assets', 'mega-stones', 'generic-mega-symbol.png')], "thumbnail", size=(30, 30))[0]
+            image = self.ctk.CTkImage(light_image=image, size=(image.width, image.height))
+            variation_button = self.ctk.CTkButton(master=self.sidebar_widget,  # Change to self.var_frame
+                                                  height=40,
+                                                  fg_color='#ffffff',
+                                                  hover_color='#ffffff',
+                                                  width=50,
+                                                  text=None,
+                                                  image=image,
+                                                  command=lambda string=value: self.update_display(string))
+
+            variation_button.grid(row=index, column=0, padx=5)
 
         # Runs on query to show base form of pokemon (redo)
-        variant = ["Mega", "Alolan", "Galarian", "Hisuian", "Paldean"]
+        variant = ["Mega ", "Alolan ", "Galarian ", "Hisuian ", "Paldean "]
 
         for value in ref_path:
-            name = os.path.split(value)[-1]
-            if name.endswith(".png"):
-                name = name.split(".png")[0]
-            else:
-                name = name.split(".jpg")[0]
+            name = os.path.splitext(os.path.basename(value))[0]
 
             if not any(s in name for s in variant):
                 self.update_display(value)
@@ -149,6 +175,8 @@ class ModalUpdate:
     def build_path_ref(self, string):
         """
         Builds the image frame
+
+        :param string:
         :return: None
         """
         name = string.lower()
@@ -162,16 +190,13 @@ class ModalUpdate:
     def build_image(self, image_path):  # Modular do not mess with this anymore
         """
         Opens and updates the frame to hold the image
+
         :param image_path: image_path given by variation_model
         :return: None
         """
         self.gui.root.focus_set()
 
-        name = os.path.split(image_path)[-1]
-        if name.endswith(".png"):
-            name = name.split(".png")[0]
-        else:
-            name = name.split(".jpg")[0]
+        name = os.path.splitext(os.path.basename(image_path))[0]
 
         self.string_var(name)
 
@@ -191,6 +216,7 @@ class ModalUpdate:
     def update_display(self, string):
         """
         Updates the entire frame with new data
+
         :param string: name of the pokemon currently displayed
         :return: None
         """
@@ -198,11 +224,10 @@ class ModalUpdate:
 
         stats_folder = 'pokemon-pokedex'
 
-        path = os.path.split(string)
-        head_path = os.path.split(path[0])[1]
-        tail_path = path[1].split('.')[0]
+        inner_folder = os.path.split(os.path.split(string)[0])[-1]
+        path = os.path.splitext(os.path.basename(string))[0]
 
-        json_path = os.path.join(stats_folder, head_path, tail_path + '.json')
+        json_path = os.path.join(stats_folder, inner_folder, path + '.json')
         data = json_load(json_path)
 
         self.build_image(string)
@@ -216,7 +241,7 @@ class ModalUpdate:
         # Left pad 0's until there are 4 figures
         pokedex_no = str(data['pokedex-no']).zfill(4)
 
-        label = self.ctk.CTkLabel(master=self.type_widget,
+        label = self.ctk.CTkLabel(master=self.pokedex_no,
                                   text='#' + pokedex_no,
                                   font=('Helvetica', 20, 'bold'),
                                   width=100,
@@ -251,6 +276,7 @@ class ModalUpdate:
     def update_stats_widget(self, data):
         """
         Updates the displayed stats for the appropriate pokemon
+
         :param json_path: path to open json stats
         :return: None
         """
