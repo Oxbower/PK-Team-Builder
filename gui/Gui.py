@@ -4,7 +4,7 @@ import gui.UIModals as modals
 
 class UI:
     """
-        Builds the public facing interface
+    Builds the public facing interface
     """
 
     def __init__(self, current_window):
@@ -32,8 +32,6 @@ class UI:
         self.flat_corner = 0
         self.rounded_corner = 10
         self.expand_all = "nswe"
-        self.expand_vertical = "ns"
-        self.expand_horizontal = "ew"
 
         # sys font
         self.font = ("Arial Bold", 15)
@@ -52,8 +50,6 @@ class UI:
         self.name_stat_frame_height = 500
         self.stat_subcategory_height = 40
 
-        self.image_disp = 0
-
     def setup_ui(self):
         """
         Public facing setup call for gui
@@ -62,9 +58,6 @@ class UI:
 
         # call gui builder
         self.__build_gui()
-
-        # allow user to focus on all widgets
-        # self.root.bind_all("<Button-1>", lambda event: event.widget.focus_set())  # redo later
 
     def __build_gui(self):
         """
@@ -84,9 +77,6 @@ class UI:
         # build items and ability frame
         item_ability_frame = self.__item_ability_frame()
 
-        # build variations frame
-        variation_frame = self.__build_variation_frame()
-
         # build type frame
         type_frame = self.__build_type_frame()
 
@@ -95,6 +85,8 @@ class UI:
 
         # build this pokemon type frame
         type_adv_frame = self.__build_type_adv_frame()
+
+        side_frame = self.__build_side_img_frame()
 
         '''
         Builds the modals using the parentFrames created by the build_[name]_frame methods
@@ -106,20 +98,21 @@ class UI:
         # build modal for the image
         self.modals.build_img_modal(image_frame)
 
-        # build search bar inside the info_stat frame block
-        self.modals.build_search_bar_modal(search_stat_frame)
-
         # build the 'stats' inside the info_stat frame
         self.modals.build_stat_modal(search_stat_frame)
+
+        # build the items inside the type container i.e. pokedex-no and type display
+        self.modals.build_type_modal(type_frame)
+
+        self.modals.build_side_container(side_frame)
+
+        # build search bar inside the info_stat frame block
+        self.modals.build_search_bar_modal(search_stat_frame)
 
         # build the move picker inside the move frame
         self.modals.build_move_modal(move_frame)
 
-        # build the modal to show the variations of this pokemon (variations should still be searchable)
-        self.modals.build_variation_modal(variation_frame)
-
         # self.modals.build_type_modal(type_frame)
-
         self.modals.build_item_ability_modal(item_ability_frame)
 
         self.modals.build_type_adv_modal(type_adv_frame)
@@ -151,6 +144,8 @@ class UI:
         img_frame = self.Frame(master=self.root,
                                height=self.img_height,
                                width=self.img_width,
+                               fg_color='#ffffff',
+                               bg_color='#232323',
                                corner_radius=self.rounded_corner)
         img_frame.grid(row=1,
                        column=0,
@@ -159,28 +154,25 @@ class UI:
 
         return img_frame
 
-    def __build_variation_frame(self):
+    def __build_side_img_frame(self):
         """
-        Builds the sliding frame which contains the different variations of the current pokemon
-        :return: created frame
+        Builds the frame that display battle transformations i.e mega evolutions and stuff
+        :return: None
         """
-        # variations frame
         frame = self.Frame(master=self.root,
-                           height=self.img_height - 20,
-                           width=0,
-                           fg_color='#232323',
-                           corner_radius=0)
-
-        frame.place(x=self.img_width + self.pad_x,
-                    y=self.pad_y * 2 + 10)
+                           height=self.img_height,
+                           fg_color='#242424',
+                           width=50)
+        frame.grid(row=1,
+                   column=1,
+                   sticky='w',
+                   pady=(self.pad_y, 0))
 
         inner_frame = self.Frame(master=frame,
-                                 height=self.img_height - 20,
-                                 width=0,
-                                 fg_color='#2A2A2A',
-                                 corner_radius=0)
-        inner_frame.grid()
-        inner_frame.grid_propagate(False)
+                                 height=self.img_height-20,
+                                 fg_color='#242424',
+                                 width=50)
+        inner_frame.place(anchor='ne', relx=1, rely=.1, relheight=.9)
 
         return inner_frame
 
@@ -191,14 +183,16 @@ class UI:
         """
         # type frame
         frame = self.Frame(master=self.root,
-                           fg_color='',
-                           height=50,
+                           fg_color='#242424',
+                           corner_radius=0,
                            width=self.img_width)
 
         frame.grid(row=2,
                    column=0,
                    padx=(self.pad_x, 0),
                    sticky="nsew")
+
+        frame.columnconfigure(0, weight=1)
 
         return frame
 
