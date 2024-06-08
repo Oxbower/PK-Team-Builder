@@ -150,6 +150,7 @@ class ModalUpdate:
         for index, value in enumerate(split_ref['mega']):
             image = read_image([os.path.join('.', 'assets', 'mega-stones', 'generic-mega-symbol.png')], "thumbnail", size=(30, 30))[0]
             image = self.ctk.CTkImage(light_image=image, size=(image.width, image.height))
+
             variation_button = self.ctk.CTkButton(master=self.sidebar_widget,  # Change to self.var_frame
                                                   height=40,
                                                   fg_color='#aa0066',
