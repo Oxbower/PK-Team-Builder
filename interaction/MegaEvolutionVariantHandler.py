@@ -22,3 +22,15 @@ def variant_handler(ref_path: list[str]) -> dict[str, list[str]]:
 
     return variant_dict
 
+
+def mega_variant_folder_handler(path: str) -> list[str]:
+    file_name = os.path.splitext(os.path.basename(path))[0].split('Mega ')[-1]
+    inner_path = os.path.split(os.path.split(path)[0])[-1].title()
+    folder_path = os.path.join('.', 'assets', 'mega-stones', inner_path)
+
+    image_list = []
+
+    for value in os.listdir(folder_path):
+        image_list.append(os.path.join(folder_path, value))
+
+    return image_list
