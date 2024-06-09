@@ -7,6 +7,7 @@ from interaction.ReadFiles import build_img_ref
 from interaction.MegaEvolutionVariantHandler import variant_handler, mega_variant_folder_handler
 from app_io.LoadJson import json_load
 from app_io.LoadImage import read_image
+from gui.TypeBackgroundColor import type_color
 
 
 class ModalUpdate:
@@ -157,11 +158,12 @@ class ModalUpdate:
                 variation_button = self.ctk.CTkButton(master=self.sidebar_widget,  # Change to self.var_frame
                                                       height=40,
                                                       fg_color='#aa0066',
-                                                      hover_color='#330066',
+                                                      hover_color='#770033',
                                                       width=50,
                                                       text=None,
                                                       image=image,
-                                                      command=lambda string=split_ref['mega'][index]: self.update_display(string))
+                                                      command=lambda string=split_ref['mega'][index]:
+                                                      self.update_display(string))
 
                 variation_button.grid(row=index, column=0, padx=5, pady=(5, 5))
 
@@ -266,8 +268,10 @@ class ModalUpdate:
                 'thumbnail', size=(200, 200))[0]
             image = self.ctk.CTkImage(light_image=image, size=(30, 30))
 
+            color = type_color(type_data[value])
+
             types = self.Frame(master=self.type_frame,
-                               fg_color='#aaaaaa',
+                               fg_color=color,
                                width=40,
                                height=46)
 

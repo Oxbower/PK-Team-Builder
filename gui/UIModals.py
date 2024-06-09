@@ -81,6 +81,14 @@ class UIModals:
         frame.grid(row=0, column=0, padx=5, sticky='nw')
         frame.grid_propagate(False)
 
+        label = self.ctk.CTkLabel(master=frame,
+                                  text='#0000',
+                                  font=('Helvetica', 20, 'bold'),
+                                  width=100,
+                                  height=40)
+        label.grid(row=0, column=0)
+        label.grid_propagate(False)
+
         type_frame = self.Frame(master=parentFrame,
                                 fg_color='#242424',
                                 height=45,
