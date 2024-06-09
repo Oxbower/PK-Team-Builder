@@ -4,7 +4,7 @@ import os
 from interaction.StatColorUpdate import stat_color_update
 from interaction.AnimateStatBars import start_animation
 from interaction.ReadFiles import build_img_ref
-from interaction.MegaEvolutionVariantHandler import variant_handler
+from interaction.MegaEvolutionVariantHandler import variant_handler, mega_variant_folder_handler
 from app_io.LoadJson import json_load
 from app_io.LoadImage import read_image
 
@@ -147,20 +147,23 @@ class ModalUpdate:
 
             variation_button.grid(row=0, column=index, padx=5)
 
-        for index, value in enumerate(split_ref['mega']):
-            image = read_image([os.path.join('.', 'assets', 'mega-stones', 'generic-mega-symbol.png')],
-                               "thumbnail", size=(30, 30))[0]
-            image = self.ctk.CTkImage(light_image=image, size=(image.width, image.height))
-            variation_button = self.ctk.CTkButton(master=self.sidebar_widget,  # Change to self.var_frame
-                                                  height=40,
-                                                  fg_color='#aa0066',
-                                                  hover_color='#330066',
-                                                  width=50,
-                                                  text=None,
-                                                  image=image,
-                                                  command=lambda string=value: self.update_display(string))
+        if len(split_ref['mega']) != 0:
+            image = mega_variant_folder_handler(split_ref['mega'][0])
 
-            variation_button.grid(row=index, column=0, padx=5, pady=(0, 5))
+            for index, value in enumerate(image):
+                image = read_image([value], "thumbnail", size=(30, 30))[0]
+
+                image = self.ctk.CTkImage(light_image=image, size=(image.width, image.height))
+                variation_button = self.ctk.CTkButton(master=self.sidebar_widget,  # Change to self.var_frame
+                                                      height=40,
+                                                      fg_color='#aa0066',
+                                                      hover_color='#330066',
+                                                      width=50,
+                                                      text=None,
+                                                      image=image,
+                                                      command=lambda string=split_ref['mega'][index]: self.update_display(string))
+
+                variation_button.grid(row=index, column=0, padx=5, pady=(5, 5))
 
         # Runs on query to show base form of pokemon (redo)
         variant = ["Mega ", "Alolan ", "Galarian ", "Hisuian ", "Paldean "]
