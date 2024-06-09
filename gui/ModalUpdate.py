@@ -147,6 +147,7 @@ class ModalUpdate:
 
             variation_button.grid(row=0, column=index, padx=5)
 
+
         if len(split_ref['mega']) != 0:
             image = mega_variant_folder_handler(split_ref['mega'][0])
 
@@ -162,7 +163,7 @@ class ModalUpdate:
                                                       text=None,
                                                       image=image,
                                                       command=lambda string=split_ref['mega'][index]: self.update_display(string))
-
+                
                 variation_button.grid(row=index, column=0, padx=5, pady=(5, 5))
 
         # Runs on query to show base form of pokemon (redo)
