@@ -147,7 +147,6 @@ class ModalUpdate:
 
             variation_button.grid(row=0, column=index, padx=5)
 
-
         if len(split_ref['mega']) != 0:
             image = mega_variant_folder_handler(split_ref['mega'][0])
 
