@@ -163,7 +163,7 @@ class ModalUpdate:
                                                       image=image,
                                                       command=lambda string=split_ref['mega'][index]: self.update_display(string))
 
-            variation_button.grid(row=index, column=0, padx=5, pady=(0, 5))
+                variation_button.grid(row=index, column=0, padx=5, pady=(0, 5))
 
         # Runs on query to show base form of pokemon (redo)
         variant = ["Mega ", "Alolan ", "Galarian ", "Hisuian ", "Paldean "]
