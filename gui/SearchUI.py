@@ -73,11 +73,11 @@ class SearchUI:
         self.scrollable_frame = self.ctk.CTkScrollableFrame(master=parentFrame,
                                                             fg_color="#3b3b3b",
                                                             width=self.frame_width - 70,
-                                                            height=150,
+                                                            height=0,
                                                             corner_radius=0)
 
         # there's a bug with scrollable frames in CTK this just deals with it
-        self.scrollable_frame._scrollbar.configure(height=0)
+        # self.scrollable_frame._scrollbar.configure(height=0)
         self.scrollable_frame.pack()
 
         self.__build_result_frame(query_result)
