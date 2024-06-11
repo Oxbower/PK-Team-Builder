@@ -279,16 +279,19 @@ class ModalUpdate:
             # How much of the bar should be visible
             percentile = (data['stats'][i]['base'] / max_val)
 
-            # Accumulate value of base stat (Generally not useful in actual play)
+            # Accumulate value of base stat
             total = total + data['stats'][i]['base']
 
             display_width = int(max_width * percentile)
 
-            # Minimum bar fill
-            if max_width * percentile < 5:
-                self.stats_widget[i][1].configure(width=5)
-            else:
-                self.stats_widget[i][1].configure(fg_color=stat_color_update(data['stats'][i]['base']))
-                start_animation(self.stats_widget[i][1], display_width)
+            # Change stat_bar size and color
+            if self.stats_widget[i][1].cget('width') != display_width:
+                # Minimum bar fill
+                if max_width * percentile < 5:
+                    self.stats_widget[i][1].configure(fg_color=stat_color_update(data['stats'][i]['base']))
+                    self.stats_widget[i][1].configure(width=5)
+                else:
+                    self.stats_widget[i][1].configure(fg_color=stat_color_update(data['stats'][i]['base']))
+                    start_animation(self.stats_widget[i][1], display_width)
 
         self.stats_widget["Total"][0].configure(text=total)
