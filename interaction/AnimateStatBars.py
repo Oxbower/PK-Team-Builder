@@ -16,4 +16,4 @@ def animate_stat_bar(stat_bar, max_value, loop_value: int) -> None:
         else:
             loop_value = loop_value + 1
 
-        stat_bar.after(10, animate_stat_bar, stat_bar, max_value, loop_value)
+        stat_bar.after(5, animate_stat_bar, stat_bar, max_value, loop_value)
