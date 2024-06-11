@@ -1,22 +1,22 @@
 import gui.ModalInteraction as ModalInteraction
-from app_io.LoadImage import read_image
+import customtkinter as ctk
 
 
 class UIModals:
-    def __init__(self, gui, ctk, mainWindow, Frame):
+    def __init__(self, gui, current_window):
         """
         Initialize UI modals this is the stuff inside the
         frames.
         """
         self.ctk = ctk
-        self.mainWindow = mainWindow
-        self.Frame = Frame
+        self.mainWindow = current_window
+        self.Frame = ctk.CTkFrame
         self.gui = gui
 
         self.string_var = self.ctk.StringVar()
 
         # instantiate modal_interact class can only be accessed by UIModals
-        self.modal_interact = ModalInteraction.ModalInteraction(self.string_var, gui, ctk, mainWindow, Frame)
+        self.modal_interact = ModalInteraction.ModalInteraction(self.string_var, gui, current_window)
 
         self.pokemon_id = None
         self.types_adv = [0, 0]
@@ -73,6 +73,8 @@ class UIModals:
         :param parentFrame: the parent container
         :return: None
         """
+
+        # holds the pokemon's pokedex num
         frame = self.Frame(master=parentFrame,
                            fg_color='#666666',
                            height=45,
@@ -89,6 +91,7 @@ class UIModals:
         label.grid(row=0, column=0)
         label.grid_propagate(False)
 
+        # holds the pokemon's type
         type_frame = self.Frame(master=parentFrame,
                                 fg_color='#242424',
                                 height=45,
@@ -96,6 +99,7 @@ class UIModals:
 
         type_frame.place(anchor='ne', rely=-0.1, relx=.96)
 
+        # pass in the frame to write pokedex-num and type frame into
         self.modal_interact.set_type_widget(frame, type_frame)
 
     def build_search_bar_modal(self, parentFrame):

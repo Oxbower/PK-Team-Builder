@@ -3,17 +3,17 @@ import gui.ModalUpdate as ModalUpdate
 
 
 class ModalInteraction:
-    def __init__(self, stringVar, gui, ctk, mainWindow, Frame):
+    def __init__(self, string_var, gui, current_window):
         # Updated String (need to keep track of)
-        self.string_var = stringVar
+        self.string_var = string_var
 
         self.searchFrame = None
         self.name_plate_focused = False
 
-        self.mainWindow = mainWindow
+        self.mainWindow = current_window
 
         self.searchAlgorithm = SearchResult.SearchResult()
-        self.modalUpdate = ModalUpdate.ModalUpdate(gui, ctk, mainWindow, Frame, self)
+        self.modalUpdate = ModalUpdate.ModalUpdate(gui, current_window, self)
 
     def set_stats_widget(self, stats_widget, type_frame):
         """

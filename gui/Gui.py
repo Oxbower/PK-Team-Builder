@@ -24,7 +24,7 @@ class UI:
         self.Frame = ctk.CTkFrame
 
         # modal class
-        self.modals = modals.UIModals(self, self.ctk, self.current_window, self.Frame)
+        self.modals = modals.UIModals(self, self.current_window)
 
         # ui settings
         self.pad_y = 30

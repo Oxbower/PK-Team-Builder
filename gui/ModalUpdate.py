@@ -1,4 +1,5 @@
 import gui.SearchUI as SearchUI
+import customtkinter as ctk
 import os
 
 from interaction.StatColorUpdate import stat_color_update
@@ -14,15 +15,15 @@ class ModalUpdate:
     """
     Updates the modals when interaction occurs
     """
-    def __init__(self, gui, ctk, mainWindow, Frame, modalInteract):
+    def __init__(self, gui, mainWindow, modalInteract):
         self.gui = gui
         self.ctk = ctk
         self.mainWindow = mainWindow
-        self.Frame = Frame
+        self.Frame = ctk.CTkFrame
 
         self.SearchUI = SearchUI.SearchUI(self.gui, self.ctk, self.mainWindow, self.Frame, modalInteract)
 
-        self.container_frame = None
+        self.search_result_container = None
         self.img_holder = None
         self.var_frame = None
         self.string_var = None
@@ -91,18 +92,18 @@ class ModalUpdate:
         """
 
         # destroy container frame to stop filling up heap
-        if self.container_frame is not None:
-            self.container_frame.destroy()
+        if self.search_result_container is not None:
+            self.search_result_container.destroy()
 
         frame_width = parentFrame.winfo_width()
 
         # Work around to destroy scrollable frame, it's a known issue on Github #2266
-        self.container_frame = self.Frame(master=parentFrame, width=0)
+        self.search_result_container = self.Frame(master=parentFrame, width=0)
         # place the container in the stat frame at fixed location
-        self.container_frame.place(y=70, x=25)
+        self.search_result_container.place(y=70, x=25)
 
         # build result frame
-        self.SearchUI.build_frame(result_list, self.container_frame, frame_width)
+        self.SearchUI.build_frame(result_list, self.search_result_container, frame_width)
 
     def destroy_result_frame(self):
         """
@@ -111,10 +112,13 @@ class ModalUpdate:
         :return: None
         """
         try:
-            self.container_frame.destroy()
+            self.search_result_container.destroy()
             print("Destroying result frame...")
         except Exception as E:
             print(E)
+
+
+
 
     def build_dynamic_variation_modal(self, ref_path: list[str]):
         """
@@ -185,13 +189,36 @@ class ModalUpdate:
         :param string:
         :return: None
         """
-        name = string.lower()
-        name = name.split(' ')
+        name = string.lower().split(' ')
         name = '-'.join(name)
 
         print("Clicked Result: " + name)
         ref_path = build_img_ref(name)
         self.build_dynamic_variation_modal(ref_path)
+
+    def update_display(self, string):
+        """
+        Updates the entire frame with new data
+
+        :param string: name of the pokemon currently displayed
+        :return: None
+        """
+        self.name_plate_focused(False)
+
+        stats_folder = 'pokemon-pokedex'
+
+        inner_folder = os.path.split(os.path.split(string)[0])[-1]
+        path = os.path.splitext(os.path.basename(string))[0]
+
+        json_path = os.path.join(stats_folder, inner_folder, path + '.json')
+        data = json_load(json_path)
+
+        self.build_image(string)
+
+        # Update the stats widget
+        self.update_stats_widget(data)
+        self.update_pokemon_id(data)
+        self.update_type_displayed(data)
 
     def build_image(self, image_path):  # Modular do not mess with this anymore
         """
@@ -219,31 +246,14 @@ class ModalUpdate:
 
         self.img_holder.pack()
 
-    def update_display(self, string):
+    def update_pokemon_id(self, data):
         """
-        Updates the entire frame with new data
+        update the pokedex id of the current pokemon
 
-        :param string: name of the pokemon currently displayed
+        :param data: pokedex id of pokemon
         :return: None
         """
-        self.name_plate_focused(False)
 
-        stats_folder = 'pokemon-pokedex'
-
-        inner_folder = os.path.split(os.path.split(string)[0])[-1]
-        path = os.path.splitext(os.path.basename(string))[0]
-
-        json_path = os.path.join(stats_folder, inner_folder, path + '.json')
-        data = json_load(json_path)
-
-        self.build_image(string)
-
-        # Update the stats widget
-        self.update_stats_widget(data)
-        self.update_pokemon_id(data)
-        self.update_type_displayed(data)
-
-    def update_pokemon_id(self, data):
         # Left pad 0's until there are 4 figures
         pokedex_no = str(data['pokedex-no']).zfill(4)
 
@@ -257,6 +267,12 @@ class ModalUpdate:
         label.grid_propagate(False)
 
     def update_type_displayed(self, data):
+        """
+        Updates the type displayed for the current pokemon
+
+        :param data: type data of pokemon
+        :return: None
+        """
         for value in self.type_frame.winfo_children():
             value.destroy()
 
@@ -285,13 +301,13 @@ class ModalUpdate:
         """
         Updates the displayed stats for the appropriate pokemon
 
-        :param json_path: path to open json stats
+        :param data: data returned by json
         :return: None
         """
         row_label = ["HP", "Attack", "Defense", "Sp. Atk", "Sp. Def", "Speed"]
 
         total = 0
-        max_val = 255
+        max_val = 255   # Max value that all stat can have
 
         max_height = self.stats_widget["HP"][1].cget("height")
         max_width = self.stats_widget["HP"][1].cget("width")
