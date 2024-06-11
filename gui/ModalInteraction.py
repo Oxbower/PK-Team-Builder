@@ -1,5 +1,6 @@
 import interaction.SearchingAlgorithm as SearchResult
 import gui.ModalUpdate as ModalUpdate
+import gui.SearchUI as SearchUI
 
 
 class ModalInteraction:
@@ -13,7 +14,10 @@ class ModalInteraction:
         self.mainWindow = current_window
 
         self.searchAlgorithm = SearchResult.SearchResult()
+
         self.modalUpdate = ModalUpdate.ModalUpdate(gui, current_window, self)
+        self.SearchUI = SearchUI.SearchUI(self.mainWindow, self)
+
 
     def set_stats_widget(self, stats_widget, type_frame):
         """
@@ -66,14 +70,14 @@ class ModalInteraction:
 
         if search_string == "":
             print("Empty String")
-            self.modalUpdate.destroy_result_frame()
+            self.SearchUI.destroy_result_frame()
         else:
             if self.name_plate_focused:
                 # build the list containing all matches of string
                 search_string = self.searchAlgorithm.build_search_list(search_string)
 
                 # pass in the list to build result frame from
-                self.modalUpdate.build_search_result(search_string, self.searchFrame)
+                self.SearchUI.build_search_result(search_string, self.searchFrame)
 
     def name_plate_focus(self, boolean: bool) -> None:
         self.name_plate_focused = boolean
@@ -89,4 +93,4 @@ class ModalInteraction:
 
         self.mainWindow.root.focus_set()
         # destroy result frame
-        self.modalUpdate.destroy_result_frame()
+        self.SearchUI.destroy_result_frame()

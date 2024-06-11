@@ -1,45 +1,92 @@
+import customtkinter as ctk
+
 class SearchUI:
-    def __init__(self, gui, ctk, mainWindow, Frame, modalInteract):
-        self.gui = gui
+    def __init__(self, mainWindow, modalInteract):
         self.ctk = ctk
         self.mainWindow = mainWindow
-        self.Frame = Frame
+        self.Frame = ctk.CTkFrame
         self.modalInteract = modalInteract
 
-        self.result_frame = None
+        self.frame_width = 0
 
-    def build_frame(self, query_result, parentFrame, frame_width):
+        self.search_result_container = None
+        self.scrollable_frame = None
+
+    def build_search_result(self, result_list: list[str], parentFrame):
+        """
+                        parentFrame
+        -----------------------------------------
+        |       search_result_container         |
+        |   ---------------------------------   |
+        |   |        scrollable_frame       |   |
+        |   |                               |   |
+        |   |                               |   |
+        |   |                               |   |
+        |   ---------------------------------   |
+        -----------------------------------------
+
+        Builds search result
+
+        :param result_list: list to build search result for
+        :param parentFrame: parentFrame for this class so stat_frame
+        :return: None
+        """
+
+        # destroy container frame to stop filling up heap
+        if self.search_result_container is not None:
+            self.search_result_container.destroy()
+
+        self.frame_width = parentFrame.winfo_width()
+
+        # Work around to destroy scrollable frame, it's a known issue on Github #2266
+        self.search_result_container = self.Frame(master=parentFrame, width=self.frame_width)
+        # place the container in the stat frame at fixed location
+        self.search_result_container.place(y=70, x=25)
+
+        # build result frame
+        self.__build_scrollable_frame(result_list, self.search_result_container)
+
+    def destroy_result_frame(self):
+        """
+        Destroys search_result_container after user has chosen a result
+
+        :return: None
+        """
+        try:
+            self.search_result_container.destroy()
+            print("Destroying result frame...")
+        except Exception as E:
+            print(E)
+
+    def __build_scrollable_frame(self, query_result, parentFrame):
         """
         Build a result bar for given result string
-        :param frame_width: width of parentFrame
         :param parentFrame: frame to build in
         :param query_result: list containing strings to put into search bar
         :return: None
         """
         # destroy frame
-        if self.result_frame is not None:
-            self.result_frame.destroy()
+        if self.scrollable_frame is not None:
+            self.scrollable_frame.destroy()
 
         # Build the scrollable frame
-        self.result_frame = self.ctk.CTkScrollableFrame(master=parentFrame,
-                                                        fg_color="#3b3b3b",
-                                                        width=frame_width - 70,
-                                                        height=150,
-                                                        corner_radius=self.gui.flat_corner)
+        self.scrollable_frame = self.ctk.CTkScrollableFrame(master=parentFrame,
+                                                            fg_color="#3b3b3b",
+                                                            width=self.frame_width - 70,
+                                                            height=150,
+                                                            corner_radius=0)
 
         # there's a bug with scrollable frames in CTK this just deals with it
-        self.result_frame._scrollbar.configure(height=0)
-        self.result_frame.pack()
+        self.scrollable_frame._scrollbar.configure(height=0)
+        self.scrollable_frame.pack()
 
-        #self.searchHandler = SearchR.SearchResult(self.Frame, self.ctk, self.result)
-        self.__build_result_frame(query_result, frame_width)
+        self.__build_result_frame(query_result)
 
-    def __destroy_frame(self, widget):
-        widget.destroy()
-
-    def __build_result_frame(self, query_result, frame_width):
+    def __build_result_frame(self, query_result):
         """
         Build query output
+
+        :param query_result: output of SearchingAlgorithm
         :return: null
         """
 
@@ -48,21 +95,21 @@ class SearchUI:
             capitalized = value.title()
             query_result[index] = capitalized
 
-        # Flush the Frame
-        if self.result_frame is not None:
-            for value in self.result_frame.winfo_children():
-                self.__destroy_frame(value)
+        # Flush the items in the scrollable frame
+        if self.scrollable_frame is not None:
+            for value in self.scrollable_frame.winfo_children():
+                value.destroy()
 
         # Insert query result into frame
         for index, value in enumerate(query_result):
-            label = self.ctk.CTkButton(master=self.result_frame,
+            label = self.ctk.CTkButton(master=self.scrollable_frame,
                                        text=value,
                                        fg_color="#2b2b2b",
                                        hover_color="#353535",
-                                       width=frame_width-80,
+                                       width=self.frame_width - 80,
                                        height=50,
                                        command=lambda string=value: self.modalInteract.clicked_search_query(string),
-                                       corner_radius=self.gui.rounded_corner)
+                                       corner_radius=10)
             label.grid(row=index,
                        column=0,
                        pady=5,

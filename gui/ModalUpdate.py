@@ -21,8 +21,6 @@ class ModalUpdate:
         self.mainWindow = mainWindow
         self.Frame = ctk.CTkFrame
 
-        self.SearchUI = SearchUI.SearchUI(self.gui, self.ctk, self.mainWindow, self.Frame, modalInteract)
-
         self.search_result_container = None
         self.img_holder = None
         self.var_frame = None
@@ -81,44 +79,6 @@ class ModalUpdate:
         self.var_frame = Frame
         self.string_var = string_var
         self.name_plate_focused = name_plate_focused
-
-    def build_search_result(self, result_list: list[str], parentFrame):
-        """
-        Builds search result
-
-        :param result_list: list to build search result for
-        :param parentFrame: parentFrame for this class so stat_frame
-        :return: None
-        """
-
-        # destroy container frame to stop filling up heap
-        if self.search_result_container is not None:
-            self.search_result_container.destroy()
-
-        frame_width = parentFrame.winfo_width()
-
-        # Work around to destroy scrollable frame, it's a known issue on Github #2266
-        self.search_result_container = self.Frame(master=parentFrame, width=0)
-        # place the container in the stat frame at fixed location
-        self.search_result_container.place(y=70, x=25)
-
-        # build result frame
-        self.SearchUI.build_frame(result_list, self.search_result_container, frame_width)
-
-    def destroy_result_frame(self):
-        """
-        Destroy frame after user has chosen a result
-
-        :return: None
-        """
-        try:
-            self.search_result_container.destroy()
-            print("Destroying result frame...")
-        except Exception as E:
-            print(E)
-
-
-
 
     def build_dynamic_variation_modal(self, ref_path: list[str]):
         """
