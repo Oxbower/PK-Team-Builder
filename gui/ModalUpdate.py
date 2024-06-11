@@ -269,8 +269,7 @@ class ModalUpdate:
         total = 0
         max_val = 255   # Max value that all stat can have
 
-        max_height = self.stats_widget["HP"][1].cget("height")
-        max_width = self.stats_widget["HP"][1].cget("width")
+        max_width = self.mainWindow.root.nametowidget(self.stats_widget['HP'][1].winfo_parent()).winfo_width()
 
         for i in row_label:
             self.stats_widget[i][0].configure(text=data['stats'][i]['base'])
@@ -283,22 +282,13 @@ class ModalUpdate:
             # Accumulate value of base stat (Generally not useful in actual play)
             total = total + data['stats'][i]['base']
 
-            # Destroy the current bar in display
-            for widget in self.stats_widget[i][1].winfo_children():
-                widget.destroy()
-
-            display_width = max_width * percentile
+            display_width = int(max_width * percentile)
 
             # Minimum bar fill
             if max_width * percentile < 5:
-                display_width = 5
-
-            inner_frame = self.Frame(master=self.stats_widget[i][1],
-                                     fg_color=stat_color_update(data['stats'][i]['base']),
-                                     height=max_height,
-                                     width=2)
-            inner_frame.grid()
-
-            start_animation(inner_frame, display_width)
+                self.stats_widget[i][1].configure(width=5)
+            else:
+                self.stats_widget[i][1].configure(fg_color=stat_color_update(data['stats'][i]['base']))
+                start_animation(self.stats_widget[i][1], display_width)
 
         self.stats_widget["Total"][0].configure(text=total)

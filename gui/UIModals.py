@@ -306,7 +306,13 @@ class UIModals:
             outer_frame.grid(pady=10)
             outer_frame.grid_propagate(False)
 
-            self.stats_widget[i][1] = outer_frame
+            stat_bar = self.Frame(master=outer_frame,
+                                  fg_color="#ff0000",
+                                  height=outer_frame.cget('height'),
+                                  width=5)
+            stat_bar.grid()
+
+            self.stats_widget[i][1] = stat_bar
 
         """
         Container for pokemon variations

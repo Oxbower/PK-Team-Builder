@@ -1,8 +1,22 @@
-def start_animation(*args):
-    animate_stat_bar(args[0], args[1])
+import threading
 
 
-def animate_stat_bar(Frame, max_value, loop_value: int = 0) -> None:
-    if loop_value < max_value:
-        Frame.configure(width=loop_value)
-        Frame.after(6, animate_stat_bar, Frame, max_value, loop_value + 1)
+def start_animation(stat_bar, max_value):
+    if stat_bar.cget('width') == max_value:
+        return
+
+    # start thread to improve performance
+    thread = threading.Thread(target=animate_stat_bar, args=(stat_bar, max_value, stat_bar.cget('width')))
+    thread.start()
+
+
+def animate_stat_bar(stat_bar, max_value, loop_value: int) -> None:
+    if loop_value != max_value:
+        stat_bar.configure(width=loop_value)
+
+        if max_value < loop_value:
+            loop_value = loop_value - 1
+        else:
+            loop_value = loop_value + 1
+
+        stat_bar.after(6, animate_stat_bar, stat_bar, max_value, loop_value)
