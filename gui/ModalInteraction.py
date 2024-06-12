@@ -1,19 +1,24 @@
 import interaction.SearchingAlgorithm as SearchResult
 import gui.ModalUpdate as ModalUpdate
+import gui.SearchUI as SearchUI
 
 
 class ModalInteraction:
-    def __init__(self, stringVar, gui, ctk, mainWindow, Frame):
-        # Updated String (need to keep track of)
-        self.string_var = stringVar
+    def __init__(self, string_var, gui, current_window):
 
-        self.searchFrame = None
+        self.current_window = current_window
+
+        # Updated String (need to keep track of)
+        self.string_var = string_var
+
+        self.parent_search_frame = None
         self.name_plate_focused = False
 
-        self.mainWindow = mainWindow
-
         self.searchAlgorithm = SearchResult.SearchResult()
-        self.modalUpdate = ModalUpdate.ModalUpdate(gui, ctk, mainWindow, Frame, self)
+
+        self.ModalUpdate = ModalUpdate.ModalUpdate(gui, current_window, self)
+        self.SearchUI = SearchUI.SearchUI(self.current_window, self)
+
 
     def set_stats_widget(self, stats_widget, type_frame):
         """
@@ -22,14 +27,14 @@ class ModalInteraction:
         :param stats_widget: the statistics widget dictionary
         :return: None
         """
-        self.modalUpdate.set_stats_widget(stats_widget)
-        self.modalUpdate.set_variation_frame(type_frame, self.set_string_var, self.name_plate_focus)
+        self.ModalUpdate.set_stats_widget(stats_widget)
+        self.ModalUpdate.set_variation_frame(type_frame, self.set_string_var, self.name_plate_focus)
 
     def set_type_widget(self, pokedex_no, type_frame):
-        self.modalUpdate.set_type_widget(pokedex_no, type_frame)
+        self.ModalUpdate.set_type_widget(pokedex_no, type_frame)
 
     def set_sidebar_widget(self, sidebar_widget):
-        self.modalUpdate.set_sidebar_widget(sidebar_widget)
+        self.ModalUpdate.set_sidebar_widget(sidebar_widget)
 
     def set_search_modal_frame(self, Frame):
         """
@@ -37,7 +42,7 @@ class ModalInteraction:
         :param Frame: search frame widget
         :return: None
         """
-        self.searchFrame = Frame
+        self.parent_search_frame = Frame
 
     def set_img_frame(self, Frame):
         """
@@ -46,11 +51,12 @@ class ModalInteraction:
         :param imgFrame: Frame to manipulate when displaying new image
         :return: None
         """
-        self.modalUpdate.set_img_frame(Frame)
+        self.ModalUpdate.set_img_frame(Frame)
 
     def set_string_var(self, string: str) -> None:
         """
-        Sets the string_var which is the callback function for the
+        Sets the string_var for search_bar_callback
+
         :param string: String being passed into the search bar callback
         :return: None
         """
@@ -59,6 +65,7 @@ class ModalInteraction:
     def search_bar_callback(self, *args):
         """
         Handles search bar inputs to do string searches
+
         :param args: Necessary arguments for the call back function
         :return: None
         """
@@ -66,27 +73,35 @@ class ModalInteraction:
 
         if search_string == "":
             print("Empty String")
-            self.modalUpdate.destroy_result_frame()
+            self.SearchUI.destroy_result_frame()
         else:
+            # Check if search bar focused before triggering
             if self.name_plate_focused:
                 # build the list containing all matches of string
                 search_string = self.searchAlgorithm.build_search_list(search_string)
 
                 # pass in the list to build result frame from
-                self.modalUpdate.build_search_result(search_string, self.searchFrame)
+                self.SearchUI.build_search_result(search_string, self.parent_search_frame)
 
     def name_plate_focus(self, boolean: bool) -> None:
+        """
+        Boolean var to detect if focus is on search_bar
+
+        :param boolean: true if focused else
+        :return: None
+        """
         self.name_plate_focused = boolean
 
     def clicked_search_query(self, string: str) -> None:
         """
         Detect when any of the search results are clicked
+
         :param string: name of the clicked result
-        :return: null
+        :return: None
         """
         self.string_var.set(string)
-        self.modalUpdate.build_path_ref(string)
+        self.ModalUpdate.build_path_ref(string)
 
-        self.mainWindow.root.focus_set()
+        self.current_window.root.focus_set()
         # destroy result frame
-        self.modalUpdate.destroy_result_frame()
+        self.SearchUI.destroy_result_frame()
