@@ -255,7 +255,7 @@ class UI:
         """
         frame = self.Frame(master=self.root,
                            height=100,
-                           width=self.img_width + 50)
+                           width=180)
         frame.grid(row=3,
                    column=0,
                    columnspan=2,
