@@ -1,4 +1,4 @@
-import interaction.ReadFiles as read_file
+import interaction.BuildDirectoryReference as read_file
 import sys
 import json
 from os import listdir

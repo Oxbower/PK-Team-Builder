@@ -4,7 +4,7 @@ import os
 
 from interaction.StatColorUpdate import stat_color_update
 from interaction.AnimateStatBars import start_animation
-from interaction.ReadFiles import build_img_ref
+from interaction.BuildDirectoryReference import build_img_ref
 from interaction.MegaEvolutionVariantHandler import variant_handler, mega_variant_folder_handler
 from app_io.LoadJson import json_load
 from app_io.LoadImage import read_image
