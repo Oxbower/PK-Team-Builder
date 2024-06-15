@@ -14,6 +14,9 @@ class ModalInteraction:
         self.parent_search_frame = None
         self.name_plate_focused = False
 
+        self.type_adv_active_window = None
+        self.button_config = None
+
         self.searchAlgorithm = SearchResult.SearchResult()
 
         self.ModalUpdate = ModalUpdate.ModalUpdate(gui, current_window, self)
@@ -105,3 +108,22 @@ class ModalInteraction:
         self.current_window.root.focus_set()
         # destroy result frame
         self.SearchUI.destroy_result_frame()
+
+    def type_adv_change_window(self, string: str, new_window, button_config) -> None:
+        """
+        handles the type advantage window button callback
+
+        :param button_config: button config change color when active
+        :param string: which button was pressed
+        :param new_window: the window to display
+        :return: None
+        """
+        if self.type_adv_active_window is not None:
+            self.button_config.configure(fg_color="#2e2e2e", hover_color='#3f3f3f')
+            self.type_adv_active_window.grid_remove()
+
+        self.type_adv_active_window = new_window.get_window()
+        self.button_config = button_config
+
+        self.button_config.configure(fg_color='#202020', hover_color='#202020')
+        self.type_adv_active_window.grid(row=1, column=0)

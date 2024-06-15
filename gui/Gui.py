@@ -204,9 +204,10 @@ class UI:
         frame = self.Frame(master=self.root,
                            width=400)
         frame.grid(row=4,
-                   column=2,
-                   padx=(0, self.pad_x),
-                   sticky="ne")
+                   column=0,
+                   padx=(self.pad_x, 0),
+                   sticky="nw",
+                   columnspan=3)
 
         return frame
 
@@ -217,12 +218,16 @@ class UI:
         """
         frame = self.Frame(master=self.root,
                            width=460,
-                           height=300)
+                           height=300,
+                           fg_color='#242424')
         frame.grid(row=4,
-                   column=0,
-                   padx=(self.pad_x, 0),
-                   sticky='w',
-                   columnspan=3)
+                   column=2,
+                   padx=(0, self.pad_x),
+                   sticky='e')
+
+        frame.rowconfigure(0, weight=1)
+        frame.columnconfigure(1, weight=1)
+
         return frame
 
     def __build_info_frame(self):

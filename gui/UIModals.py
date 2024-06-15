@@ -1,6 +1,8 @@
 import gui.ModalInteraction as ModalInteraction
 import customtkinter as ctk
 
+import gui.TypeAdvantageFrames as taf
+
 
 class UIModals:
     def __init__(self, gui, current_window):
@@ -19,7 +21,6 @@ class UIModals:
         self.modal_interact = ModalInteraction.ModalInteraction(self.string_var, gui, current_window)
 
         self.pokemon_id = None
-        self.types_adv = [0, 0]
 
         '''
         Holds modal references for update
@@ -146,7 +147,7 @@ class UIModals:
                                      hover_color=self.gui.hover_color,
                                      cursor="hand2",
                                      height=45,
-                                     width=max_width-10)
+                                     width=max_width - 10)
 
         ability.grid(row=0,
                      pady=5,
@@ -167,38 +168,52 @@ class UIModals:
     def build_type_adv_modal(self, parentFrame):
         """
         builds modal which shows current pokemon's defensive strength and weaknesses
+
         :param parentFrame: parent frame to hold modals
         :return: None
         """
+        options = ['Offensive', 'Defensive']
+        initial_active_window, initial_active_button = None, None
 
-        # get the dimensions of this parent frame
-        max_height = parentFrame.cget("height")
-        max_width = parentFrame.cget("width")
+        button_holder = self.Frame(master=parentFrame,
+                                   corner_radius=0,
+                                   fg_color='#242424')
+        button_holder.grid(row=0,
+                           column=0,
+                           sticky='e',
+                           padx=10)
 
-        for index, value in enumerate(self.types_adv):
-            frame = self.Frame(master=parentFrame,
-                               height=max_height - 10,
-                               width=(max_width / 2) - 10,
-                               fg_color="#2a2a2a"
-                               )
+        for index, value in enumerate(options):
+            new_window = taf.TypeAdvantageFrames()
 
-            frame.grid(row=0,
-                       column=index,
-                       padx=5,
-                       pady=5)
+            button = self.ctk.CTkButton(master=button_holder,
+                                        width=150,
+                                        height=35,
+                                        cursor="hand2",
+                                        fg_color="#2e2e2e",
+                                        font=("Helvetica", 15, "bold"),
+                                        hover_color=self.gui.hover_color,
+                                        text=value,
+                                        command=None)
 
-            self.types_adv[index] = frame
+            button.configure(command=lambda string=value, window=new_window, button_config=button:
+            self.modal_interact.type_adv_change_window(string, window, button_config))
 
-        # for index in range(10):
-        #     frame = self.Frame(master=self.types_adv[0],
-        #                        height=(max_height / 10) - 5,
-        #                        fg_color="white"
-        #                        )
-        #
-        #     frame.grid(row=index,
-        #                column=0,
-        #                pady=2,
-        #                padx=2)
+            button.grid(row=0,
+                        column=index,
+                        padx=(5, 0),
+                        sticky='w')
+
+            if value == 'Defensive':
+                color = 'orange'
+            else:
+                color = 'green'
+                initial_active_window = new_window
+                initial_active_button = button
+
+            new_window.set_parent_frame(parentFrame, color)
+
+        self.modal_interact.type_adv_change_window('initial', initial_active_window, initial_active_button)
 
     def build_move_modal(self, parentFrame):
         """
