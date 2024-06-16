@@ -1,5 +1,6 @@
 import json
 
+
 def json_load(path):
     """
     Load JSON files into ram

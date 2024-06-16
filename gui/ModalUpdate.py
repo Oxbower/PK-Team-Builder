@@ -1,4 +1,3 @@
-import gui.SearchUI as SearchUI
 import customtkinter as ctk
 import os
 
@@ -9,6 +8,7 @@ from interaction.MegaEvolutionVariantHandler import variant_handler, mega_varian
 from app_io.LoadJson import json_load
 from app_io.LoadImage import read_image
 from gui.TypeBackgroundColor import type_color
+from interaction.TypeAdvantageHandler import type_advantage_defensive_handler
 
 
 class ModalUpdate:
@@ -30,6 +30,7 @@ class ModalUpdate:
         self.name_plate_focused = None
         self.type_frame = None
         self.sidebar_widget = None
+        self.type_advantage_frame = []  # offensive, defensive
 
         self.delta_width = 10
         self.frame_width = 250
@@ -66,6 +67,9 @@ class ModalUpdate:
     def set_type_widget(self, pokedex_no, type_frame):
         self.pokedex_no = pokedex_no
         self.type_frame = type_frame
+
+    def set_type_advantage_frame(self, frame):
+        self.type_advantage_frame.append(frame)
 
     def set_variation_frame(self, Frame, string_var, name_plate_focused):
         """
@@ -179,6 +183,7 @@ class ModalUpdate:
         self.update_stats_widget(data)
         self.update_pokemon_id(data)
         self.update_type_displayed(data)
+        self.update_type_advantage(data)
 
     def build_image(self, image_path):  # Modular do not mess with this anymore
         """
@@ -256,6 +261,11 @@ class ModalUpdate:
 
             label = self.ctk.CTkLabel(master=types, image=image, text=None)
             label.place(anchor="center", relx=.5, rely=.55)
+
+    def update_type_advantage(self, data):
+        type_defense = type_advantage_defensive_handler(data)
+        # defensive
+        self.type_advantage_frame[1].populate_frame(type_defense)
 
     def update_stats_widget(self, data):
         """

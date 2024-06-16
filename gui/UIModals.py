@@ -211,7 +211,8 @@ class UIModals:
                 initial_active_window = new_window
                 initial_active_button = button
 
-            new_window.set_parent_frame(parentFrame, color)
+            new_window.set_parent_frame(parentFrame, value)
+            self.modal_interact.set_type_advantage_frame(new_window)
 
         self.modal_interact.type_adv_change_window('initial', initial_active_window, initial_active_button)
 
