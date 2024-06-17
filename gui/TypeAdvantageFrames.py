@@ -112,6 +112,7 @@ class TypeAdvantageFrames:
                             set_list.remove(i)
                         except KeyError:
                             pass
+
                 for index, value in enumerate(set_list):
                     frame = self.Frame(master=self.types_defensive[index_d],
                                        fg_color=type_color(value),
