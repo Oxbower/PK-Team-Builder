@@ -1,4 +1,5 @@
 import customtkinter as ctk
+import threading
 import os
 
 from interaction.StatColorUpdate import stat_color_update
@@ -256,16 +257,23 @@ class ModalUpdate:
                                width=40,
                                height=46)
 
-            types.grid(row=0, column=index, padx=5, sticky='en')
+            types.grid(row=0,
+                       column=index,
+                       padx=5,
+                       sticky='en')
             types.grid_propagate(False)
 
-            label = self.ctk.CTkLabel(master=types, image=image, text=None)
+            label = self.ctk.CTkLabel(master=types,
+                                      image=image,
+                                      text=None)
             label.place(anchor="center", relx=.5, rely=.55)
 
     def update_type_advantage(self, data):
         type_defense = type_advantage_defensive_handler(data)
+
         # defensive
-        self.type_advantage_frame[1].populate_frame(type_defense)
+        start_thread = threading.Thread(target=self.type_advantage_frame[1].populate_frame, args=(type_defense,))
+        start_thread.start()
 
     def update_stats_widget(self, data):
         """

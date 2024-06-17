@@ -206,10 +206,10 @@ class UIModals:
 
             if value == 'Defensive':
                 color = 'orange'
-            else:
-                color = 'green'
                 initial_active_window = new_window
                 initial_active_button = button
+            else:
+                color = 'green'
 
             new_window.set_parent_frame(parentFrame, value)
             self.modal_interact.set_type_advantage_frame(new_window)
@@ -239,7 +239,7 @@ class UIModals:
                                            cursor="hand2",
                                            corner_radius=50,
                                            hover_color=self.gui.hover_color,
-                                           width=200,
+                                           width=int(parentFrame.cget('width') / 2),
                                            height=90,
                                            # border_width=2,
                                            # border_color="#5a5a5a",
