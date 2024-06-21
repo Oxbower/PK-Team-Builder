@@ -272,8 +272,8 @@ class ModalUpdate:
         type_defense = type_advantage_defensive_handler(data)
 
         # defensive
-        start_thread = threading.Thread(target=self.type_advantage_frame[1].populate_frame, args=(type_defense,))
-        start_thread.start()
+        #start_thread = threading.Thread(target=self.type_advantage_frame[1].populate_frame, args=(type_defense,))
+        #start_thread.start()
 
     def update_stats_widget(self, data):
         """
