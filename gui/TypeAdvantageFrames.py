@@ -1,10 +1,8 @@
 import customtkinter as ctk
-import app_io.LoadImage as LoadImage
-import os
 import sys
 
 from math import floor
-from app_io.LoadImage import load_type_ctk_images as types_image
+from app_io.LoadTypesAsImages import load_type_ctk_images as types_image
 from gui.TypeBackgroundColor import type_color
 
 
@@ -104,6 +102,7 @@ class TypeAdvantageFrames:
 
                 for value in data:
                     set_list += [i for i in value[tag_d]]
+                set_list.sort(reverse=True)
                 set_list = set(set_list)
 
                 if index_d != 2:

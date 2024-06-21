@@ -36,7 +36,6 @@ class SearchResult:
         # Search string
         new_case = str.lower(string)
 
-
         # Change to a dictionary later
         for i in self.names:
             # regex looking for strings that match the start
