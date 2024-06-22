@@ -4,6 +4,7 @@ import sys
 from math import floor
 from app_io.LoadTypesAsImages import load_type_ctk_images as types_image
 from gui.TypeBackgroundColor import type_color
+from interaction.TypeAdvantageHandler import find_neutral_types
 from collections import defaultdict
 
 
@@ -96,7 +97,7 @@ class TypeAdvantageFrames:
                     j.destroy()
 
             dict_tags = ['strengths', 'weaknesses', 'immunity']
-            skip_value = self.find_neutral_types(data)
+            skip_value = find_neutral_types(data)
 
             for index_d, tag_d in enumerate(dict_tags):
                 set_list = []
@@ -136,27 +137,3 @@ class TypeAdvantageFrames:
                                column=0,
                                sticky='nsew',
                                pady=5)
-
-    def find_neutral_types(self, data):
-        """
-        Finds which are neutral types to current pokemon and excludes them from being displayed
-
-        :param data: dictionary containing this pokemon's types and finds which are neutral
-        :return: types that are to be excluded from being displayed
-        """
-
-        defensive_typing = {'strengths':    set(),
-                            'weaknesses':   set(),
-                            'immunity':     set()}
-
-        duplicate_counts = defaultdict(lambda: 0, {})   # count number of occurrences in all 3 defensive areas
-
-        for value in defensive_typing.keys():   # remove duplicates from same key for this pokemon's different types
-            for tag in data:
-                defensive_typing[value] = defensive_typing[value] | set(tag[value]) # set data struct
-
-        for value in defensive_typing.values():
-            for inner_value in value:   # go through all 3 defensive_typing and count how many times each type appears
-                duplicate_counts[inner_value] += 1
-
-        return [key for key, value in duplicate_counts.items() if value > 1]
