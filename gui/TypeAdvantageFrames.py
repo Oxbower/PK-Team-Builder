@@ -4,6 +4,7 @@ import sys
 from math import floor
 from app_io.LoadTypesAsImages import load_type_ctk_images as types_image
 from gui.TypeBackgroundColor import type_color
+from collections import defaultdict
 
 
 class TypeAdvantageFrames:
@@ -137,32 +138,25 @@ class TypeAdvantageFrames:
                                pady=5)
 
     def find_neutral_types(self, data):
-        defensive_typing = {'strengths':     [],
-                            'weaknesses':    [],
-                            'immunity':      []}
+        """
+        Finds which are neutral types to current pokemon and excludes them from being displayed
 
-        dict_tags = ['strengths', 'weaknesses', 'immunity']
+        :param data: dictionary containing this pokemon's types and finds which are neutral
+        :return: types that are to be excluded from being displayed
+        """
 
-        duplicate_counts = {}
+        defensive_typing = {'strengths':    set(),
+                            'weaknesses':   set(),
+                            'immunity':     set()}
 
-        for value in dict_tags:
+        duplicate_counts = defaultdict(lambda: 0, {})   # count number of occurrences in all 3 defensive areas
+
+        for value in defensive_typing.keys():   # remove duplicates from same key for this pokemon's different types
             for tag in data:
-                defensive_typing[value] += tag[value]
-
-        for value in dict_tags:
-            defensive_typing[value] = set(defensive_typing[value])
+                defensive_typing[value] = defensive_typing[value] | set(tag[value]) # set data struct
 
         for value in defensive_typing.values():
-            for inner_value in value:
-                if inner_value not in duplicate_counts:
-                    duplicate_counts[inner_value] = 1
-                else:
-                    duplicate_counts[inner_value] += 1
+            for inner_value in value:   # go through all 3 defensive_typing and count how many times each type appears
+                duplicate_counts[inner_value] += 1
 
-        defensive_typing = []
-
-        for value in duplicate_counts:
-            if duplicate_counts[value] > 1:
-                defensive_typing.append(value)
-
-        return defensive_typing
+        return [key for key, value in duplicate_counts.items() if value > 1]
