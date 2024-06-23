@@ -4,8 +4,7 @@ import sys
 from math import floor
 from app_io.LoadTypesAsImages import load_type_ctk_images as types_image
 from gui.TypeBackgroundColor import type_color
-from interaction.TypeAdvantageHandler import find_neutral_types
-from collections import defaultdict
+from interaction.TypeAdvantageHandler import find_neutral_types, find_defensive_type_multiplier, find_type_defense
 
 
 class TypeAdvantageFrames:
@@ -100,6 +99,8 @@ class TypeAdvantageFrames:
             dict_tags = ['strengths', 'weaknesses', 'immunity']
             skip_value = find_neutral_types(data)  # types to exclude on display
 
+            type_defense = find_type_defense([key['name'] for key in data])
+
             for tag_index, key in enumerate(dict_tags):
                 set_list = set()
 
@@ -111,20 +112,35 @@ class TypeAdvantageFrames:
                     set_list.difference_update(skip_value)
 
                 for index, value in enumerate(set_list):
+                    # container to hold image
                     frame = self.Frame(master=self.types_defensive[tag_index],
                                        fg_color=type_color(value),
                                        height=40,
-                                       width=int(self.types_defensive[0].cget('width') / 3) - 8)
+                                       width=int(self.types_defensive[0].cget('width') / 3))
 
                     frame.grid(row=floor(index/3) + 1,
                                column=index % 3,
                                sticky='w',
-                               pady=2,
-                               padx=4)
+                               pady=1)
 
                     frame.grid_propagate(False)
-                    frame.columnconfigure(0, weight=1)
 
+                    multiplier_str, size = find_defensive_type_multiplier(type_defense, value)
+
+                    multiplier = ctk.CTkLabel(master=frame,
+                                              text=multiplier_str,
+                                              text_color='black',
+                                              fg_color='white',
+                                              corner_radius=5,
+                                              font=("Helvetica", size, "bold"),
+                                              width=8,
+                                              height=8)
+
+                    multiplier.grid(row=0,
+                                    column=1,
+                                    padx=1)
+
+                    # type image to display
                     image = ctk.CTkLabel(master=frame,
                                          text=None,
                                          image=types_image[value.lower()])

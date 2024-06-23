@@ -42,3 +42,42 @@ def find_neutral_types(data: list[dict[str, list[str]]]) -> list[str]:
             duplicate_counts[inner_value] += 1
 
     return [key for key, value in duplicate_counts.items() if value > 1]
+
+
+def find_type_defense(types: list[str]):
+    defensive_types = []
+
+    for value in type_defensive:
+        for tag in types:
+            if value['name'] == tag:
+                defensive_types.append(value)
+
+    return defensive_types
+
+
+def find_defensive_type_multiplier(data, type_check):
+    base = 1
+    size = 10
+    dict_tags = ['strengths', 'weaknesses', 'immunity']
+
+    for value in data:
+        for tag in dict_tags:
+            if type_check in value[tag]:
+                if tag == 'strengths':
+                    base *= .5
+                elif tag == 'weaknesses':
+                    base *= 2
+                else:
+                    base *= 0
+
+    if base == .5:
+        size = 9
+    elif base == .25:
+        size = 8
+
+    if base != 0:
+        string = str(base).lstrip('0') + 'x'
+    else:
+        string = str(int(base)) + 'x'
+
+    return string, size

@@ -217,7 +217,7 @@ class UI:
         :return: created frame
         """
         frame = self.Frame(master=self.root,
-                           width=500,
+                           width=530,
                            height=300,
                            fg_color='#242424')
         frame.grid(row=4,
