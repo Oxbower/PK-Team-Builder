@@ -19,7 +19,7 @@ def type_advantage_defensive_handler(data):
     return types_defensive_adv
 
 
-def find_neutral_types(data):
+def find_neutral_types(data: list[dict[str, list[str]]]) -> list[str]:
     """
     Finds which are neutral types to current pokemon and excludes them from being displayed
 

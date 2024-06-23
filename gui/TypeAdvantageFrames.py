@@ -15,8 +15,8 @@ class TypeAdvantageFrames:
         self.max_width = 0
         self.max_height = 0
 
-        self.types_defensive = [0, 0, 0]
-        self.types_offensive = [0, 0]
+        self.types_defensive = [ctk.CTkFrame, ctk.CTkFrame, ctk.CTkFrame]
+        self.types_offensive = [ctk.CTkFrame, ctk.CTkFrame]
         self.active_window = None
 
     def set_parent_frame(self, parent_frame: ctk.CTkFrame, active_window: str, color: str = '#202020') -> None:
@@ -92,30 +92,26 @@ class TypeAdvantageFrames:
 
     def populate_frame(self, data):
         if self.active_window == 'Defensive':
-            for i in self.types_defensive:
-                for j in i.winfo_children():
-                    j.destroy()
+            # Destroy all inner widgets inside a frame
+            for frame in self.types_defensive:
+                for widget in frame.winfo_children():
+                    widget.destroy()
 
             dict_tags = ['strengths', 'weaknesses', 'immunity']
-            skip_value = find_neutral_types(data)
+            skip_value = find_neutral_types(data)  # types to exclude on display
 
-            for index_d, tag_d in enumerate(dict_tags):
-                set_list = []
+            for tag_index, key in enumerate(dict_tags):
+                set_list = set()
 
                 for value in data:
-                    set_list += [i for i in value[tag_d]]
-                set_list.sort(reverse=True)
-                set_list = set(set_list)
+                    set_list = set_list | set(value[key])
+                sorted(set_list, reverse=True)
 
-                if index_d != 2:
-                    for i in skip_value:
-                        try:
-                            set_list.remove(i)
-                        except KeyError:
-                            pass
+                if key != 'immunity':
+                    set_list.difference_update(skip_value)
 
                 for index, value in enumerate(set_list):
-                    frame = self.Frame(master=self.types_defensive[index_d],
+                    frame = self.Frame(master=self.types_defensive[tag_index],
                                        fg_color=type_color(value),
                                        height=40,
                                        width=int(self.types_defensive[0].cget('width') / 3) - 8)
