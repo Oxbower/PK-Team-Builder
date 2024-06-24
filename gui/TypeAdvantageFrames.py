@@ -1,11 +1,10 @@
 import customtkinter as ctk
-import app_io.LoadImage as LoadImage
-import os
 import sys
 
 from math import floor
-from app_io.LoadImage import load_type_ctk_images as types_image
+from app_io.LoadTypesAsImages import load_type_ctk_images as types_image
 from gui.TypeBackgroundColor import type_color
+from interaction.TypeAdvantageHandler import find_neutral_types, find_defensive_type_multiplier, find_type_defense
 
 
 class TypeAdvantageFrames:
@@ -15,8 +14,8 @@ class TypeAdvantageFrames:
         self.max_width = 0
         self.max_height = 0
 
-        self.types_defensive = [0, 0, 0]
-        self.types_offensive = [0, 0]
+        self.types_defensive = [ctk.CTkFrame, ctk.CTkFrame, ctk.CTkFrame]
+        self.types_offensive = [ctk.CTkFrame, ctk.CTkFrame]
         self.active_window = None
 
     def set_parent_frame(self, parent_frame: ctk.CTkFrame, active_window: str, color: str = '#202020') -> None:
@@ -92,78 +91,63 @@ class TypeAdvantageFrames:
 
     def populate_frame(self, data):
         if self.active_window == 'Defensive':
-            for i in self.types_defensive:
-                for j in i.winfo_children():
-                    j.destroy()
+            # Destroy all inner widgets inside a frame
+            for frame in self.types_defensive:
+                for widget in frame.winfo_children():
+                    widget.destroy()
 
             dict_tags = ['strengths', 'weaknesses', 'immunity']
-            skip_value = self.find_neutral_types(data)
+            skip_value = find_neutral_types(data)  # types to exclude on display
 
-            for index_d, tag_d in enumerate(dict_tags):
-                set_list = []
+            type_defense = find_type_defense([key['name'] for key in data])
+
+            for tag_index, key in enumerate(dict_tags):
+                set_list = set()
 
                 for value in data:
-                    set_list += [i for i in value[tag_d]]
-                set_list = set(set_list)
+                    set_list = set_list | set(value[key])
+                sorted(set_list, reverse=True)
 
-                if index_d != 2:
-                    for i in skip_value:
-                        try:
-                            set_list.remove(i)
-                        except KeyError:
-                            pass
+                if key != 'immunity':
+                    set_list.difference_update(skip_value)
 
                 for index, value in enumerate(set_list):
-                    frame = self.Frame(master=self.types_defensive[index_d],
+                    # container to hold image ang multiplier text
+                    frame = self.Frame(master=self.types_defensive[tag_index],
                                        fg_color=type_color(value),
                                        height=40,
-                                       width=int(self.types_defensive[0].cget('width') / 3) - 8)
+                                       width=int(self.types_defensive[0].cget('width') / 3))
 
                     frame.grid(row=floor(index/3) + 1,
                                column=index % 3,
                                sticky='w',
-                               pady=2,
-                               padx=4)
+                               pady=(1, 2),
+                               padx=.4)
 
                     frame.grid_propagate(False)
-                    frame.columnconfigure(0, weight=1)
 
+                    # damage multiplier text
+                    multiplier_str, size = find_defensive_type_multiplier(type_defense, value)
+
+                    multiplier = ctk.CTkLabel(master=frame,
+                                              text=multiplier_str,
+                                              text_color='black',
+                                              fg_color='white',
+                                              corner_radius=5,
+                                              font=("Helvetica", size, "bold"),
+                                              width=8,
+                                              height=8)
+
+                    multiplier.grid(row=0,
+                                    column=1,
+                                    padx=1)
+
+                    # type image to display
                     image = ctk.CTkLabel(master=frame,
-                                         text=None,
+                                         text='',
                                          image=types_image[value.lower()])
 
                     image.grid(row=0,
                                column=0,
                                sticky='nsew',
                                pady=5)
-
-    def find_neutral_types(self, data):
-        defensive_typing = {'strengths':     [],
-                            'weaknesses':    [],
-                            'immunity':      []}
-
-        dict_tags = ['strengths', 'weaknesses', 'immunity']
-
-        duplicate_counts = {}
-
-        for value in dict_tags:
-            for tag in data:
-                defensive_typing[value] += tag[value]
-
-        for value in dict_tags:
-            defensive_typing[value] = set(defensive_typing[value])
-
-        for value in defensive_typing.values():
-            for inner_value in value:
-                if inner_value not in duplicate_counts:
-                    duplicate_counts[inner_value] = 1
-                else:
-                    duplicate_counts[inner_value] += 1
-
-        defensive_typing = []
-
-        for value in duplicate_counts:
-            if duplicate_counts[value] > 1:
-                defensive_typing.append(value)
-
-        return defensive_typing

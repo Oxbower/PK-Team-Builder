@@ -273,7 +273,7 @@ class ModalUpdate:
 
         # defensive
         start_thread = threading.Thread(target=self.type_advantage_frame[1].populate_frame, args=(type_defense,))
-        start_thread.start()
+        start_thread.run()
 
     def update_stats_widget(self, data):
         """
@@ -310,6 +310,8 @@ class ModalUpdate:
                     self.stats_widget[i][1].configure(width=5)
                 else:
                     self.stats_widget[i][1].configure(fg_color=stat_color_update(data['stats'][i]['base']))
+
+                    # Use a queue
                     start_animation(self.stats_widget[i][1], display_width)
 
         self.stats_widget["Total"][0].configure(text=total)

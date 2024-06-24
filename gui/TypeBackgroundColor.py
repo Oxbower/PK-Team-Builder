@@ -40,7 +40,7 @@ def type_color(string: str) -> str:
         case 'dark':
             return '#736c75'
         case 'steel':
-            return '#B7B7CE'
+            return '#508B9A'
         case 'fairy':
             return '#D685AD'
         case _:
