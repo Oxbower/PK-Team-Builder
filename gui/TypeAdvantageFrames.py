@@ -112,7 +112,7 @@ class TypeAdvantageFrames:
                     set_list.difference_update(skip_value)
 
                 for index, value in enumerate(set_list):
-                    # container to hold image
+                    # container to hold image ang multiplier text
                     frame = self.Frame(master=self.types_defensive[tag_index],
                                        fg_color=type_color(value),
                                        height=40,
@@ -125,6 +125,7 @@ class TypeAdvantageFrames:
 
                     frame.grid_propagate(False)
 
+                    # damage multiplier text
                     multiplier_str, size = find_defensive_type_multiplier(type_defense, value)
 
                     multiplier = ctk.CTkLabel(master=frame,
@@ -142,7 +143,7 @@ class TypeAdvantageFrames:
 
                     # type image to display
                     image = ctk.CTkLabel(master=frame,
-                                         text=None,
+                                         text='',
                                          image=types_image[value.lower()])
 
                     image.grid(row=0,
