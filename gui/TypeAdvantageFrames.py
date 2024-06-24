@@ -121,7 +121,8 @@ class TypeAdvantageFrames:
                     frame.grid(row=floor(index/3) + 1,
                                column=index % 3,
                                sticky='w',
-                               pady=1)
+                               pady=(1, 2),
+                               padx=.4)
 
                     frame.grid_propagate(False)
 
