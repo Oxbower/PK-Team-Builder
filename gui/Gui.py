@@ -210,7 +210,7 @@ class UI:
         #            columnspan=3)
 
         frame = self.Frame(master=self.root,
-                           height=500,
+                           height=405,
                            width=330)
         frame.grid(row=3,
                    column=0,
