@@ -223,33 +223,37 @@ class UIModals:
         :return: None
         """
         label = self.ctk.CTkLabel(master=parentFrame,
-                                  text="Moves",
-                                  font=("Helvetica", 20, "bold")
+                                  text="M\no\nv\ne\ns",
+                                  font=("Helvetica", 20, "bold"),
                                   )
         label.grid(row=0,
                    column=0,
                    sticky="w",
+                   rowspan=4,
                    padx=10,
                    pady=7)
 
-        for row in range(2):
-            for col in range(2):
-                modal = self.ctk.CTkButton(master=parentFrame,
-                                           text="Move " + str((row + (col + row)) + 1),
-                                           cursor="hand2",
-                                           corner_radius=50,
-                                           hover_color=self.gui.hover_color,
-                                           width=int(parentFrame.cget('width') / 2),
-                                           height=90,
-                                           # border_width=2,
-                                           # border_color="#5a5a5a",
-                                           fg_color="#2e2e2e")
+        for row in range(4):
+            size = 0
+            if row == 0:
+                size = 10
 
-                modal.grid(row=int(row + 1),
-                           column=col,
-                           padx=5,
-                           pady=(0, 10),
-                           sticky="nsew")
+            modal = self.ctk.CTkButton(master=parentFrame,
+                                       text="Move " + str(row + 1),
+                                       cursor="hand2",
+                                       corner_radius=50,
+                                       hover_color=self.gui.hover_color,
+                                       width=parentFrame.cget('width') - 60,
+                                       height=90,
+                                       # border_width=2,
+                                       # border_color="#5a5a5a",
+                                       fg_color="#2e2e2e")
+
+            modal.grid(row=row,
+                       column=1,
+                       padx=10,
+                       pady=(size, 10),
+                       sticky="nsew")
 
     def build_stat_modal(self, parentFrame):
         """
