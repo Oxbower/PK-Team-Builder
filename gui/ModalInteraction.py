@@ -89,6 +89,14 @@ class ModalInteraction:
                 # pass in the list to build result frame from
                 self.SearchUI.build_search_result(search_string, self.parent_search_frame)
 
+    def move_callback(self, modal_name):
+        """
+        handles the move_frame modal
+        :param modal_name:
+        :return:
+        """
+        self.ModalUpdate.update_moves(modal_name)
+
     def name_plate_focus(self, boolean: bool) -> None:
         """
         Boolean var to detect if focus is on search_bar

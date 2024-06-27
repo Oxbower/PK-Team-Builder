@@ -10,6 +10,7 @@ from app_io.LoadJson import json_load
 from app_io.LoadImage import read_image
 from gui.TypeBackgroundColor import type_color
 from interaction.TypeAdvantageHandler import type_advantage_defensive_handler
+from gui.MoveModalFrame import build_move_frame
 
 
 class ModalUpdate:
@@ -31,6 +32,7 @@ class ModalUpdate:
         self.name_plate_focused = None
         self.type_frame = None
         self.sidebar_widget = None
+        self.current_name = None
         self.type_advantage_frame = []  # offensive, defensive
 
         self.delta_width = 10
@@ -173,9 +175,10 @@ class ModalUpdate:
         stats_folder = 'pokemon-pokedex'
 
         inner_folder = os.path.split(os.path.split(string)[0])[-1]
-        path = os.path.splitext(os.path.basename(string))[0]
+        file_name = os.path.splitext(os.path.basename(string))[0]
+        self.current_name = inner_folder
 
-        json_path = os.path.join(stats_folder, inner_folder, path + '.json')
+        json_path = os.path.join(stats_folder, inner_folder, file_name + '.json')
         data = json_load(json_path)
 
         self.build_image(string)
@@ -185,6 +188,13 @@ class ModalUpdate:
         self.update_pokemon_id(data)
         self.update_type_displayed(data)
         self.update_type_advantage(data)
+
+    def update_moves(self, modal):
+        if self.current_name is None: # guard clause TODO: handle exception later
+            print('Empty selection')
+            return False
+
+        build_move_frame(modal, self.current_name)
 
     def build_image(self, image_path):  # Modular do not mess with this anymore
         """

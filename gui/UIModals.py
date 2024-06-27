@@ -249,6 +249,8 @@ class UIModals:
                                        # border_color="#5a5a5a",
                                        fg_color="#2e2e2e")
 
+            modal.configure(command=lambda _modal=modal: self.modal_interact.move_callback(_modal))
+
             modal.grid(row=row,
                        column=1,
                        padx=10,
