@@ -1,5 +1,6 @@
 import customtkinter as ctk
 
+
 class SearchUI:
     def __init__(self, mainWindow, modalInteract):
         self.ctk = ctk

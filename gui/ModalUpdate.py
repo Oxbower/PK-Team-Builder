@@ -1,6 +1,7 @@
 import customtkinter as ctk
 import threading
 import os
+import gui.MoveModalFrame as MoveModalFrame
 
 from interaction.StatColorUpdate import stat_color_update
 from interaction.AnimateStatBars import start_animation
@@ -10,17 +11,16 @@ from app_io.LoadJson import json_load
 from app_io.LoadImage import read_image
 from gui.TypeBackgroundColor import type_color
 from interaction.TypeAdvantageHandler import type_advantage_defensive_handler
-from gui.MoveModalFrame import build_move_frame
 
 
 class ModalUpdate:
     """
     Updates the modals when interaction occurs
     """
-    def __init__(self, gui, mainWindow, modalInteract):
+    def __init__(self, gui, current_window):
         self.gui = gui
         self.ctk = ctk
-        self.mainWindow = mainWindow
+        self.mainWindow = current_window
         self.Frame = ctk.CTkFrame
 
         self.search_result_container = None
@@ -33,6 +33,8 @@ class ModalUpdate:
         self.type_frame = None
         self.sidebar_widget = None
         self.current_name = None
+        # Instantiate move modal class
+        self.scrollable_move_frame = MoveModalFrame.MoveModalFrame(current_window)
         self.type_advantage_frame = []  # offensive, defensive
 
         self.delta_width = 10
@@ -190,11 +192,11 @@ class ModalUpdate:
         self.update_type_advantage(data)
 
     def update_moves(self, modal):
-        if self.current_name is None: # guard clause TODO: handle exception later
+        if self.current_name is None: # guard clause
             print('Empty selection')
             return False
 
-        build_move_frame(modal, self.current_name)
+        self.scrollable_move_frame.start_search_build(modal, self.current_name)
 
     def build_image(self, image_path):  # Modular do not mess with this anymore
         """

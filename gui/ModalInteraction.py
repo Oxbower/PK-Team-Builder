@@ -19,7 +19,7 @@ class ModalInteraction:
 
         self.searchAlgorithm = SearchResult.SearchResult()
 
-        self.ModalUpdate = ModalUpdate.ModalUpdate(gui, current_window, self)
+        self.ModalUpdate = ModalUpdate.ModalUpdate(gui, current_window)
         self.SearchUI = SearchUI.SearchUI(self.current_window, self)
 
 
@@ -95,6 +95,8 @@ class ModalInteraction:
         :param modal_name:
         :return:
         """
+
+        # Only update the button pressed
         self.ModalUpdate.update_moves(modal_name)
 
     def name_plate_focus(self, boolean: bool) -> None:
