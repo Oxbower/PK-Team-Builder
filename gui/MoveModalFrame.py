@@ -8,8 +8,8 @@ from app_io.LoadJson import json_load
 class MoveModalFrame():
     # build the search modal frame
     def __init__(self, current_window):
-        self.root=current_window.root
-        self.active_window=False
+        self.root = current_window.root
+        self.active_window = False
         self.active_modal = None
 
         self.data = None
@@ -49,7 +49,6 @@ class MoveModalFrame():
         self.insert_modals(frame, current_name)
 
     def insert_modals(self, parentFrame, current_name):
-        #TODO: Pokemon specific movesets
         if current_name in self.data:
             new_data = self.data[current_name]
         else:
@@ -59,14 +58,19 @@ class MoveModalFrame():
         new_container = set(self.data['non-specific'] + new_data)
 
         for index, text in enumerate(new_container):
-            frame = ctk.CTkLabel(master=parentFrame,
-                                 text=text,
-                                 fg_color='#333333',
-                                 width=250,
-                                 height=50)
+            frame = ctk.CTkButton(master=parentFrame,
+                                  text=text,
+                                  fg_color='#333333',
+                                  width=250,
+                                  height=50,
+                                  command=lambda _text=text: self.active_modal_callback(_text))
 
             frame.grid(row=index,
                        column=0,
                        padx=5,
                        pady=5,
                        sticky='nesw')
+
+    def active_modal_callback(self, text):
+        # Change active modal text
+        self.active_modal.configure(text=text)
