@@ -32,6 +32,7 @@ class ModalUpdate:
         self.name_plate_focused = None
         self.type_frame = None
         self.sidebar_widget = None
+        self.dir_folder = None
         self.current_name = None
         # Instantiate move modal class
         self.scrollable_move_frame = MoveModalFrame.MoveModalFrame(current_window)
@@ -178,7 +179,8 @@ class ModalUpdate:
 
         inner_folder = os.path.split(os.path.split(string)[0])[-1]
         file_name = os.path.splitext(os.path.basename(string))[0]
-        self.current_name = inner_folder
+        self.dir_folder = inner_folder
+        self.current_name = file_name
 
         json_path = os.path.join(stats_folder, inner_folder, file_name + '.json')
         data = json_load(json_path)
@@ -192,11 +194,11 @@ class ModalUpdate:
         self.update_type_advantage(data)
 
     def update_moves(self, modal):
-        if self.current_name is None: # guard clause
+        if self.dir_folder is None: # guard clause
             print('Empty selection')
             return False
 
-        self.scrollable_move_frame.start_search_build(modal, self.current_name)
+        self.scrollable_move_frame.start_search_build(modal, self.dir_folder, self.current_name)
 
     def build_image(self, image_path):  # Modular do not mess with this anymore
         """

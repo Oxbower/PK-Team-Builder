@@ -10,28 +10,33 @@ class MoveModalFrame():
     def __init__(self, current_window):
         self.root=current_window.root
         self.active_window=False
+        self.active_modal = None
 
-    def start_search_build(self, modal, folder_dir):
-        path = os.path.join('pokemon-pokedex', folder_dir, 'moves.json')
+        self.data = None
+
+    def start_search_build(self, modal, dir_folder_name, current_name):
+        path = os.path.join('pokemon-pokedex', dir_folder_name, 'moves.json')
 
         try:
-            data = json_load(path)
-            print(json.dumps(data, indent=4))
+            self.data = json_load(path)
+            print(json.dumps(self.data, indent=4))
         except FileNotFoundError as e:
             print(e)
             return None
 
-        self.build_search_container()
+        self.active_modal = modal
 
-    def build_search_container(self):
-        # Don't destroy, grid remove for perfrmance
+        self.build_search_container(current_name)
+
+    def build_search_container(self, current_name):
+        # Don't destroy, grid remove for performance
         frame = ctk.CTkFrame(master=self.root)
 
         frame.place(relx=0.3, rely=0.1)
 
-        self.build_search_scrollbar(frame)
+        self.build_search_scrollbar(frame, current_name)
 
-    def build_search_scrollbar(self, parentFrame):
+    def build_search_scrollbar(self, parentFrame, current_name):
         frame = ctk.CTkScrollableFrame(master=parentFrame,
                                      corner_radius=0,
                                      width=300,
@@ -41,15 +46,27 @@ class MoveModalFrame():
 
         frame.grid(row=0, column=0, sticky='nesw')
 
-        self.insert_modals(frame)
+        self.insert_modals(frame, current_name)
 
-    def insert_modals(self, parentFrame):
-        frame = ctk.CTkFrame(master=parentFrame,
-                             width=250,
-                             height=50)
+    def insert_modals(self, parentFrame, current_name):
+        #TODO: Pokemon specific movesets
+        if current_name in self.data:
+            new_data = self.data[current_name]
+        else:
+            new_data = []
 
-        frame.grid(row=0,
-                   column=0,
-                   padx=5,
-                   pady=2,
-                   sticky='nesw')
+        # Turn into set to remove redundancy
+        new_container = set(self.data['non-specific'] + new_data)
+
+        for index, text in enumerate(new_container):
+            frame = ctk.CTkLabel(master=parentFrame,
+                                 text=text,
+                                 fg_color='#333333',
+                                 width=250,
+                                 height=50)
+
+            frame.grid(row=index,
+                       column=0,
+                       padx=5,
+                       pady=5,
+                       sticky='nesw')
