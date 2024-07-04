@@ -227,7 +227,7 @@ class UIModals:
         for row in range(4):
             size = 0
             if row == 0:
-                size = 10
+                size = 5
 
             # modal = self.ctk.CTkButton(master=parentFrame,
             #                            text="Move " + str(row + 1),
@@ -256,8 +256,8 @@ class UIModals:
 
             modal.grid(row=row,
                        column=1,
-                       padx=10,
-                       pady=(size, 10),
+                       padx=5,
+                       pady=(size, 5),
                        sticky='nsew')
 
     def build_stat_modal(self, parentFrame):

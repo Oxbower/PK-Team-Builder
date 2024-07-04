@@ -85,7 +85,7 @@ class MoveModal(ctk.CTkFrame):
 
     def add_pp(self):
         self.pp = ctk.CTkLabel(master=self,
-                               text="PP: 10",
+                               text="PP: 0",
                                width=int(self.cget('width') / self.num_width_elements),
                                height=int(self.cget('height') / self.num_height_elements))
 

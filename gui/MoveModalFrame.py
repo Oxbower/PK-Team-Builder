@@ -9,6 +9,7 @@ class MoveModalFrame():
     # build the search modal frame
     def __init__(self, current_window):
         self.root = current_window.root
+        self.all_moves = json_load(os.path.join('data', 'moves.json'))
         self.active_modal = None
 
         self.data = None
@@ -19,7 +20,7 @@ class MoveModalFrame():
 
         try:
             self.data = json_load(path)
-            print(json.dumps(self.data, indent=4))
+            # print(json.dumps(self.data, indent=4))
         except FileNotFoundError as e:
             print(e)
             return None
@@ -76,5 +77,11 @@ class MoveModalFrame():
     def active_modal_callback(self, text):
         # Change active modal text
         self.active_modal.move_name.configure(text=text)
+
+        for value in self.all_moves:
+            if value['name'] == text:
+                self.active_modal.pp.configure(text=str('PP: ' + value['pp']))
+                self.active_modal.category.configure(text=value['cat'].title())
+                self.active_modal.type.configure(text=value['type'])
 
         self.active_frame.destroy()
