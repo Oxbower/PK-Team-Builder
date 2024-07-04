@@ -9,10 +9,10 @@ class MoveModalFrame():
     # build the search modal frame
     def __init__(self, current_window):
         self.root = current_window.root
-        self.active_window = False
         self.active_modal = None
 
         self.data = None
+        self.active_frame = None
 
     def start_search_build(self, modal, dir_folder_name, current_name):
         path = os.path.join('pokemon-pokedex', dir_folder_name, 'moves.json')
@@ -34,13 +34,15 @@ class MoveModalFrame():
 
         frame.place(relx=0.3, rely=0.1)
 
+        self.active_frame = frame
+
         self.build_search_scrollbar(frame, current_name)
 
     def build_search_scrollbar(self, parentFrame, current_name):
         frame = ctk.CTkScrollableFrame(master=parentFrame,
-                                     corner_radius=0,
-                                     width=300,
-                                     height=400)
+                                       corner_radius=0,
+                                       width=300,
+                                       height=400)
 
         frame.columnconfigure(0, weight=1)
 
@@ -73,4 +75,6 @@ class MoveModalFrame():
 
     def active_modal_callback(self, text):
         # Change active modal text
-        self.active_modal.configure(text=text)
+        self.active_modal.move_name.configure(text=text)
+
+        self.active_frame.destroy()

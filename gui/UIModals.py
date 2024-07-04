@@ -2,6 +2,7 @@ import gui.ModalInteraction as ModalInteraction
 import customtkinter as ctk
 
 import gui.TypeAdvantageFrames as taf
+import gui.MoveModalUI as MoveModal
 
 
 class UIModals:
@@ -222,40 +223,44 @@ class UIModals:
         :param parentFrame: parent frame to hold modals
         :return: None
         """
-        label = self.ctk.CTkLabel(master=parentFrame,
-                                  text="M\no\nv\ne\ns",
-                                  font=("Helvetica", 20, "bold"),
-                                  )
-        label.grid(row=0,
-                   column=0,
-                   sticky="w",
-                   rowspan=4,
-                   padx=10,
-                   pady=7)
 
         for row in range(4):
             size = 0
             if row == 0:
                 size = 10
 
-            modal = self.ctk.CTkButton(master=parentFrame,
-                                       text="Move " + str(row + 1),
-                                       cursor="hand2",
-                                       corner_radius=50,
-                                       hover_color=self.gui.hover_color,
-                                       width=parentFrame.cget('width') - 60,
-                                       height=90,
-                                       # border_width=2,
-                                       # border_color="#5a5a5a",
-                                       fg_color="#2e2e2e")
+            # modal = self.ctk.CTkButton(master=parentFrame,
+            #                            text="Move " + str(row + 1),
+            #                            cursor="hand2",
+            #                            corner_radius=50,
+            #                            hover_color=self.gui.hover_color,
+            #                            width=parentFrame.cget('width') - 60,
+            #                            height=90,
+            #                            fg_color="#2e2e2e")
+            #
+            #
+            # modal.grid(row=row,
+            #            column=1,
+            #            padx=10,
+            #            pady=(size, 10),
+            #            sticky="nsew")
 
-            modal.configure(command=lambda _modal=modal: self.modal_interact.move_callback(_modal))
+            modal = MoveModal.MoveModal(master=parentFrame,
+                                        fg_color='#2e2e2e',
+                                        corner_radius=0,
+                                        hover_color=self.gui.hover_color,
+                                        width=parentFrame.cget('width') - 60,
+                                        height=90)
+
+            modal.add_command(command=lambda _modal=modal: self.modal_interact.move_callback(_modal))
+
+            modal.grid_propagate(False)
 
             modal.grid(row=row,
                        column=1,
                        padx=10,
                        pady=(size, 10),
-                       sticky="nsew")
+                       sticky='nsew')
 
     def build_stat_modal(self, parentFrame):
         """
