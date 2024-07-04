@@ -250,9 +250,11 @@ class UIModals:
                                         corner_radius=0,
                                         hover_color=self.gui.hover_color,
                                         width=parentFrame.cget('width') - 40,
-                                        height=90)
+                                        height=100)
 
             modal.configure_(command=lambda _modal=modal: self.modal_interact.move_callback(_modal))
+
+            modal.grid_propagate(False)
 
             modal.grid(row=row,
                        column=1,

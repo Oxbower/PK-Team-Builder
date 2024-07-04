@@ -209,7 +209,7 @@ class UI:
                    column=0,
                    rowspan=3,
                    columnspan=3,
-                   pady=(45, 0),
+                   pady=(5, 0),
                    padx=(self.pad_x, 0),
                    sticky="nw")
 

@@ -10,14 +10,18 @@ class MoveModal(ctk.CTkFrame):
         self.category = None
         self.pp = None
         self.type = None
+        self.power = None
+        self.accuracy = None
 
         self.command = None
         self.num_width_elements = 2
-        self.num_height_elements = 2
+        self.num_height_elements = 3
         self.hover_color = hover_color
         self.kwargs = kwargs
 
         super().__init__(master, **kwargs)
+
+        self.columnconfigure(1, weight=1)
 
         self.create_frame()
 
@@ -41,6 +45,8 @@ class MoveModal(ctk.CTkFrame):
             self.add_category()
             self.add_pp()
             self.add_type()
+            self.add_power()
+            self.add_accuracy()
 
             for widget in self.winfo_children():
                 # hover bind
@@ -72,31 +78,51 @@ class MoveModal(ctk.CTkFrame):
                                       height=int(self.cget('height') / self.num_height_elements))
 
         self.move_name.grid(row=0,
-                            column=0,)
+                            column=0)
 
     def add_type(self):
         self.type = ctk.CTkLabel(master=self,
                                  text="Type: None",
-                                 width=int(self.cget('width') / self.num_width_elements),
+                                 corner_radius=10,
+                                 fg_color='#212121',
+                                 width=int(self.cget('width') / self.num_width_elements) - 50,
                                  height=int(self.cget('height') / self.num_height_elements))
 
         self.type.grid(row=1,
-                       column=1,)
+                       column=1,
+                       padx=(0, 5),
+                       sticky='e')
 
     def add_pp(self):
         self.pp = ctk.CTkLabel(master=self,
                                text="PP: 0",
-                               width=int(self.cget('width') / self.num_width_elements),
+                               width=int(self.cget('width') / self.num_width_elements) - 50,
                                height=int(self.cget('height') / self.num_height_elements))
 
         self.pp.grid(row=0,
-                     column=1,)
+                     column=1,
+                     padx=(0, 5),
+                     sticky='e')
 
     def add_category(self):
         self.category = ctk.CTkLabel(master=self,
                                      text='Category: None',
-                                     width=int(self.cget('width') / self.num_width_elements),
+                                     width=int(self.cget('width') / self.num_width_elements) - 50,
                                      height=int(self.cget('height') / self.num_height_elements))
 
-        self.category.grid(row=1,
-                           column=0,)
+        self.category.grid(row=2,
+                           column=1,
+                           padx=(0, 5),
+                           sticky='e')
+
+    def add_accuracy(self):
+        self.accuracy = ctk.CTkLabel(master=self,
+                                     text='Accuracy: 0')
+        self.accuracy.grid(row=2,
+                           column=0)
+
+    def add_power(self):
+        self.power = ctk.CTkLabel(master=self,
+                                  text='Power: 0')
+        self.power.grid(row=1,
+                        column=0)

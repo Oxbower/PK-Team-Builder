@@ -3,6 +3,7 @@ import json
 import customtkinter as ctk
 
 from app_io.LoadJson import json_load
+from gui.TypeBackgroundColor import type_color
 
 
 class MoveModalFrame():
@@ -82,6 +83,8 @@ class MoveModalFrame():
             if value['name'] == text:
                 self.active_modal.pp.configure(text=str('PP: ' + value['pp']))
                 self.active_modal.category.configure(text=value['cat'].title())
-                self.active_modal.type.configure(text=value['type'])
+                self.active_modal.type.configure(text=value['type'], fg_color=type_color(value['type']))
+                self.active_modal.accuracy.configure(text=str('Accuracy: ' + value['acc']))
+                self.active_modal.power.configure(text=str('Power: ' + value['power']))
 
         self.active_frame.destroy()
