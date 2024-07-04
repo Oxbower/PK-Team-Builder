@@ -249,12 +249,10 @@ class UIModals:
                                         fg_color='#2e2e2e',
                                         corner_radius=0,
                                         hover_color=self.gui.hover_color,
-                                        width=parentFrame.cget('width') - 60,
+                                        width=parentFrame.cget('width') - 40,
                                         height=90)
 
-            modal.add_command(command=lambda _modal=modal: self.modal_interact.move_callback(_modal))
-
-            modal.grid_propagate(False)
+            modal.configure_(command=lambda _modal=modal: self.modal_interact.move_callback(_modal))
 
             modal.grid(row=row,
                        column=1,

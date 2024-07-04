@@ -211,7 +211,7 @@ class UI:
 
         frame = self.Frame(master=self.root,
                            height=405,
-                           width=330)
+                           width=340)
         frame.grid(row=3,
                    column=0,
                    rowspan=3,

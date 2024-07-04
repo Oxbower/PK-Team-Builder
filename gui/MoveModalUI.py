@@ -5,11 +5,12 @@ class MoveModal(ctk.CTkFrame):
     """
     This is a custom button for the MoveModalUI, it supers the CTkFrame class
     """
-    def __init__(self, master, hover_color=None, command=None, **kwargs):
+    def __init__(self, master, hover_color=None, **kwargs):
         self.move_name = None
         self.category = None
         self.pp = None
         self.type = None
+
         self.command = None
         self.num_width_elements = 2
         self.num_height_elements = 2
@@ -20,8 +21,9 @@ class MoveModal(ctk.CTkFrame):
 
         self.create_frame()
 
-    def add_command(self, command):
+    def configure_(self, command, **kwargs):
         self.command = command
+        self.configure(**kwargs)
 
     def create_frame(self):
         def hover_enter():
@@ -63,9 +65,9 @@ class MoveModal(ctk.CTkFrame):
 
     def add_move_name(self):
         self.move_name = ctk.CTkLabel(master=self,
-                                      text="Toxic",
+                                      text="None",
                                       corner_radius=0,
-                                      font=('Helvetica', 20, 'bold'),
+                                      font=('Helvetica', 18, 'bold'),
                                       width=int(self.cget('width') / self.num_width_elements),
                                       height=int(self.cget('height') / self.num_height_elements))
 
@@ -74,7 +76,7 @@ class MoveModal(ctk.CTkFrame):
 
     def add_type(self):
         self.type = ctk.CTkLabel(master=self,
-                                 text="Type: Dark",
+                                 text="Type: None",
                                  width=int(self.cget('width') / self.num_width_elements),
                                  height=int(self.cget('height') / self.num_height_elements))
 
@@ -83,7 +85,7 @@ class MoveModal(ctk.CTkFrame):
 
     def add_pp(self):
         self.pp = ctk.CTkLabel(master=self,
-                               text="PP: 0/10",
+                               text="PP: 10",
                                width=int(self.cget('width') / self.num_width_elements),
                                height=int(self.cget('height') / self.num_height_elements))
 
@@ -92,7 +94,7 @@ class MoveModal(ctk.CTkFrame):
 
     def add_category(self):
         self.category = ctk.CTkLabel(master=self,
-                                     text='Category: Special',
+                                     text='Category: None',
                                      width=int(self.cget('width') / self.num_width_elements),
                                      height=int(self.cget('height') / self.num_height_elements))
 
