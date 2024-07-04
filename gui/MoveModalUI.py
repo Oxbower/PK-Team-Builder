@@ -82,7 +82,7 @@ class MoveModal(ctk.CTkFrame):
 
     def add_type(self):
         self.type = ctk.CTkLabel(master=self,
-                                 text="Type: None",
+                                 text=None,
                                  corner_radius=10,
                                  fg_color='#212121',
                                  width=int(self.cget('width') / self.num_width_elements) - 50,
@@ -117,12 +117,14 @@ class MoveModal(ctk.CTkFrame):
 
     def add_accuracy(self):
         self.accuracy = ctk.CTkLabel(master=self,
+                                     font=('Helvetica', 13, 'bold'),
                                      text='Accuracy: 0')
         self.accuracy.grid(row=2,
                            column=0)
 
     def add_power(self):
         self.power = ctk.CTkLabel(master=self,
+                                  font=('Helvetica', 13, 'bold'),
                                   text='Power: 0')
         self.power.grid(row=1,
                         column=0)
