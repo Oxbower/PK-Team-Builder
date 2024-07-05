@@ -85,34 +85,41 @@ class MoveModal(ctk.CTkFrame):
                                  text=None,
                                  corner_radius=10,
                                  fg_color='#212121',
-                                 width=int(self.cget('width') / self.num_width_elements) - 50,
-                                 height=int(self.cget('height') / self.num_height_elements))
+                                 width=int(self.cget('width') / self.num_width_elements) - 40,
+                                 height=int(self.cget('height') / self.num_height_elements) - 2)
 
         self.type.grid(row=1,
                        column=1,
-                       padx=(0, 5),
+                       padx=(0, 2),
+                       pady=(1, 1),
                        sticky='e')
 
     def add_pp(self):
         self.pp = ctk.CTkLabel(master=self,
                                text="PP: 0",
-                               width=int(self.cget('width') / self.num_width_elements) - 50,
-                               height=int(self.cget('height') / self.num_height_elements))
+                               corner_radius=10,
+                               fg_color='#777777',
+                               width=int(self.cget('width') / self.num_width_elements) - 40,
+                               height=int(self.cget('height') / self.num_height_elements) - 2)
 
         self.pp.grid(row=0,
                      column=1,
-                     padx=(0, 5),
+                     padx=(0, 2),
+                     pady=(2, 1),
                      sticky='e')
 
     def add_category(self):
         self.category = ctk.CTkLabel(master=self,
                                      text='Category: None',
-                                     width=int(self.cget('width') / self.num_width_elements) - 50,
-                                     height=int(self.cget('height') / self.num_height_elements))
+                                     fg_color='#454545',
+                                     corner_radius=10,
+                                     width=int(self.cget('width') / self.num_width_elements) - 40,
+                                     height=int(self.cget('height') / self.num_height_elements) - 2)
 
         self.category.grid(row=2,
                            column=1,
-                           padx=(0, 5),
+                           padx=(0, 2),
+                           pady=(1, 2),
                            sticky='e')
 
     def add_accuracy(self):
