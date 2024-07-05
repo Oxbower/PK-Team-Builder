@@ -92,3 +92,14 @@ class MoveModalFrame():
                 self.active_modal.power.configure(text=str('Power: ' + value['power']))
 
         self.active_frame.destroy()
+
+    def reset_modal(self, modals):
+        for widget in modals:
+            widget.move_name.configure(text='None')
+            widget.pp.configure(text=str('PP: 0'))
+            widget.category.configure(text='Category: None')
+            widget.type.configure(text=None,
+                                  image='',
+                                  fg_color='#212121')
+            widget.accuracy.configure(text=str('Accuracy: 0'))
+            widget.power.configure(text=str('Power: 0'))

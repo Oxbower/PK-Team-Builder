@@ -23,6 +23,8 @@ class UIModals:
 
         self.pokemon_id = None
 
+        self.move_modal = []
+
         '''
         Holds modal references for update
         
@@ -229,22 +231,6 @@ class UIModals:
             if row == 0:
                 size = 5
 
-            # modal = self.ctk.CTkButton(master=parentFrame,
-            #                            text="Move " + str(row + 1),
-            #                            cursor="hand2",
-            #                            corner_radius=50,
-            #                            hover_color=self.gui.hover_color,
-            #                            width=parentFrame.cget('width') - 60,
-            #                            height=90,
-            #                            fg_color="#2e2e2e")
-            #
-            #
-            # modal.grid(row=row,
-            #            column=1,
-            #            padx=10,
-            #            pady=(size, 10),
-            #            sticky="nsew")
-
             modal = MoveModal.MoveModal(master=parentFrame,
                                         fg_color='#2e2e2e',
                                         corner_radius=0,
@@ -261,6 +247,10 @@ class UIModals:
                        padx=5,
                        pady=(size, 5),
                        sticky='nsew')
+
+            self.move_modal.append(modal)
+
+        self.modal_interact.set_move_modal(move_modal=self.move_modal)
 
     def build_stat_modal(self, parentFrame):
         """
@@ -291,10 +281,7 @@ class UIModals:
                 frame = self.Frame(master=stat_frame,
                                    corner_radius=self.gui.flat_corner,
                                    height=self.gui.stat_subcategory_height,
-                                   width=width,
-                                   # border_width=2,
-                                   # border_color="#ff0000"
-                                   )
+                                   width=width)
                 frame.grid(row=row, column=col, sticky=self.gui.expand_all)
 
                 if col != 2:
