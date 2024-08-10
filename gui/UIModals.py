@@ -141,16 +141,16 @@ class UIModals:
         :param parentFrame: parentFrame to hold modal
         :return: None
         """
-        max_width = parentFrame.cget("width")
+        max_height = parentFrame.cget("height")
 
         # build ability modal (open separate window for selection)
         ability = self.ctk.CTkButton(master=parentFrame,
-                                     text="Abilities",
+                                     text="A\nb\ni\nl\ni\nt\ni\ne\ns",
                                      fg_color="#2a2a2a",
                                      hover_color=self.gui.hover_color,
                                      cursor="hand2",
-                                     height=45,
-                                     width=max_width - 10)
+                                     height=max_height - 70,
+                                     width=40)
 
         ability.grid(row=0,
                      pady=5,
@@ -158,12 +158,12 @@ class UIModals:
 
         # build item modal (open separate window for selection)
         items = self.ctk.CTkButton(master=parentFrame,
-                                   text="Items",
+                                   text="",
                                    fg_color="#2a2a2a",
                                    hover_color=self.gui.hover_color,
                                    cursor="hand2",
                                    height=45,
-                                   width=max_width-10)
+                                   width=40)
         items.grid(row=1,
                    pady=(0, 5),
                    padx=5)
