@@ -34,6 +34,7 @@ class ModalUpdate:
         self.sidebar_widget = None
         self.dir_folder = None
         self.current_name = None
+        self.move_modals = None
         # Instantiate move modal class
         self.scrollable_move_frame = MoveModalFrame.MoveModalFrame(current_window)
         self.type_advantage_frame = []  # offensive, defensive
@@ -57,6 +58,9 @@ class ModalUpdate:
                                             height=self.gui.img_height,
                                             width=self.gui.img_width,
                                             corner_radius=self.gui.rounded_corner)
+
+    def set_move_modal(self, move_modal):
+        self.move_modals = move_modal
 
     def set_stats_widget(self, stats_widget):
         """
@@ -192,6 +196,8 @@ class ModalUpdate:
         self.update_pokemon_id(data)
         self.update_type_displayed(data)
         self.update_type_advantage(data)
+
+        self.scrollable_move_frame.reset_modal(self.move_modals)
 
     def update_moves(self, modal):
         if self.dir_folder is None: # guard clause

@@ -68,6 +68,9 @@ class ModalInteraction:
         """
         self.string_var.set(string)
 
+    def set_move_modal(self, move_modal):
+        self.ModalUpdate.set_move_modal(move_modal)
+
     def search_bar_callback(self, *args):
         """
         Handles search bar inputs to do string searches

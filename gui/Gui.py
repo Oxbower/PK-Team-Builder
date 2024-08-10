@@ -74,9 +74,6 @@ class UI:
         # build search & stat frame
         search_stat_frame = self.__build_info_frame()
 
-        # build items and ability frame
-        # item_ability_frame = self.__item_ability_frame()
-
         # build type frame
         type_frame = self.__build_type_frame()
 
@@ -87,6 +84,8 @@ class UI:
         type_adv_frame = self.__build_type_adv_frame()
 
         side_frame = self.__build_side_img_frame()
+
+        item_ability_frame = self.__build_ability_item_bar()
 
         '''
         Builds the modals using the parentFrames created by the build_[name]_frame methods
@@ -112,8 +111,8 @@ class UI:
         # build the move picker inside the move frame
         self.modals.build_move_modal(move_frame)
 
-        # self.modals.build_type_modal(type_frame)
-        # self.modals.build_item_ability_modal(item_ability_frame)
+        # build the picker for the pokemon's held item and their ability
+        self.modals.build_item_ability_modal(item_ability_frame)
 
         self.modals.build_type_adv_modal(type_adv_frame)
 
@@ -131,7 +130,7 @@ class UI:
         # position file_bar
         file_bar.grid(row=0,
                       sticky=self.expand_all,
-                      columnspan=3)
+                      columnspan=4)
 
         return file_bar
 
@@ -201,22 +200,15 @@ class UI:
         Builds the frame for move modals
         :return: created frame
         """
-        # frame = self.Frame(master=self.root,
-        #                    width=350)
-        # frame.grid(row=4,
-        #            column=0,
-        #            padx=(self.pad_x, 0),
-        #            sticky="nw",
-        #            columnspan=3)
 
         frame = self.Frame(master=self.root,
                            height=405,
-                           width=330)
+                           width=340)
         frame.grid(row=3,
                    column=0,
                    rowspan=3,
                    columnspan=3,
-                   pady=10,
+                   pady=(5, 0),
                    padx=(self.pad_x, 0),
                    sticky="nw")
 
@@ -232,7 +224,8 @@ class UI:
                            height=300,
                            fg_color='#242424')
         frame.grid(row=4,
-                   column=2,
+                   column=3,
+                   pady=10,
                    padx=(0, self.pad_x),
                    sticky='e')
 
@@ -252,7 +245,7 @@ class UI:
                            height=self.name_stat_frame_height,
                            )
         frame.grid(row=1,
-                   column=2,
+                   column=3,
                    rowspan=3,
                    sticky="ne",
                    pady=(self.pad_y, 0),
@@ -264,19 +257,16 @@ class UI:
 
         return frame
 
-    def __item_ability_frame(self):
-        """
-        Builds the frame that will hold the ability and items
-        :return: created frame
-        """
+    def __build_ability_item_bar(self):
         frame = self.Frame(master=self.root,
-                           height=100,
-                           width=180)
-        frame.grid(row=3,
-                   column=0,
-                   columnspan=2,
-                   pady=10,
-                   padx=(self.pad_x, 0),
-                   sticky="nw")
+                           fg_color='#333333',
+                           height=350,
+                           width=50)
+
+        frame.grid(row=1,
+                   rowspan=3,
+                   column=2,
+                   pady=(self.pad_y, 0),
+                   sticky='e')
 
         return frame

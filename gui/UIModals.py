@@ -23,6 +23,8 @@ class UIModals:
 
         self.pokemon_id = None
 
+        self.move_modal = []
+
         '''
         Holds modal references for update
         
@@ -139,16 +141,16 @@ class UIModals:
         :param parentFrame: parentFrame to hold modal
         :return: None
         """
-        max_width = parentFrame.cget("width")
+        max_height = parentFrame.cget("height")
 
         # build ability modal (open separate window for selection)
         ability = self.ctk.CTkButton(master=parentFrame,
-                                     text="Abilities",
+                                     text="A\nb\ni\nl\ni\nt\ni\ne\ns",
                                      fg_color="#2a2a2a",
                                      hover_color=self.gui.hover_color,
                                      cursor="hand2",
-                                     height=45,
-                                     width=max_width - 10)
+                                     height=max_height - 70,
+                                     width=40)
 
         ability.grid(row=0,
                      pady=5,
@@ -156,12 +158,12 @@ class UIModals:
 
         # build item modal (open separate window for selection)
         items = self.ctk.CTkButton(master=parentFrame,
-                                   text="Items",
+                                   text="",
                                    fg_color="#2a2a2a",
                                    hover_color=self.gui.hover_color,
                                    cursor="hand2",
                                    height=45,
-                                   width=max_width-10)
+                                   width=40)
         items.grid(row=1,
                    pady=(0, 5),
                    padx=5)
@@ -227,40 +229,28 @@ class UIModals:
         for row in range(4):
             size = 0
             if row == 0:
-                size = 10
-
-            # modal = self.ctk.CTkButton(master=parentFrame,
-            #                            text="Move " + str(row + 1),
-            #                            cursor="hand2",
-            #                            corner_radius=50,
-            #                            hover_color=self.gui.hover_color,
-            #                            width=parentFrame.cget('width') - 60,
-            #                            height=90,
-            #                            fg_color="#2e2e2e")
-            #
-            #
-            # modal.grid(row=row,
-            #            column=1,
-            #            padx=10,
-            #            pady=(size, 10),
-            #            sticky="nsew")
+                size = 5
 
             modal = MoveModal.MoveModal(master=parentFrame,
                                         fg_color='#2e2e2e',
                                         corner_radius=0,
                                         hover_color=self.gui.hover_color,
-                                        width=parentFrame.cget('width') - 60,
-                                        height=90)
+                                        width=parentFrame.cget('width') - 40,
+                                        height=100)
 
-            modal.add_command(command=lambda _modal=modal: self.modal_interact.move_callback(_modal))
+            modal.configure_(command=lambda _modal=modal: self.modal_interact.move_callback(_modal))
 
             modal.grid_propagate(False)
 
             modal.grid(row=row,
                        column=1,
-                       padx=10,
-                       pady=(size, 10),
+                       padx=5,
+                       pady=(size, 5),
                        sticky='nsew')
+
+            self.move_modal.append(modal)
+
+        self.modal_interact.set_move_modal(move_modal=self.move_modal)
 
     def build_stat_modal(self, parentFrame):
         """
@@ -291,10 +281,7 @@ class UIModals:
                 frame = self.Frame(master=stat_frame,
                                    corner_radius=self.gui.flat_corner,
                                    height=self.gui.stat_subcategory_height,
-                                   width=width,
-                                   # border_width=2,
-                                   # border_color="#ff0000"
-                                   )
+                                   width=width)
                 frame.grid(row=row, column=col, sticky=self.gui.expand_all)
 
                 if col != 2:
