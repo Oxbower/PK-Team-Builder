@@ -166,11 +166,12 @@ class UIModals:
                                    cursor="hand2",
                                    height=45,
                                    width=40)
+
+        items.configure(command=lambda _modal=items: self.modal_interact.clicked_item_modal(_modal))
+
         items.grid(row=1,
                    pady=(0, 5),
                    padx=5)
-
-        #Pass to modal_interact
 
     def build_type_adv_modal(self, parentFrame):
         """

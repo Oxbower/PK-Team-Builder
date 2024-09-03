@@ -59,9 +59,6 @@ class ModalInteraction:
     def set_type_advantage_frame(self, frame):
         self.ModalUpdate.set_type_advantage_frame(frame)
 
-    def set_item_ability_frame(self, frame):
-        self.ModalUpdate.set
-
     def set_string_var(self, string: str) -> None:
         """
         Sets the string_var for search_bar_callback
@@ -127,6 +124,17 @@ class ModalInteraction:
         self.current_window.root.focus_set()
         # destroy result frame
         self.SearchUI.destroy_result_frame()
+
+    def clicked_item_modal(self, self_modal) -> None:
+        print("test item button")
+
+        if self_modal.cget('text') == 'L':
+            self_modal.configure(text='')
+        else:
+            self_modal.configure(text='L')
+
+        # open a new window and populate on a new thread, update using modalUpdate
+        self.ModalUpdate.update_item_modal()
 
     def type_adv_change_window(self, string: str, new_window, button_config) -> None:
         """

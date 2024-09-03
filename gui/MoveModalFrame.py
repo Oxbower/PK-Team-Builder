@@ -16,6 +16,8 @@ class MoveModalFrame():
         self.data = None
         self.active_frame = None
 
+    # use SearchingAlgo class
+
     def start_search_build(self, modal, dir_folder_name, current_name):
         path = os.path.join('pokemon-pokedex', dir_folder_name, 'moves.json')
 
