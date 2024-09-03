@@ -10,6 +10,8 @@ class UIModals:
         """
         Initialize UI modals this is the stuff inside the
         frames.
+
+        passes the interactable Modals to modal_iteract
         """
         self.ctk = ctk
         self.mainWindow = current_window
@@ -150,7 +152,7 @@ class UIModals:
                                      hover_color=self.gui.hover_color,
                                      cursor="hand2",
                                      height=max_height - 70,
-                                     width=40)
+                                     width=45)
 
         ability.grid(row=0,
                      pady=5,
@@ -158,12 +160,15 @@ class UIModals:
 
         # build item modal (open separate window for selection)
         items = self.ctk.CTkButton(master=parentFrame,
-                                   text="",
                                    fg_color="#2a2a2a",
+                                   text='',
                                    hover_color=self.gui.hover_color,
                                    cursor="hand2",
                                    height=45,
-                                   width=40)
+                                   width=45)
+
+        items.configure(command=lambda: self.modal_interact.clicked_item_modal(items))
+
         items.grid(row=1,
                    pady=(0, 5),
                    padx=5)

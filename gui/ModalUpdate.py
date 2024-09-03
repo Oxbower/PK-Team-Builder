@@ -2,6 +2,7 @@ import customtkinter as ctk
 import threading
 import os
 import gui.MoveModalFrame as MoveModalFrame
+import gui.ItemModalFrame as ItemModalFrame
 
 from interaction.StatColorUpdate import stat_color_update
 from interaction.AnimateStatBars import start_animation
@@ -35,9 +36,12 @@ class ModalUpdate:
         self.dir_folder = None
         self.current_name = None
         self.move_modals = None
-        # Instantiate move modal class
+        # Instantiate move modal class #TODO: REWORK TO MULTIPURPOSE SEARCH
         self.scrollable_move_frame = MoveModalFrame.MoveModalFrame(current_window)
         self.type_advantage_frame = []  # offensive, defensive
+
+        # Pass in current window to anchor new frame, rework later
+        self.scrollable_item_frame = ItemModalFrame.ItemModalFrame(current_window)
 
         self.delta_width = 10
         self.frame_width = 250
@@ -294,6 +298,9 @@ class ModalUpdate:
         # defensive
         start_thread = threading.Thread(target=self.type_advantage_frame[1].populate_frame, args=(type_defense,))
         start_thread.run()
+
+    def update_item_modal(self, modal):
+        self.scrollable_item_frame.start_search_build(self.current_name, modal)
 
     def update_stats_widget(self, data):
         """

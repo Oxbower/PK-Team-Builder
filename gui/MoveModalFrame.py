@@ -16,6 +16,8 @@ class MoveModalFrame():
         self.data = None
         self.active_frame = None
 
+    # use SearchingAlgo class
+
     def start_search_build(self, modal, dir_folder_name, current_name):
         path = os.path.join('pokemon-pokedex', dir_folder_name, 'moves.json')
 
@@ -85,7 +87,7 @@ class MoveModalFrame():
             if value['name'] == text:
                 self.active_modal.pp.configure(text=str('PP: ' + value['pp']))
                 self.active_modal.category.configure(text=value['cat'].title())
-                self.active_modal.type.configure(text=None,
+                self.active_modal.type.configure(text='',
                                                  image=types_image[value['type'].lower()],
                                                  fg_color=type_color(value['type']))
                 self.active_modal.accuracy.configure(text=str('Accuracy: ' + value['acc']))
