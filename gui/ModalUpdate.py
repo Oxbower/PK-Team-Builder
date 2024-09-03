@@ -300,9 +300,7 @@ class ModalUpdate:
         start_thread.run()
 
     def update_item_modal(self, modal):
-        self.scrollable_item_frame.start_search_build()
-
-        start_thread = threading.Thread(target=self)
+        self.scrollable_item_frame.start_search_build(self.current_name, modal)
 
     def update_stats_widget(self, data):
         """

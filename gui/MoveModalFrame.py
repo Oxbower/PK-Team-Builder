@@ -87,7 +87,7 @@ class MoveModalFrame():
             if value['name'] == text:
                 self.active_modal.pp.configure(text=str('PP: ' + value['pp']))
                 self.active_modal.category.configure(text=value['cat'].title())
-                self.active_modal.type.configure(text=None,
+                self.active_modal.type.configure(text='',
                                                  image=types_image[value['type'].lower()],
                                                  fg_color=type_color(value['type']))
                 self.active_modal.accuracy.configure(text=str('Accuracy: ' + value['acc']))

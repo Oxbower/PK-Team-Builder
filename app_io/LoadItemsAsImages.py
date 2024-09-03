@@ -5,7 +5,7 @@ from app_io.LoadImage import read_image
 
 
 types_image_PIL = [
-    read_image([os.path.join('assets', 'item-artwork', i)], 'thumbnail', (40, 40))[0]
+    read_image([os.path.join('assets', 'item-artwork', i)], 'thumbnail', (200, 200))[0]
     for i in os.listdir(os.path.join('assets', 'item-artwork'))]
 
 key_values = [os.path.splitext(os.path.basename(key))[0] for key in os.listdir(os.path.join('assets', 'item-artwork'))]

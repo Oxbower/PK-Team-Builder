@@ -126,13 +126,6 @@ class ModalInteraction:
         self.SearchUI.destroy_result_frame()
 
     def clicked_item_modal(self, self_modal) -> None:
-        print("test item button")
-
-        if self_modal.cget('text') == 'L':
-            self_modal.configure(text='')
-        else:
-            self_modal.configure(text='L')
-
         # open a new window and populate on a new thread, update using modalUpdate
         self.ModalUpdate.update_item_modal(self_modal)
 
