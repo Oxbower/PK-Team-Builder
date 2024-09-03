@@ -299,8 +299,8 @@ class ModalUpdate:
         start_thread = threading.Thread(target=self.type_advantage_frame[1].populate_frame, args=(type_defense,))
         start_thread.run()
 
-    def update_item_modal(self):
-        print('item modal update')
+    def update_item_modal(self, modal):
+        self.scrollable_item_frame.start_search_build()
 
         start_thread = threading.Thread(target=self)
 

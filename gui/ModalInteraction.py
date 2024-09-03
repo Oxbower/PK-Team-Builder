@@ -134,7 +134,7 @@ class ModalInteraction:
             self_modal.configure(text='L')
 
         # open a new window and populate on a new thread, update using modalUpdate
-        self.ModalUpdate.update_item_modal()
+        self.ModalUpdate.update_item_modal(self_modal)
 
     def type_adv_change_window(self, string: str, new_window, button_config) -> None:
         """
