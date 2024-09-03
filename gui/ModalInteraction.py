@@ -59,6 +59,9 @@ class ModalInteraction:
     def set_type_advantage_frame(self, frame):
         self.ModalUpdate.set_type_advantage_frame(frame)
 
+    def set_item_ability_frame(self, frame):
+        self.ModalUpdate.set
+
     def set_string_var(self, string: str) -> None:
         """
         Sets the string_var for search_bar_callback

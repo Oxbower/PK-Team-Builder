@@ -10,6 +10,8 @@ class UIModals:
         """
         Initialize UI modals this is the stuff inside the
         frames.
+
+        passes the interactable Modals to modal_iteract
         """
         self.ctk = ctk
         self.mainWindow = current_window
@@ -167,6 +169,8 @@ class UIModals:
         items.grid(row=1,
                    pady=(0, 5),
                    padx=5)
+
+        #Pass to modal_interact
 
     def build_type_adv_modal(self, parentFrame):
         """
