@@ -170,6 +170,9 @@ class UIModals:
                           pady=(5, 5),
                           padx=5)
 
+        # pass custom label object to click handler to pass into modalUpdate
+        canvas_label.bind('<Button-1>', lambda _: self.modal_interact.clicked_ability_modal(canvas_label))
+
         # build item modal (open separate window for selection)
         items = self.ctk.CTkButton(master=parentFrame,
                                    fg_color="#2a2a2a",

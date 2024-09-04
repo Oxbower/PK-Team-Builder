@@ -34,16 +34,13 @@ class CustomCanvasLabel(ctk.CTkFrame):
 
         self.canvas = canvas
 
-        self.bind_event(canvas)
-
-    def bind_event(self, canvas):
+    def bind(self, *args):
         """
         Bind mouse events on this module
-        :param canvas: parent canvas
         :return: None
         """
-        self.bind("<Button-1>", lambda: self.click_event()) # bind to self
-        self.canvas.bind("<Button-1>", lambda: self.click_event())
+        super().bind(*args)
+        self.canvas.bind(*args)
 
     def configure(self, text='', **kwargs):
         """
@@ -54,11 +51,3 @@ class CustomCanvasLabel(ctk.CTkFrame):
         """
         self.configure(**kwargs)
         self.canvas.configure(text=text)
-
-    def click_event(self):
-        """
-        Handles all click events for this modal
-        :return:
-        """
-        print(f'ctk tag:{self.canvas}')
-

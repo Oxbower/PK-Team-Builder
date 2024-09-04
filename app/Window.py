@@ -8,6 +8,7 @@ class Window:
         """
         Initializes window class
         :param window_size: Argument for window size (window_width, window_height)
+        :return: None
         """
 
         # window dimensions
