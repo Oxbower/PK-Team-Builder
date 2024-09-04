@@ -30,7 +30,7 @@ class CustomCanvasLabel(ctk.CTkFrame):
                                bg=color)
         canvas.grid(column=0, row=0, padx=2)
 
-        canvas.create_text(width/2-2, height/2 - len(text)/2, text=text, angle=90)
+        canvas.create_text(width/2-2, height/2 - len(text)/2, text=text, fill='#ffffff', angle=90)
 
         self.canvas = canvas
 
@@ -49,5 +49,9 @@ class CustomCanvasLabel(ctk.CTkFrame):
         :param kwargs:
         :return:
         """
-        self.configure(**kwargs)
-        self.canvas.configure(text=text)
+        super().configure(**kwargs)
+
+        if text != '':
+            self.canvas.configure(text=text, bg=kwargs['fg_color'])
+        else:
+            self.canvas.configure(bg=kwargs['fg_color'])

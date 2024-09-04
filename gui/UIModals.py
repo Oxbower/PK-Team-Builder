@@ -172,6 +172,8 @@ class UIModals:
 
         # pass custom label object to click handler to pass into modalUpdate
         canvas_label.bind('<Button-1>', lambda _: self.modal_interact.clicked_ability_modal(canvas_label))
+        canvas_label.bind('<Enter>', lambda _: canvas_label.configure(fg_color=self.gui.hover_color))
+        canvas_label.bind('<Leave>', lambda _: canvas_label.configure(fg_color='#2a2a2a'))
 
         # build item modal (open separate window for selection)
         items = self.ctk.CTkButton(master=parentFrame,
