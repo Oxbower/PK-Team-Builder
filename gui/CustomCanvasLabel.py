@@ -15,7 +15,7 @@ class CustomCanvasLabel(ctk.CTkFrame):
     def draw(self, height=0, width=0, color='#ffffff', text=''):
         canvas = ctk.CTkCanvas(master=self,
                                height=height-20,
-                               width=width-10,
+                               width=width-5,
                                bd=0,
                                highlightthickness=0,
                                relief='ridge',
