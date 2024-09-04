@@ -300,6 +300,8 @@ class ModalUpdate:
         start_thread.run()
 
     def update_item_modal(self, modal):
+        # open a search list and display all items
+        # TODO: rework implementation to forget instead of destroying to save on resources
         self.scrollable_item_frame.start_search_build(self.current_name, modal)
 
     def update_stats_widget(self, data):

@@ -3,6 +3,7 @@ import customtkinter as ctk
 
 import gui.TypeAdvantageFrames as taf
 import gui.MoveModalUI as MoveModal
+import gui.CustomCanvasLabel as CanvasLabel
 
 
 class UIModals:
@@ -146,17 +147,31 @@ class UIModals:
         max_height = parentFrame.cget("height")
 
         # build ability modal (open separate window for selection)
-        ability = self.ctk.CTkButton(master=parentFrame,
-                                     text="A\nb\ni\nl\ni\nt\ni\ne\ns",
-                                     fg_color="#2a2a2a",
-                                     hover_color=self.gui.hover_color,
-                                     cursor="hand2",
-                                     height=max_height - 70,
-                                     width=45)
+        # ability = self.ctk.CTkButton(master=parentFrame,
+        #                              text="A\nb\ni\nl\ni\nt\ni\ne\ns",
+        #                              fg_color="#2a2a2a",
+        #                              hover_color=self.gui.hover_color,
+        #                              cursor="hand2",
+        #                              height=max_height - 70,
+        #                              width=45)
+        #
+        # ability.grid(row=0,
+        #              pady=5,
+        #              padx=5)
 
-        ability.grid(row=0,
-                     pady=5,
-                     padx=5)
+        canvas_label = CanvasLabel.CustomCanvasLabel(master=parentFrame,
+                                                     text='Ability',
+                                                     fg_color="#2a2a2a",
+                                                     cursor="hand2",
+                                                     width=45,
+                                                     height=max_height - 70)
+
+        canvas_label.grid(row=0,
+                          pady=(5, 5),
+                          padx=5)
+
+        # pass custom label object to click handler to pass into modalUpdate
+        canvas_label.bind('<Button-1>', lambda _: self.modal_interact.clicked_ability_modal(canvas_label))
 
         # build item modal (open separate window for selection)
         items = self.ctk.CTkButton(master=parentFrame,
@@ -166,12 +181,12 @@ class UIModals:
                                    cursor="hand2",
                                    height=45,
                                    width=45)
-
-        items.configure(command=lambda: self.modal_interact.clicked_item_modal(items))
-
+        items.propagate(False)
         items.grid(row=1,
                    pady=(0, 5),
                    padx=5)
+
+        items.configure(command=lambda: self.modal_interact.clicked_item_modal(items))
 
     def build_type_adv_modal(self, parentFrame):
         """

@@ -129,6 +129,9 @@ class ModalInteraction:
         # open a new window and populate on a new thread, update using modalUpdate
         self.ModalUpdate.update_item_modal(self_modal)
 
+    def clicked_ability_modal(self, self_modal) -> None:
+        pass
+
     def type_adv_change_window(self, string: str, new_window, button_config) -> None:
         """
         handles the type advantage window button callback
