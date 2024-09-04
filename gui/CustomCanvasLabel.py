@@ -13,6 +13,14 @@ class CustomCanvasLabel(ctk.CTkFrame):
         self.draw(height=height, width=width, color=fg_color, text=text)
 
     def draw(self, height=0, width=0, color='#ffffff', text=''):
+        """
+        Draw the canvas and text
+        :param height: height is based on the param given for the main frame
+        :param width: width is based on the param given for the main frame
+        :param color: color is based on param given for main frame
+        :param text: text to display
+        :return: None
+        """
         canvas = ctk.CTkCanvas(master=self,
                                height=height-20,
                                width=width-5,
@@ -26,6 +34,17 @@ class CustomCanvasLabel(ctk.CTkFrame):
 
         self.canvas = canvas
 
+        self.bind_event(canvas)
+
+    def bind_event(self, canvas):
+        """
+        Bind mouse events on this module
+        :param canvas: parent canvas
+        :return: None
+        """
+        self.bind("<Button-1>", lambda: self.click_event()) # bind to self
+        self.canvas.bind("<Button-1>", lambda: self.click_event())
+
     def configure(self, text='', **kwargs):
         """
         Override the configure method of ctkFrame
@@ -35,3 +54,11 @@ class CustomCanvasLabel(ctk.CTkFrame):
         """
         self.configure(**kwargs)
         self.canvas.configure(text=text)
+
+    def click_event(self):
+        """
+        Handles all click events for this modal
+        :return:
+        """
+        print(f'ctk tag:{self.canvas}')
+
