@@ -37,7 +37,7 @@ class CustomCanvasLabel(ctk.CTkFrame):
                                               text=text,
                                               fill='#ffffff',
                                               angle=90,
-                                              font=('Helvetica', 10, 'bold'))
+                                              font=('Helvetica', 13, 'bold'))
         self.canvas = canvas
 
     def bind(self, *args):

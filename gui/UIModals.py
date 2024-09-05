@@ -166,9 +166,7 @@ class UIModals:
                                                      width=45,
                                                      height=max_height - 70)
 
-        canvas_label.grid(row=0,
-                          pady=(5, 5),
-                          padx=5)
+        canvas_label.place(relx=.1, rely=.02)
 
         # pass custom label object to click handler to pass into modalUpdate
         canvas_label.bind('<Button-1>', lambda _: self.modal_interact.clicked_ability_modal(canvas_label))
@@ -184,9 +182,9 @@ class UIModals:
                                    height=45,
                                    width=45)
         items.propagate(False)
-        items.grid(row=1,
-                   pady=(0, 5),
-                   padx=5)
+
+        items.place(relx=.1, rely=.85)
+
 
         items.configure(command=lambda: self.modal_interact.clicked_item_modal(items))
 
