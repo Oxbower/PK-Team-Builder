@@ -1,3 +1,5 @@
+import time
+
 import customtkinter as ctk
 
 
@@ -10,6 +12,7 @@ class CustomCanvasLabel(ctk.CTkFrame):
         self.grid_propagate(False)
 
         self.canvas = None
+        self.canvas_text = None
         self.draw(height=height, width=width, color=fg_color, text=text)
 
     def draw(self, height=0, width=0, color='#ffffff', text=''):
@@ -29,9 +32,12 @@ class CustomCanvasLabel(ctk.CTkFrame):
                                relief='ridge',
                                bg=color)
         canvas.grid(column=0, row=0, padx=2)
-
-        canvas.create_text(width/2-2, height/2 - len(text)/2, text=text, fill='#ffffff', angle=90)
-
+        self.canvas_text = canvas.create_text(width/2-2,
+                                              height/2 - len(text)/2,
+                                              text=text,
+                                              fill='#ffffff',
+                                              angle=90,
+                                              font=('Helvetica', 10, 'bold'))
         self.canvas = canvas
 
     def bind(self, *args):
@@ -52,6 +58,6 @@ class CustomCanvasLabel(ctk.CTkFrame):
         super().configure(**kwargs)
 
         if text != '':
-            self.canvas.configure(text=text, bg=kwargs['fg_color'])
+            self.canvas.itemconfigure(self.canvas_text, text=text)
         else:
             self.canvas.configure(bg=kwargs['fg_color'])
