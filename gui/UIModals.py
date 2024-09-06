@@ -2,7 +2,7 @@ import gui.ModalInteraction as ModalInteraction
 import customtkinter as ctk
 
 import gui.TypeAdvantageFrames as taf
-import gui.MoveModalUI as MoveModal
+import gui.custommoveframe.MoveModal as MoveModal
 import gui.customcanvaslabel.CustomCanvasLabel as CanvasLabel
 
 
@@ -246,7 +246,7 @@ class UIModals:
                                         width=parentFrame.cget('width') - 40,
                                         height=100)
 
-            modal.configure_(command=lambda _modal=modal: self.modal_interact.move_callback(_modal))
+            modal.configure(command=lambda _modal=modal: self.modal_interact.move_callback(_modal))
 
             modal.grid_propagate(False)
 

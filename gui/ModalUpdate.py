@@ -1,7 +1,7 @@
 import customtkinter as ctk
 import threading
 import os
-import gui.MoveModalFrame as MoveModalFrame
+import gui.custommoveframe.MoveModalFrame as MoveModalFrame
 import gui.ItemModalFrame as ItemModalFrame
 
 from interaction.StatColorUpdate import stat_color_update
