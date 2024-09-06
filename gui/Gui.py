@@ -259,7 +259,7 @@ class UI:
 
     def __build_ability_item_bar(self):
         frame = self.Frame(master=self.root,
-                           fg_color='#333333',
+                           fg_color='#242424',
                            height=350,
                            width=50)
 

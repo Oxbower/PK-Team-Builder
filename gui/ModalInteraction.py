@@ -130,7 +130,8 @@ class ModalInteraction:
         self.ModalUpdate.update_item_modal(self_modal)
 
     def clicked_ability_modal(self, self_modal) -> None:
-        pass
+        # self_modal.configure(text='Chlorophyll')
+        self.ModalUpdate.update_ability_modal(self_modal)
 
     def type_adv_change_window(self, string: str, new_window, button_config) -> None:
         """

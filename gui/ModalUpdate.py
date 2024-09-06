@@ -3,6 +3,7 @@ import threading
 import os
 import gui.custommoveframe.MoveModalFrame as MoveModalFrame
 import gui.ItemModalFrame as ItemModalFrame
+import gui.CanvasLabelUpdate as CanvasLabelUpdate
 
 from interaction.StatColorUpdate import stat_color_update
 from interaction.AnimateStatBars import start_animation
@@ -42,6 +43,8 @@ class ModalUpdate:
 
         # Pass in current window to anchor new frame, rework later
         self.scrollable_item_frame = ItemModalFrame.ItemModalFrame(current_window)
+
+        self.scrollable_ability_frame = CanvasLabelUpdate.CanvasLabelUpdate(current_window)
 
         self.delta_width = 10
         self.frame_width = 250
@@ -303,6 +306,9 @@ class ModalUpdate:
         # open a search list and display all items
         # TODO: rework implementation to forget instead of destroying to save on resources
         self.scrollable_item_frame.start_search_build(self.current_name, modal)
+
+    def update_ability_modal(self, modal):
+        self.scrollable_ability_frame.start_search_build(modal, self.dir_folder, self.current_name)
 
     def update_stats_widget(self, data):
         """
