@@ -3,7 +3,7 @@ import customtkinter as ctk
 
 import gui.TypeAdvantageFrames as taf
 import gui.MoveModalUI as MoveModal
-import gui.CustomCanvasLabel as CanvasLabel
+import gui.customcanvaslabel.CustomCanvasLabel as CanvasLabel
 
 
 class UIModals:
@@ -147,18 +147,6 @@ class UIModals:
         max_height = parentFrame.cget("height")
 
         # build ability modal (open separate window for selection)
-        # ability = self.ctk.CTkButton(master=parentFrame,
-        #                              text="A\nb\ni\nl\ni\nt\ni\ne\ns",
-        #                              fg_color="#2a2a2a",
-        #                              hover_color=self.gui.hover_color,
-        #                              cursor="hand2",
-        #                              height=max_height - 70,
-        #                              width=45)
-        #
-        # ability.grid(row=0,
-        #              pady=5,
-        #              padx=5)
-
         canvas_label = CanvasLabel.CustomCanvasLabel(master=parentFrame,
                                                      text='Ability',
                                                      fg_color="#2a2a2a",

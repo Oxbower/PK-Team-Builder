@@ -3,7 +3,8 @@ import os
 from customtkinter import CTkImage
 from app_io.LoadImage import read_image
 
-class LoadImageDictionary():
+
+class LoadImageDictionary:
     """
     Load specified image directory as a dictionary
     {'filename': 'filepath'}
