@@ -2,7 +2,7 @@ import os.path
 import customtkinter as ctk
 
 # imports items as dictionary tags with items as ctk labels
-from app_io.LoadItemsAsImages import load_item_ctk_images as items_image
+import app_io.LoadImageDictionary as ImageDictionary
 
 
 class ItemModalFrame:
@@ -10,6 +10,10 @@ class ItemModalFrame:
         self.root = current_window.root
         self.active_modal = None
         self.active_frame = None
+
+        self.items_image = ImageDictionary.LoadImageDictionary('assets',
+                                                               'item-artwork',
+                                                               (27, 27)).load_image()
 
     def start_search_build(self, current_name, modal):
         self.active_modal = modal
@@ -40,7 +44,7 @@ class ItemModalFrame:
 
     def insert_modals(self, parentFrame, current_name):
 
-        item_name_list = list(items_image.keys())
+        item_name_list = list(self.items_image.keys())
         item_name_list.sort()
 
         for index, text in enumerate(item_name_list):
@@ -59,6 +63,6 @@ class ItemModalFrame:
 
     def active_modal_callback(self, text):
         self.active_modal.configure(text='',
-                                    image=items_image[text])
+                                    image=self.items_image[text])
 
         self.active_frame.destroy()

@@ -3,7 +3,7 @@ import customtkinter as ctk
 
 from app_io.LoadJson import json_load
 from gui.TypeBackgroundColor import type_color
-from app_io.LoadTypesAsImages import load_type_ctk_images as types_image
+import app_io.LoadImageDictionary as ImageDicitonary
 
 
 class MoveModalFrame():
@@ -15,6 +15,8 @@ class MoveModalFrame():
 
         self.data = None
         self.active_frame = None
+
+        self.types_image = ImageDicitonary.LoadImageDictionary('assets', 'type-icon', (30, 30)).load_image()
 
     # use SearchingAlgo class
 
@@ -88,7 +90,7 @@ class MoveModalFrame():
                 self.active_modal.pp.configure(text=str('PP: ' + value['pp']))
                 self.active_modal.category.configure(text=value['cat'].title())
                 self.active_modal.type.configure(text='',
-                                                 image=types_image[value['type'].lower()],
+                                                 image=self.types_image[value['type'].lower()],
                                                  fg_color=type_color(value['type']))
                 self.active_modal.accuracy.configure(text=str('Accuracy: ' + value['acc']))
                 self.active_modal.power.configure(text=str('Power: ' + value['power']))

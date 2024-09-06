@@ -1,8 +1,9 @@
 import customtkinter as ctk
 import sys
+import app_io.LoadImageDictionary as ImageDictionary
+
 
 from math import floor
-from app_io.LoadTypesAsImages import load_type_ctk_images as types_image
 from gui.TypeBackgroundColor import type_color
 from interaction.TypeAdvantageHandler import find_neutral_types, find_defensive_type_multiplier, find_type_defense
 
@@ -17,6 +18,10 @@ class TypeAdvantageFrames:
         self.types_defensive = [ctk.CTkFrame, ctk.CTkFrame, ctk.CTkFrame]
         self.types_offensive = [ctk.CTkFrame, ctk.CTkFrame]
         self.active_window = None
+
+        self.type_image = ImageDictionary.LoadImageDictionary('assets',
+                                                              'type-icon',
+                                                              (30, 30)).load_image()
 
     def set_parent_frame(self, parent_frame: ctk.CTkFrame, active_window: str, color: str = '#202020') -> None:
         if parent_frame is None:
@@ -145,7 +150,7 @@ class TypeAdvantageFrames:
                     # type image to display
                     image = ctk.CTkLabel(master=frame,
                                          text='',
-                                         image=types_image[value.lower()])
+                                         image=self.type_image[value.lower()])
 
                     image.grid(row=0,
                                column=0,
