@@ -33,7 +33,7 @@ class MoveModal(ctk.CTkFrame):
                   move_name: str = '',
                   category: str = '',
                   pp: str = '',
-                  type: (str, ctk.CTkImage, str) = None,
+                  type: tuple[str, ctk.CTkImage, str] = None,
                   power: str = '',
                   accuracy: str = '',
                   **kwargs):
@@ -62,7 +62,7 @@ class MoveModal(ctk.CTkFrame):
         if power != '':
             self.__power.configure(text=power)
         if accuracy != '':
-            self.__accuracy.configure(value=accuracy)
+            self.__accuracy.configure(text=accuracy)
 
         super().configure(**kwargs)
 
@@ -152,7 +152,7 @@ class MoveModal(ctk.CTkFrame):
 
     def __add_category(self) -> ctk.CTkLabel:
         label = ctk.CTkLabel(master=self,
-                             text='Category: None',
+                             text='Category: N/A',
                              fg_color='#454545',
                              corner_radius=10,
                              width=int(self.cget('width') / self.num_width_elements) - 40,

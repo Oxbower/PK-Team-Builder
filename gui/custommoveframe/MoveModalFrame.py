@@ -1,4 +1,6 @@
 import os.path
+
+from PIL import Image
 import customtkinter as ctk
 
 from app_io.LoadJson import json_load
@@ -12,6 +14,7 @@ class MoveModalFrame():
         self.root = current_window.root
         self.all_moves = json_load(os.path.join('data', 'moves.json'))
         self.active_modal = None
+        self.blank_image = ctk.CTkImage(light_image=Image.new("RGBA", (40,40)), size=(30,30))
 
         self.data = None
         self.active_frame = None
@@ -91,9 +94,9 @@ class MoveModalFrame():
             if value['name'] == text:
                 self.active_modal.configure(pp=str('PP: ' + value['pp']))
                 self.active_modal.configure(category=value['cat'].title())
-                self.active_modal.type.configure(type=('',
-                                                       self.types_image[value['type'].lower()],
-                                                       type_color(value['type'])))
+                self.active_modal.configure(type=('',
+                                                  self.types_image[value['type'].lower()],
+                                                  type_color(value['type'])))
                 self.active_modal.configure(accuracy=str('Accuracy: ' + value['acc']))
                 self.active_modal.configure(power=str('Power: ' + value['power']))
 
@@ -103,7 +106,7 @@ class MoveModalFrame():
         for widget in modals:
             widget.configure(move_name='None')
             widget.configure(pp=str('PP: 0'))
-            widget.configure(category='Category: None')
-            widget.configure(type=(None, '', '#212121'))
+            widget.configure(category='Category: N/A')
+            widget.configure(type=('', self.blank_image, '#212121'))
             widget.configure(accuracy=str('Accuracy: 0'))
             widget.configure(power=str('Power: 0'))
