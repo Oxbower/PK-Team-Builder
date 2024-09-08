@@ -27,7 +27,6 @@ class SearchUI:
         -----------------------------------------
 
         Builds search result
-
         :param result_list: list to build search result for
         :param parentFrame: parentFrame for this class so stat_frame
         :return: None
@@ -50,7 +49,6 @@ class SearchUI:
     def destroy_result_frame(self):
         """
         Destroys search_result_container after user has chosen a result
-
         :return: None
         """
         try:
@@ -86,9 +84,8 @@ class SearchUI:
     def __build_result_frame(self, query_result):
         """
         Build query output
-
         :param query_result: output of SearchingAlgorithm
-        :return: null
+        :return: None
         """
 
         # Make the string display look nicer

@@ -1,9 +1,9 @@
 import customtkinter as ctk
 import threading
 import os
-import gui.custommoveframe.MoveModalFrame as MoveModalFrame
+import gui.custommovewidget.MoveModalUpdate as MoveModalFrame
 import gui.ItemModalFrame as ItemModalFrame
-import gui.CanvasLabelUpdate as CanvasLabelUpdate
+import gui.customcanvaslabel.CanvasLabelUpdate as CanvasLabelUpdate
 
 from interaction.StatColorUpdate import stat_color_update
 from interaction.AnimateStatBars import start_animation
@@ -38,7 +38,7 @@ class ModalUpdate:
         self.current_name = None
         self.move_modals = None
         # Instantiate move modal class #TODO: REWORK TO MULTIPURPOSE SEARCH
-        self.scrollable_move_frame = MoveModalFrame.MoveModalFrame(current_window)
+        self.scrollable_move_frame = MoveModalFrame.MoveModalUpdate(current_window)
         self.type_advantage_frame = []  # offensive, defensive
 
         # Pass in current window to anchor new frame, rework later

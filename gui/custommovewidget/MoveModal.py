@@ -1,4 +1,4 @@
-from typing import Union, Tuple, Callable, Optional, Any
+from typing import Callable
 
 import customtkinter as ctk
 
@@ -152,7 +152,7 @@ class MoveModal(ctk.CTkFrame):
 
     def __add_category(self) -> ctk.CTkLabel:
         label = ctk.CTkLabel(master=self,
-                             text='Category: N/A',
+                             text='None',
                              fg_color='#454545',
                              corner_radius=10,
                              width=int(self.cget('width') / self.num_width_elements) - 40,

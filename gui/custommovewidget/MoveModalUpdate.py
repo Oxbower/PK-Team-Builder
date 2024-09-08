@@ -8,8 +8,7 @@ from gui.TypeBackgroundColor import type_color
 import app_io.LoadImageDictionary as ImageDicitonary
 
 
-class MoveModalFrame():
-    # build the search modal frame
+class MoveModalUpdate():
     def __init__(self, current_window):
         self.root = current_window.root
         self.all_moves = json_load(os.path.join('data', 'moves.json'))
@@ -106,7 +105,7 @@ class MoveModalFrame():
         for widget in modals:
             widget.configure(move_name='None')
             widget.configure(pp=str('PP: 0'))
-            widget.configure(category='Category: N/A')
+            widget.configure(category='None')
             widget.configure(type=('', self.blank_image, '#212121'))
             widget.configure(accuracy=str('Accuracy: 0'))
             widget.configure(power=str('Power: 0'))
