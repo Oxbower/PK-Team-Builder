@@ -53,7 +53,6 @@ class ModalUpdate:
     def set_img_frame(self, Frame):
         """
         Sets image frame to display creature art
-
         :param Frame: Parent frame
         :return: None
         """
@@ -72,16 +71,26 @@ class ModalUpdate:
     def set_stats_widget(self, stats_widget):
         """
         Sets the stats widget
-
         :param stats_widget: dictionary to update the stats widget
         :return: None
         """
         self.stats_widget = stats_widget
 
     def set_sidebar_widget(self, sidebar_widget):
+        """
+        Sets the sidebar
+        :param sidebar_widget: stores the sidebar widget to ref in this file
+        :return:
+        """
         self.sidebar_widget = sidebar_widget
 
     def set_type_widget(self, pokedex_no, type_frame):
+        """
+        sets the type widget
+        :param pokedex_no: widget that contains label to update
+        :param type_frame: holds type_frame
+        :return:
+        """
         self.pokedex_no = pokedex_no
         self.type_frame = type_frame
 
@@ -91,7 +100,6 @@ class ModalUpdate:
     def set_variation_frame(self, Frame, string_var, name_plate_focused):
         """
         pass in the variation frame to display current pokemons different forms
-
         :param name_plate_focused: passed in function to update the name_plate_focus
         :param Frame: frame to put the forms in
         :param string_var: passed in function to update name display
@@ -104,7 +112,6 @@ class ModalUpdate:
     def build_dynamic_variation_modal(self, ref_path: list[str]):
         """
         Builds a dynamic modal for the number of variations this pokemon has, this only runs once on query
-
         :param ref_path: reference path to pokemon passed in by the clicked result
         :return: None
         """
@@ -166,7 +173,6 @@ class ModalUpdate:
     def build_path_ref(self, string):
         """
         Builds the image frame
-
         :param string:
         :return: None
         """
@@ -180,7 +186,6 @@ class ModalUpdate:
     def update_display(self, string):
         """
         Updates the entire frame with new data
-
         :param string: name of the pokemon currently displayed
         :return: None
         """
@@ -216,7 +221,6 @@ class ModalUpdate:
     def build_image(self, image_path):  # Modular do not mess with this anymore
         """
         Opens and updates the frame to hold the image
-
         :param image_path: image_path given by variation_model
         :return: None
         """
@@ -242,7 +246,6 @@ class ModalUpdate:
     def update_pokemon_id(self, data):
         """
         update the pokedex id of the current pokemon
-
         :param data: pokedex id of pokemon
         :return: None
         """
@@ -262,7 +265,6 @@ class ModalUpdate:
     def update_type_displayed(self, data):
         """
         Updates the type displayed for the current pokemon
-
         :param data: type data of pokemon
         :return: None
         """
@@ -313,7 +315,6 @@ class ModalUpdate:
     def update_stats_widget(self, data):
         """
         Updates the displayed stats for the appropriate pokemon
-
         :param data: data returned by json
         :return: None
         """

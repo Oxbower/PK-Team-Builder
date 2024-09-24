@@ -10,6 +10,10 @@ from interaction.TypeAdvantageHandler import find_neutral_types, find_defensive_
 
 class TypeAdvantageFrames:
     def __init__(self, parent_frame: ctk.CTkFrame = None):
+        """
+        Initializes the TypeAdvantageFrames
+        :param parent_frame: sets the parent frame for this modal
+        """
         self.parent_frame = parent_frame
         self.Frame = ctk.CTkFrame
         self.max_width = 0
@@ -24,6 +28,13 @@ class TypeAdvantageFrames:
                                                               (30, 30)).load_image()
 
     def set_parent_frame(self, parent_frame: ctk.CTkFrame, active_window: str, color: str = '#202020') -> None:
+        """
+
+        :param parent_frame:
+        :param active_window:
+        :param color:
+        :return:
+        """
         if parent_frame is None:
             sys.exit('Error creating window frame')
 
@@ -38,15 +49,28 @@ class TypeAdvantageFrames:
         self.build_widget(self.parent_frame)
 
     def get_window(self) -> ctk.CTkFrame:
+        """
+
+        :return: the parent frame
+        """
         if self.parent_frame is None:
             sys.exit('Error creating window frame')
 
         return self.parent_frame
 
     def get_types_container(self) -> (ctk.CTkFrame, ctk.CTkFrame):
+        """
+
+        :return:
+        """
         return self.types_offensive, self.types_defensive
 
     def build_widget(self, parent: ctk.CTkFrame):
+        """
+
+        :param parent:
+        :return:
+        """
         label_frame_def = ['Resistant to', 'Weak to', 'Immune to']
         label_frame_off = ['Types covered', 'Types not covered']
 
@@ -95,6 +119,11 @@ class TypeAdvantageFrames:
             frame_to_use[index] = holder_type_frame
 
     def populate_frame(self, data):
+        """
+
+        :param data:
+        :return:
+        """
         if self.active_window == 'Defensive':
             # Destroy all inner widgets inside a frame
             for frame in self.types_defensive:

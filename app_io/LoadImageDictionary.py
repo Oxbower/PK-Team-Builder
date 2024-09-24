@@ -9,7 +9,7 @@ class LoadImageDictionary:
     Load specified image directory as a dictionary
     {'filename': 'filepath'}
     """
-    def __init__(self, parent_directory='', sub_directory='', size=(40, 40)):
+    def __init__(self, parent_directory: str = '', sub_directory: str = '', size: tuple[int, int] = (40, 40)):
         self.parent_directory = parent_directory
         self.sub_directory = sub_directory
         self.size = size

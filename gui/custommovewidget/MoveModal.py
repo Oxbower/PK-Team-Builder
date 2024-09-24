@@ -5,10 +5,15 @@ import customtkinter as ctk
 
 class MoveModal(ctk.CTkFrame):
     """
-    This is a custom button for the MoveModalUI, it supers the CTkFrame class
+    This is a custom button to display the move buttons, it supers the CTkFrame class
     """
 
     def __init__(self, hover_color=None, **kwargs):
+        """
+
+        :param hover_color:
+        :param kwargs:
+        """
         self.command = None
 
         self.num_width_elements = 2
@@ -106,6 +111,10 @@ class MoveModal(ctk.CTkFrame):
         self.bind('<Button-1>', lambda _: self.command())
 
     def __add_move_name(self) -> ctk.CTkLabel:
+        """
+
+        :return:
+        """
         label = ctk.CTkLabel(master=self,
                              text="None",
                              corner_radius=0,
@@ -119,6 +128,10 @@ class MoveModal(ctk.CTkFrame):
         return label
 
     def __add_type(self) -> ctk.CTkLabel:
+        """
+
+        :return:
+        """
         label = ctk.CTkLabel(master=self,
                              text=None,
                              corner_radius=10,
@@ -135,6 +148,10 @@ class MoveModal(ctk.CTkFrame):
         return label
 
     def __add_pp(self) -> ctk.CTkLabel:
+        """
+
+        :return:
+        """
         label = ctk.CTkLabel(master=self,
                              text="PP: 0",
                              corner_radius=10,
@@ -151,6 +168,10 @@ class MoveModal(ctk.CTkFrame):
         return label
 
     def __add_category(self) -> ctk.CTkLabel:
+        """
+
+        :return:
+        """
         label = ctk.CTkLabel(master=self,
                              text='None',
                              fg_color='#454545',
@@ -167,6 +188,10 @@ class MoveModal(ctk.CTkFrame):
         return label
 
     def __add_accuracy(self) -> ctk.CTkLabel:
+        """
+
+        :return:
+        """
         label = ctk.CTkLabel(master=self,
                              font=('Helvetica', 13, 'bold'),
                              text='Accuracy: 0')
@@ -176,6 +201,10 @@ class MoveModal(ctk.CTkFrame):
         return label
 
     def __add_power(self) -> ctk.CTkLabel:
+        """
+
+        :return:
+        """
         label = ctk.CTkLabel(master=self,
                              font=('Helvetica', 13, 'bold'),
                              text='Power: 0')

@@ -4,7 +4,6 @@ import os
 def variant_handler(ref_path: list[str]) -> dict[str, list[str]]:
     """
     Handles variants and splits them into mega-evolution and base variants
-
     :param ref_path: list containing strings that are references to pokemon data
     :return: dictionary containing normal variants and mega-evos
     """

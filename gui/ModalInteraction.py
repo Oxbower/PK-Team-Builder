@@ -62,7 +62,6 @@ class ModalInteraction:
     def set_string_var(self, string: str) -> None:
         """
         Sets the string_var for search_bar_callback
-
         :param string: String being passed into the search bar callback
         :return: None
         """
@@ -74,7 +73,6 @@ class ModalInteraction:
     def search_bar_callback(self, *args):
         """
         Handles search bar inputs to do string searches
-
         :param args: Necessary arguments for the call back function
         :return: None
         """
@@ -105,7 +103,6 @@ class ModalInteraction:
     def name_plate_focus(self, boolean: bool) -> None:
         """
         Boolean var to detect if focus is on search_bar
-
         :param boolean: true if focused else
         :return: None
         """
@@ -114,7 +111,6 @@ class ModalInteraction:
     def clicked_search_query(self, string: str) -> None:
         """
         Detect when any of the search results are clicked
-
         :param string: name of the clicked result
         :return: None
         """
@@ -126,17 +122,25 @@ class ModalInteraction:
         self.SearchUI.destroy_result_frame()
 
     def clicked_item_modal(self, self_modal) -> None:
+        """
+
+        :param self_modal:
+        :return:
+        """
         # open a new window and populate on a new thread, update using modalUpdate
         self.ModalUpdate.update_item_modal(self_modal)
 
     def clicked_ability_modal(self, self_modal) -> None:
-        # self_modal.configure(text='Chlorophyll')
+        """
+
+        :param self_modal:
+        :return:
+        """
         self.ModalUpdate.update_ability_modal(self_modal)
 
     def type_adv_change_window(self, string: str, new_window, button_config) -> None:
         """
         handles the type advantage window button callback
-
         :param button_config: button config change color when active
         :param string: which button was pressed
         :param new_window: the window to display

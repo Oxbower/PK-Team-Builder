@@ -1,13 +1,18 @@
 import os.path
 import customtkinter as ctk
-import json as json
+import gui.customcanvaslabel.CustomCanvasLabel as CustomCanvasLabel
 
 from app_io.LoadJson import json_load
 
 
-class CanvasLabelUpdate():
+class CanvasLabelUpdate:
     # build the search modal frame
-    def __init__(self, current_window):
+    def __init__(self, current_window: ctk):
+        """
+        initialize the canvas label update class, call
+        this to update the canvas label
+        :param current_window: ctk root instance
+        """
         self.root = current_window.root
         self.all_moves = json_load(os.path.join('data', 'abilities.json'))
         self.active_modal = None
@@ -15,7 +20,14 @@ class CanvasLabelUpdate():
         self.data = None
         self.active_frame = None
 
-    def start_search_build(self, modal, dir_folder_name, current_name):
+    def start_search_build(self, modal: CustomCanvasLabel, dir_folder_name: str, current_name: str):
+        """
+        public call for the search container
+        :param modal: modal to update
+        :param dir_folder_name: folder name of this pokemon to grap abilities from
+        :param current_name: pokemon name
+        :return: None
+        """
         if current_name is None:
             return None
 
@@ -30,9 +42,13 @@ class CanvasLabelUpdate():
 
         self.active_modal = modal
 
-        self.build_search_container(current_name)
+        self.build_search_container()
 
-    def build_search_container(self, current_name):
+    def build_search_container(self):
+        """
+
+        :return:
+        """
         # Don't destroy, grid remove for performance
         frame = ctk.CTkFrame(master=self.root)
 
@@ -40,9 +56,14 @@ class CanvasLabelUpdate():
 
         self.active_frame = frame
 
-        self.build_search_scrollbar(frame, current_name)
+        self.build_search_scrollbar(frame)
 
-    def build_search_scrollbar(self, parentFrame, current_name):
+    def build_search_scrollbar(self, parentFrame):
+        """
+
+        :param parentFrame:
+        :return:
+        """
         frame = ctk.CTkScrollableFrame(master=parentFrame,
                                        corner_radius=0,
                                        width=300,
@@ -52,9 +73,14 @@ class CanvasLabelUpdate():
 
         frame.grid(row=0, column=0, sticky='nesw')
 
-        self.insert_modals(frame, current_name)
+        self.insert_modals(frame)
 
-    def insert_modals(self, parentFrame, current_name):
+    def insert_modals(self, parentFrame):
+        """
+
+        :param parentFrame:
+        :return:
+        """
         for index, text in enumerate(list(self.data.values())):
             frame = ctk.CTkButton(master=parentFrame,
                                   text=text,
@@ -70,6 +96,11 @@ class CanvasLabelUpdate():
                        sticky='nesw')
 
     def active_modal_callback(self, text):
+        """
+
+        :param text:
+        :return:
+        """
         # Change active modal text
         self.active_modal.configure(text)
 
