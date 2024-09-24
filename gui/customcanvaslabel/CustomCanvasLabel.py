@@ -5,7 +5,8 @@ from typing import Callable
 
 class CustomCanvasLabel(ctk.CTkFrame):
     """
-    Supers the ctkFrame class with a canvas on top to allow for rotated texts
+    Supers the ctkFrame class with a canvas on top to allow
+    for rotated labels to be drawn
     """
     def __init__(self, master=None, text='', fg_color='#fffff', height=0, width=0, **kwargs):
         """

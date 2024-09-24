@@ -6,10 +6,16 @@ from app_io.LoadImage import read_image
 
 class LoadImageDictionary:
     """
-    Load specified image directory as a dictionary
+    Load specified image directory as a dictionary (for bulk loading i.e., items, pokemon-types, etc)
     {'filename': 'filepath'}
     """
     def __init__(self, parent_directory: str = '', sub_directory: str = '', size: tuple[int, int] = (40, 40)):
+        """
+        initialize the LoadImageDictionary class
+        :param parent_directory: directory to load all images from
+        :param sub_directory: possible sub-directory option, leave blank if no sub-directory is present
+        :param size: size to load the image
+        """
         self.parent_directory = parent_directory
         self.sub_directory = sub_directory
         self.size = size
@@ -19,10 +25,6 @@ class LoadImageDictionary:
         public call to load given image directory
         :param directory: directory to pull images from
         :return: None
-        """
-
-        """
-        TODO: move to seperate thread
         """
 
         # open images as PIL object

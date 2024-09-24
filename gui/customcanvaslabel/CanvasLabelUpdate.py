@@ -6,7 +6,10 @@ from app_io.LoadJson import json_load
 
 
 class CanvasLabelUpdate:
-    # build the search modal frame
+    """
+    Allows for the custom label to be updated when the user
+    interacts with the ability button
+    """
     def __init__(self, current_window: ctk):
         """
         initialize the canvas label update class, call
@@ -42,12 +45,13 @@ class CanvasLabelUpdate:
 
         self.active_modal = modal
 
-        self.build_search_container()
+        self.__build_search_container()
 
-    def build_search_container(self):
+    def __build_search_container(self):
         """
-
-        :return:
+        builds the frame to hold the results, needed
+        due to ctk.scrollableframe destroy() not working properly
+        :return: None
         """
         # Don't destroy, grid remove for performance
         frame = ctk.CTkFrame(master=self.root)
@@ -56,13 +60,13 @@ class CanvasLabelUpdate:
 
         self.active_frame = frame
 
-        self.build_search_scrollbar(frame)
+        self.__build_search_scrollbar(frame)
 
-    def build_search_scrollbar(self, parentFrame):
+    def __build_search_scrollbar(self, parentFrame):
         """
-
-        :param parentFrame:
-        :return:
+        builds the scrollable container called by build_search_container
+        :param parentFrame: the frame created by build_search_container
+        :return: None
         """
         frame = ctk.CTkScrollableFrame(master=parentFrame,
                                        corner_radius=0,
@@ -73,13 +77,13 @@ class CanvasLabelUpdate:
 
         frame.grid(row=0, column=0, sticky='nesw')
 
-        self.insert_modals(frame)
+        self.__insert_modals(frame)
 
-    def insert_modals(self, parentFrame):
+    def __insert_modals(self, parentFrame):
         """
-
-        :param parentFrame:
-        :return:
+        inserts result blocks into the scrollable frame
+        :param parentFrame: the frame created by build_search_scrollbar
+        :return: None
         """
         for index, text in enumerate(list(self.data.values())):
             frame = ctk.CTkButton(master=parentFrame,
@@ -87,7 +91,7 @@ class CanvasLabelUpdate:
                                   fg_color='#333333',
                                   width=250,
                                   height=50,
-                                  command=lambda _text=text: self.active_modal_callback(_text))
+                                  command=lambda _text=text: self.__active_modal_callback(_text))
 
             frame.grid(row=index,
                        column=0,
@@ -95,11 +99,13 @@ class CanvasLabelUpdate:
                        pady=5,
                        sticky='nesw')
 
-    def active_modal_callback(self, text):
+    def __active_modal_callback(self, text):
         """
-
-        :param text:
-        :return:
+        when result selected, change the text displayed by the
+        canvas label and destroy the frame_container holding the
+        results
+        :param text: text selected
+        :return: None
         """
         # Change active modal text
         self.active_modal.configure(text)

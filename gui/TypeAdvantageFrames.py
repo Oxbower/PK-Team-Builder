@@ -29,11 +29,11 @@ class TypeAdvantageFrames:
 
     def set_parent_frame(self, parent_frame: ctk.CTkFrame, active_window: str, color: str = '#202020') -> None:
         """
-
-        :param parent_frame:
-        :param active_window:
-        :param color:
-        :return:
+        sets the parent container to put the different type_adv frames into
+        :param parent_frame: the parent frame to display stuff into
+        :param active_window: the default active window
+        :param color: color of the frame
+        :return: None
         """
         if parent_frame is None:
             sys.exit('Error creating window frame')
@@ -50,7 +50,7 @@ class TypeAdvantageFrames:
 
     def get_window(self) -> ctk.CTkFrame:
         """
-
+        get this current frame
         :return: the parent frame
         """
         if self.parent_frame is None:
@@ -60,16 +60,16 @@ class TypeAdvantageFrames:
 
     def get_types_container(self) -> (ctk.CTkFrame, ctk.CTkFrame):
         """
-
-        :return:
+        get the type advantage containers
+        :return: returns the type advantage containers
         """
         return self.types_offensive, self.types_defensive
 
-    def build_widget(self, parent: ctk.CTkFrame):
+    def build_widget(self, parent: ctk.CTkFrame) -> None:
         """
-
-        :param parent:
-        :return:
+        builds the widgets inside type advantage frames to put the type icons into
+        :param parent: the parent frame to display stuff into
+        :return: None
         """
         label_frame_def = ['Resistant to', 'Weak to', 'Immune to']
         label_frame_off = ['Types covered', 'Types not covered']
@@ -118,11 +118,11 @@ class TypeAdvantageFrames:
 
             frame_to_use[index] = holder_type_frame
 
-    def populate_frame(self, data):
+    def populate_frame(self, data) -> None:
         """
-
-        :param data:
-        :return:
+        populates the active type advantage frame with type icon widgets
+        :param data: the current pokemons types
+        :return: None
         """
         if self.active_window == 'Defensive':
             # Destroy all inner widgets inside a frame

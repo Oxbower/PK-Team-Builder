@@ -6,7 +6,14 @@ import app_io.LoadImageDictionary as ImageDictionary
 
 
 class ItemModalFrame:
+    """
+    builds the frame to hold the items
+    """
     def __init__(self, current_window):
+        """
+        Instantiates ItemModalFrame
+        :param current_window: the ctk window instance
+        """
         self.root = current_window.root
         self.active_modal = None
         self.active_frame = None
@@ -15,12 +22,23 @@ class ItemModalFrame:
                                                                'item-artwork',
                                                                (27, 27)).load_image()
 
-    def start_search_build(self, current_name, modal):
+    def start_search_build(self, modal):
+        """
+        public call for the search container
+        :param current_name: pokemon name
+        :param modal: the current modal
+        :return: None
+        """
         self.active_modal = modal
 
-        self.build_search_container(current_name)
+        self.__build_search_container()
 
-    def build_search_container(self, current_name):
+    def __build_search_container(self):
+        """
+        builds the frame to hold the results, needed
+        due to ctk.scrollableframe destroy() not working properly
+        :return: None
+        """
         # Don't destroy grid, remove for performance
         frame = ctk.CTkFrame(master=self.root)
 
@@ -28,9 +46,14 @@ class ItemModalFrame:
 
         self.active_frame = frame
 
-        self.build_search_scrollbar(frame, current_name)
+        self.__build_search_scrollbar(frame)
 
-    def build_search_scrollbar(self, parentFrame, current_name):
+    def __build_search_scrollbar(self, parentFrame):
+        """
+        builds the scrollable container called by build_search_container
+        :param parentFrame: the frame created by build_search_container
+        :return: None
+        """
         frame = ctk.CTkScrollableFrame(master=parentFrame,
                                        corner_radius=0,
                                        width=300,
@@ -40,10 +63,14 @@ class ItemModalFrame:
 
         frame.grid(row=0, column=0, sticky='nesw')
 
-        self.insert_modals(frame, current_name)
+        self.__insert_modals(frame)
 
-    def insert_modals(self, parentFrame, current_name):
-
+    def __insert_modals(self, parentFrame):
+        """
+        inserts result blocks into the scrollable frame
+        :param parentFrame: the frame created by build_search_scrollbar
+        :return: None
+        """
         item_name_list = list(self.items_image.keys())
         item_name_list.sort()
 
@@ -62,6 +89,13 @@ class ItemModalFrame:
                        sticky='nesw')
 
     def active_modal_callback(self, text):
+        """
+        when result selected, change the text displayed by the
+        canvas label and destroy the frame_container holding the
+        results
+        :param text: text selected
+        :return: None
+        """
         self.active_modal.configure(text='',
                                     image=self.items_image[text])
 

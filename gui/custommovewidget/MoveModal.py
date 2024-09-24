@@ -5,14 +5,14 @@ import customtkinter as ctk
 
 class MoveModal(ctk.CTkFrame):
     """
-    This is a custom button to display the move buttons, it supers the CTkFrame class
+    Creates a custom widget that displays moves information
     """
 
     def __init__(self, hover_color=None, **kwargs):
         """
-
-        :param hover_color:
-        :param kwargs:
+        initialize the widget which supers the ctk.CTkFrame class
+        :param hover_color: change the hover color of the widget
+        :param kwargs: keyword arguements to pass to ctk.CTkFrame class
         """
         self.command = None
 
@@ -44,15 +44,15 @@ class MoveModal(ctk.CTkFrame):
                   **kwargs):
         """
         Configure the MoveModal class
-        :param command:
-        :param move_name:
-        :param category:
-        :param pp:
-        :param type:
-        :param power:
-        :param accuracy:
-        :param kwargs:
-        :return:
+        :param command: what to open when this widget is clicked
+        :param move_name: name of the move
+        :param category: name of the category
+        :param pp: base # of pp available for this move
+        :param type: what type this move is
+        :param power: power of the move, i.e., base dmg
+        :param accuracy: accuracy of the move
+        :param kwargs: keyword arguments to pass to ctk.CTkFrame class
+        :return: None
         """
         if command is not None:
             self.command = command
@@ -112,8 +112,8 @@ class MoveModal(ctk.CTkFrame):
 
     def __add_move_name(self) -> ctk.CTkLabel:
         """
-
-        :return:
+        adds frame to hold label for move_name
+        :return: the container created
         """
         label = ctk.CTkLabel(master=self,
                              text="None",
@@ -129,8 +129,8 @@ class MoveModal(ctk.CTkFrame):
 
     def __add_type(self) -> ctk.CTkLabel:
         """
-
-        :return:
+        adds frame to hold label for type
+        :return: the container created
         """
         label = ctk.CTkLabel(master=self,
                              text=None,
@@ -149,8 +149,8 @@ class MoveModal(ctk.CTkFrame):
 
     def __add_pp(self) -> ctk.CTkLabel:
         """
-
-        :return:
+        adds container to hold label for pp
+        :return: the container created
         """
         label = ctk.CTkLabel(master=self,
                              text="PP: 0",
@@ -169,8 +169,8 @@ class MoveModal(ctk.CTkFrame):
 
     def __add_category(self) -> ctk.CTkLabel:
         """
-
-        :return:
+        add container to hold label for category
+        :return: the container created
         """
         label = ctk.CTkLabel(master=self,
                              text='None',
@@ -189,8 +189,8 @@ class MoveModal(ctk.CTkFrame):
 
     def __add_accuracy(self) -> ctk.CTkLabel:
         """
-
-        :return:
+        add container to hold label for accuracy
+        :return: the container created
         """
         label = ctk.CTkLabel(master=self,
                              font=('Helvetica', 13, 'bold'),
@@ -202,8 +202,8 @@ class MoveModal(ctk.CTkFrame):
 
     def __add_power(self) -> ctk.CTkLabel:
         """
-
-        :return:
+        add container to hold label for power
+        :return: the container created
         """
         label = ctk.CTkLabel(master=self,
                              font=('Helvetica', 13, 'bold'),

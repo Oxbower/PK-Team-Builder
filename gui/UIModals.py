@@ -7,11 +7,13 @@ import gui.customcanvaslabel.CustomCanvasLabel as CanvasLabel
 
 
 class UIModals:
+    """
+    Instantiates the widgets for the GUI that called this class
+    """
     def __init__(self, gui, current_window):
         """
         Initialize UI modals this is the stuff inside the
         frames.
-
         passes the interactable Modals to modal_iteract
         """
         self.ctk = ctk
@@ -179,7 +181,6 @@ class UIModals:
     def build_type_adv_modal(self, parentFrame):
         """
         builds modal which shows current pokemon's defensive strength and weaknesses
-
         :param parentFrame: parent frame to hold modals
         :return: None
         """

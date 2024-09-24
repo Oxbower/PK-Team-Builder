@@ -2,7 +2,15 @@ import customtkinter as ctk
 
 
 class SearchUI:
+    """
+    Builds the UI for the search function
+    """
     def __init__(self, mainWindow, modalInteract):
+        """
+        Initializes the searchUI class
+        :param mainWindow: the ctk window instance
+        :param modalInteract: the modal interact instance that called this class
+        """
         self.ctk = ctk
         self.mainWindow = mainWindow
         self.Frame = ctk.CTkFrame

@@ -20,6 +20,11 @@ class ModalUpdate:
     Updates the modals when interaction occurs
     """
     def __init__(self, gui, current_window):
+        """
+        Initializes the class to update widgets
+        :param gui: the gui class that called started this instance
+        :param current_window: the ctk window root instance
+        """
         self.gui = gui
         self.ctk = ctk
         self.mainWindow = current_window
@@ -173,7 +178,7 @@ class ModalUpdate:
     def build_path_ref(self, string):
         """
         Builds the image frame
-        :param string:
+        :param string: Name of the clicked pokemon
         :return: None
         """
         name = string.lower().split(' ')
@@ -212,6 +217,11 @@ class ModalUpdate:
         self.scrollable_move_frame.reset_modal(self.move_modals)
 
     def update_moves(self, modal):
+        """
+        passes in the possible moves to be put in this move modal
+        :param modal: which modal to update
+        :return: None
+        """
         if self.dir_folder is None: # guard clause
             print('Empty selection')
             return False
@@ -298,6 +308,11 @@ class ModalUpdate:
             label.place(anchor="center", relx=.5, rely=.55)
 
     def update_type_advantage(self, data):
+        """
+        Updates the contents of type advantage button
+        :param data: passes the current pokemons type
+        :return: None
+        """
         type_defense = type_advantage_defensive_handler(data)
 
         # defensive
@@ -305,11 +320,21 @@ class ModalUpdate:
         start_thread.run()
 
     def update_item_modal(self, modal):
+        """
+        Update the item modal
+        :param modal: which modal this update is related to
+        :return: None
+        """
         # open a search list and display all items
         # TODO: rework implementation to forget instead of destroying to save on resources
         self.scrollable_item_frame.start_search_build(self.current_name, modal)
 
     def update_ability_modal(self, modal):
+        """
+        Updates the ability modal
+        :param modal: which modal this update is related to
+        :return: None
+        """
         self.scrollable_ability_frame.start_search_build(modal, self.dir_folder, self.current_name)
 
     def update_stats_widget(self, data):

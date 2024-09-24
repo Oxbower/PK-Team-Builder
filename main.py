@@ -7,7 +7,8 @@ from app.Application import App
 
 def main():
     """
-    Main function to run app
+    Main function to run app, checks if the app works on system,
+    calls appropriate functions to start main loop and build UI
     """
 
     # OS check

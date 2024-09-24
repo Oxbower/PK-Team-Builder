@@ -5,7 +5,13 @@ import gui.SearchUI as SearchUI
 
 class ModalInteraction:
     def __init__(self, string_var, gui, current_window):
-
+        """
+        initializes the ModalInteraction class
+        :param string_var: the updated string variable whenever
+                           the contents of the searchbar is updated
+        :param gui: the GUI class instance
+        :param current_window: the ctk window instance
+        """
         self.current_window = current_window
 
         # Updated String (need to keep track of)
@@ -34,9 +40,21 @@ class ModalInteraction:
         self.ModalUpdate.set_variation_frame(type_frame, self.set_string_var, self.name_plate_focus)
 
     def set_type_widget(self, pokedex_no, type_frame):
+        """
+        sets the widget under the pokemon portrait to be updated
+        :param pokedex_no: this pokemon's pokedex num
+        :param type_frame: the frame where to add this pokemons types
+        :return: None
+        """
         self.ModalUpdate.set_type_widget(pokedex_no, type_frame)
 
     def set_sidebar_widget(self, sidebar_widget):
+        """
+        sets the widget to the right of the pokemon portrait to
+        add possible transformations this pokemon is capable of
+        :param sidebar_widget: the sidebar widget
+        :return: None
+        """
         self.ModalUpdate.set_sidebar_widget(sidebar_widget)
 
     def set_search_modal_frame(self, Frame):
@@ -123,18 +141,18 @@ class ModalInteraction:
 
     def clicked_item_modal(self, self_modal) -> None:
         """
-
-        :param self_modal:
-        :return:
+        send click events for the item modal to the appropriate function
+        :param self_modal: which modal was clicked
+        :return: None
         """
         # open a new window and populate on a new thread, update using modalUpdate
         self.ModalUpdate.update_item_modal(self_modal)
 
     def clicked_ability_modal(self, self_modal) -> None:
         """
-
-        :param self_modal:
-        :return:
+        send click event for the ability modal to the appropriate function
+        :param self_modal: which modal was clicked
+        :return: None
         """
         self.ModalUpdate.update_ability_modal(self_modal)
 

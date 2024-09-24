@@ -8,6 +8,11 @@ type_offensive = json_load(os.path.join('data', 'type-offensive.json'))
 
 
 def type_advantage_defensive_handler(data):
+    """
+    finds the types current pokemon has defensive advantage to
+    :param data: type fo this pokemon
+    :return: None
+    """
     types_defensive_adv = []
     type = [i for i in data['type'].values()]
 
@@ -22,7 +27,6 @@ def type_advantage_defensive_handler(data):
 def find_neutral_types(data: list[dict[str, list[str]]]) -> list[str]:
     """
     Finds which are neutral types to current pokemon and excludes them from being displayed
-
     :param data: dictionary containing this pokemon's types and finds which are neutral
     :return: types that are to be excluded from being displayed
     """
@@ -45,6 +49,11 @@ def find_neutral_types(data: list[dict[str, list[str]]]) -> list[str]:
 
 
 def find_type_defense(types: list[str]):
+    """
+
+    :param types:
+    :return:
+    """
     defensive_types = []
 
     for value in type_defensive:
@@ -55,7 +64,13 @@ def find_type_defense(types: list[str]):
     return defensive_types
 
 
-def find_defensive_type_multiplier(data, type_check):
+def find_defensive_type_multiplier(data: list[dict[str, str, str, str]], type_check: str) -> (str, int):
+    """
+    finds the multiplier for this defensive typing
+    :param data: this pokemons types and their defensive qualities
+    :param type_check: type to check against this pokemons type data
+    :return: string and size of the type icon
+    """
     base = 1
     size = 10
     dict_tags = ['strengths', 'weaknesses', 'immunity']
