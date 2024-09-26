@@ -1,9 +1,9 @@
 import customtkinter as ctk
 import threading
 import os
-import gui.MoveModalFrame as MoveModalFrame
+import gui.custommovewidget.MoveModalUpdate as MoveModalFrame
 import gui.ItemModalFrame as ItemModalFrame
-import gui.CanvasLabelUpdate as CanvasLabelUpdate
+import gui.customcanvaslabel.CanvasLabelUpdate as CanvasLabelUpdate
 
 from interaction.StatColorUpdate import stat_color_update
 from interaction.AnimateStatBars import start_animation
@@ -20,6 +20,11 @@ class ModalUpdate:
     Updates the modals when interaction occurs
     """
     def __init__(self, gui, current_window):
+        """
+        Initializes the class to update widgets
+        :param gui: the gui class that called started this instance
+        :param current_window: the ctk window root instance
+        """
         self.gui = gui
         self.ctk = ctk
         self.mainWindow = current_window
@@ -38,7 +43,7 @@ class ModalUpdate:
         self.current_name = None
         self.move_modals = None
         # Instantiate move modal class #TODO: REWORK TO MULTIPURPOSE SEARCH
-        self.scrollable_move_frame = MoveModalFrame.MoveModalFrame(current_window)
+        self.scrollable_move_frame = MoveModalFrame.MoveModalUpdate(current_window)
         self.type_advantage_frame = []  # offensive, defensive
 
         # Pass in current window to anchor new frame, rework later
@@ -53,7 +58,6 @@ class ModalUpdate:
     def set_img_frame(self, Frame):
         """
         Sets image frame to display creature art
-
         :param Frame: Parent frame
         :return: None
         """
@@ -72,16 +76,26 @@ class ModalUpdate:
     def set_stats_widget(self, stats_widget):
         """
         Sets the stats widget
-
         :param stats_widget: dictionary to update the stats widget
         :return: None
         """
         self.stats_widget = stats_widget
 
     def set_sidebar_widget(self, sidebar_widget):
+        """
+        Sets the sidebar
+        :param sidebar_widget: stores the sidebar widget to ref in this file
+        :return:
+        """
         self.sidebar_widget = sidebar_widget
 
     def set_type_widget(self, pokedex_no, type_frame):
+        """
+        sets the type widget
+        :param pokedex_no: widget that contains label to update
+        :param type_frame: holds type_frame
+        :return:
+        """
         self.pokedex_no = pokedex_no
         self.type_frame = type_frame
 
@@ -91,7 +105,6 @@ class ModalUpdate:
     def set_variation_frame(self, Frame, string_var, name_plate_focused):
         """
         pass in the variation frame to display current pokemons different forms
-
         :param name_plate_focused: passed in function to update the name_plate_focus
         :param Frame: frame to put the forms in
         :param string_var: passed in function to update name display
@@ -104,7 +117,6 @@ class ModalUpdate:
     def build_dynamic_variation_modal(self, ref_path: list[str]):
         """
         Builds a dynamic modal for the number of variations this pokemon has, this only runs once on query
-
         :param ref_path: reference path to pokemon passed in by the clicked result
         :return: None
         """
@@ -166,8 +178,7 @@ class ModalUpdate:
     def build_path_ref(self, string):
         """
         Builds the image frame
-
-        :param string:
+        :param string: Name of the clicked pokemon
         :return: None
         """
         name = string.lower().split(' ')
@@ -180,7 +191,6 @@ class ModalUpdate:
     def update_display(self, string):
         """
         Updates the entire frame with new data
-
         :param string: name of the pokemon currently displayed
         :return: None
         """
@@ -207,6 +217,11 @@ class ModalUpdate:
         self.scrollable_move_frame.reset_modal(self.move_modals)
 
     def update_moves(self, modal):
+        """
+        passes in the possible moves to be put in this move modal
+        :param modal: which modal to update
+        :return: None
+        """
         if self.dir_folder is None: # guard clause
             print('Empty selection')
             return False
@@ -216,7 +231,6 @@ class ModalUpdate:
     def build_image(self, image_path):  # Modular do not mess with this anymore
         """
         Opens and updates the frame to hold the image
-
         :param image_path: image_path given by variation_model
         :return: None
         """
@@ -242,7 +256,6 @@ class ModalUpdate:
     def update_pokemon_id(self, data):
         """
         update the pokedex id of the current pokemon
-
         :param data: pokedex id of pokemon
         :return: None
         """
@@ -262,7 +275,6 @@ class ModalUpdate:
     def update_type_displayed(self, data):
         """
         Updates the type displayed for the current pokemon
-
         :param data: type data of pokemon
         :return: None
         """
@@ -296,6 +308,11 @@ class ModalUpdate:
             label.place(anchor="center", relx=.5, rely=.55)
 
     def update_type_advantage(self, data):
+        """
+        Updates the contents of type advantage button
+        :param data: passes the current pokemons type
+        :return: None
+        """
         type_defense = type_advantage_defensive_handler(data)
 
         # defensive
@@ -303,17 +320,26 @@ class ModalUpdate:
         start_thread.run()
 
     def update_item_modal(self, modal):
+        """
+        Update the item modal
+        :param modal: which modal this update is related to
+        :return: None
+        """
         # open a search list and display all items
         # TODO: rework implementation to forget instead of destroying to save on resources
-        self.scrollable_item_frame.start_search_build(self.current_name, modal)
+        self.scrollable_item_frame.start_search_build(modal)
 
     def update_ability_modal(self, modal):
+        """
+        Updates the ability modal
+        :param modal: which modal this update is related to
+        :return: None
+        """
         self.scrollable_ability_frame.start_search_build(modal, self.dir_folder, self.current_name)
 
     def update_stats_widget(self, data):
         """
         Updates the displayed stats for the appropriate pokemon
-
         :param data: data returned by json
         :return: None
         """

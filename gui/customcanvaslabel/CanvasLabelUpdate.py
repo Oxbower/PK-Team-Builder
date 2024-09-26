@@ -1,34 +1,48 @@
 import os.path
 import customtkinter as ctk
+import gui.customcanvaslabel.CustomCanvasLabel as CustomCanvasLabel
 
-# imports items as dictionary tags with items as ctk labels
-import app_io.LoadImageDictionary as ImageDictionary
+from app_io.LoadJson import json_load
 
 
-class ItemModalFrame:
+class CanvasLabelUpdate:
     """
-    builds the frame to hold the items
+    Allows for the custom label to be updated when the user
+    interacts with the ability button
     """
-    def __init__(self, current_window):
+    def __init__(self, current_window: ctk):
         """
-        Instantiates ItemModalFrame
-        :param current_window: the ctk window instance
+        initialize the canvas label update class, call
+        this to update the canvas label
+        :param current_window: ctk root instance
         """
         self.root = current_window.root
+        self.all_moves = json_load(os.path.join('data', 'abilities.json'))
         self.active_modal = None
+
+        self.data = None
         self.active_frame = None
 
-        self.items_image = ImageDictionary.LoadImageDictionary('assets',
-                                                               'item-artwork',
-                                                               (27, 27)).load_image()
-
-    def start_search_build(self, modal):
+    def start_search_build(self, modal: CustomCanvasLabel, dir_folder_name: str, current_name: str):
         """
         public call for the search container
+        :param modal: modal to update
+        :param dir_folder_name: folder name of this pokemon to grap abilities from
         :param current_name: pokemon name
-        :param modal: the current modal
         :return: None
         """
+        if current_name is None:
+            return None
+
+        path = os.path.join('pokemon-pokedex', dir_folder_name, f'{current_name}.json')
+
+        try:
+            self.data = json_load(path)
+            self.data = self.data['abilities']
+        except FileNotFoundError as e:
+            print(e)
+            return None
+
         self.active_modal = modal
 
         self.__build_search_container()
@@ -39,7 +53,7 @@ class ItemModalFrame:
         due to ctk.scrollableframe destroy() not working properly
         :return: None
         """
-        # Don't destroy grid, remove for performance
+        # Don't destroy, grid remove for performance
         frame = ctk.CTkFrame(master=self.root)
 
         frame.place(relx=0.3, rely=0.1)
@@ -71,16 +85,13 @@ class ItemModalFrame:
         :param parentFrame: the frame created by build_search_scrollbar
         :return: None
         """
-        item_name_list = list(self.items_image.keys())
-        item_name_list.sort()
-
-        for index, text in enumerate(item_name_list):
+        for index, text in enumerate(list(self.data.values())):
             frame = ctk.CTkButton(master=parentFrame,
                                   text=text,
                                   fg_color='#333333',
                                   width=250,
                                   height=50,
-                                  command=lambda _text=text: self.active_modal_callback(_text))
+                                  command=lambda _text=text: self.__active_modal_callback(_text))
 
             frame.grid(row=index,
                        column=0,
@@ -88,7 +99,7 @@ class ItemModalFrame:
                        pady=5,
                        sticky='nesw')
 
-    def active_modal_callback(self, text):
+    def __active_modal_callback(self, text):
         """
         when result selected, change the text displayed by the
         canvas label and destroy the frame_container holding the
@@ -96,7 +107,7 @@ class ItemModalFrame:
         :param text: text selected
         :return: None
         """
-        self.active_modal.configure(text='',
-                                    image=self.items_image[text])
+        # Change active modal text
+        self.active_modal.configure(text)
 
         self.active_frame.destroy()

@@ -1,7 +1,6 @@
 def type_color(string: str) -> str:
     """
     Chooses the right color for the types background
-
     :param string: pokemons type
     :return: corresponding color
     """

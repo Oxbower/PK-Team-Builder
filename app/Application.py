@@ -6,6 +6,10 @@ from app.Window import Window
 
 
 class App:
+    """
+    This is the running class for the app, contains the main-loop
+    and calls other appropriate classes to build UI and functionality
+    """
     def __init__(self):
         """
         Initialize the app with window_size=(width=1000, height=800)

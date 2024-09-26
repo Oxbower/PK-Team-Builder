@@ -1,14 +1,19 @@
 import customtkinter as ctk
 import sys
+import app_io.LoadImageDictionary as ImageDictionary
+
 
 from math import floor
-from app_io.LoadTypesAsImages import load_type_ctk_images as types_image
 from gui.TypeBackgroundColor import type_color
 from interaction.TypeAdvantageHandler import find_neutral_types, find_defensive_type_multiplier, find_type_defense
 
 
 class TypeAdvantageFrames:
     def __init__(self, parent_frame: ctk.CTkFrame = None):
+        """
+        Initializes the TypeAdvantageFrames
+        :param parent_frame: sets the parent frame for this modal
+        """
         self.parent_frame = parent_frame
         self.Frame = ctk.CTkFrame
         self.max_width = 0
@@ -18,7 +23,18 @@ class TypeAdvantageFrames:
         self.types_offensive = [ctk.CTkFrame, ctk.CTkFrame]
         self.active_window = None
 
+        self.type_image = ImageDictionary.LoadImageDictionary('assets',
+                                                              'type-icon',
+                                                              (30, 30)).load_image()
+
     def set_parent_frame(self, parent_frame: ctk.CTkFrame, active_window: str, color: str = '#202020') -> None:
+        """
+        sets the parent container to put the different type_adv frames into
+        :param parent_frame: the parent frame to display stuff into
+        :param active_window: the default active window
+        :param color: color of the frame
+        :return: None
+        """
         if parent_frame is None:
             sys.exit('Error creating window frame')
 
@@ -33,15 +49,28 @@ class TypeAdvantageFrames:
         self.build_widget(self.parent_frame)
 
     def get_window(self) -> ctk.CTkFrame:
+        """
+        get this current frame
+        :return: the parent frame
+        """
         if self.parent_frame is None:
             sys.exit('Error creating window frame')
 
         return self.parent_frame
 
     def get_types_container(self) -> (ctk.CTkFrame, ctk.CTkFrame):
+        """
+        get the type advantage containers
+        :return: returns the type advantage containers
+        """
         return self.types_offensive, self.types_defensive
 
-    def build_widget(self, parent: ctk.CTkFrame):
+    def build_widget(self, parent: ctk.CTkFrame) -> None:
+        """
+        builds the widgets inside type advantage frames to put the type icons into
+        :param parent: the parent frame to display stuff into
+        :return: None
+        """
         label_frame_def = ['Resistant to', 'Weak to', 'Immune to']
         label_frame_off = ['Types covered', 'Types not covered']
 
@@ -89,7 +118,12 @@ class TypeAdvantageFrames:
 
             frame_to_use[index] = holder_type_frame
 
-    def populate_frame(self, data):
+    def populate_frame(self, data) -> None:
+        """
+        populates the active type advantage frame with type icon widgets
+        :param data: the current pokemons types
+        :return: None
+        """
         if self.active_window == 'Defensive':
             # Destroy all inner widgets inside a frame
             for frame in self.types_defensive:
@@ -145,7 +179,7 @@ class TypeAdvantageFrames:
                     # type image to display
                     image = ctk.CTkLabel(master=frame,
                                          text='',
-                                         image=types_image[value.lower()])
+                                         image=self.type_image[value.lower()])
 
                     image.grid(row=0,
                                column=0,

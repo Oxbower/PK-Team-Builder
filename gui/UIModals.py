@@ -2,16 +2,18 @@ import gui.ModalInteraction as ModalInteraction
 import customtkinter as ctk
 
 import gui.TypeAdvantageFrames as taf
-import gui.MoveModalUI as MoveModal
-import gui.CustomCanvasLabel as CanvasLabel
+import gui.custommovewidget.MoveModal as MoveModal
+import gui.customcanvaslabel.CustomCanvasLabel as CanvasLabel
 
 
 class UIModals:
+    """
+    Instantiates the widgets for the GUI that called this class
+    """
     def __init__(self, gui, current_window):
         """
         Initialize UI modals this is the stuff inside the
         frames.
-
         passes the interactable Modals to modal_iteract
         """
         self.ctk = ctk
@@ -147,18 +149,6 @@ class UIModals:
         max_height = parentFrame.cget("height")
 
         # build ability modal (open separate window for selection)
-        # ability = self.ctk.CTkButton(master=parentFrame,
-        #                              text="A\nb\ni\nl\ni\nt\ni\ne\ns",
-        #                              fg_color="#2a2a2a",
-        #                              hover_color=self.gui.hover_color,
-        #                              cursor="hand2",
-        #                              height=max_height - 70,
-        #                              width=45)
-        #
-        # ability.grid(row=0,
-        #              pady=5,
-        #              padx=5)
-
         canvas_label = CanvasLabel.CustomCanvasLabel(master=parentFrame,
                                                      text='Ability',
                                                      fg_color="#2a2a2a",
@@ -169,9 +159,9 @@ class UIModals:
         canvas_label.place(relx=.1, rely=.02)
 
         # pass custom label object to click handler to pass into modalUpdate
-        canvas_label.bind('<Button-1>', lambda _: self.modal_interact.clicked_ability_modal(canvas_label))
-        canvas_label.bind('<Enter>', lambda _: canvas_label.configure(fg_color=self.gui.hover_color))
-        canvas_label.bind('<Leave>', lambda _: canvas_label.configure(fg_color='#2a2a2a'))
+        canvas_label.bind(sequence='<Button-1>', command=lambda _: self.modal_interact.clicked_ability_modal(canvas_label))
+        canvas_label.bind(sequence='<Enter>', command=lambda _: canvas_label.configure(fg_color=self.gui.hover_color))
+        canvas_label.bind(sequence='<Leave>', command=lambda _: canvas_label.configure(fg_color='#2a2a2a'))
 
         # build item modal (open separate window for selection)
         items = self.ctk.CTkButton(master=parentFrame,
@@ -191,7 +181,6 @@ class UIModals:
     def build_type_adv_modal(self, parentFrame):
         """
         builds modal which shows current pokemon's defensive strength and weaknesses
-
         :param parentFrame: parent frame to hold modals
         :return: None
         """
@@ -258,7 +247,7 @@ class UIModals:
                                         width=parentFrame.cget('width') - 40,
                                         height=100)
 
-            modal.configure_(command=lambda _modal=modal: self.modal_interact.move_callback(_modal))
+            modal.configure(command=lambda _modal=modal: self.modal_interact.move_callback(_modal))
 
             modal.grid_propagate(False)
 

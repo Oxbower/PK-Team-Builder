@@ -1,13 +1,23 @@
-import time
-
 import customtkinter as ctk
+
+from typing import Callable
 
 
 class CustomCanvasLabel(ctk.CTkFrame):
     """
-    Supers the ctkFrame class with a canvas on top to allow for rotated texts
+    Supers the ctkFrame class with a canvas on top to allow
+    for rotated labels to be drawn
     """
     def __init__(self, master=None, text='', fg_color='#fffff', height=0, width=0, **kwargs):
+        """
+        Initializes the CustomCanvas class
+        :param master: parent for this class
+        :param text: text to display
+        :param fg_color: color of widget
+        :param height: height of the widget
+        :param width: width of the widget
+        :param kwargs: other args for CTkFrame
+        """
         super().__init__(master, height=height, width=width, fg_color=fg_color, **kwargs)
         self.grid_propagate(False)
 
@@ -32,6 +42,8 @@ class CustomCanvasLabel(ctk.CTkFrame):
                                relief='ridge',
                                bg=color)
         canvas.grid(column=0, row=0, padx=2)
+
+        # Store the canvas text as attribute to configure
         self.canvas_text = canvas.create_text(width/2-2,
                                               height/2 - len(text)/2,
                                               text=text,
@@ -40,20 +52,24 @@ class CustomCanvasLabel(ctk.CTkFrame):
                                               font=('Helvetica', 13, 'bold'))
         self.canvas = canvas
 
-    def bind(self, *args):
+    def bind(self, sequence: str = None, command: Callable = None, **kwargs):
         """
-        Bind mouse events on this module
+        Bind mouse event to this modal
+        :param sequence: type of mouse event to bind
+        :param command: callback method
+        :param kwargs: other args for ctkFrame
         :return: None
         """
-        super().bind(*args)
-        self.canvas.bind(*args)
+        if command is not None:
+            super().bind(sequence=sequence, command=command, **kwargs)
+            self.canvas.bind(sequence=sequence, func=command)
 
     def configure(self, text='', **kwargs):
         """
         Override the configure method of ctkFrame
-        :param text:
-        :param kwargs:
-        :return:
+        :param text: text to display
+        :param kwargs: other args for ctkFrame
+        :return: None
         """
         super().configure(**kwargs)
 

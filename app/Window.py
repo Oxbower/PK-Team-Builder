@@ -3,6 +3,9 @@ import os
 
 
 class Window:
+    """
+    Creates the window container to display GUI elements in
+    """
 
     def __init__(self, window_size: tuple[int, int]):
         """
@@ -28,7 +31,7 @@ class Window:
         ctk.set_default_color_theme("dark-blue")
 
         # window title
-        self.root.title("PKMN Team-Builder")
+        self.root.title("Pokemon Team-Builder")
 
         # min window Size
         self.root.minsize(width=self.width, height=self.height)

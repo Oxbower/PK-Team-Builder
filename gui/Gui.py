@@ -4,14 +4,14 @@ import gui.UIModals as modals
 
 class UI:
     """
-    Builds the public facing interface
+    Builds the containers for the widgets to make up the UI
     """
 
     def __init__(self, current_window):
         """
-        Initialize the UI
-        :param mainWindow: window object
-        :param app: app class
+        Initialize the UI, sets default attributes for
+        the UI
+        :param current_window: window object
         """
 
         # Root Object
@@ -258,6 +258,10 @@ class UI:
         return frame
 
     def __build_ability_item_bar(self):
+        """
+        builds a container to hold the ability and items
+        :return: created frame
+        """
         frame = self.Frame(master=self.root,
                            fg_color='#242424',
                            height=350,
