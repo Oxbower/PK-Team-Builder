@@ -48,11 +48,11 @@ def find_neutral_types(data: list[dict[str, list[str]]]) -> list[str]:
     return [key for key, value in duplicate_counts.items() if value > 1]
 
 
-def find_type_defense(types: list[str]):
+def find_type_defense(types: list[str]) -> list[dict[str, list[str]]]:
     """
-
-    :param types:
-    :return:
+    find this pokemons type and their defensive values
+    :param types: this pokemons type
+    :return: list containing a dictionary for each of this pokemons defensive type qualities
     """
     defensive_types = []
 
@@ -64,7 +64,7 @@ def find_type_defense(types: list[str]):
     return defensive_types
 
 
-def find_defensive_type_multiplier(data: list[dict[str, str, str, str]], type_check: str) -> (str, int):
+def find_defensive_type_multiplier(data: list[dict[str, list[str]]], type_check: str) -> (str, int):
     """
     finds the multiplier for this defensive typing
     :param data: this pokemons types and their defensive qualities
@@ -74,6 +74,8 @@ def find_defensive_type_multiplier(data: list[dict[str, str, str, str]], type_ch
     base = 1
     size = 10
     dict_tags = ['strengths', 'weaknesses', 'immunity']
+
+    print(data)
 
     for value in data:
         for tag in dict_tags:

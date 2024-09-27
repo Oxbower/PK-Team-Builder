@@ -1,5 +1,5 @@
 import gui.Gui
-import interaction.JsonHandler as json_
+from app_io.LoadJson import load_pokemon_names as load_names
 
 import re
 
@@ -9,8 +9,7 @@ class SearchResult:
     Handles the searching algorithm and building the list to return
     """
     def __init__(self):
-        self.json = json_.JSONHandler()
-        self.names = self.json.load_image_directory()
+        self.names = load_names()
 
     def build_search_list(self, search_string):
         """
