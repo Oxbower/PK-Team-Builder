@@ -1,6 +1,6 @@
 import interaction.SearchingAlgorithm as SearchResult
 import gui.ModalUpdate as ModalUpdate
-import gui.SearchUI as SearchUI
+import gui.searchgui.SearchUI as SearchUI
 
 
 class ModalInteraction:
@@ -26,6 +26,8 @@ class ModalInteraction:
         self.searchAlgorithm = SearchResult.SearchResult()
 
         self.ModalUpdate = ModalUpdate.ModalUpdate(gui, current_window)
+
+        # Instantiate the class that builds the UI for the search results
         self.SearchUI = SearchUI.SearchUI(self.current_window, self)
 
 
@@ -94,19 +96,25 @@ class ModalInteraction:
         :param args: Necessary arguments for the call back function
         :return: None
         """
+
+        # Passed in by UIModals at class instantiation
         search_string = self.string_var.get()
 
+        # Destroy the search bar area
         if search_string == "":
             print("Empty String")
             self.SearchUI.destroy_result_frame()
         else:
             # Check if search bar focused before triggering
             if self.name_plate_focused:
-                # build the list containing all matches of string
+                # build the list containing all matches of the typed string
                 search_string = self.searchAlgorithm.build_search_list(search_string)
 
                 # pass in the list to build result frame from
                 self.SearchUI.build_search_result(search_string, self.parent_search_frame)
+
+    def search_button_callback(self) -> None:
+        print("Search Button")
 
     def move_callback(self, modal_name):
         """

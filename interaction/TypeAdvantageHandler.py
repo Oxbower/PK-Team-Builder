@@ -75,8 +75,6 @@ def find_defensive_type_multiplier(data: list[dict[str, list[str]]], type_check:
     size = 10
     dict_tags = ['strengths', 'weaknesses', 'immunity']
 
-    print(data)
-
     for value in data:
         for tag in dict_tags:
             if type_check in value[tag]:
