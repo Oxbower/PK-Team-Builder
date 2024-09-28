@@ -30,13 +30,12 @@ class ModalUpdate:
         self.mainWindow = current_window
         self.Frame = ctk.CTkFrame
 
+        self.name_plate = None
         self.search_result_container = None
         self.img_holder = None
         self.var_frame = None
-        self.string_var = None
         self.stats_widget = None
         self.pokedex_no = None
-        self.name_plate_focused = None
         self.type_frame = None
         self.sidebar_widget = None
         self.dir_folder = None
@@ -102,17 +101,17 @@ class ModalUpdate:
     def set_type_advantage_frame(self, frame):
         self.type_advantage_frame.append(frame)
 
-    def set_variation_frame(self, Frame, string_var, name_plate_focused):
+    def set_variation_frame(self, Frame):
         """
         pass in the variation frame to display current pokemons different forms
-        :param name_plate_focused: passed in function to update the name_plate_focus
         :param Frame: frame to put the forms in
         :param string_var: passed in function to update name display
         :return: None
         """
         self.var_frame = Frame
-        self.string_var = string_var
-        self.name_plate_focused = name_plate_focused
+
+    def set_name_plate(self, name_plate: ctk.CTkButton):
+        self.name_plate = name_plate
 
     def build_dynamic_variation_modal(self, ref_path: list[str]):
         """
@@ -172,10 +171,10 @@ class ModalUpdate:
 
             if not any(s in name for s in variant):
                 self.update_display(value)
-                self.string_var(name)
+                self.update_name_plate(name)
                 break
 
-    def build_path_ref(self, string):
+    def build_path_ref(self, string: str):
         """
         Builds the image frame
         :param string: Name of the clicked pokemon
@@ -188,14 +187,20 @@ class ModalUpdate:
         ref_path = build_img_ref(name)
         self.build_dynamic_variation_modal(ref_path)
 
+    def update_name_plate(self, pokemon_name: str) -> None:
+        """
+        Update the pokemon name displayed
+        :param pokemon_name: new name
+        :return: None
+        """
+        self.name_plate.configure(text=pokemon_name, text_color="white")
+
     def update_display(self, string):
         """
         Updates the entire frame with new data
         :param string: name of the pokemon currently displayed
         :return: None
         """
-        self.name_plate_focused(False)
-
         stats_folder = 'pokemon-pokedex'
 
         inner_folder = os.path.split(os.path.split(string)[0])[-1]
@@ -238,7 +243,7 @@ class ModalUpdate:
 
         name = os.path.splitext(os.path.basename(image_path))[0]
 
-        self.string_var(name)
+        self.update_name_plate(name)
 
         # Only returns a single image
         image = read_image([image_path], "thumbnail",

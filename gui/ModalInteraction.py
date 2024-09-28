@@ -2,23 +2,18 @@ import interaction.SearchingAlgorithm as SearchResult
 import gui.ModalUpdate as ModalUpdate
 import gui.searchgui.SearchUI as SearchUI
 
+from customtkinter import CTkButton as CTkButton
 
 class ModalInteraction:
-    def __init__(self, string_var, gui, current_window):
+    def __init__(self, gui, current_window):
         """
         initializes the ModalInteraction class
-        :param string_var: the updated string variable whenever
-                           the contents of the searchbar is updated
         :param gui: the GUI class instance
         :param current_window: the ctk window instance
         """
         self.current_window = current_window
 
-        # Updated String (need to keep track of)
-        self.string_var = string_var
-
         self.parent_search_frame = None
-        self.name_plate_focused = False
 
         self.type_adv_active_window = None
         self.button_config = None
@@ -30,7 +25,6 @@ class ModalInteraction:
         # Instantiate the class that builds the UI for the search results
         self.SearchUI = SearchUI.SearchUI(self.current_window, self)
 
-
     def set_stats_widget(self, stats_widget, type_frame):
         """
         Passes the statistics widget to ModalUpdate
@@ -39,7 +33,7 @@ class ModalInteraction:
         :return: None
         """
         self.ModalUpdate.set_stats_widget(stats_widget)
-        self.ModalUpdate.set_variation_frame(type_frame, self.set_string_var, self.name_plate_focus)
+        self.ModalUpdate.set_variation_frame(type_frame)
 
     def set_type_widget(self, pokedex_no, type_frame):
         """
@@ -59,13 +53,15 @@ class ModalInteraction:
         """
         self.ModalUpdate.set_sidebar_widget(sidebar_widget)
 
-    def set_search_modal_frame(self, Frame):
+    def set_search_modal_frame(self, Frame, name_plate: CTkButton):
         """
         Sets the search frame after it was built
+        :param name_plate: the container that holds pokemon name
         :param Frame: search frame widget
         :return: None
         """
         self.parent_search_frame = Frame
+        self.ModalUpdate.set_name_plate(name_plate)
 
     def set_img_frame(self, Frame):
         """
@@ -79,14 +75,6 @@ class ModalInteraction:
     def set_type_advantage_frame(self, frame):
         self.ModalUpdate.set_type_advantage_frame(frame)
 
-    def set_string_var(self, string: str) -> None:
-        """
-        Sets the string_var for search_bar_callback
-        :param string: String being passed into the search bar callback
-        :return: None
-        """
-        self.string_var.set(string)
-
     def set_move_modal(self, move_modal):
         self.ModalUpdate.set_move_modal(move_modal)
 
@@ -96,56 +84,37 @@ class ModalInteraction:
         :param args: Necessary arguments for the call back function
         :return: None
         """
-
         # Passed in by UIModals at class instantiation
-        search_string = self.string_var.get()
+        search_string = self.SearchUI.string_var.get()
+        query_result = self.searchAlgorithm.build_search_list(search_string)
+        self.SearchUI.build_result_frame(query_result)
 
-        # Destroy the search bar area
-        if search_string == "":
-            print("Empty String")
-            self.SearchUI.destroy_result_frame()
-        else:
-            # Check if search bar focused before triggering
-            if self.name_plate_focused:
-                # build the list containing all matches of the typed string
-                search_string = self.searchAlgorithm.build_search_list(search_string)
+    def search_button_callback(self, which_modal: str) -> None:
+        self.SearchUI.build_search_result(self.parent_search_frame, which_modal)
 
-                # pass in the list to build result frame from
-                self.SearchUI.build_search_result(search_string, self.parent_search_frame)
-
-    def search_button_callback(self) -> None:
-        print("Search Button")
-
-    def move_callback(self, modal_name):
+    def move_callback(self, modal_name) -> None:
         """
         handles the move_frame modal
-        :param modal_name:
-        :return:
+        :param modal_name: which modal to change
+        :return: None
         """
-
         # Only update the button pressed
         self.ModalUpdate.update_moves(modal_name)
 
-    def name_plate_focus(self, boolean: bool) -> None:
-        """
-        Boolean var to detect if focus is on search_bar
-        :param boolean: true if focused else
-        :return: None
-        """
-        self.name_plate_focused = boolean
-
-    def clicked_search_query(self, string: str) -> None:
+    def clicked_search_query(self, string: str, which_modal: str) -> None:
         """
         Detect when any of the search results are clicked
+        :param which_modal: which modal is accessing this function
         :param string: name of the clicked result
         :return: None
         """
-        self.string_var.set(string)
-        self.ModalUpdate.build_path_ref(string)
+        if which_modal == "name_plate":
+            self.ModalUpdate.update_name_plate(string)
+            self.ModalUpdate.build_path_ref(string)
+            # destroy result frame
+            self.SearchUI.destroy_result_frame()
 
         self.current_window.root.focus_set()
-        # destroy result frame
-        self.SearchUI.destroy_result_frame()
 
     def clicked_item_modal(self, self_modal) -> None:
         """
@@ -164,7 +133,7 @@ class ModalInteraction:
         """
         self.ModalUpdate.update_ability_modal(self_modal)
 
-    def type_adv_change_window(self, string: str, new_window, button_config) -> None:
+    def type_adv_change_window(self, new_window, button_config) -> None:
         """
         handles the type advantage window button callback
         :param button_config: button config change color when active

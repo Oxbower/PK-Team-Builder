@@ -21,11 +21,8 @@ class UIModals:
         self.Frame = ctk.CTkFrame
         self.gui = gui
 
-        # keeps track of the variable in the name_plate
-        self.string_var = self.ctk.StringVar()
-
         # instantiate modal_interact class can only be accessed by UIModals
-        self.modal_interact = ModalInteraction.ModalInteraction(self.string_var, gui, current_window)
+        self.modal_interact = ModalInteraction.ModalInteraction(gui, current_window)
 
         self.pokemon_id = None
 
@@ -121,15 +118,15 @@ class UIModals:
         name_plate = self.ctk.CTkButton(master=parentFrame,
                                         corner_radius=50,
                                         width=self.gui.img_width,
-                                        text="Pokemon Name",
+                                        text_color="grey",
+                                        text="Search a Pokemon",
                                         height=50,
                                         fg_color="#2e2e2e",
                                         hover_color=self.gui.hover_color,
                                         border_width=0,
                                         cursor="hand2",
-                                        # justify='center',
                                         font=("Helvetica", 20, "bold"),
-                                        command=lambda: self.modal_interact.search_button_callback())
+                                        command=lambda: self.modal_interact.search_button_callback("name_plate"))
 
         name_plate.grid(row=0,
                         column=0,
@@ -137,31 +134,7 @@ class UIModals:
                         pady=10,
                         sticky=self.gui.expand_all)
 
-        # name_plate = self.ctk.CTkEntry(master=parentFrame,
-        #                                textvariable=self.string_var,
-        #                                corner_radius=50,
-        #                                width=self.gui.img_width,
-        #                                height=50,
-        #                                fg_color="#2e2e2e",
-        #                                border_width=0,
-        #                                justify='center',
-        #                                font=("Helvetica", 20, "bold"))
-        #
-        # name_plate.grid(row=0,
-        #                 column=0,
-        #                 padx=10,
-        #                 pady=10,
-        #                 sticky=self.gui.expand_all)
-
-        # Set mainWindow as the parent
-        # self.modal_interact.set_search_modal_frame(self.mainWindow)
-
-        # Allows user to focus on/off name_plate
-        # name_plate.bind('<FocusIn>', lambda _: self.modal_interact.name_plate_focus(True))
-        # name_plate.bind('<FocusOut>', lambda _: self.modal_interact.name_plate_focus(False))
-
-        # Trace the value in the search bar
-        # self.string_var.trace('w', self.modal_interact.search_bar_callback)
+        self.modal_interact.set_search_modal_frame(self.mainWindow, name_plate)
 
     def build_item_ability_modal(self, parentFrame):
         """
@@ -249,7 +222,7 @@ class UIModals:
             new_window.set_parent_frame(parentFrame, value)
             self.modal_interact.set_type_advantage_frame(new_window)
 
-        self.modal_interact.type_adv_change_window('initial', initial_active_window, initial_active_button)
+        self.modal_interact.type_adv_change_window(initial_active_window, initial_active_button)
 
     def build_move_modal(self, parentFrame):
         """
