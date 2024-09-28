@@ -1,4 +1,3 @@
-import gui.Gui
 from app_io.LoadJson import load_pokemon_names as load_names
 
 import re

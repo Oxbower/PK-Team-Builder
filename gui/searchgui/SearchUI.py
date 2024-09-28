@@ -20,7 +20,6 @@ class SearchUI:
 
         # keeps track of the variable in the name_plate
         self.string_var = self.ctk.StringVar()
-        self.string_var.trace('w', self.modal_interact.search_bar_callback)
 
         # set width of result container as an attribute
         self.frame_width = 0
@@ -43,7 +42,6 @@ class SearchUI:
         |   |                               |   |
         |   ---------------------------------   |
         -----------------------------------------
-
         Builds search result
         :param which_modal: which modal is using the search bar
         :param result_list: list to build search result for
@@ -77,6 +75,9 @@ class SearchUI:
         :param parentFrame: container to put the search bar in
         :return: None
         """
+        self.string_var = self.ctk.StringVar()
+        self.string_var.trace('w', self.modal_interact.search_bar_callback)
+
         name_plate = self.ctk.CTkEntry(master=parentFrame,
                                        textvariable=self.string_var,
                                        corner_radius=50,
@@ -115,7 +116,7 @@ class SearchUI:
         """
         # destroy frame
         if self.scrollable_frame is not None:
-            self.scrollable_frame.destroy()
+            self.scrollable_frame.forget()
 
         # Build the scrollable frame
         self.scrollable_frame = self.ctk.CTkScrollableFrame(master=parentFrame,
