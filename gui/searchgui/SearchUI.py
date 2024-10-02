@@ -65,11 +65,11 @@ class SearchUI:
         # place the container in the stat frame at fixed location
         self.search_result_container.place(relx=0, rely=0)
 
-        self.build_search_bar(self.search_result_container)
+        self.__build_search_bar(self.search_result_container)
         # build result frame
         self.__build_scrollable_frame(self.search_result_container)
 
-    def build_search_bar(self, parentFrame) -> None:
+    def __build_search_bar(self, parentFrame) -> None:
         """
         Builds the search bar inside the search result container frame
         :param parentFrame: container to put the search bar in
@@ -95,7 +95,7 @@ class SearchUI:
 
         name_plate.focus_set()
 
-    def destroy_result_frame(self):
+    def destroy_result_frame(self) -> None:
         """
         Destroys search_result_container after user has chosen a result
         :return: None
@@ -107,7 +107,7 @@ class SearchUI:
         except Exception as E:
             print(E)
 
-    def __build_scrollable_frame(self, parentFrame: ctk.CTkFrame):
+    def __build_scrollable_frame(self, parentFrame: ctk.CTkFrame) -> None:
         """
         Build a result bar for given result string
         :param parentFrame: frame to build in
@@ -130,7 +130,7 @@ class SearchUI:
         self.scrollable_frame.grid(row=1,
                                    column=0)
 
-    def build_result_frame(self, query_result):
+    def build_result_frame(self, query_result: list[str]) -> None:
         """
         Populate the search list
         :param query_result: output of SearchingAlgorithm

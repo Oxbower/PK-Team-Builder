@@ -41,7 +41,7 @@ class ModalUpdate:
         self.dir_folder = None
         self.current_name = None
         self.move_modals = None
-        # Instantiate move modal class #TODO: REWORK TO MULTIPURPOSE SEARCH
+        # Instantiate move modal class
         self.scrollable_move_frame = MoveModalFrame.MoveModalUpdate(current_window)
         self.type_advantage_frame = []  # offensive, defensive
 
@@ -331,7 +331,6 @@ class ModalUpdate:
         :return: None
         """
         # open a search list and display all items
-        # TODO: rework implementation to forget instead of destroying to save on resources
         self.scrollable_item_frame.start_search_build(modal)
 
     def update_ability_modal(self, modal):
