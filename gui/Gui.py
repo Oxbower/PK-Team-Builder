@@ -1,5 +1,5 @@
 import customtkinter as ctk
-import gui.UIModals as modals
+import gui.BuildWidget as widgets
 
 
 class UI:
@@ -23,8 +23,8 @@ class UI:
         # frame object
         self.Frame = ctk.CTkFrame
 
-        # modal class
-        self.modals = modals.UIModals(self, self.current_window)
+        # widget class
+        self.widgets = widgets.Widgets(self, self.current_window)
 
         # ui settings
         self.pad_y = 30
@@ -91,30 +91,30 @@ class UI:
         Builds the modals using the parentFrames created by the build_[name]_frame methods
         '''
 
-        # build modals for the file bar
-        self.modals.build_file_modals(file_bar_frame)
+        # build widgets for the file bar
+        self.widgets.build_file_modals(file_bar_frame)
 
-        # build modal for the image
-        self.modals.build_img_modal(image_frame)
+        # build widgets for the image
+        self.widgets.build_img_modal(image_frame)
 
         # build the 'stats' inside the info_stat frame
-        self.modals.build_stat_modal(search_stat_frame)
+        self.widgets.build_stat_modal(search_stat_frame)
 
         # build the items inside the type container i.e. pokedex-no and type display
-        self.modals.build_type_modal(type_frame)
+        self.widgets.build_type_modal(type_frame)
 
-        self.modals.build_side_container(side_frame)
+        self.widgets.build_side_container(side_frame)
 
         # build search bar inside the info_stat frame block
-        self.modals.build_search_bar_modal(search_stat_frame)
+        self.widgets.build_search_bar_modal(search_stat_frame)
 
         # build the move picker inside the move frame
-        self.modals.build_move_modal(move_frame)
+        self.widgets.build_move_modal(move_frame)
 
         # build the picker for the pokemon's held item and their ability
-        self.modals.build_item_ability_modal(item_ability_frame)
+        self.widgets.build_item_ability_modal(item_ability_frame)
 
-        self.modals.build_type_adv_modal(type_adv_frame)
+        self.widgets.build_type_adv_modal(type_adv_frame)
 
     def __build_file_bar(self):
         """

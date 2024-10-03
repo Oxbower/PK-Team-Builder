@@ -1,7 +1,7 @@
 import customtkinter as ctk
 import threading
 import os
-import gui.custommovewidget.MoveModalUpdate as MoveModalFrame
+import gui.custommovewidget.MoveWidgetUpdate as MoveWidgetUpdate
 import gui.ItemModalFrame as ItemModalFrame
 import gui.customcanvaslabel.CanvasLabelUpdate as CanvasLabelUpdate
 
@@ -15,7 +15,7 @@ from gui.TypeBackgroundColor import type_color
 from interaction.TypeAdvantageHandler import type_advantage_defensive_handler
 
 
-class ModalUpdate:
+class WidgetUpdate:
     """
     Updates the modals when interaction occurs
     """
@@ -40,13 +40,14 @@ class ModalUpdate:
         self.sidebar_widget = None
         self.dir_folder = None
         self.current_name = None
-        self.move_modals = None
+        self.move_widget = None
+        self.item_widget = None
         # Instantiate move modal class
-        self.scrollable_move_frame = MoveModalFrame.MoveModalUpdate(current_window)
+        self.scrollable_move_frame = MoveWidgetUpdate.MoveWidgetUpdate(current_window)
         self.type_advantage_frame = []  # offensive, defensive
 
         # Pass in current window to anchor new frame, rework later
-        self.scrollable_item_frame = ItemModalFrame.ItemModalFrame(current_window)
+        self.scrollable_item_frame = ItemModalFrame.ItemModalFrame()
 
         self.scrollable_ability_frame = CanvasLabelUpdate.CanvasLabelUpdate(current_window)
 
@@ -54,13 +55,13 @@ class ModalUpdate:
         self.frame_width = 250
         self.frames = 25
 
-    def set_img_frame(self, Frame):
+    def set_img_frame(self, img_frame):
         """
         Sets image frame to display creature art
-        :param Frame: Parent frame
+        :param img_frame: Parent frame
         :return: None
         """
-        self.img_holder = self.ctk.CTkLabel(master=Frame,
+        self.img_holder = self.ctk.CTkLabel(master=img_frame,
                                             image=None,
                                             text=None,
                                             fg_color='#ffffff',
@@ -69,8 +70,8 @@ class ModalUpdate:
                                             width=self.gui.img_width,
                                             corner_radius=self.gui.rounded_corner)
 
-    def set_move_modal(self, move_modal):
-        self.move_modals = move_modal
+    def set_move_modal(self, move_widget):
+        self.move_widget = move_widget
 
     def set_stats_widget(self, stats_widget):
         """
@@ -101,14 +102,16 @@ class ModalUpdate:
     def set_type_advantage_frame(self, frame):
         self.type_advantage_frame.append(frame)
 
-    def set_variation_frame(self, Frame):
+    def set_variation_frame(self, variation_frame):
         """
         pass in the variation frame to display current pokemons different forms
-        :param Frame: frame to put the forms in
-        :param string_var: passed in function to update name display
+        :param variation_frame: frame to put the forms in
         :return: None
         """
-        self.var_frame = Frame
+        self.var_frame = variation_frame
+
+    def set_item_modal(self, item_widget):
+        self.item_widget = item_widget
 
     def set_name_plate(self, name_plate: ctk.CTkButton):
         self.name_plate = name_plate
@@ -140,7 +143,7 @@ class ModalUpdate:
                                                   width=30,
                                                   text=None,
                                                   image=image,
-                                                  command=lambda string=value: self.update_display(string))
+                                                  command=lambda string=value: self.update_when_variant_chosen(string))
 
             variation_button.grid(row=0, column=index, padx=5)
 
@@ -159,7 +162,7 @@ class ModalUpdate:
                                                       text=None,
                                                       image=image,
                                                       command=lambda string=split_ref['mega'][index]:
-                                                      self.update_display(string))
+                                                      self.update_when_variant_chosen(string))
 
                 variation_button.grid(row=index, column=0, padx=5, pady=(5, 5))
 
@@ -170,24 +173,31 @@ class ModalUpdate:
             name = os.path.splitext(os.path.basename(value))[0]
 
             if not any(s in name for s in variant):
-                self.update_display(value)
-                self.update_name_plate(name)
+                self.update_when_variant_chosen(value)
+                self.update_pokemon_name_displayed(name)
                 break
 
-    def build_path_ref(self, string: str):
+    def update_widget_related_to_search(self, string: str, which_modal: str) -> None:
         """
         Builds the image frame
-        :param string: Name of the clicked pokemon
+        :param which_modal: which modal was this query for
+        :param string: the clicked string
         :return: None
         """
-        name = string.lower().split(' ')
-        name = '-'.join(name)
+        if which_modal == "name_plate":
+            name = string.lower().split(' ')
+            name = '-'.join(name)
 
-        print("Clicked Result: " + name)
-        ref_path = build_img_ref(name)
-        self.build_dynamic_variation_modal(ref_path)
+            print("Clicked Result: " + name)
+            ref_path = build_img_ref("pokemon-artwork", name)
+            self.build_dynamic_variation_modal(ref_path)
+        elif which_modal == "item_modal":
+            name_capitalized = []
+            for i in string.split(" "):
+                name_capitalized.append(i.capitalize())
+            self.scrollable_item_frame.active_modal_callback(self.item_widget, " ".join(name_capitalized))
 
-    def update_name_plate(self, pokemon_name: str) -> None:
+    def update_pokemon_name_displayed(self, pokemon_name: str) -> None:
         """
         Update the pokemon name displayed
         :param pokemon_name: new name
@@ -195,9 +205,9 @@ class ModalUpdate:
         """
         self.name_plate.configure(text=pokemon_name, text_color="white")
 
-    def update_display(self, string):
+    def update_when_variant_chosen(self, string):
         """
-        Updates the entire frame with new data
+        Updates the frame with data related to variant
         :param string: name of the pokemon currently displayed
         :return: None
         """
@@ -211,7 +221,7 @@ class ModalUpdate:
         json_path = os.path.join(stats_folder, inner_folder, file_name + '.json')
         data = json_load(json_path)
 
-        self.build_image(string)
+        self.update_pokemon_image(string)
 
         # Update the stats widget
         self.update_stats_widget(data)
@@ -219,7 +229,7 @@ class ModalUpdate:
         self.update_type_displayed(data)
         self.update_type_advantage(data)
 
-        self.scrollable_move_frame.reset_modal(self.move_modals)
+        self.scrollable_move_frame.reset_modal(self.move_widget)
 
     def update_moves(self, modal):
         """
@@ -233,7 +243,7 @@ class ModalUpdate:
 
         self.scrollable_move_frame.start_search_build(modal, self.dir_folder, self.current_name)
 
-    def build_image(self, image_path):  # Modular do not mess with this anymore
+    def update_pokemon_image(self, image_path):
         """
         Opens and updates the frame to hold the image
         :param image_path: image_path given by variation_model
@@ -243,7 +253,7 @@ class ModalUpdate:
 
         name = os.path.splitext(os.path.basename(image_path))[0]
 
-        self.update_name_plate(name)
+        self.update_pokemon_name_displayed(name)
 
         # Only returns a single image
         image = read_image([image_path], "thumbnail",
@@ -324,16 +334,7 @@ class ModalUpdate:
         start_thread = threading.Thread(target=self.type_advantage_frame[1].populate_frame, args=(type_defense,))
         start_thread.run()
 
-    def update_item_modal(self, modal):
-        """
-        Update the item modal
-        :param modal: which modal this update is related to
-        :return: None
-        """
-        # open a search list and display all items
-        self.scrollable_item_frame.start_search_build(modal)
-
-    def update_ability_modal(self, modal):
+    def update_ability_widget(self, modal):
         """
         Updates the ability modal
         :param modal: which modal this update is related to

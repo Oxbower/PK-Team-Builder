@@ -16,7 +16,7 @@ class SearchUI:
         self.mainWindow = mainWindow
         self.Frame = ctk.CTkFrame
         self.modal_interact = modal_interact
-        self.which_modal = None
+        self.which_widget = None
 
         # keeps track of the variable in the name_plate
         self.string_var = self.ctk.StringVar()
@@ -28,7 +28,7 @@ class SearchUI:
         self.search_result_container = None
         self.scrollable_frame = None
 
-    def build_search_result(self, parentFrame: ctk, which_modal: str):
+    def build_search_frame(self, parentFrame: ctk, which_modal: str, directory: str):
         """
         result_list: list[str]
 
@@ -43,9 +43,9 @@ class SearchUI:
         |   ---------------------------------   |
         -----------------------------------------
         Builds search result
-        :param which_modal: which modal is using the search bar
-        :param result_list: list to build search result for
         :param parentFrame: parentFrame for this class so stat_frame
+        :param which_modal: which modal is using the search bar
+        :param directory: which directory to open
         :return: None
         """
 
@@ -53,7 +53,7 @@ class SearchUI:
         if self.search_result_container is not None:
             self.search_result_container.destroy()
 
-        self.which_modal = which_modal
+        self.which_widget = which_modal
 
         self.frame_width = parentFrame.width
         self.frame_height = parentFrame.height
@@ -65,18 +65,19 @@ class SearchUI:
         # place the container in the stat frame at fixed location
         self.search_result_container.place(relx=0, rely=0)
 
-        self.__build_search_bar(self.search_result_container)
+        self.__build_search_bar(self.search_result_container, directory)
         # build result frame
         self.__build_scrollable_frame(self.search_result_container)
 
-    def __build_search_bar(self, parentFrame) -> None:
+    def __build_search_bar(self, parentFrame, directory: str) -> None:
         """
         Builds the search bar inside the search result container frame
         :param parentFrame: container to put the search bar in
+        :param directory: which directory to open
         :return: None
         """
         self.string_var = self.ctk.StringVar()
-        self.string_var.trace('w', self.modal_interact.search_bar_callback)
+        self.string_var.trace('w', lambda *_,_dir=directory: self.modal_interact.search_bar_callback(*_,directory=_dir))
 
         name_plate = self.ctk.CTkEntry(master=parentFrame,
                                        textvariable=self.string_var,
@@ -101,7 +102,7 @@ class SearchUI:
         :return: None
         """
         try:
-            self.which_modal = None
+            self.which_widget = None
             self.search_result_container.destroy()
             print("Destroying result frame...")
         except Exception as E:
@@ -111,7 +112,6 @@ class SearchUI:
         """
         Build a result bar for given result string
         :param parentFrame: frame to build in
-        :param query_result: list containing strings to put into search bar
         :return: None
         """
         # destroy frame
@@ -139,8 +139,10 @@ class SearchUI:
 
         # Make the string display look nicer
         for index, value in enumerate(query_result):
-            capitalized = value.title()
-            query_result[index] = capitalized
+            name_capitalized = []
+            for i in value.split(" "):
+                name_capitalized.append(i.capitalize())
+            query_result[index] = " ".join(name_capitalized)
 
         # Flush the items in the scrollable frame
         if self.scrollable_frame is not None:
@@ -155,7 +157,7 @@ class SearchUI:
                                        hover_color="#353535",
                                        width=self.frame_width - 30,
                                        height=50,
-                                       command=lambda string=value: self.modal_interact.clicked_search_query(string, self.which_modal),
+                                       command=lambda string=value: self.modal_interact.clicked_search_query(string, self.which_widget),
                                        corner_radius=10)
             label.grid(row=index,
                        column=0,

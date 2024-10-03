@@ -1,10 +1,10 @@
 import interaction.SearchingAlgorithm as SearchResult
-import gui.ModalUpdate as ModalUpdate
+import gui.WidgetUpdate as ModalUpdate
 import gui.searchgui.SearchUI as SearchUI
 
 from customtkinter import CTkButton as CTkButton
 
-class ModalInteraction:
+class WidgetCallback:
     def __init__(self, gui, current_window):
         """
         initializes the ModalInteraction class
@@ -20,7 +20,7 @@ class ModalInteraction:
 
         self.searchAlgorithm = SearchResult.SearchResult()
 
-        self.ModalUpdate = ModalUpdate.ModalUpdate(gui, current_window)
+        self.ModalUpdate = ModalUpdate.WidgetUpdate(gui, current_window)
 
         # Instantiate the class that builds the UI for the search results
         self.SearchUI = SearchUI.SearchUI(self.current_window, self)
@@ -67,7 +67,6 @@ class ModalInteraction:
         """
         Set Image frame
         :param Frame: parentFrame for image container
-        :param imgFrame: Frame to manipulate when displaying new image
         :return: None
         """
         self.ModalUpdate.set_img_frame(Frame)
@@ -78,19 +77,28 @@ class ModalInteraction:
     def set_move_modal(self, move_modal):
         self.ModalUpdate.set_move_modal(move_modal)
 
-    def search_bar_callback(self, *args):
+    def set_item_modal(self, item_modal):
+        self.ModalUpdate.set_item_modal(item_modal)
+
+    def search_bar_callback(self, *args, directory: str) -> None:
         """
         Handles search bar inputs to do string searches
         :param args: Necessary arguments for the call back function
+        :param directory: directory name to read contents from
         :return: None
         """
         # Passed in by UIModals at class instantiation
         search_string = self.SearchUI.string_var.get()
-        query_result = self.searchAlgorithm.build_search_list(search_string)
+        query_result = self.searchAlgorithm.build_search_list(search_string, directory)
         self.SearchUI.build_result_frame(query_result)
 
-    def search_button_callback(self, which_modal: str) -> None:
-        self.SearchUI.build_search_result(self.parent_search_frame, which_modal)
+    def search_button_callback(self, which_modal: str, directory: str) -> None:
+        """
+        Opens the search ui if button clicked
+        :param which_modal: which modal accessed the search
+        :return: None
+        """
+        self.SearchUI.build_search_frame(self.parent_search_frame, which_modal, directory)
 
     def move_callback(self, modal_name) -> None:
         """
@@ -104,26 +112,18 @@ class ModalInteraction:
     def clicked_search_query(self, string: str, which_modal: str) -> None:
         """
         Detect when any of the search results are clicked
-        :param which_modal: which modal is accessing this function
         :param string: name of the clicked result
+        :param which_modal: which modal is accessing this function
         :return: None
         """
         if which_modal == "name_plate":
-            self.ModalUpdate.update_name_plate(string)
-            self.ModalUpdate.build_path_ref(string)
-            # destroy result frame
-            self.SearchUI.destroy_result_frame()
+            self.ModalUpdate.update_pokemon_name_displayed(string)
+            self.ModalUpdate.update_widget_related_to_search(string, which_modal)
+        elif which_modal == "item_modal":
+            self.ModalUpdate.update_widget_related_to_search(string, which_modal)
 
+        self.SearchUI.destroy_result_frame()
         self.current_window.root.focus_set()
-
-    def clicked_item_modal(self, self_modal) -> None:
-        """
-        send click events for the item modal to the appropriate function
-        :param self_modal: which modal was clicked
-        :return: None
-        """
-        # open a new window and populate on a new thread, update using modalUpdate
-        self.ModalUpdate.update_item_modal(self_modal)
 
     def clicked_ability_modal(self, self_modal) -> None:
         """
@@ -131,13 +131,12 @@ class ModalInteraction:
         :param self_modal: which modal was clicked
         :return: None
         """
-        self.ModalUpdate.update_ability_modal(self_modal)
+        self.ModalUpdate.update_ability_widget(self_modal)
 
     def type_adv_change_window(self, new_window, button_config) -> None:
         """
         handles the type advantage window button callback
         :param button_config: button config change color when active
-        :param string: which button was pressed
         :param new_window: the window to display
         :return: None
         """

@@ -1,20 +1,20 @@
-import gui.ModalInteraction as ModalInteraction
+import os
+
+import gui.WidgetCallback as ModalInteraction
 import customtkinter as ctk
 
 import gui.TypeAdvantageFrames as taf
-import gui.custommovewidget.MoveModal as MoveModal
+import gui.custommovewidget.MoveWidget as MoveModal
 import gui.customcanvaslabel.CustomCanvasLabel as CanvasLabel
 
 
-class UIModals:
+class Widgets:
     """
     Instantiates the widgets for the GUI that called this class
     """
     def __init__(self, gui, current_window):
         """
-        Initialize UI modals this is the stuff inside the
-        frames.
-        passes the interactable Modals to modal_iteract
+        Initialize UI widgets this is the stuff inside the frames.
         """
         self.ctk = ctk
         self.mainWindow = current_window
@@ -22,14 +22,14 @@ class UIModals:
         self.gui = gui
 
         # instantiate modal_interact class can only be accessed by UIModals
-        self.modal_interact = ModalInteraction.ModalInteraction(gui, current_window)
+        self.modal_interact = ModalInteraction.WidgetCallback(gui, current_window)
 
         self.pokemon_id = None
 
         self.move_modal = []
 
         '''
-        Holds modal references for update
+        Holds widget references for update
         
         [0] = Base, [1] = Graph, [2] = Min, [3] = Max
         '''
@@ -126,7 +126,7 @@ class UIModals:
                                         border_width=0,
                                         cursor="hand2",
                                         font=("Helvetica", 20, "bold"),
-                                        command=lambda: self.modal_interact.search_button_callback("name_plate"))
+                                        command=lambda: self.modal_interact.search_button_callback("name_plate", "pokemon-artwork"))
 
         name_plate.grid(row=0,
                         column=0,
@@ -171,8 +171,10 @@ class UIModals:
 
         items.place(relx=.1, rely=.85)
 
+        # call unified search_button_callback
+        items.configure(command=lambda: self.modal_interact.search_button_callback("item_modal", os.path.join("assets", "item-artwork")))
 
-        items.configure(command=lambda: self.modal_interact.clicked_item_modal(items))
+        self.modal_interact.set_item_modal(items)
 
     def build_type_adv_modal(self, parentFrame):
         """
@@ -205,7 +207,7 @@ class UIModals:
                                         command=None)
 
             button.configure(command=lambda string=value, window=new_window, button_config=button:
-            self.modal_interact.type_adv_change_window(string, window, button_config))
+            self.modal_interact.type_adv_change_window(window, button_config))
 
             button.grid(row=0,
                         column=index,
