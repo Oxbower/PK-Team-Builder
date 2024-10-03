@@ -2,7 +2,7 @@ import customtkinter as ctk
 import threading
 import os
 import gui.custommovewidget.MoveWidgetUpdate as MoveWidgetUpdate
-import gui.ItemModalFrame as ItemModalFrame
+import gui.ItemWidgetFrame as ItemModalFrame
 import gui.customcanvaslabel.CanvasLabelUpdate as CanvasLabelUpdate
 
 from interaction.StatColorUpdate import stat_color_update
@@ -11,7 +11,7 @@ from interaction.BuildDirectoryReference import build_img_ref
 from interaction.MegaEvolutionVariantHandler import variant_handler, mega_variant_folder_handler
 from app_io.LoadJson import json_load
 from app_io.LoadImage import read_image
-from gui.TypeBackgroundColor import type_color
+from interaction.GetTypeBackgroundColor import type_color
 from interaction.TypeAdvantageHandler import type_advantage_defensive_handler
 
 
@@ -55,6 +55,9 @@ class WidgetUpdate:
         self.frame_width = 250
         self.frames = 25
 
+    """
+    Sets the widgets to be updated
+    """
     def set_img_frame(self, img_frame):
         """
         Sets image frame to display creature art
@@ -116,9 +119,13 @@ class WidgetUpdate:
     def set_name_plate(self, name_plate: ctk.CTkButton):
         self.name_plate = name_plate
 
-    def build_dynamic_variation_modal(self, ref_path: list[str]):
+    """
+    below are the functions to update the widgets
+    """
+
+    def build_pokemon_variant_widgets(self, ref_path: list[str]) -> None:
         """
-        Builds a dynamic modal for the number of variations this pokemon has, this only runs once on query
+        builds widgets that show the variations this pokemon has, this only runs once every query
         :param ref_path: reference path to pokemon passed in by the clicked result
         :return: None
         """
@@ -190,7 +197,7 @@ class WidgetUpdate:
 
             print("Clicked Result: " + name)
             ref_path = build_img_ref("pokemon-artwork", name)
-            self.build_dynamic_variation_modal(ref_path)
+            self.build_pokemon_variant_widgets(ref_path)
         elif which_modal == "item_modal":
             name_capitalized = []
             for i in string.split(" "):
@@ -205,23 +212,23 @@ class WidgetUpdate:
         """
         self.name_plate.configure(text=pokemon_name, text_color="white")
 
-    def update_when_variant_chosen(self, string):
+    def update_when_variant_chosen(self, variant_name: str) -> None:
         """
         Updates the frame with data related to variant
-        :param string: name of the pokemon currently displayed
+        :param variant_name: name of the pokemon currently displayed
         :return: None
         """
         stats_folder = 'pokemon-pokedex'
 
-        inner_folder = os.path.split(os.path.split(string)[0])[-1]
-        file_name = os.path.splitext(os.path.basename(string))[0]
+        inner_folder = os.path.split(os.path.split(variant_name)[0])[-1]
+        file_name = os.path.splitext(os.path.basename(variant_name))[0]
         self.dir_folder = inner_folder
         self.current_name = file_name
 
         json_path = os.path.join(stats_folder, inner_folder, file_name + '.json')
         data = json_load(json_path)
 
-        self.update_pokemon_image(string)
+        self.update_pokemon_image(variant_name)
 
         # Update the stats widget
         self.update_stats_widget(data)
@@ -231,7 +238,7 @@ class WidgetUpdate:
 
         self.scrollable_move_frame.reset_modal(self.move_widget)
 
-    def update_moves(self, modal):
+    def update_moves(self, modal) -> None:
         """
         passes in the possible moves to be put in this move modal
         :param modal: which modal to update
@@ -239,11 +246,11 @@ class WidgetUpdate:
         """
         if self.dir_folder is None: # guard clause
             print('Empty selection')
-            return False
+            return
 
         self.scrollable_move_frame.start_search_build(modal, self.dir_folder, self.current_name)
 
-    def update_pokemon_image(self, image_path):
+    def update_pokemon_image(self, image_path) -> None:
         """
         Opens and updates the frame to hold the image
         :param image_path: image_path given by variation_model
@@ -268,7 +275,7 @@ class WidgetUpdate:
 
         self.img_holder.pack()
 
-    def update_pokemon_id(self, data):
+    def update_pokemon_id(self, data) -> None:
         """
         update the pokedex id of the current pokemon
         :param data: pokedex id of pokemon
@@ -287,7 +294,7 @@ class WidgetUpdate:
 
         label.grid_propagate(False)
 
-    def update_type_displayed(self, data):
+    def update_type_displayed(self, data) -> None:
         """
         Updates the type displayed for the current pokemon
         :param data: type data of pokemon
@@ -322,7 +329,7 @@ class WidgetUpdate:
                                       text=None)
             label.place(anchor="center", relx=.5, rely=.55)
 
-    def update_type_advantage(self, data):
+    def update_type_advantage(self, data) -> None:
         """
         Updates the contents of type advantage button
         :param data: passes the current pokemons type
@@ -334,7 +341,7 @@ class WidgetUpdate:
         start_thread = threading.Thread(target=self.type_advantage_frame[1].populate_frame, args=(type_defense,))
         start_thread.run()
 
-    def update_ability_widget(self, modal):
+    def update_ability_widget(self, modal) -> None:
         """
         Updates the ability modal
         :param modal: which modal this update is related to
@@ -342,7 +349,7 @@ class WidgetUpdate:
         """
         self.scrollable_ability_frame.start_search_build(modal, self.dir_folder, self.current_name)
 
-    def update_stats_widget(self, data):
+    def update_stats_widget(self, data) -> None:
         """
         Updates the displayed stats for the appropriate pokemon
         :param data: data returned by json

@@ -4,7 +4,7 @@ from PIL import Image
 import customtkinter as ctk
 
 from app_io.LoadJson import json_load
-from gui.TypeBackgroundColor import type_color
+from interaction.GetTypeBackgroundColor import type_color
 from gui.custommovewidget import MoveWidget as MoveModal
 import app_io.LoadImageDictionary as ImageDicitonary
 

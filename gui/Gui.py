@@ -55,7 +55,6 @@ class UI:
         Public facing setup call for gui
         :return: None
         """
-
         # call gui builder
         self.__build_gui()
 
@@ -92,29 +91,29 @@ class UI:
         '''
 
         # build widgets for the file bar
-        self.widgets.build_file_modals(file_bar_frame)
+        self.widgets.build_file_widget(file_bar_frame)
 
         # build widgets for the image
-        self.widgets.build_img_modal(image_frame)
+        self.widgets.build_img_widget(image_frame)
 
         # build the 'stats' inside the info_stat frame
-        self.widgets.build_stat_modal(search_stat_frame)
+        self.widgets.build_stat_widget(search_stat_frame)
 
         # build the items inside the type container i.e. pokedex-no and type display
-        self.widgets.build_type_modal(type_frame)
+        self.widgets.build_type_widget(type_frame)
 
         self.widgets.build_side_container(side_frame)
 
         # build search bar inside the info_stat frame block
-        self.widgets.build_search_bar_modal(search_stat_frame)
+        self.widgets.build_search_bar_widget(search_stat_frame)
 
         # build the move picker inside the move frame
-        self.widgets.build_move_modal(move_frame)
+        self.widgets.build_move_widget(move_frame)
 
         # build the picker for the pokemon's held item and their ability
-        self.widgets.build_item_ability_modal(item_ability_frame)
+        self.widgets.build_item_ability_widget(item_ability_frame)
 
-        self.widgets.build_type_adv_modal(type_adv_frame)
+        self.widgets.build_type_adv_widget(type_adv_frame)
 
     def __build_file_bar(self):
         """

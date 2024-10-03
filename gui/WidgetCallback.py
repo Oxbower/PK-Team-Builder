@@ -80,11 +80,15 @@ class WidgetCallback:
     def set_item_modal(self, item_modal):
         self.ModalUpdate.set_item_modal(item_modal)
 
+    """
+    Widget callback methods!!!!
+    """
+
     def search_bar_callback(self, *args, directory: str) -> None:
         """
-        Handles search bar inputs to do string searches
+        traces the search bar and updates the search result
         :param args: Necessary arguments for the call back function
-        :param directory: directory name to read contents from
+        :param directory: path to the directory to read from
         :return: None
         """
         # Passed in by UIModals at class instantiation

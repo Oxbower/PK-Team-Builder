@@ -44,7 +44,7 @@ class Widgets:
             "Total":    [0, 0, 0, 0]
         }
 
-    def build_file_modals(self, parentFrame):
+    def build_file_widget(self, parentFrame):
         """
         Build file modals
         :param parentFrame: which frame to draw modals on
@@ -63,7 +63,7 @@ class Widgets:
                                       font=self.gui.font)
             file.grid(row=0, column=index)
 
-    def build_img_modal(self, parentFrame):
+    def build_img_widget(self, parentFrame):
         """
         Passes image frame to modalUpdate to allow for this frame to be updated
         :param parentFrame: the parent container
@@ -74,7 +74,7 @@ class Widgets:
     def build_side_container(self, parentFrame):
         self.modal_interact.set_sidebar_widget(parentFrame)
 
-    def build_type_modal(self, parentFrame):
+    def build_type_widget(self, parentFrame):
         """
         Builds the pokedex-no container
         :param parentFrame: the parent container
@@ -109,7 +109,7 @@ class Widgets:
         # pass in the frame to write pokedex-num and type frame into
         self.modal_interact.set_type_widget(frame, type_frame)
 
-    def build_search_bar_modal(self, parentFrame):
+    def build_search_bar_widget(self, parentFrame):
         """
         Build the search bar modal
         :param parentFrame: which frame to draw modals on
@@ -136,7 +136,7 @@ class Widgets:
 
         self.modal_interact.set_search_modal_frame(self.mainWindow, name_plate)
 
-    def build_item_ability_modal(self, parentFrame):
+    def build_item_ability_widget(self, parentFrame):
         """
         build selection modal for possible abilities and all items
         :param parentFrame: parentFrame to hold modal
@@ -176,7 +176,7 @@ class Widgets:
 
         self.modal_interact.set_item_modal(items)
 
-    def build_type_adv_modal(self, parentFrame):
+    def build_type_adv_widget(self, parentFrame):
         """
         builds modal which shows current pokemon's defensive strength and weaknesses
         :param parentFrame: parent frame to hold modals
@@ -226,7 +226,7 @@ class Widgets:
 
         self.modal_interact.type_adv_change_window(initial_active_window, initial_active_button)
 
-    def build_move_modal(self, parentFrame):
+    def build_move_widget(self, parentFrame):
         """
         build move modals limited to things that only this pokemon can learn in gen-9
         :param parentFrame: parent frame to hold modals
@@ -259,7 +259,7 @@ class Widgets:
 
         self.modal_interact.set_move_modal(move_modal=self.move_modal)
 
-    def build_stat_modal(self, parentFrame):
+    def build_stat_widget(self, parentFrame):
         """
         Builds the stats frame up
         :param parentFrame: master frame of the stats modals
