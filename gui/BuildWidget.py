@@ -23,9 +23,6 @@ class Widgets:
 
         # instantiate modal_interact class can only be accessed by UIModals
         self.modal_interact = ModalInteraction.WidgetCallback(gui, current_window)
-
-        self.pokemon_id = None
-
         self.move_modal = []
 
         '''
@@ -44,10 +41,10 @@ class Widgets:
             "Total":    [0, 0, 0, 0]
         }
 
-    def build_file_widget(self, parentFrame):
+    def build_file_widget(self, parent_frame):
         """
         Build file modals
-        :param parentFrame: which frame to draw modals on
+        :param parent_frame: which frame to draw modals on
         :return: None
         """
 
@@ -55,7 +52,7 @@ class Widgets:
 
         # build buttons for file bar
         for index, _ in enumerate(modals):
-            file = self.ctk.CTkButton(master=parentFrame,
+            file = self.ctk.CTkButton(master=parent_frame,
                                       text=modals[index],
                                       width=50,
                                       corner_radius=0,
@@ -63,26 +60,26 @@ class Widgets:
                                       font=self.gui.font)
             file.grid(row=0, column=index)
 
-    def build_img_widget(self, parentFrame):
+    def build_img_widget(self, parent_frame):
         """
         Passes image frame to modalUpdate to allow for this frame to be updated
-        :param parentFrame: the parent container
+        :param parent_frame: the parent container
         :return: None
         """
-        self.modal_interact.set_img_frame(parentFrame)
+        self.modal_interact.set_img_frame(parent_frame)
 
     def build_side_container(self, parentFrame):
         self.modal_interact.set_sidebar_widget(parentFrame)
 
-    def build_type_widget(self, parentFrame):
+    def build_type_widget(self, parent_frame):
         """
         Builds the pokedex-no container
-        :param parentFrame: the parent container
+        :param parent_frame: the parent container
         :return: None
         """
 
         # holds the pokemon's pokedex num
-        frame = self.Frame(master=parentFrame,
+        frame = self.Frame(master=parent_frame,
                            fg_color='#666666',
                            height=45,
                            width=100)
@@ -99,7 +96,7 @@ class Widgets:
         label.grid_propagate(False)
 
         # holds the pokemon's type
-        type_frame = self.Frame(master=parentFrame,
+        type_frame = self.Frame(master=parent_frame,
                                 fg_color='#242424',
                                 height=45,
                                 width=100)
@@ -109,13 +106,13 @@ class Widgets:
         # pass in the frame to write pokedex-num and type frame into
         self.modal_interact.set_type_widget(frame, type_frame)
 
-    def build_search_bar_widget(self, parentFrame):
+    def build_search_bar_widget(self, parent_frame):
         """
         Build the search bar modal
-        :param parentFrame: which frame to draw modals on
+        :param parent_frame: which frame to draw modals on
         :return: None
         """
-        name_plate = self.ctk.CTkButton(master=parentFrame,
+        name_plate = self.ctk.CTkButton(master=parent_frame,
                                         corner_radius=50,
                                         width=self.gui.img_width,
                                         text_color="grey",
@@ -136,16 +133,16 @@ class Widgets:
 
         self.modal_interact.set_search_modal_frame(self.mainWindow, name_plate)
 
-    def build_item_ability_widget(self, parentFrame):
+    def build_item_ability_widget(self, parent_frame):
         """
         build selection modal for possible abilities and all items
-        :param parentFrame: parentFrame to hold modal
+        :param parent_frame: parentFrame to hold modal
         :return: None
         """
-        max_height = parentFrame.cget("height")
+        max_height = parent_frame.cget("height")
 
         # build ability modal (open separate window for selection)
-        canvas_label = CanvasLabel.CustomCanvasLabel(master=parentFrame,
+        canvas_label = CanvasLabel.CustomCanvasLabel(master=parent_frame,
                                                      text='Ability',
                                                      fg_color="#2a2a2a",
                                                      cursor="hand2",
@@ -155,12 +152,12 @@ class Widgets:
         canvas_label.place(relx=.1, rely=.02)
 
         # pass custom label object to click handler to pass into modalUpdate
-        canvas_label.bind(sequence='<Button-1>', command=lambda _: self.modal_interact.clicked_ability_modal(canvas_label))
+        canvas_label.bind(sequence='<Button-1>', command=lambda _: self.modal_interact.ability_widget_callback(canvas_label))
         canvas_label.bind(sequence='<Enter>', command=lambda _: canvas_label.configure(fg_color=self.gui.hover_color))
         canvas_label.bind(sequence='<Leave>', command=lambda _: canvas_label.configure(fg_color='#2a2a2a'))
 
         # build item modal (open separate window for selection)
-        items = self.ctk.CTkButton(master=parentFrame,
+        items = self.ctk.CTkButton(master=parent_frame,
                                    fg_color="#2a2a2a",
                                    text='',
                                    hover_color=self.gui.hover_color,
@@ -176,16 +173,16 @@ class Widgets:
 
         self.modal_interact.set_item_modal(items)
 
-    def build_type_adv_widget(self, parentFrame):
+    def build_type_adv_widget(self, parent_frame):
         """
         builds modal which shows current pokemon's defensive strength and weaknesses
-        :param parentFrame: parent frame to hold modals
+        :param parent_frame: parent frame to hold modals
         :return: None
         """
         options = ['Offensive', 'Defensive']
         initial_active_window, initial_active_button = None, None
 
-        button_holder = self.Frame(master=parentFrame,
+        button_holder = self.Frame(master=parent_frame,
                                    corner_radius=0,
                                    fg_color='#242424')
         button_holder.grid(row=0,
@@ -221,15 +218,15 @@ class Widgets:
             else:
                 color = 'green'
 
-            new_window.set_parent_frame(parentFrame, value)
+            new_window.set_parent_frame(parent_frame, value)
             self.modal_interact.set_type_advantage_frame(new_window)
 
         self.modal_interact.type_adv_change_window(initial_active_window, initial_active_button)
 
-    def build_move_widget(self, parentFrame):
+    def build_move_widget(self, parent_frame):
         """
         build move modals limited to things that only this pokemon can learn in gen-9
-        :param parentFrame: parent frame to hold modals
+        :param parent_frame: parent frame to hold modals
         :return: None
         """
 
@@ -238,11 +235,11 @@ class Widgets:
             if row == 0:
                 size = 5
 
-            modal = MoveModal.MoveModal(master=parentFrame,
+            modal = MoveModal.MoveModal(master=parent_frame,
                                         fg_color='#2e2e2e',
                                         corner_radius=0,
                                         hover_color=self.gui.hover_color,
-                                        width=parentFrame.cget('width') - 40,
+                                        width=parent_frame.cget('width') - 40,
                                         height=100)
 
             modal.configure(command=lambda _modal=modal: self.modal_interact.move_callback(_modal))
@@ -259,10 +256,10 @@ class Widgets:
 
         self.modal_interact.set_move_modal(move_modal=self.move_modal)
 
-    def build_stat_widget(self, parentFrame):
+    def build_stat_widget(self, parent_frame):
         """
         Builds the stats frame up
-        :param parentFrame: master frame of the stats modals
+        :param parent_frame: master frame of the stats modals
         :return: None
         """
         row_label = ["", "HP", "Attack", "Defense", "Sp. Atk", "Sp. Def", "Speed", "Total"]
@@ -272,8 +269,8 @@ class Widgets:
         for row in range(1, 9):  # hard-coded range(), update if they add new stats
             row_key = int(row - 1)
             # Builds outer frame to hold the stuff that will get updated frequently
-            stat_frame = self.Frame(master=parentFrame,
-                                    corner_radius=self.gui.flat_corner,
+            stat_frame = self.Frame(master=parent_frame,
+                                    corner_radius=0,
                                     height=self.gui.stat_subcategory_height)
             stat_frame.grid(row=row, column=0, sticky="ne", padx=10)
 
@@ -286,14 +283,14 @@ class Widgets:
 
                 # Creates the inner frame to hold the actual numbers and bar graph
                 frame = self.Frame(master=stat_frame,
-                                   corner_radius=self.gui.flat_corner,
+                                   corner_radius=0,
                                    height=self.gui.stat_subcategory_height,
                                    width=width)
                 frame.grid(row=row, column=col, sticky=self.gui.expand_all)
 
                 if col != 2:
                     label = self.ctk.CTkLabel(master=frame,
-                                              corner_radius=self.gui.flat_corner,
+                                              corner_radius=0,
                                               height=self.gui.stat_subcategory_height,
                                               width=width,
                                               text="0",
@@ -310,7 +307,7 @@ class Widgets:
                     self.stats_widget[row_label[row_key]][col - 1] = label
 
         # Build column Labels
-        for col in range(len(column_label)):
+        for col, _ in enumerate(column_label):
             if col != 1:
                 self.stats_widget[""][col].configure(text=column_label[col])
 
@@ -338,7 +335,7 @@ class Widgets:
         """
         Container for pokemon variations
         """
-        var_frame = self.Frame(master=parentFrame,
+        var_frame = self.Frame(master=parent_frame,
                                height=50,
                                width=360,
                                fg_color='#212121',

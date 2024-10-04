@@ -36,12 +36,12 @@ class App:
             sys.exit("Could not create window, exiting now")
 
         # start drawing gui
-        self.__build_gen_frame()
+        self._build_gen_frame()
 
         # run window main loop
         self.window.root.mainloop()
 
-    def __build_gen_frame(self):
+    def _build_gen_frame(self):
         """
         Build general layout of window object
         :return: None

@@ -29,14 +29,13 @@ class UI:
         # ui settings
         self.pad_y = 30
         self.pad_x = 50
-        self.flat_corner = 0
         self.rounded_corner = 10
         self.expand_all = "nswe"
 
         # sys font
         self.font = ("Arial Bold", 15)
 
-        # widget recolor
+        # widget color
         self.light_grey = '#3b3b3b'
         self.dark_grey = '#2a2a2a'
 
@@ -56,35 +55,30 @@ class UI:
         :return: None
         """
         # call gui builder
-        self.__build_gui()
+        self._build_gui()
 
-    def __build_gui(self):
+    def _build_gui(self):
         """
         Builds the frame to put stuff in
         :return: None
         """
 
         # Build top bar
-        file_bar_frame = self.__build_file_bar()
-
+        file_bar_frame = self._build_file_bar()
         # Build image frame
-        image_frame = self.__build_img_frame()
-
+        image_frame = self._build_img_frame()
         # build search & stat frame
-        search_stat_frame = self.__build_info_frame()
-
+        search_stat_frame = self._build_info_frame()
         # build type frame
-        type_frame = self.__build_type_frame()
-
+        type_frame = self._build_type_frame()
         # build moves frame
-        move_frame = self.__build_moves_frame()
-
+        move_frame = self._build_moves_frame()
         # build this pokemon type frame
-        type_adv_frame = self.__build_type_adv_frame()
+        type_adv_frame = self._build_type_adv_frame()
 
-        side_frame = self.__build_side_img_frame()
+        side_frame = self._build_side_img_frame()
 
-        item_ability_frame = self.__build_ability_item_bar()
+        item_ability_frame = self._build_ability_item_bar()
 
         '''
         Builds the modals using the parentFrames created by the build_[name]_frame methods
@@ -92,30 +86,24 @@ class UI:
 
         # build widgets for the file bar
         self.widgets.build_file_widget(file_bar_frame)
-
         # build widgets for the image
         self.widgets.build_img_widget(image_frame)
-
         # build the 'stats' inside the info_stat frame
         self.widgets.build_stat_widget(search_stat_frame)
-
         # build the items inside the type container i.e. pokedex-no and type display
         self.widgets.build_type_widget(type_frame)
 
         self.widgets.build_side_container(side_frame)
-
         # build search bar inside the info_stat frame block
         self.widgets.build_search_bar_widget(search_stat_frame)
-
         # build the move picker inside the move frame
         self.widgets.build_move_widget(move_frame)
-
         # build the picker for the pokemon's held item and their ability
         self.widgets.build_item_ability_widget(item_ability_frame)
 
         self.widgets.build_type_adv_widget(type_adv_frame)
 
-    def __build_file_bar(self):
+    def _build_file_bar(self):
         """
         Builds the 'file' bar i.e. the strip on top with file, options, etc
         :return: created frame
@@ -124,7 +112,7 @@ class UI:
         # Builds frame for 'file' area
         file_bar = self.Frame(master=self.root,
                               width=self.current_window.width,
-                              corner_radius=self.flat_corner,
+                              corner_radius=0,
                               fg_color=self.dark_grey)
         # position file_bar
         file_bar.grid(row=0,
@@ -133,7 +121,7 @@ class UI:
 
         return file_bar
 
-    def __build_img_frame(self):
+    def _build_img_frame(self):
         """
         Build the img_frame for image container
         :return: created frame
@@ -152,7 +140,7 @@ class UI:
 
         return img_frame
 
-    def __build_side_img_frame(self):
+    def _build_side_img_frame(self):
         """
         Builds the frame that display battle transformations i.e mega evolutions and stuff
         :return: None
@@ -174,7 +162,7 @@ class UI:
 
         return inner_frame
 
-    def __build_type_frame(self):
+    def _build_type_frame(self):
         """
         Builds the chosen pokemon's type
         :return: created frame
@@ -194,7 +182,7 @@ class UI:
 
         return frame
 
-    def __build_moves_frame(self):
+    def _build_moves_frame(self):
         """
         Builds the frame for move modals
         :return: created frame
@@ -213,7 +201,7 @@ class UI:
 
         return frame
 
-    def __build_type_adv_frame(self):
+    def _build_type_adv_frame(self):
         """
         Builds the frame for a pokemon weakness and strengths
         :return: created frame
@@ -233,7 +221,7 @@ class UI:
 
         return frame
 
-    def __build_info_frame(self):
+    def _build_info_frame(self):
         """
         Builds the frame that will hold the stats and search bar
         :return: created frame
@@ -241,8 +229,7 @@ class UI:
 
         frame = self.Frame(master=self.root,
                            corner_radius=self.rounded_corner,
-                           height=self.name_stat_frame_height,
-                           )
+                           height=self.name_stat_frame_height)
         frame.grid(row=1,
                    column=3,
                    rowspan=3,
@@ -256,7 +243,7 @@ class UI:
 
         return frame
 
-    def __build_ability_item_bar(self):
+    def _build_ability_item_bar(self):
         """
         builds a container to hold the ability and items
         :return: created frame

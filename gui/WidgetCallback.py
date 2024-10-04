@@ -75,7 +75,7 @@ class WidgetCallback:
         self.ModalUpdate.set_type_advantage_frame(frame)
 
     def set_move_modal(self, move_modal):
-        self.ModalUpdate.set_move_modal(move_modal)
+        self.ModalUpdate.move_widget(move_modal)
 
     def set_item_modal(self, item_modal):
         self.ModalUpdate.set_item_modal(item_modal)
@@ -129,7 +129,7 @@ class WidgetCallback:
         self.SearchUI.destroy_result_frame()
         self.current_window.root.focus_set()
 
-    def clicked_ability_modal(self, self_modal) -> None:
+    def ability_widget_callback(self, self_modal) -> None:
         """
         send click event for the ability modal to the appropriate function
         :param self_modal: which modal was clicked

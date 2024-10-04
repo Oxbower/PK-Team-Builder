@@ -8,7 +8,7 @@ class MoveModal(ctk.CTkFrame):
     Creates a custom widget that displays moves information
     """
 
-    def __init__(self, hover_color=None, **kwargs):
+    def __init__(self, hover_color=None, **kwargs) -> None:
         """
         initialize the widget which supers the ctk.CTkFrame class
         :param hover_color: change the hover color of the widget
@@ -23,15 +23,15 @@ class MoveModal(ctk.CTkFrame):
 
         super().__init__(**kwargs)
 
-        self.__move_name = self.__add_move_name()
-        self.__category = self.__add_category()
-        self.__pp = self.__add_pp()
-        self.__type = self.__add_type()
-        self.__power = self.__add_power()
-        self.__accuracy = self.__add_accuracy()
+        self._move_name = self._add_move_name()
+        self._category = self._add_category()
+        self._pp = self._add_pp()
+        self._type = self._add_type()
+        self._power = self._add_power()
+        self._accuracy = self._add_accuracy()
 
         self.columnconfigure(1, weight=1)
-        self.__create_frame()
+        self._create_frame()
 
     def configure(self,
                   command: Callable = None,
@@ -41,7 +41,7 @@ class MoveModal(ctk.CTkFrame):
                   type: tuple[str, ctk.CTkImage, str] = None,
                   power: str = '',
                   accuracy: str = '',
-                  **kwargs):
+                  **kwargs) -> None:
         """
         Configure the MoveModal class
         :param command: what to open when this widget is clicked
@@ -57,22 +57,22 @@ class MoveModal(ctk.CTkFrame):
         if command is not None:
             self.command = command
         if move_name != '':
-            self.__move_name.configure(text=move_name)
+            self._move_name.configure(text=move_name)
         if category != '':
-            self.__category.configure(text=category)
+            self._category.configure(text=category)
         if pp != '':
-            self.__pp.configure(text=pp)
+            self._pp.configure(text=pp)
         if type is not None:
-            self.__type.configure(text=type[0], image=type[1], fg_color=type[2])
+            self._type.configure(text=type[0], image=type[1], fg_color=type[2])
         if power != '':
-            self.__power.configure(text=power)
+            self._power.configure(text=power)
         if accuracy != '':
-            self.__accuracy.configure(text=accuracy)
+            self._accuracy.configure(text=accuracy)
 
         super().configure(**kwargs)
 
     @staticmethod
-    def __hover_enter(widget):
+    def _hover_enter(widget) -> None:
         """
         change color of the widget on mouse enter
         :param widget: the widget to modify
@@ -85,7 +85,7 @@ class MoveModal(ctk.CTkFrame):
         widget.configure(cursor='hand2')
 
     @staticmethod
-    def __hover_leave(widget):
+    def _hover_leave(widget) -> None:
         """
         change color of the widget on mouse leave
         :param widget: the widget to modify
@@ -93,7 +93,7 @@ class MoveModal(ctk.CTkFrame):
         """
         widget.configure(fg_color=widget.kwargs['fg_color'])
 
-    def __create_frame(self):
+    def _create_frame(self) -> None:
         """
         Create container frame for sub frames
         :return: None
@@ -101,16 +101,16 @@ class MoveModal(ctk.CTkFrame):
         # bind a hover event for all widget inside THIS frame
         for widget in self.winfo_children():
             # bind a hover and click event to the widgets
-            widget.bind('<Enter>', lambda _: self.__hover_enter(self))
-            widget.bind('<Leave>', lambda _: self.__hover_leave(self))
+            widget.bind('<Enter>', lambda _: self._hover_enter(self))
+            widget.bind('<Leave>', lambda _: self._hover_leave(self))
             widget.bind('<Button-1>', lambda _: self.command())
 
         # bind a hover and click event for the main frame
-        self.bind('<Enter>', lambda _: self.__hover_enter(self))
-        self.bind('<Leave>', lambda _: self.__hover_leave(self))
+        self.bind('<Enter>', lambda _: self._hover_enter(self))
+        self.bind('<Leave>', lambda _: self._hover_leave(self))
         self.bind('<Button-1>', lambda _: self.command())
 
-    def __add_move_name(self) -> ctk.CTkLabel:
+    def _add_move_name(self) -> ctk.CTkLabel:
         """
         adds frame to hold label for move_name
         :return: the container created
@@ -127,7 +127,7 @@ class MoveModal(ctk.CTkFrame):
 
         return label
 
-    def __add_type(self) -> ctk.CTkLabel:
+    def _add_type(self) -> ctk.CTkLabel:
         """
         adds frame to hold label for type
         :return: the container created
@@ -147,7 +147,7 @@ class MoveModal(ctk.CTkFrame):
 
         return label
 
-    def __add_pp(self) -> ctk.CTkLabel:
+    def _add_pp(self) -> ctk.CTkLabel:
         """
         adds container to hold label for pp
         :return: the container created
@@ -167,7 +167,7 @@ class MoveModal(ctk.CTkFrame):
 
         return label
 
-    def __add_category(self) -> ctk.CTkLabel:
+    def _add_category(self) -> ctk.CTkLabel:
         """
         add container to hold label for category
         :return: the container created
@@ -187,7 +187,7 @@ class MoveModal(ctk.CTkFrame):
 
         return label
 
-    def __add_accuracy(self) -> ctk.CTkLabel:
+    def _add_accuracy(self) -> ctk.CTkLabel:
         """
         add container to hold label for accuracy
         :return: the container created
@@ -200,7 +200,7 @@ class MoveModal(ctk.CTkFrame):
 
         return label
 
-    def __add_power(self) -> ctk.CTkLabel:
+    def _add_power(self) -> ctk.CTkLabel:
         """
         add container to hold label for power
         :return: the container created
