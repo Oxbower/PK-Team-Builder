@@ -56,8 +56,8 @@ class Widgets:
                                       text=modals[index],
                                       width=50,
                                       corner_radius=0,
-                                      fg_color=self.gui.dark_grey,
-                                      font=self.gui.font)
+                                      fg_color='#2a2a2a',
+                                      font=self.gui.DEFAULT_FONT)
             file.grid(row=0, column=index)
 
     def build_img_widget(self, parent_frame):
@@ -114,12 +114,12 @@ class Widgets:
         """
         name_plate = self.ctk.CTkButton(master=parent_frame,
                                         corner_radius=50,
-                                        width=self.gui.img_width,
+                                        width=self.gui.IMG_WIDTH,
                                         text_color="grey",
                                         text="Search a Pokemon",
                                         height=50,
                                         fg_color="#2e2e2e",
-                                        hover_color=self.gui.hover_color,
+                                        hover_color=self.gui.HOVER_COLOR,
                                         border_width=0,
                                         cursor="hand2",
                                         font=("Helvetica", 20, "bold"),
@@ -129,7 +129,7 @@ class Widgets:
                         column=0,
                         padx=10,
                         pady=10,
-                        sticky=self.gui.expand_all)
+                        sticky="nswe")
 
         self.modal_interact.set_search_modal_frame(self.mainWindow, name_plate)
 
@@ -153,14 +153,14 @@ class Widgets:
 
         # pass custom label object to click handler to pass into modalUpdate
         canvas_label.bind(sequence='<Button-1>', command=lambda _: self.modal_interact.ability_widget_callback(canvas_label))
-        canvas_label.bind(sequence='<Enter>', command=lambda _: canvas_label.configure(fg_color=self.gui.hover_color))
+        canvas_label.bind(sequence='<Enter>', command=lambda _: canvas_label.configure(fg_color=self.gui.HOVER_COLOR))
         canvas_label.bind(sequence='<Leave>', command=lambda _: canvas_label.configure(fg_color='#2a2a2a'))
 
         # build item modal (open separate window for selection)
         items = self.ctk.CTkButton(master=parent_frame,
                                    fg_color="#2a2a2a",
                                    text='',
-                                   hover_color=self.gui.hover_color,
+                                   hover_color=self.gui.HOVER_COLOR,
                                    cursor="hand2",
                                    height=45,
                                    width=45)
@@ -199,7 +199,7 @@ class Widgets:
                                         cursor="hand2",
                                         fg_color="#2e2e2e",
                                         font=("Helvetica", 15, "bold"),
-                                        hover_color=self.gui.hover_color,
+                                        hover_color=self.gui.HOVER_COLOR,
                                         text=value,
                                         command=None)
 
@@ -238,7 +238,7 @@ class Widgets:
             modal = MoveModal.MoveModal(master=parent_frame,
                                         fg_color='#2e2e2e',
                                         corner_radius=0,
-                                        hover_color=self.gui.hover_color,
+                                        hover_color=self.gui.HOVER_COLOR,
                                         width=parent_frame.cget('width') - 40,
                                         height=100)
 
@@ -271,7 +271,7 @@ class Widgets:
             # Builds outer frame to hold the stuff that will get updated frequently
             stat_frame = self.Frame(master=parent_frame,
                                     corner_radius=0,
-                                    height=self.gui.stat_subcategory_height)
+                                    height=40)
             stat_frame.grid(row=row, column=0, sticky="ne", padx=10)
 
             # Build Col
@@ -284,18 +284,18 @@ class Widgets:
                 # Creates the inner frame to hold the actual numbers and bar graph
                 frame = self.Frame(master=stat_frame,
                                    corner_radius=0,
-                                   height=self.gui.stat_subcategory_height,
+                                   height=40,
                                    width=width)
-                frame.grid(row=row, column=col, sticky=self.gui.expand_all)
+                frame.grid(row=row, column=col, sticky="nswe")
 
                 if col != 2:
                     label = self.ctk.CTkLabel(master=frame,
                                               corner_radius=0,
-                                              height=self.gui.stat_subcategory_height,
+                                              height=40,
                                               width=width,
                                               text="0",
-                                              font=self.gui.font)
-                    label.grid(sticky=self.gui.expand_all)
+                                              font=self.gui.DEFAULT_FONT)
+                    label.grid(sticky="nswe")
 
                 if col == 0:
                     label.configure(text=row_label[row - 1])

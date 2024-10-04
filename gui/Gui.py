@@ -27,27 +27,16 @@ class UI:
         self.widgets = widgets.Widgets(self, self.current_window)
 
         # ui settings
-        self.pad_y = 30
-        self.pad_x = 50
-        self.rounded_corner = 10
-        self.expand_all = "nswe"
-
+        self.PAD_Y = 30
+        self.PAD_X = 50
+        self.ROUNDED_CORNER = 10
         # sys font
-        self.font = ("Arial Bold", 15)
-
-        # widget color
-        self.light_grey = '#3b3b3b'
-        self.dark_grey = '#2a2a2a'
-
+        self.DEFAULT_FONT = ("Arial Bold", 15)
         # hover color
-        self.hover_color = '#3f3f3f'
-
+        self.HOVER_COLOR = '#3f3f3f'
         # img width
-        self.img_width = 230
-        self.img_height = 230
-
-        self.name_stat_frame_height = 500
-        self.stat_subcategory_height = 40
+        self.IMG_WIDTH = 230
+        self.IMG_HEIGHT = 230
 
     def setup_ui(self):
         """
@@ -113,10 +102,10 @@ class UI:
         file_bar = self.Frame(master=self.root,
                               width=self.current_window.width,
                               corner_radius=0,
-                              fg_color=self.dark_grey)
+                              fg_color='#2a2a2a')
         # position file_bar
         file_bar.grid(row=0,
-                      sticky=self.expand_all,
+                      sticky="nswe",
                       columnspan=4)
 
         return file_bar
@@ -128,15 +117,15 @@ class UI:
         """
 
         img_frame = self.Frame(master=self.root,
-                               height=self.img_height,
-                               width=self.img_width,
+                               height=self.IMG_HEIGHT,
+                               width=self.IMG_WIDTH,
                                fg_color='#ffffff',
                                bg_color='#232323',
-                               corner_radius=self.rounded_corner)
+                               corner_radius=self.ROUNDED_CORNER)
         img_frame.grid(row=1,
                        column=0,
-                       pady=(self.pad_y, 0),
-                       padx=(self.pad_x, 0))
+                       pady=(self.PAD_Y, 0),
+                       padx=(self.PAD_X, 0))
 
         return img_frame
 
@@ -146,16 +135,16 @@ class UI:
         :return: None
         """
         frame = self.Frame(master=self.root,
-                           height=self.img_height,
+                           height=self.IMG_HEIGHT,
                            fg_color='#242424',
                            width=50)
         frame.grid(row=1,
                    column=1,
                    sticky='w',
-                   pady=(self.pad_y, 0))
+                   pady=(self.PAD_Y, 0))
 
         inner_frame = self.Frame(master=frame,
-                                 height=self.img_height-20,
+                                 height=self.IMG_HEIGHT - 20,
                                  fg_color='#242424',
                                  width=50)
         inner_frame.place(anchor='ne', relx=1, rely=.1, relheight=.9)
@@ -171,11 +160,11 @@ class UI:
         frame = self.Frame(master=self.root,
                            fg_color='#242424',
                            corner_radius=0,
-                           width=self.img_width)
+                           width=self.IMG_WIDTH)
 
         frame.grid(row=2,
                    column=0,
-                   padx=(self.pad_x, 0),
+                   padx=(self.PAD_X, 0),
                    sticky="nsew")
 
         frame.columnconfigure(0, weight=1)
@@ -196,7 +185,7 @@ class UI:
                    rowspan=3,
                    columnspan=3,
                    pady=(5, 0),
-                   padx=(self.pad_x, 0),
+                   padx=(self.PAD_X, 0),
                    sticky="nw")
 
         return frame
@@ -213,7 +202,7 @@ class UI:
         frame.grid(row=4,
                    column=3,
                    pady=10,
-                   padx=(0, self.pad_x),
+                   padx=(0, self.PAD_X),
                    sticky='e')
 
         frame.rowconfigure(0, weight=1)
@@ -228,14 +217,14 @@ class UI:
         """
 
         frame = self.Frame(master=self.root,
-                           corner_radius=self.rounded_corner,
-                           height=self.name_stat_frame_height)
+                           corner_radius=self.ROUNDED_CORNER,
+                           height=500)
         frame.grid(row=1,
                    column=3,
                    rowspan=3,
                    sticky="ne",
-                   pady=(self.pad_y, 0),
-                   padx=(0, self.pad_x))
+                   pady=(self.PAD_Y, 0),
+                   padx=(0, self.PAD_X))
 
         # allow stat block to overlap other rows and columns
         frame.columnconfigure(0, weight=1)
@@ -256,7 +245,7 @@ class UI:
         frame.grid(row=1,
                    rowspan=3,
                    column=2,
-                   pady=(self.pad_y, 0),
+                   pady=(self.PAD_Y, 0),
                    sticky='e')
 
         return frame

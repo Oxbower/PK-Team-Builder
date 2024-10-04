@@ -26,5 +26,4 @@ class ItemModalFrame:
         :param item: item name
         :return: None
         """
-        print(item)
         widget.configure(text='', image=self.items_image[item])

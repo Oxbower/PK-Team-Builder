@@ -4,7 +4,11 @@ import gui.searchgui.SearchUI as SearchUI
 
 from customtkinter import CTkButton as CTkButton
 
+
 class WidgetCallback:
+    """
+    Handles interactions with widgets
+    """
     def __init__(self, gui, current_window):
         """
         initializes the ModalInteraction class
@@ -20,7 +24,7 @@ class WidgetCallback:
 
         self.searchAlgorithm = SearchResult.SearchResult()
 
-        self.ModalUpdate = ModalUpdate.WidgetUpdate(gui, current_window)
+        self.WidgetUpdate = ModalUpdate.WidgetUpdate(gui, current_window)
 
         # Instantiate the class that builds the UI for the search results
         self.SearchUI = SearchUI.SearchUI(self.current_window, self)
@@ -32,8 +36,8 @@ class WidgetCallback:
         :param stats_widget: the statistics widget dictionary
         :return: None
         """
-        self.ModalUpdate.set_stats_widget(stats_widget)
-        self.ModalUpdate.set_variation_frame(type_frame)
+        self.WidgetUpdate.set_stats_widget(stats_widget)
+        self.WidgetUpdate.set_variation_frame(type_frame)
 
     def set_type_widget(self, pokedex_no, type_frame):
         """
@@ -42,7 +46,7 @@ class WidgetCallback:
         :param type_frame: the frame where to add this pokemons types
         :return: None
         """
-        self.ModalUpdate.set_type_widget(pokedex_no, type_frame)
+        self.WidgetUpdate.set_type_widget(pokedex_no, type_frame)
 
     def set_sidebar_widget(self, sidebar_widget):
         """
@@ -51,7 +55,7 @@ class WidgetCallback:
         :param sidebar_widget: the sidebar widget
         :return: None
         """
-        self.ModalUpdate.set_sidebar_widget(sidebar_widget)
+        self.WidgetUpdate.set_sidebar_widget(sidebar_widget)
 
     def set_search_modal_frame(self, Frame, name_plate: CTkButton):
         """
@@ -61,7 +65,7 @@ class WidgetCallback:
         :return: None
         """
         self.parent_search_frame = Frame
-        self.ModalUpdate.set_name_plate(name_plate)
+        self.WidgetUpdate.set_name_plate(name_plate)
 
     def set_img_frame(self, Frame):
         """
@@ -69,16 +73,16 @@ class WidgetCallback:
         :param Frame: parentFrame for image container
         :return: None
         """
-        self.ModalUpdate.set_img_frame(Frame)
+        self.WidgetUpdate.set_img_frame(Frame)
 
     def set_type_advantage_frame(self, frame):
-        self.ModalUpdate.set_type_advantage_frame(frame)
+        self.WidgetUpdate.set_type_advantage_frame(frame)
 
     def set_move_modal(self, move_modal):
-        self.ModalUpdate.move_widget(move_modal)
+        self.WidgetUpdate.set_move_widget(move_modal)
 
     def set_item_modal(self, item_modal):
-        self.ModalUpdate.set_item_modal(item_modal)
+        self.WidgetUpdate.set_item_modal(item_modal)
 
     """
     Widget callback methods!!!!
@@ -111,7 +115,7 @@ class WidgetCallback:
         :return: None
         """
         # Only update the button pressed
-        self.ModalUpdate.update_moves(modal_name)
+        self.WidgetUpdate.update_moves(modal_name)
 
     def clicked_search_query(self, string: str, which_modal: str) -> None:
         """
@@ -121,10 +125,10 @@ class WidgetCallback:
         :return: None
         """
         if which_modal == "name_plate":
-            self.ModalUpdate.update_pokemon_name_displayed(string)
-            self.ModalUpdate.update_widget_related_to_search(string, which_modal)
+            self.WidgetUpdate.update_pokemon_name_displayed(string)
+            self.WidgetUpdate.update_widget_related_to_search(string, which_modal)
         elif which_modal == "item_modal":
-            self.ModalUpdate.update_widget_related_to_search(string, which_modal)
+            self.WidgetUpdate.update_widget_related_to_search(string, which_modal)
 
         self.SearchUI.destroy_result_frame()
         self.current_window.root.focus_set()
@@ -135,7 +139,7 @@ class WidgetCallback:
         :param self_modal: which modal was clicked
         :return: None
         """
-        self.ModalUpdate.update_ability_widget(self_modal)
+        self.WidgetUpdate.update_ability_widget(self_modal)
 
     def type_adv_change_window(self, new_window, button_config) -> None:
         """

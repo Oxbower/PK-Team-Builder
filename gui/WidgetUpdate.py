@@ -67,11 +67,11 @@ class WidgetUpdate:
                                             text=None,
                                             fg_color='#ffffff',
                                             bg_color='#212121',
-                                            height=self.gui.img_height,
-                                            width=self.gui.img_width,
-                                            corner_radius=self.gui.rounded_corner)
+                                            height=self.gui.IMG_HEIGHT,
+                                            width=self.gui.IMG_WIDTH,
+                                            corner_radius=self.gui.ROUNDED_CORNER)
 
-    def move_widget(self, move_widget):
+    def set_move_widget(self, move_widget):
         self._move_widget = move_widget
 
     def set_stats_widget(self, stats_widget):
@@ -184,7 +184,7 @@ class WidgetUpdate:
 
     def update_widget_related_to_search(self, string: str, which_modal: str) -> None:
         """
-        Builds the image frame
+        Updates the widget according to user chosen result
         :param which_modal: which modal was this query for
         :param string: the clicked string
         :return: None
@@ -262,12 +262,12 @@ class WidgetUpdate:
 
         # Only returns a single image
         image = read_image([image_path], "thumbnail",
-                           (self.gui.img_height - self.gui.rounded_corner,
-                            self.gui.img_width - self.gui.rounded_corner))[0]
+                           (self.gui.IMG_HEIGHT - self.gui.ROUNDED_CORNER,
+                            self.gui.IMG_WIDTH - self.gui.ROUNDED_CORNER))[0]
 
         image_container = self.ctk.CTkImage(light_image=image,
-                                            size=(image.width - self.gui.rounded_corner,
-                                                  image.height - self.gui.rounded_corner))
+                                            size=(image.width - self.gui.ROUNDED_CORNER,
+                                                  image.height - self.gui.ROUNDED_CORNER))
 
         self.img_holder.configure(image=image_container)
 
