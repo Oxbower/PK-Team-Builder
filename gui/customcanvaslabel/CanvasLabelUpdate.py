@@ -45,9 +45,9 @@ class CanvasLabelUpdate:
 
         self.active_modal = modal
 
-        self.__build_search_container()
+        self._build_search_container()
 
-    def __build_search_container(self):
+    def _build_search_container(self):
         """
         builds the frame to hold the results, needed
         due to ctk.scrollableframe destroy() not working properly
@@ -60,9 +60,9 @@ class CanvasLabelUpdate:
 
         self.active_frame = frame
 
-        self.__build_search_scrollbar(frame)
+        self._build_search_scrollbar(frame)
 
-    def __build_search_scrollbar(self, parentFrame):
+    def _build_search_scrollbar(self, parentFrame):
         """
         builds the scrollable container called by build_search_container
         :param parentFrame: the frame created by build_search_container
@@ -77,9 +77,9 @@ class CanvasLabelUpdate:
 
         frame.grid(row=0, column=0, sticky='nesw')
 
-        self.__insert_modals(frame)
+        self._insert_modals(frame)
 
-    def __insert_modals(self, parentFrame):
+    def _insert_modals(self, parentFrame):
         """
         inserts result blocks into the scrollable frame
         :param parentFrame: the frame created by build_search_scrollbar
@@ -91,7 +91,7 @@ class CanvasLabelUpdate:
                                   fg_color='#333333',
                                   width=250,
                                   height=50,
-                                  command=lambda _text=text: self.__active_modal_callback(_text))
+                                  command=lambda _text=text: self._active_modal_callback(_text))
 
             frame.grid(row=index,
                        column=0,
@@ -99,7 +99,7 @@ class CanvasLabelUpdate:
                        pady=5,
                        sticky='nesw')
 
-    def __active_modal_callback(self, text):
+    def _active_modal_callback(self, text):
         """
         when result selected, change the text displayed by the
         canvas label and destroy the frame_container holding the

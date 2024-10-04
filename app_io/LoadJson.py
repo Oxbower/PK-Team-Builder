@@ -12,9 +12,10 @@ def json_load(path):
     return data
 
 
-def load_pokemon_names() -> list[str]:
+def load_names(directory: str) -> list[str]:
     """
     Load pokemon names
+    :param directory: directory to load names from
     :return: list of names
     """
-    return listdir("pokemon-artwork")
+    return listdir(directory)

@@ -1,5 +1,5 @@
 import customtkinter as ctk
-import gui.UIModals as modals
+import gui.BuildWidget as widgets
 
 
 class UI:
@@ -23,100 +23,76 @@ class UI:
         # frame object
         self.Frame = ctk.CTkFrame
 
-        # modal class
-        self.modals = modals.UIModals(self, self.current_window)
+        # widget class
+        self.widgets = widgets.Widgets(self, self.current_window)
 
         # ui settings
-        self.pad_y = 30
-        self.pad_x = 50
-        self.flat_corner = 0
-        self.rounded_corner = 10
-        self.expand_all = "nswe"
-
+        self.PAD_Y = 30
+        self.PAD_X = 50
+        self.ROUNDED_CORNER = 10
         # sys font
-        self.font = ("Arial Bold", 15)
-
-        # widget recolor
-        self.light_grey = '#3b3b3b'
-        self.dark_grey = '#2a2a2a'
-
+        self.DEFAULT_FONT = ("Arial Bold", 15)
         # hover color
-        self.hover_color = '#3f3f3f'
-
+        self.HOVER_COLOR = '#3f3f3f'
         # img width
-        self.img_width = 230
-        self.img_height = 230
-
-        self.name_stat_frame_height = 500
-        self.stat_subcategory_height = 40
+        self.IMG_WIDTH = 230
+        self.IMG_HEIGHT = 230
 
     def setup_ui(self):
         """
         Public facing setup call for gui
         :return: None
         """
-
         # call gui builder
-        self.__build_gui()
+        self._build_gui()
 
-    def __build_gui(self):
+    def _build_gui(self):
         """
         Builds the frame to put stuff in
         :return: None
         """
 
         # Build top bar
-        file_bar_frame = self.__build_file_bar()
-
+        file_bar_frame = self._build_file_bar()
         # Build image frame
-        image_frame = self.__build_img_frame()
-
+        image_frame = self._build_img_frame()
         # build search & stat frame
-        search_stat_frame = self.__build_info_frame()
-
+        search_stat_frame = self._build_info_frame()
         # build type frame
-        type_frame = self.__build_type_frame()
-
+        type_frame = self._build_type_frame()
         # build moves frame
-        move_frame = self.__build_moves_frame()
-
+        move_frame = self._build_moves_frame()
         # build this pokemon type frame
-        type_adv_frame = self.__build_type_adv_frame()
+        type_adv_frame = self._build_type_adv_frame()
 
-        side_frame = self.__build_side_img_frame()
+        side_frame = self._build_side_img_frame()
 
-        item_ability_frame = self.__build_ability_item_bar()
+        item_ability_frame = self._build_ability_item_bar()
 
         '''
         Builds the modals using the parentFrames created by the build_[name]_frame methods
         '''
 
-        # build modals for the file bar
-        self.modals.build_file_modals(file_bar_frame)
-
-        # build modal for the image
-        self.modals.build_img_modal(image_frame)
-
+        # build widgets for the file bar
+        self.widgets.build_file_widget(file_bar_frame)
+        # build widgets for the image
+        self.widgets.build_img_widget(image_frame)
         # build the 'stats' inside the info_stat frame
-        self.modals.build_stat_modal(search_stat_frame)
-
+        self.widgets.build_stat_widget(search_stat_frame)
         # build the items inside the type container i.e. pokedex-no and type display
-        self.modals.build_type_modal(type_frame)
+        self.widgets.build_type_widget(type_frame)
 
-        self.modals.build_side_container(side_frame)
-
+        self.widgets.build_side_container(side_frame)
         # build search bar inside the info_stat frame block
-        self.modals.build_search_bar_modal(search_stat_frame)
-
+        self.widgets.build_search_bar_widget(search_stat_frame)
         # build the move picker inside the move frame
-        self.modals.build_move_modal(move_frame)
-
+        self.widgets.build_move_widget(move_frame)
         # build the picker for the pokemon's held item and their ability
-        self.modals.build_item_ability_modal(item_ability_frame)
+        self.widgets.build_item_ability_widget(item_ability_frame)
 
-        self.modals.build_type_adv_modal(type_adv_frame)
+        self.widgets.build_type_adv_widget(type_adv_frame)
 
-    def __build_file_bar(self):
+    def _build_file_bar(self):
         """
         Builds the 'file' bar i.e. the strip on top with file, options, etc
         :return: created frame
@@ -125,57 +101,57 @@ class UI:
         # Builds frame for 'file' area
         file_bar = self.Frame(master=self.root,
                               width=self.current_window.width,
-                              corner_radius=self.flat_corner,
-                              fg_color=self.dark_grey)
+                              corner_radius=0,
+                              fg_color='#2a2a2a')
         # position file_bar
         file_bar.grid(row=0,
-                      sticky=self.expand_all,
+                      sticky="nswe",
                       columnspan=4)
 
         return file_bar
 
-    def __build_img_frame(self):
+    def _build_img_frame(self):
         """
         Build the img_frame for image container
         :return: created frame
         """
 
         img_frame = self.Frame(master=self.root,
-                               height=self.img_height,
-                               width=self.img_width,
+                               height=self.IMG_HEIGHT,
+                               width=self.IMG_WIDTH,
                                fg_color='#ffffff',
                                bg_color='#232323',
-                               corner_radius=self.rounded_corner)
+                               corner_radius=self.ROUNDED_CORNER)
         img_frame.grid(row=1,
                        column=0,
-                       pady=(self.pad_y, 0),
-                       padx=(self.pad_x, 0))
+                       pady=(self.PAD_Y, 0),
+                       padx=(self.PAD_X, 0))
 
         return img_frame
 
-    def __build_side_img_frame(self):
+    def _build_side_img_frame(self):
         """
         Builds the frame that display battle transformations i.e mega evolutions and stuff
         :return: None
         """
         frame = self.Frame(master=self.root,
-                           height=self.img_height,
+                           height=self.IMG_HEIGHT,
                            fg_color='#242424',
                            width=50)
         frame.grid(row=1,
                    column=1,
                    sticky='w',
-                   pady=(self.pad_y, 0))
+                   pady=(self.PAD_Y, 0))
 
         inner_frame = self.Frame(master=frame,
-                                 height=self.img_height-20,
+                                 height=self.IMG_HEIGHT - 20,
                                  fg_color='#242424',
                                  width=50)
         inner_frame.place(anchor='ne', relx=1, rely=.1, relheight=.9)
 
         return inner_frame
 
-    def __build_type_frame(self):
+    def _build_type_frame(self):
         """
         Builds the chosen pokemon's type
         :return: created frame
@@ -184,18 +160,18 @@ class UI:
         frame = self.Frame(master=self.root,
                            fg_color='#242424',
                            corner_radius=0,
-                           width=self.img_width)
+                           width=self.IMG_WIDTH)
 
         frame.grid(row=2,
                    column=0,
-                   padx=(self.pad_x, 0),
+                   padx=(self.PAD_X, 0),
                    sticky="nsew")
 
         frame.columnconfigure(0, weight=1)
 
         return frame
 
-    def __build_moves_frame(self):
+    def _build_moves_frame(self):
         """
         Builds the frame for move modals
         :return: created frame
@@ -209,12 +185,12 @@ class UI:
                    rowspan=3,
                    columnspan=3,
                    pady=(5, 0),
-                   padx=(self.pad_x, 0),
+                   padx=(self.PAD_X, 0),
                    sticky="nw")
 
         return frame
 
-    def __build_type_adv_frame(self):
+    def _build_type_adv_frame(self):
         """
         Builds the frame for a pokemon weakness and strengths
         :return: created frame
@@ -226,7 +202,7 @@ class UI:
         frame.grid(row=4,
                    column=3,
                    pady=10,
-                   padx=(0, self.pad_x),
+                   padx=(0, self.PAD_X),
                    sticky='e')
 
         frame.rowconfigure(0, weight=1)
@@ -234,22 +210,21 @@ class UI:
 
         return frame
 
-    def __build_info_frame(self):
+    def _build_info_frame(self):
         """
         Builds the frame that will hold the stats and search bar
         :return: created frame
         """
 
         frame = self.Frame(master=self.root,
-                           corner_radius=self.rounded_corner,
-                           height=self.name_stat_frame_height,
-                           )
+                           corner_radius=self.ROUNDED_CORNER,
+                           height=500)
         frame.grid(row=1,
                    column=3,
                    rowspan=3,
                    sticky="ne",
-                   pady=(self.pad_y, 0),
-                   padx=(0, self.pad_x))
+                   pady=(self.PAD_Y, 0),
+                   padx=(0, self.PAD_X))
 
         # allow stat block to overlap other rows and columns
         frame.columnconfigure(0, weight=1)
@@ -257,7 +232,7 @@ class UI:
 
         return frame
 
-    def __build_ability_item_bar(self):
+    def _build_ability_item_bar(self):
         """
         builds a container to hold the ability and items
         :return: created frame
@@ -270,7 +245,7 @@ class UI:
         frame.grid(row=1,
                    rowspan=3,
                    column=2,
-                   pady=(self.pad_y, 0),
+                   pady=(self.PAD_Y, 0),
                    sticky='e')
 
         return frame

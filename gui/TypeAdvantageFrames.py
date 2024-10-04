@@ -4,7 +4,7 @@ import app_io.LoadImageDictionary as ImageDictionary
 
 
 from math import floor
-from gui.TypeBackgroundColor import type_color
+from interaction.GetTypeBackgroundColor import type_color
 from interaction.TypeAdvantageHandler import find_neutral_types, find_defensive_type_multiplier, find_type_defense
 
 

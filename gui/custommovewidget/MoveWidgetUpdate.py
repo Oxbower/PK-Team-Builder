@@ -4,12 +4,12 @@ from PIL import Image
 import customtkinter as ctk
 
 from app_io.LoadJson import json_load
-from gui.TypeBackgroundColor import type_color
-from gui.custommovewidget import MoveModal as MoveModal
+from interaction.GetTypeBackgroundColor import type_color
+from gui.custommovewidget import MoveWidget as MoveModal
 import app_io.LoadImageDictionary as ImageDicitonary
 
 
-class MoveModalUpdate:
+class MoveWidgetUpdate:
     """
     Updates the contents of the custom move widget
     to accurately reflect the choices made by user
